@@ -1,3 +1,4 @@
+// CSS Variables
 :root {
   --tnt-primary: #F06449;
   --tnt-background: #EDE6E3;
@@ -7,27 +8,38 @@
   --tnt-white: #FFFFFF;
 }
 
+// Reset
 *,
 *::before,
 *::after {
-  font-family: 'Trebuchet MS', sans-serif;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: 'Trebuchet MS', sans-serif;
 }
 
-
-.grid {
+// Custom Grid
+.tnt-grid {
   display: grid;
   grid-gap: 10px;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-}
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
 
-.box {
-  background: #ccc;
-  color: black;
-  text-align: center;
-  padding: 10px;
-  border-radius: 3px;
+  &--col-3 {
+    @media screen and (min-width: 768px) {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+    }
+
+    @media screen and (min-width: 992px) {
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+    }
+  }
+
+  &__col {
+    background: transparent;
+    // Temporary
+    border: 1px solid black;
+  }
 }
