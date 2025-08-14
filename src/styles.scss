@@ -4,4 +4,14 @@
   --tnt-neutral: #DADAD9;
   --tnt-dark: #36382E;
   --tnt-accent: #5BC3EB;
+  --tnt-white: #FFFFFF;
+}
+
+*,
+*::before,
+*::after {
+  font-family: 'Trebuchet MS', sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }

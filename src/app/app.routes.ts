@@ -2,7 +2,7 @@ import { Routes } from '@angular/router';
 import { ActivitiesComponent } from './features/activities';
 
 export const routes: Routes = [
-    { path: '', component: ActivitiesComponent },
+    { path: '', component: ActivitiesComponent, pathMatch: 'full' },
     {
         path: 'hotels',
         loadComponent: () => import('./features/hotels/hotels.component')

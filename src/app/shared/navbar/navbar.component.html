@@ -1,19 +1,52 @@
 <header class="tnt-navbar">
-    <nav class="tnt-navbar__nav" aria-label="Main navigation">
-        <a routerLink="/" class="navbar-brand" alt="activities" aria-label="activities navbar link">
-            Activities
-        </a>
-        <a routerLink="/hotels" class="navbar-brand" alt="hotels" aria-label="hotels navbar link">
-            Hotels
-        </a>
-        <a routerLink="/restaurants" class="navbar-brand" alt="restaurants" aria-label="restaurants navbar link">
-            Restaurants
-        </a>
-        <a routerLink="/ai-search" class="navbar-brand" alt="ai-search" aria-label="ai-search navbar link">
-            AI Search
-        </a>
-        <a routerLink="/profile" class="navbar-brand" alt="profile" aria-label="profile navbar link">
-            Profile
-        </a>
-    </nav>
+    <!-- Top Section -->
+    <div class="tnt-navbar__top-section">
+        <!-- Left Section -->
+        <div>
+            <img routerLink="/" src="/assets/images/hiptraveler-logo.png" class="tnt-navbar__brand"
+                alt="hiptraveler-logo" aria-label="main logo" />
+        </div>
+
+        <!-- Center Section -->
+        <div>
+            <nav class="tnt-navbar__nav" aria-label="Main navigation">
+                <a routerLink="/" routerLinkActive="tnt-navbar__link--active"
+                    [routerLinkActiveOptions]="{ exact: true }" class="tnt-navbar__link"
+                    aria-label="activities navbar link">
+                    <img src="/assets/images/activity.png" class="tnt-navbar__link-logo" alt="activities" />
+                    <span>Activities</span>
+                </a>
+                <a routerLink="/hotels" routerLinkActive="tnt-navbar__link--active"
+                    [routerLinkActiveOptions]="{ exact: true }" class="tnt-navbar__link"
+                    aria-label="hotels navbar link">
+                    <img src="/assets/images/hotel.png" class="tnt-navbar__link-logo" alt="hotels" />
+                    <span>Hotels</span>
+                </a>
+                <a routerLink="/restaurants" routerLinkActive="tnt-navbar__link--active"
+                    [routerLinkActiveOptions]="{ exact: true }" class="tnt-navbar__link"
+                    aria-label="restaurants navbar link">
+                    <img src="/assets/images/restaurant.png" class="tnt-navbar__link-logo" alt="restaurants" />
+                    <span>Restaurants</span>
+                </a>
+            </nav>
+        </div>
+
+        <!-- Right Section -->
+        <div class="tnt-navbar__right-section">
+            <button class="tnt-navbar__create-itinerary" aria-label="create itinerary button">Create Itinerary</button>
+            <a routerLink="/ai-search" class="tnt-navbar__ai-search" aria-label="ai search navbar link">
+                <img src="/assets/images/ai-search.png" class="tnt-navbar__link-logo" alt="ai-search"
+                    title="AI Search" />
+            </a>
+            <a routerLink="/profile" class="tnt-navbar__profile" aria-label="profile navbar link">
+                <img src="/assets/images/profile.png" class="tnt-navbar__link-logo" alt="profile" title="Profile" />
+            </a>
+        </div>
+    </div>
+
+    <!-- Bottom Section -->
+    <div class="tnt-navbar__bottom-section">
+        <input type="text" class="tnt-navbar__search" placeholder="Where would you like to explore?"
+            aria-label="location search bar" />
+    </div>
 </header>
