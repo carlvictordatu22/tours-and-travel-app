@@ -1,1 +1,7 @@
-.tnt-root {}
+.tnt-root {
+    &__main {
+        max-width: 1200px;
+        margin: 40px auto;
+        padding: 0 30px;
+    }
+}
