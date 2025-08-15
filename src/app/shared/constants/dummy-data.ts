@@ -1,7 +1,7 @@
 import { EntryType } from "../enums";
 import { Entries } from "../interface"
 
-export const entries: Entries = [
+export const ENTRIES: Entries = [
     {
         id: "ACT-PAR-001",
         type: EntryType.ACTIVITY,
