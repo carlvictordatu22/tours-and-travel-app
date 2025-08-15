@@ -1,3 +1,47 @@
-body {
-  font-family: "Roboto", sans-serif;
+// @import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+// CSS Variables
+:root {
+  --tnt-primary: #F06449;
+  --tnt-background: #EDE6E3;
+  --tnt-neutral: #DADAD9;
+  --tnt-dark: #36382E;
+  --tnt-accent: #5BC3EB;
+  --tnt-white: #FFFFFF;
+}
+
+// Reset
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Trebuchet MS', sans-serif;
+}
+
+// Custom Grid
+.tnt-grid {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+
+  &--col-3 {
+    @media screen and (min-width: 768px) {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+    }
+
+    @media screen and (min-width: 992px) {
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+    }
+  }
+
+  &__col {
+    background: transparent;
+    // Temporary
+    border: 1px solid black;
+  }
 }
