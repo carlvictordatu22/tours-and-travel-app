@@ -6,6 +6,12 @@
         padding: 30px 30px 50px;
     }
 
+    &__bottom-section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
     &__brand {
         height: 30px;
         cursor: pointer;
@@ -161,10 +167,11 @@
 
         &-container {
             position: relative;
-            display: flex;
-            justify-content: center;
-            align-items: center;
             width: 100%;
+
+            @media screen and (min-width: 768px) {
+                width: unset;
+            }
         }
     }
 }
