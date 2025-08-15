@@ -3,12 +3,12 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { CreateItineraryComponent } from '../create-itinerary';
 import { MODAL_PANEL_CLASS, MODAL_WIDTH } from '../../constants';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'tnt-navbar',
-  imports: [CommonModule, RouterLink, RouterLinkActive, MatDialogModule, FormsModule, ReactiveFormsModule],
+  imports: [CommonModule, RouterLink, RouterLinkActive, MatDialogModule, FormsModule],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush
