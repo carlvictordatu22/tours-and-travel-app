@@ -45,3 +45,12 @@
     border: 1px solid black;
   }
 }
+
+// Modal
+.tnt-modal {
+
+  .mat-mdc-dialog-inner-container .mat-mdc-dialog-title,
+  .mat-mdc-dialog-inner-container .mat-mdc-dialog-content {
+    font-family: 'Trebuchet MS', sans-serif;
+  }
+}

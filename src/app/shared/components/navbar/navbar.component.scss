@@ -14,7 +14,7 @@
         font-weight: bold;
         text-decoration: none;
         padding: 10px 0;
-        color: lighten(#36382E, 40%);
+        // color: lighten(#36382E, 40%);
         border-bottom: 3px solid transparent;
 
         &:not(:last-of-type) {
@@ -71,6 +71,14 @@
         cursor: pointer;
     }
 
+    &__overlay {
+        position: absolute;
+        bottom: -30px;
+        left: 0;
+        width: 100%;
+        border-radius: 100px;
+    }
+
     &__right-section {
         display: flex;
     }
@@ -96,6 +104,10 @@
 
         &:focus {
             border: 2px solid var(--tnt-dark);
+        }
+
+        &-container {
+            position: relative;
         }
     }
 }

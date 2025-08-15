@@ -47,7 +47,15 @@
 
     <!-- Bottom Section -->
     <div class="tnt-navbar__bottom-section">
-        <input type="text" class="tnt-navbar__search" placeholder="Where would you like to explore?"
-            aria-label="location search bar" />
+        <div class="tnt-navbar__search-container">
+            <input type="text" [(ngModel)]="searchQuery" (blur)="onSearchBlur()" class="tnt-navbar__search"
+                placeholder="Where would you like to explore?" aria-label="location search bar" />
+
+            @if (isOverlayDropdownShown()) {
+            <div class="tnt-navbar__overlay">
+                TEST
+            </div>
+            }
+        </div>
     </div>
 </header>
