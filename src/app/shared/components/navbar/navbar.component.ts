@@ -1,14 +1,14 @@
-import { ChangeDetectionStrategy, Component, computed, effect, inject, signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, computed, inject, signal } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { CreateItineraryComponent } from '../create-itinerary';
 import { MODAL_PANEL_CLASS, MODAL_WIDTH } from '../../constants';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'tnt-navbar',
-  imports: [CommonModule, RouterLink, RouterLinkActive, MatDialogModule, FormsModule],
+  imports: [CommonModule, RouterLink, RouterLinkActive, MatDialogModule, FormsModule, ReactiveFormsModule],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush
@@ -16,15 +16,15 @@ import { CommonModule } from '@angular/common';
 export class NavbarComponent {
   readonly #dialog = inject(MatDialog);
 
-  readonly options: string[] = ['Paris', 'London', 'Spain'];
   searchQuery = signal('');
-  isSearchBlur = signal(false);
+  isSearchFocused = signal(false);
+  readonly options: string[] = ['Paris', 'London', 'Spain'];
 
   filteredItems = computed(() => {
     const query = this.searchQuery().toLowerCase();
 
     if (!query) {
-      return this.options;
+      return [];
     }
 
     return this.options.filter(item =>
@@ -32,14 +32,7 @@ export class NavbarComponent {
     );
   });
 
-  isOverlayDropdownShown = computed(() => !!this.filteredItems().length && !this.isSearchBlur());
-
-  constructor() {
-    effect(() => {
-      console.log('filteredItems', this.filteredItems())
-      console.log('isOverlayDropdownShown', this.isOverlayDropdownShown())
-    })
-  }
+  isOverlayDropdownShown = computed(() => this.filteredItems().length > 0 && this.isSearchFocused());
 
   openCreateItineraryDialog(): void {
     this.#dialog.open(
@@ -52,8 +45,16 @@ export class NavbarComponent {
     );
   }
 
+  onSearchFocus(): void {
+    this.isSearchFocused.set(true);
+  }
 
   onSearchBlur(): void {
-    this.isSearchBlur.set(true);
+    this.isSearchFocused.set(false);
+  }
+
+  onChooseLocation(location: string): void {
+    this.searchQuery.set(location);
+    this.onSearchBlur();
   }
 }

@@ -14,7 +14,7 @@
         font-weight: bold;
         text-decoration: none;
         padding: 10px 0;
-        // color: lighten(#36382E, 40%);
+        color: lighten(#36382E, 40%);
         border-bottom: 3px solid transparent;
 
         &:not(:last-of-type) {
@@ -40,6 +40,18 @@
         height: 40px;
         display: inline-block;
         margin-right: 10px;
+    }
+
+    &__list {
+        list-style-type: none;
+        margin: 0;
+        padding: 10px 0;
+
+        &-item {
+            padding: 10px 15px;
+            font-size: 16px;
+            cursor: pointer;
+        }
     }
 
     &__nav {
@@ -73,10 +85,18 @@
 
     &__overlay {
         position: absolute;
-        bottom: -30px;
+        top: 110%;
         left: 0;
         width: 100%;
-        border-radius: 100px;
+        border-radius: 10px;
+        background-color: var(--tnt-white);
+        box-shadow: 0px 11px 10px -4px rgba(0, 0, 0, 0.12);
+        border: 2px solid var(--tnt-dark);
+
+        &--hidden {
+            opacity: 0;
+            transition: opacity .3s ease;
+        }
     }
 
     &__right-section {
@@ -89,10 +109,8 @@
     }
 
     &__search {
-        background-color: var(--tnt-white);
         border-radius: 100px;
         border: 2px solid transparent;
-        outline: 1px solid var(--tnt-neutral);
         width: 700px;
         max-width: 100%;
         padding: 20px 40px;
@@ -101,6 +119,7 @@
         text-align: center;
         font-size: 16px;
         box-shadow: 0px 11px 10px -4px rgba(0, 0, 0, 0.12);
+        background: url('/assets/images/map.png') no-repeat 97% center/5% var(--tnt-white);
 
         &:focus {
             border: 2px solid var(--tnt-dark);

@@ -48,14 +48,18 @@
     <!-- Bottom Section -->
     <div class="tnt-navbar__bottom-section">
         <div class="tnt-navbar__search-container">
-            <input type="text" [(ngModel)]="searchQuery" (blur)="onSearchBlur()" class="tnt-navbar__search"
-                placeholder="Where would you like to explore?" aria-label="location search bar" />
+            <input type="text" [(ngModel)]="searchQuery" (focus)="onSearchFocus()" (blur)="onSearchBlur()"
+                class="tnt-navbar__search" placeholder="Where would you like to explore?"
+                aria-label="location search bar" />
 
-            @if (isOverlayDropdownShown()) {
-            <div class="tnt-navbar__overlay">
-                TEST
+            <div class="tnt-navbar__overlay" [class.tnt-navbar__overlay--hidden]="!isOverlayDropdownShown()">
+                <div class="tnt-navbar__list">
+                    @for (item of filteredItems(); track $index) {
+                    <div class="tnt-navbar__list-item" (click)="onChooseLocation(item)">{{ item }}</div>
+                    }
+                </div>
             </div>
-            }
+
         </div>
     </div>
 </header>
