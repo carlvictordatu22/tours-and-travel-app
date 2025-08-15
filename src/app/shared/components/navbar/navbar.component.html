@@ -33,7 +33,8 @@
 
         <!-- Right Section -->
         <div class="tnt-navbar__right-section">
-            <button class="tnt-navbar__create-itinerary" aria-label="create itinerary button">Create Itinerary</button>
+            <button class="tnt-navbar__create-itinerary" (click)="openCreateItineraryDialog()"
+                aria-label="create itinerary button">Create Itinerary</button>
             <a routerLink="/ai-search" class="tnt-navbar__ai-search" aria-label="ai search navbar link">
                 <img src="/assets/images/ai-search.png" class="tnt-navbar__link-logo" alt="ai-search"
                     title="AI Search" />

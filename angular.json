@@ -7,8 +7,8 @@
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
-            "style": "scss"
-          }
+          "style": "scss"
+        }
       },
       "root": "",
       "sourceRoot": "src",
@@ -30,11 +30,10 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css"
             ],
-            "scripts": [
-              "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
-            ],
+            "scripts": [],
             "server": "src/main.server.ts",
             "outputMode": "server",
             "ssr": {
