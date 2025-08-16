@@ -5,6 +5,7 @@ import { CreateItineraryComponent } from '../create-itinerary';
 import { MODAL_PANEL_CLASS, MODAL_WIDTH } from '../../constants';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { Location } from '../../enums';
 
 @Component({
   selector: 'tnt-navbar',
@@ -18,7 +19,7 @@ export class NavbarComponent {
 
   searchQuery = signal('');
   isSearchFocused = signal(false);
-  readonly options: string[] = ['Paris', 'London', 'Spain'];
+  readonly options: Location[] = [Location.PARIS, Location.LONDON, Location.SPAIN];
 
   filteredItems = computed(() => {
     const query = this.searchQuery().toLowerCase();

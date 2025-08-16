@@ -17,13 +17,15 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Trebuchet MS', sans-serif;
+  font-family: "Funnel Display", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: normal;
 }
 
 // Custom Grid
 .tnt-grid {
   display: grid;
-  grid-gap: 10px;
+  grid-gap: 20px;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
 
@@ -42,7 +44,7 @@
   &__col {
     background: transparent;
     // Temporary
-    border: 1px solid black;
+    // border: 1px solid black;
   }
 }
 
@@ -51,6 +53,6 @@
 
   .mat-mdc-dialog-inner-container .mat-mdc-dialog-title,
   .mat-mdc-dialog-inner-container .mat-mdc-dialog-content {
-    font-family: 'Trebuchet MS', sans-serif;
+    font-family: "Funnel Display", sans-serif;
   }
 }

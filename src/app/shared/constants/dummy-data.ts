@@ -1,4 +1,4 @@
-import { EntryType } from "../enums";
+import { EntryType, Location } from "../enums";
 import { Entries } from "../interface"
 
 export const ENTRIES: Entries = [
@@ -9,7 +9,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-PAR-001/800/600",
         rating: 0.1,
         description: "Street Art Walk - Paris in Paris is a popular activity pick for travelers.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 129,
         isFavorite: true,
         durationHours: 2
@@ -21,7 +21,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-PAR-002/800/600",
         rating: 0.4,
         description: "Brewery Tour - Paris in Paris is a popular activity pick for travelers.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 30,
         isFavorite: true,
         durationHours: 4
@@ -33,7 +33,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-PAR-003/800/600",
         rating: 3,
         description: "Craft Workshop - Paris in Paris is a popular activity pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 294,
         isFavorite: false,
         durationHours: 8
@@ -45,7 +45,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-PAR-004/800/600",
         rating: 1.4,
         description: "Scooter Tour - Paris in Paris is a popular activity pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 96,
         isFavorite: false,
         durationHours: 6
@@ -57,7 +57,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-PAR-005/800/600",
         rating: 0.8,
         description: "Boat Ride - Paris in Paris is a popular activity pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 187,
         isFavorite: true,
         durationHours: 7
@@ -69,7 +69,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-PAR-006/800/600",
         rating: 1.8,
         description: "Cooking Class - Paris in Paris is a popular activity pick for travelers.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 150,
         isFavorite: false,
         durationHours: 12
@@ -81,7 +81,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-PAR-007/800/600",
         rating: 2.7,
         description: "Coffee Workshop - Paris in Paris is a popular activity pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 208,
         isFavorite: true,
         durationHours: 5
@@ -93,7 +93,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-PAR-008/800/600",
         rating: 4.4,
         description: "Hidden Alleys Tour - Paris in Paris is a popular activity pick for travelers.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 113,
         isFavorite: false,
         durationHours: 1
@@ -105,7 +105,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-PAR-009/800/600",
         rating: 3.9,
         description: "Theater Show - Paris in Paris is a popular activity pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 134,
         isFavorite: false,
         durationHours: 7
@@ -117,7 +117,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-PAR-010/800/600",
         rating: 2.3,
         description: "Boat Ride - Paris in Paris is a popular activity pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 98,
         isFavorite: false,
         durationHours: 4
@@ -129,7 +129,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-PAR-011/800/600",
         rating: 3.5,
         description: "Boat Ride - Paris in Paris is a popular activity pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 51,
         isFavorite: false,
         durationHours: 3
@@ -141,7 +141,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-PAR-012/800/600",
         rating: 3.6,
         description: "Brewery Tour - Paris in Paris is a popular activity pick for travelers.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 209,
         isFavorite: false,
         durationHours: 11
@@ -153,7 +153,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-PAR-013/800/600",
         rating: 1.1,
         description: "Vineyard Tour - Paris in Paris is a popular activity pick for travelers.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 43,
         isFavorite: false,
         durationHours: 1
@@ -165,7 +165,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-PAR-014/800/600",
         rating: 2,
         description: "Day Trip - Paris in Paris is a popular activity pick for travelers.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 176,
         isFavorite: false,
         durationHours: 8
@@ -177,7 +177,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-PAR-015/800/600",
         rating: 4.4,
         description: "Jazz Night - Paris in Paris is a popular activity pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 88,
         isFavorite: false,
         durationHours: 4
@@ -189,7 +189,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-PAR-016/800/600",
         rating: 2.7,
         description: "Vineyard Tour - Paris in Paris is a popular activity pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 234,
         isFavorite: false,
         durationHours: 7
@@ -201,7 +201,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-PAR-017/800/600",
         rating: 1.1,
         description: "Kayak Session - Paris in Paris is a popular activity pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 275,
         isFavorite: false,
         durationHours: 1
@@ -213,7 +213,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-PAR-018/800/600",
         rating: 0.8,
         description: "Street Art Walk - Paris in Paris is a popular activity pick for travelers.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 231,
         isFavorite: false,
         durationHours: 7
@@ -225,7 +225,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-PAR-019/800/600",
         rating: 3,
         description: "Nightlife Crawl - Paris in Paris is a popular activity pick for travelers.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 143,
         isFavorite: false,
         durationHours: 1
@@ -237,7 +237,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-PAR-020/800/600",
         rating: 3.4,
         description: "Street Art Walk - Paris in Paris is a popular activity pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 151,
         isFavorite: false,
         durationHours: 6
@@ -249,7 +249,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-PAR-021/800/600",
         rating: 1.5,
         description: "Street Art Walk - Paris in Paris is a popular activity pick for travelers.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 16,
         isFavorite: false,
         durationHours: 12
@@ -261,7 +261,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-PAR-022/800/600",
         rating: 4.9,
         description: "Sunset Tour - Paris in Paris is a popular activity pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 274,
         isFavorite: false,
         durationHours: 11
@@ -273,7 +273,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-PAR-023/800/600",
         rating: 4.2,
         description: "Chocolate Workshop - Paris in Paris is a popular activity pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 116,
         isFavorite: true,
         durationHours: 3
@@ -285,7 +285,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-PAR-024/800/600",
         rating: 4.8,
         description: "Brewery Tour - Paris in Paris is a popular activity pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 15,
         isFavorite: false,
         durationHours: 8
@@ -297,7 +297,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-PAR-025/800/600",
         rating: 0.6,
         description: "River Cruise - Paris in Paris is a popular activity pick for travelers.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 172,
         isFavorite: false,
         durationHours: 4
@@ -309,7 +309,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-PAR-026/800/600",
         rating: 4.7,
         description: "Segway Tour - Paris in Paris is a popular activity pick for travelers.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 263,
         isFavorite: false,
         durationHours: 9
@@ -321,7 +321,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-PAR-027/800/600",
         rating: 0.6,
         description: "Wine Tasting - Paris in Paris is a popular activity pick for travelers.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 296,
         isFavorite: true,
         durationHours: 9
@@ -333,7 +333,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-PAR-028/800/600",
         rating: 2.1,
         description: "Architecture Walk - Paris in Paris is a popular activity pick for travelers.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 291,
         isFavorite: false,
         durationHours: 12
@@ -345,7 +345,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-PAR-029/800/600",
         rating: 3.6,
         description: "Park Picnic - Paris in Paris is a popular activity pick for travelers.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 206,
         isFavorite: false,
         durationHours: 9
@@ -357,7 +357,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-PAR-030/800/600",
         rating: 0.6,
         description: "Street Food Crawl - Paris in Paris is a popular activity pick for travelers.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 188,
         isFavorite: true,
         durationHours: 9
@@ -369,7 +369,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-PAR-031/800/600",
         rating: 2.9,
         description: "Theater Show - Paris in Paris is a popular activity pick for travelers.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 45,
         isFavorite: false,
         durationHours: 1
@@ -381,7 +381,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-PAR-032/800/600",
         rating: 0.4,
         description: "Castle Tour - Paris in Paris is a popular activity pick for travelers.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 263,
         isFavorite: false,
         durationHours: 3
@@ -393,7 +393,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-PAR-033/800/600",
         rating: 2.9,
         description: "Segway Tour - Paris in Paris is a popular activity pick for travelers.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 257,
         isFavorite: false,
         durationHours: 4
@@ -405,7 +405,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-PAR-034/800/600",
         rating: 0.5,
         description: "Cooking Class - Paris in Paris is a popular activity pick for travelers.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 231,
         isFavorite: false,
         durationHours: 12
@@ -417,7 +417,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-PAR-035/800/600",
         rating: 3.4,
         description: "Historic Landmark Tour - Paris in Paris is a popular activity pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 65,
         isFavorite: true,
         durationHours: 12
@@ -429,7 +429,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-PAR-036/800/600",
         rating: 4,
         description: "Castle Tour - Paris in Paris is a popular activity pick for travelers.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 113,
         isFavorite: false,
         durationHours: 8
@@ -441,7 +441,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-PAR-037/800/600",
         rating: 2.1,
         description: "Wine Tasting - Paris in Paris is a popular activity pick for travelers.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 142,
         isFavorite: false,
         durationHours: 2
@@ -453,7 +453,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-PAR-038/800/600",
         rating: 4,
         description: "Street Food Crawl - Paris in Paris is a popular activity pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 65,
         isFavorite: true,
         durationHours: 9
@@ -465,7 +465,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-PAR-039/800/600",
         rating: 4.8,
         description: "City Walking Tour - Paris in Paris is a popular activity pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 136,
         isFavorite: true,
         durationHours: 8
@@ -477,7 +477,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-PAR-040/800/600",
         rating: 1.1,
         description: "Botanical Tour - Paris in Paris is a popular activity pick for travelers.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 45,
         isFavorite: true,
         durationHours: 1
@@ -489,7 +489,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-PAR-041/800/600",
         rating: 1.3,
         description: "Nightlife Crawl - Paris in Paris is a popular activity pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 247,
         isFavorite: false,
         durationHours: 12
@@ -501,7 +501,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-PAR-042/800/600",
         rating: 3.3,
         description: "Vineyard Tour - Paris in Paris is a popular activity pick for travelers.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 112,
         isFavorite: false,
         durationHours: 1
@@ -513,7 +513,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-PAR-043/800/600",
         rating: 3.7,
         description: "Scooter Tour - Paris in Paris is a popular activity pick for travelers.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 175,
         isFavorite: true,
         durationHours: 10
@@ -525,7 +525,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-PAR-044/800/600",
         rating: 2.5,
         description: "Botanical Tour - Paris in Paris is a popular activity pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 95,
         isFavorite: true,
         durationHours: 9
@@ -537,7 +537,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-PAR-045/800/600",
         rating: 4.3,
         description: "Food Tasting - Paris in Paris is a popular activity pick for travelers.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 49,
         isFavorite: false,
         durationHours: 4
@@ -549,7 +549,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-PAR-046/800/600",
         rating: 0.6,
         description: "Jazz Night - Paris in Paris is a popular activity pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 141,
         isFavorite: false,
         durationHours: 1
@@ -561,7 +561,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-PAR-047/800/600",
         rating: 0.4,
         description: "Hidden Alleys Tour - Paris in Paris is a popular activity pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 282,
         isFavorite: false,
         durationHours: 5
@@ -573,7 +573,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-PAR-048/800/600",
         rating: 3.3,
         description: "Market Stroll - Paris in Paris is a popular activity pick for travelers.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 150,
         isFavorite: false,
         durationHours: 11
@@ -585,7 +585,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-PAR-049/800/600",
         rating: 2.3,
         description: "Chocolate Workshop - Paris in Paris is a popular activity pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 52,
         isFavorite: true,
         durationHours: 10
@@ -597,7 +597,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-PAR-050/800/600",
         rating: 5,
         description: "Segway Tour - Paris in Paris is a popular activity pick for travelers.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 124,
         isFavorite: false,
         durationHours: 3
@@ -609,7 +609,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-PAR-051/800/600",
         rating: 4.4,
         description: "Hot Air Balloon - Paris in Paris is a popular activity pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 204,
         isFavorite: false,
         durationHours: 8
@@ -621,7 +621,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-PAR-052/800/600",
         rating: 3.5,
         description: "Brewery Tour - Paris in Paris is a popular activity pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 285,
         isFavorite: true,
         durationHours: 9
@@ -633,7 +633,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-PAR-053/800/600",
         rating: 4.7,
         description: "Chocolate Workshop - Paris in Paris is a popular activity pick for travelers.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 83,
         isFavorite: false,
         durationHours: 2
@@ -645,7 +645,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-PAR-054/800/600",
         rating: 0.8,
         description: "Vineyard Tour - Paris in Paris is a popular activity pick for travelers.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 122,
         isFavorite: false,
         durationHours: 4
@@ -657,7 +657,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-PAR-055/800/600",
         rating: 2.5,
         description: "Sunset Tour - Paris in Paris is a popular activity pick for travelers.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 41,
         isFavorite: true,
         durationHours: 7
@@ -669,7 +669,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-PAR-056/800/600",
         rating: 0.2,
         description: "Boat Ride - Paris in Paris is a popular activity pick for travelers.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 81,
         isFavorite: false,
         durationHours: 5
@@ -681,7 +681,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-PAR-057/800/600",
         rating: 3.7,
         description: "Palace Tour - Paris in Paris is a popular activity pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 233,
         isFavorite: false,
         durationHours: 2
@@ -693,7 +693,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-PAR-058/800/600",
         rating: 4.7,
         description: "Bike Tour - Paris in Paris is a popular activity pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 91,
         isFavorite: false,
         durationHours: 6
@@ -705,7 +705,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-PAR-059/800/600",
         rating: 2.8,
         description: "Scooter Tour - Paris in Paris is a popular activity pick for travelers.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 36,
         isFavorite: false,
         durationHours: 1
@@ -717,7 +717,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-PAR-060/800/600",
         rating: 1.1,
         description: "Hot Air Balloon - Paris in Paris is a popular activity pick for travelers.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 67,
         isFavorite: false,
         durationHours: 9
@@ -729,7 +729,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-PAR-061/800/600",
         rating: 4.9,
         description: "Local Festival - Paris in Paris is a popular activity pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 136,
         isFavorite: false,
         durationHours: 3
@@ -741,7 +741,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-PAR-062/800/600",
         rating: 0.1,
         description: "Local Festival - Paris in Paris is a popular activity pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 185,
         isFavorite: false,
         durationHours: 7
@@ -753,7 +753,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-PAR-063/800/600",
         rating: 1.3,
         description: "Rooftop Viewing - Paris in Paris is a popular activity pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 70,
         isFavorite: false,
         durationHours: 1
@@ -765,7 +765,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-PAR-064/800/600",
         rating: 1.1,
         description: "Botanical Tour - Paris in Paris is a popular activity pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 250,
         isFavorite: false,
         durationHours: 4
@@ -777,7 +777,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-PAR-065/800/600",
         rating: 0.1,
         description: "Theater Show - Paris in Paris is a popular activity pick for travelers.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 183,
         isFavorite: false,
         durationHours: 2
@@ -789,7 +789,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-PAR-066/800/600",
         rating: 1.8,
         description: "Boat Ride - Paris in Paris is a popular activity pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 289,
         isFavorite: false,
         durationHours: 1
@@ -801,7 +801,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-PAR-067/800/600",
         rating: 4.4,
         description: "Street Art Walk - Paris in Paris is a popular activity pick for travelers.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 150,
         isFavorite: true,
         durationHours: 10
@@ -813,7 +813,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-PAR-068/800/600",
         rating: 1.7,
         description: "Archaeology Site - Paris in Paris is a popular activity pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 238,
         isFavorite: false,
         durationHours: 9
@@ -825,7 +825,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-PAR-069/800/600",
         rating: 1.9,
         description: "Street Art Walk - Paris in Paris is a popular activity pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 145,
         isFavorite: true,
         durationHours: 7
@@ -837,7 +837,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-PAR-070/800/600",
         rating: 2.6,
         description: "City Walking Tour - Paris in Paris is a popular activity pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 115,
         isFavorite: false,
         durationHours: 2
@@ -849,7 +849,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-PAR-071/800/600",
         rating: 3.1,
         description: "Castle Tour - Paris in Paris is a popular activity pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 78,
         isFavorite: false,
         durationHours: 5
@@ -861,7 +861,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-PAR-072/800/600",
         rating: 1.5,
         description: "Craft Workshop - Paris in Paris is a popular activity pick for travelers.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 221,
         isFavorite: false,
         durationHours: 9
@@ -873,7 +873,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-PAR-073/800/600",
         rating: 1,
         description: "Wine Tasting - Paris in Paris is a popular activity pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 209,
         isFavorite: false,
         durationHours: 3
@@ -885,7 +885,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-PAR-074/800/600",
         rating: 2.8,
         description: "Hidden Alleys Tour - Paris in Paris is a popular activity pick for travelers.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 15,
         isFavorite: false,
         durationHours: 4
@@ -897,7 +897,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-PAR-075/800/600",
         rating: 3.9,
         description: "Archaeology Site - Paris in Paris is a popular activity pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 179,
         isFavorite: false,
         durationHours: 8
@@ -909,7 +909,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-PAR-076/800/600",
         rating: 2.6,
         description: "Market Stroll - Paris in Paris is a popular activity pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 101,
         isFavorite: false,
         durationHours: 5
@@ -921,7 +921,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-PAR-077/800/600",
         rating: 3.3,
         description: "Craft Workshop - Paris in Paris is a popular activity pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 62,
         isFavorite: false,
         durationHours: 4
@@ -933,7 +933,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-PAR-078/800/600",
         rating: 1.1,
         description: "Chocolate Workshop - Paris in Paris is a popular activity pick for travelers.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 27,
         isFavorite: true,
         durationHours: 8
@@ -945,7 +945,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-PAR-079/800/600",
         rating: 4.2,
         description: "Hidden Alleys Tour - Paris in Paris is a popular activity pick for travelers.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 227,
         isFavorite: false,
         durationHours: 10
@@ -957,7 +957,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-PAR-080/800/600",
         rating: 3.6,
         description: "Park Picnic - Paris in Paris is a popular activity pick for travelers.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 219,
         isFavorite: false,
         durationHours: 11
@@ -969,7 +969,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-PAR-001/800/600",
         rating: 4.5,
         description: "Grand Hotel Paris in Paris is a popular hotel pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 189,
         isFavorite: false,
         reviewCount: 1817
@@ -981,7 +981,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-PAR-002/800/600",
         rating: 4,
         description: "The Promenade Paris in Paris is a popular hotel pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 555,
         isFavorite: true,
         reviewCount: 2066
@@ -993,7 +993,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-PAR-003/800/600",
         rating: 2.3,
         description: "The Heritage Paris in Paris is a popular hotel pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 404,
         isFavorite: false,
         reviewCount: 3650
@@ -1005,7 +1005,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-PAR-004/800/600",
         rating: 4.1,
         description: "The Arcade Paris in Paris is a popular hotel pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 516,
         isFavorite: false,
         reviewCount: 4513
@@ -1017,7 +1017,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-PAR-005/800/600",
         rating: 4.5,
         description: "The Lantern Paris in Paris is a popular hotel pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 566,
         isFavorite: false,
         reviewCount: 2050
@@ -1029,7 +1029,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-PAR-006/800/600",
         rating: 3.8,
         description: "Metropolitan Hotel Paris in Paris is a popular hotel pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 324,
         isFavorite: false,
         reviewCount: 659
@@ -1041,7 +1041,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-PAR-007/800/600",
         rating: 1.2,
         description: "The Galleria Paris in Paris is a popular hotel pick for travelers.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 162,
         isFavorite: true,
         reviewCount: 1919
@@ -1053,7 +1053,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-PAR-008/800/600",
         rating: 3.5,
         description: "Sapphire Stay Paris in Paris is a popular hotel pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 145,
         isFavorite: false,
         reviewCount: 2735
@@ -1065,7 +1065,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-PAR-009/800/600",
         rating: 2.3,
         description: "The Terrace Paris in Paris is a popular hotel pick for travelers.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 510,
         isFavorite: false,
         reviewCount: 4809
@@ -1077,7 +1077,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-PAR-010/800/600",
         rating: 4.3,
         description: "Boutique Inn Paris in Paris is a popular hotel pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 469,
         isFavorite: false,
         reviewCount: 2906
@@ -1089,7 +1089,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-PAR-011/800/600",
         rating: 3.8,
         description: "Harbor View Paris in Paris is a popular hotel pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 509,
         isFavorite: false,
         reviewCount: 4498
@@ -1101,7 +1101,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-PAR-012/800/600",
         rating: 4.5,
         description: "Muse Hotel Paris in Paris is a popular hotel pick for travelers.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 359,
         isFavorite: false,
         reviewCount: 262
@@ -1113,7 +1113,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-PAR-013/800/600",
         rating: 1.7,
         description: "Sapphire Stay Paris in Paris is a popular hotel pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 494,
         isFavorite: false,
         reviewCount: 3853
@@ -1125,7 +1125,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-PAR-014/800/600",
         rating: 4.9,
         description: "Skyline Hotel Paris in Paris is a popular hotel pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 483,
         isFavorite: false,
         reviewCount: 247
@@ -1137,7 +1137,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-PAR-015/800/600",
         rating: 3.2,
         description: "Garden Palace Paris in Paris is a popular hotel pick for travelers.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 552,
         isFavorite: false,
         reviewCount: 2156
@@ -1149,7 +1149,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-PAR-016/800/600",
         rating: 1.6,
         description: "Sapphire Stay Paris in Paris is a popular hotel pick for travelers.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 425,
         isFavorite: false,
         reviewCount: 3130
@@ -1161,7 +1161,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-PAR-017/800/600",
         rating: 3.8,
         description: "Metropolitan Hotel Paris in Paris is a popular hotel pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 338,
         isFavorite: false,
         reviewCount: 3877
@@ -1173,7 +1173,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-PAR-018/800/600",
         rating: 3.7,
         description: "Boutique Inn Paris in Paris is a popular hotel pick for travelers.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 438,
         isFavorite: false,
         reviewCount: 587
@@ -1185,7 +1185,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-PAR-019/800/600",
         rating: 3.8,
         description: "Riverside Suites Paris in Paris is a popular hotel pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 284,
         isFavorite: false,
         reviewCount: 1273
@@ -1197,7 +1197,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-PAR-020/800/600",
         rating: 0.6,
         description: "Parkside Hotel Paris in Paris is a popular hotel pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 303,
         isFavorite: false,
         reviewCount: 2124
@@ -1209,7 +1209,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-PAR-021/800/600",
         rating: 0.8,
         description: "Emerald Suites Paris in Paris is a popular hotel pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 197,
         isFavorite: false,
         reviewCount: 1366
@@ -1221,7 +1221,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-PAR-022/800/600",
         rating: 0.5,
         description: "Harbor View Paris in Paris is a popular hotel pick for travelers.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 399,
         isFavorite: false,
         reviewCount: 3099
@@ -1233,7 +1233,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-PAR-023/800/600",
         rating: 4.7,
         description: "The Willow Paris in Paris is a popular hotel pick for travelers.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 328,
         isFavorite: true,
         reviewCount: 2495
@@ -1245,7 +1245,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-PAR-024/800/600",
         rating: 4,
         description: "Muse Hotel Paris in Paris is a popular hotel pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 122,
         isFavorite: false,
         reviewCount: 3534
@@ -1257,7 +1257,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-PAR-025/800/600",
         rating: 0.3,
         description: "Emerald Suites Paris in Paris is a popular hotel pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 92,
         isFavorite: false,
         reviewCount: 4040
@@ -1269,7 +1269,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-PAR-026/800/600",
         rating: 2.2,
         description: "Royal Court Hotel Paris in Paris is a popular hotel pick for travelers.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 550,
         isFavorite: false,
         reviewCount: 3592
@@ -1281,7 +1281,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-PAR-027/800/600",
         rating: 3.7,
         description: "The Promenade Paris in Paris is a popular hotel pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 356,
         isFavorite: false,
         reviewCount: 4433
@@ -1293,7 +1293,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-PAR-028/800/600",
         rating: 2.3,
         description: "The Serene Paris in Paris is a popular hotel pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 354,
         isFavorite: false,
         reviewCount: 2036
@@ -1305,7 +1305,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-PAR-029/800/600",
         rating: 1.4,
         description: "Garden Palace Paris in Paris is a popular hotel pick for travelers.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 555,
         isFavorite: false,
         reviewCount: 3129
@@ -1317,7 +1317,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-PAR-030/800/600",
         rating: 0.1,
         description: "The Regency Paris in Paris is a popular hotel pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 266,
         isFavorite: false,
         reviewCount: 2931
@@ -1329,7 +1329,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-PAR-031/800/600",
         rating: 1.7,
         description: "The Atrium Paris in Paris is a popular hotel pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 362,
         isFavorite: false,
         reviewCount: 4257
@@ -1341,7 +1341,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-PAR-032/800/600",
         rating: 0.4,
         description: "Station House Paris in Paris is a popular hotel pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 580,
         isFavorite: false,
         reviewCount: 1993
@@ -1353,7 +1353,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-PAR-033/800/600",
         rating: 3.2,
         description: "The Serene Paris in Paris is a popular hotel pick for travelers.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 97,
         isFavorite: true,
         reviewCount: 1840
@@ -1365,7 +1365,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-PAR-034/800/600",
         rating: 3.5,
         description: "The Willow Paris in Paris is a popular hotel pick for travelers.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 457,
         isFavorite: false,
         reviewCount: 4374
@@ -1377,7 +1377,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-PAR-035/800/600",
         rating: 2.1,
         description: "Amber Hotel Paris in Paris is a popular hotel pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 418,
         isFavorite: false,
         reviewCount: 3742
@@ -1389,7 +1389,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-PAR-036/800/600",
         rating: 1.5,
         description: "Metropolitan Hotel Paris in Paris is a popular hotel pick for travelers.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 277,
         isFavorite: false,
         reviewCount: 4414
@@ -1401,7 +1401,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-PAR-037/800/600",
         rating: 1,
         description: "The Promenade Paris in Paris is a popular hotel pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 363,
         isFavorite: false,
         reviewCount: 4322
@@ -1413,7 +1413,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-PAR-038/800/600",
         rating: 1.4,
         description: "Muse Hotel Paris in Paris is a popular hotel pick for travelers.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 278,
         isFavorite: false,
         reviewCount: 2981
@@ -1425,7 +1425,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-PAR-039/800/600",
         rating: 1.5,
         description: "The Promenade Paris in Paris is a popular hotel pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 209,
         isFavorite: false,
         reviewCount: 471
@@ -1437,7 +1437,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-PAR-040/800/600",
         rating: 1.5,
         description: "The Foundry Paris in Paris is a popular hotel pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 582,
         isFavorite: true,
         reviewCount: 125
@@ -1449,7 +1449,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-PAR-041/800/600",
         rating: 1.4,
         description: "Ivory Hotel Paris in Paris is a popular hotel pick for travelers.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 428,
         isFavorite: false,
         reviewCount: 445
@@ -1461,7 +1461,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-PAR-042/800/600",
         rating: 4.7,
         description: "The Atrium Paris in Paris is a popular hotel pick for travelers.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 146,
         isFavorite: false,
         reviewCount: 631
@@ -1473,7 +1473,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-PAR-043/800/600",
         rating: 3.1,
         description: "Ivory Hotel Paris in Paris is a popular hotel pick for travelers.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 232,
         isFavorite: false,
         reviewCount: 2514
@@ -1485,7 +1485,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-PAR-044/800/600",
         rating: 5,
         description: "Garden Palace Paris in Paris is a popular hotel pick for travelers.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 506,
         isFavorite: false,
         reviewCount: 1873
@@ -1497,7 +1497,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-PAR-045/800/600",
         rating: 1.9,
         description: "Art House Hotel Paris in Paris is a popular hotel pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 384,
         isFavorite: false,
         reviewCount: 3537
@@ -1509,7 +1509,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-PAR-046/800/600",
         rating: 2.8,
         description: "Harbor View Paris in Paris is a popular hotel pick for travelers.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 181,
         isFavorite: false,
         reviewCount: 1727
@@ -1521,7 +1521,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-PAR-047/800/600",
         rating: 1.3,
         description: "Old Town Lodge Paris in Paris is a popular hotel pick for travelers.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 325,
         isFavorite: true,
         reviewCount: 639
@@ -1533,7 +1533,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-PAR-048/800/600",
         rating: 0,
         description: "Urban Retreat Paris in Paris is a popular hotel pick for travelers.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 561,
         isFavorite: false,
         reviewCount: 1921
@@ -1545,7 +1545,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-PAR-049/800/600",
         rating: 3.5,
         description: "The Galleria Paris in Paris is a popular hotel pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 544,
         isFavorite: true,
         reviewCount: 1937
@@ -1557,7 +1557,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-PAR-050/800/600",
         rating: 3.9,
         description: "The Atrium Paris in Paris is a popular hotel pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 282,
         isFavorite: false,
         reviewCount: 4486
@@ -1569,7 +1569,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-PAR-051/800/600",
         rating: 3.2,
         description: "The Crescent Paris in Paris is a popular hotel pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 225,
         isFavorite: true,
         reviewCount: 1384
@@ -1581,7 +1581,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-PAR-052/800/600",
         rating: 3,
         description: "Harbor View Paris in Paris is a popular hotel pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 375,
         isFavorite: false,
         reviewCount: 3864
@@ -1593,7 +1593,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-PAR-053/800/600",
         rating: 3.5,
         description: "Harbor View Paris in Paris is a popular hotel pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 592,
         isFavorite: false,
         reviewCount: 3611
@@ -1605,7 +1605,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-PAR-054/800/600",
         rating: 3,
         description: "Garden Palace Paris in Paris is a popular hotel pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 410,
         isFavorite: false,
         reviewCount: 236
@@ -1617,7 +1617,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-PAR-055/800/600",
         rating: 1.1,
         description: "Garden Palace Paris in Paris is a popular hotel pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 101,
         isFavorite: false,
         reviewCount: 2232
@@ -1629,7 +1629,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-PAR-056/800/600",
         rating: 0.2,
         description: "Ivory Hotel Paris in Paris is a popular hotel pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 561,
         isFavorite: false,
         reviewCount: 3647
@@ -1641,7 +1641,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-PAR-057/800/600",
         rating: 0.9,
         description: "Metropolitan Hotel Paris in Paris is a popular hotel pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 583,
         isFavorite: false,
         reviewCount: 3875
@@ -1653,7 +1653,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-PAR-058/800/600",
         rating: 2,
         description: "Amber Hotel Paris in Paris is a popular hotel pick for travelers.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 187,
         isFavorite: false,
         reviewCount: 2726
@@ -1665,7 +1665,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-PAR-059/800/600",
         rating: 3.5,
         description: "Maple Court Paris in Paris is a popular hotel pick for travelers.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 490,
         isFavorite: false,
         reviewCount: 4531
@@ -1677,7 +1677,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-PAR-060/800/600",
         rating: 2.3,
         description: "Riverside Suites Paris in Paris is a popular hotel pick for travelers.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 411,
         isFavorite: true,
         reviewCount: 3336
@@ -1689,7 +1689,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-PAR-061/800/600",
         rating: 4.1,
         description: "The Contemporary Paris in Paris is a popular hotel pick for travelers.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 553,
         isFavorite: false,
         reviewCount: 1561
@@ -1701,7 +1701,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-PAR-062/800/600",
         rating: 1.8,
         description: "Art House Hotel Paris in Paris is a popular hotel pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 532,
         isFavorite: false,
         reviewCount: 1692
@@ -1713,7 +1713,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-PAR-063/800/600",
         rating: 2.7,
         description: "Metropolitan Hotel Paris in Paris is a popular hotel pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 528,
         isFavorite: false,
         reviewCount: 3995
@@ -1725,7 +1725,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-PAR-064/800/600",
         rating: 0.1,
         description: "The Heritage Paris in Paris is a popular hotel pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 325,
         isFavorite: false,
         reviewCount: 2570
@@ -1737,7 +1737,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-PAR-065/800/600",
         rating: 0.1,
         description: "The Foundry Paris in Paris is a popular hotel pick for travelers.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 310,
         isFavorite: false,
         reviewCount: 954
@@ -1749,7 +1749,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-PAR-066/800/600",
         rating: 4.7,
         description: "Velvet Rooms Paris in Paris is a popular hotel pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 237,
         isFavorite: false,
         reviewCount: 2415
@@ -1761,7 +1761,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-PAR-067/800/600",
         rating: 3.5,
         description: "The Contemporary Paris in Paris is a popular hotel pick for travelers.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 574,
         isFavorite: false,
         reviewCount: 2021
@@ -1773,7 +1773,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-PAR-068/800/600",
         rating: 2.8,
         description: "Velvet Rooms Paris in Paris is a popular hotel pick for travelers.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 600,
         isFavorite: false,
         reviewCount: 1143
@@ -1785,7 +1785,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-PAR-069/800/600",
         rating: 1.4,
         description: "Cityview Residence Paris in Paris is a popular hotel pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 504,
         isFavorite: false,
         reviewCount: 4184
@@ -1797,7 +1797,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-PAR-070/800/600",
         rating: 4.1,
         description: "Metropolitan Hotel Paris in Paris is a popular hotel pick for travelers.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 385,
         isFavorite: false,
         reviewCount: 4775
@@ -1809,7 +1809,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-PAR-071/800/600",
         rating: 4.3,
         description: "The Classic Paris in Paris is a popular hotel pick for travelers.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 575,
         isFavorite: false,
         reviewCount: 4546
@@ -1821,7 +1821,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-PAR-072/800/600",
         rating: 1.9,
         description: "The Terrace Paris in Paris is a popular hotel pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 273,
         isFavorite: false,
         reviewCount: 1981
@@ -1833,7 +1833,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-PAR-073/800/600",
         rating: 1.9,
         description: "Ivory Hotel Paris in Paris is a popular hotel pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 500,
         isFavorite: true,
         reviewCount: 3899
@@ -1845,7 +1845,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-PAR-074/800/600",
         rating: 1.9,
         description: "Sapphire Stay Paris in Paris is a popular hotel pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 235,
         isFavorite: false,
         reviewCount: 328
@@ -1857,7 +1857,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-PAR-075/800/600",
         rating: 2.5,
         description: "Skyline Hotel Paris in Paris is a popular hotel pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 182,
         isFavorite: false,
         reviewCount: 3631
@@ -1869,7 +1869,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-PAR-076/800/600",
         rating: 2.6,
         description: "Royal Court Hotel Paris in Paris is a popular hotel pick for travelers.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 227,
         isFavorite: false,
         reviewCount: 1289
@@ -1881,7 +1881,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-PAR-077/800/600",
         rating: 2.3,
         description: "Cityview Residence Paris in Paris is a popular hotel pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 426,
         isFavorite: false,
         reviewCount: 3281
@@ -1893,7 +1893,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-PAR-078/800/600",
         rating: 4.3,
         description: "Garden Palace Paris in Paris is a popular hotel pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 469,
         isFavorite: false,
         reviewCount: 4022
@@ -1905,7 +1905,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-PAR-079/800/600",
         rating: 0.2,
         description: "The Terrace Paris in Paris is a popular hotel pick for travelers.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 374,
         isFavorite: false,
         reviewCount: 765
@@ -1917,7 +1917,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-PAR-080/800/600",
         rating: 4.9,
         description: "Oak & Ivy Paris in Paris is a popular hotel pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 182,
         isFavorite: false,
         reviewCount: 2478
@@ -1929,7 +1929,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-PAR-001/800/600",
         rating: 0.2,
         description: "The Copper Spoon - Paris in Paris is a popular restaurant pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 85,
         isFavorite: false,
         reviewCount: 7081
@@ -1941,7 +1941,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-PAR-002/800/600",
         rating: 1.2,
         description: "Harvest Table - Paris in Paris is a popular restaurant pick for travelers.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 56,
         isFavorite: true,
         reviewCount: 1318
@@ -1953,7 +1953,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-PAR-003/800/600",
         rating: 4.4,
         description: "The Oyster Shed - Paris in Paris is a popular restaurant pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 71,
         isFavorite: false,
         reviewCount: 9579
@@ -1965,7 +1965,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-PAR-004/800/600",
         rating: 1.2,
         description: "Harvest Table - Paris in Paris is a popular restaurant pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 127,
         isFavorite: false,
         reviewCount: 178
@@ -1977,7 +1977,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-PAR-005/800/600",
         rating: 4.5,
         description: "Curry Corner - Paris in Paris is a popular restaurant pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 50,
         isFavorite: true,
         reviewCount: 5686
@@ -1989,7 +1989,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-PAR-006/800/600",
         rating: 1.5,
         description: "The Salad Lab - Paris in Paris is a popular restaurant pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 74,
         isFavorite: false,
         reviewCount: 4974
@@ -2001,7 +2001,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-PAR-007/800/600",
         rating: 5,
         description: "Canopy Café - Paris in Paris is a popular restaurant pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 37,
         isFavorite: false,
         reviewCount: 9395
@@ -2013,7 +2013,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-PAR-008/800/600",
         rating: 2.9,
         description: "The Dumpling House - Paris in Paris is a popular restaurant pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 85,
         isFavorite: true,
         reviewCount: 6509
@@ -2025,7 +2025,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-PAR-009/800/600",
         rating: 0,
         description: "The Courtyard - Paris in Paris is a popular restaurant pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 22,
         isFavorite: false,
         reviewCount: 8163
@@ -2037,7 +2037,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-PAR-010/800/600",
         rating: 3.9,
         description: "Brick Oven - Paris in Paris is a popular restaurant pick for travelers.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 100,
         isFavorite: false,
         reviewCount: 3140
@@ -2049,7 +2049,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-PAR-011/800/600",
         rating: 1.3,
         description: "The Oyster Shed - Paris in Paris is a popular restaurant pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 45,
         isFavorite: false,
         reviewCount: 670
@@ -2061,7 +2061,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-PAR-012/800/600",
         rating: 3.9,
         description: "Little Orchard - Paris in Paris is a popular restaurant pick for travelers.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 103,
         isFavorite: false,
         reviewCount: 1501
@@ -2073,7 +2073,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-PAR-013/800/600",
         rating: 1.6,
         description: "Brick Oven - Paris in Paris is a popular restaurant pick for travelers.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 61,
         isFavorite: true,
         reviewCount: 8862
@@ -2085,7 +2085,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-PAR-014/800/600",
         rating: 2.7,
         description: "Rustic Kitchen - Paris in Paris is a popular restaurant pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 52,
         isFavorite: false,
         reviewCount: 7919
@@ -2097,7 +2097,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-PAR-015/800/600",
         rating: 3.7,
         description: "Brick Oven - Paris in Paris is a popular restaurant pick for travelers.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 39,
         isFavorite: false,
         reviewCount: 1258
@@ -2109,7 +2109,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-PAR-016/800/600",
         rating: 3.8,
         description: "Harvest Table - Paris in Paris is a popular restaurant pick for travelers.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 111,
         isFavorite: false,
         reviewCount: 9156
@@ -2121,7 +2121,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-PAR-017/800/600",
         rating: 0.5,
         description: "Rustic Kitchen - Paris in Paris is a popular restaurant pick for travelers.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 77,
         isFavorite: false,
         reviewCount: 7476
@@ -2133,7 +2133,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-PAR-018/800/600",
         rating: 3.4,
         description: "Rustic Kitchen - Paris in Paris is a popular restaurant pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 107,
         isFavorite: false,
         reviewCount: 6111
@@ -2145,7 +2145,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-PAR-019/800/600",
         rating: 3.4,
         description: "The Spice Route - Paris in Paris is a popular restaurant pick for travelers.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 93,
         isFavorite: false,
         reviewCount: 3651
@@ -2157,7 +2157,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-PAR-020/800/600",
         rating: 3.2,
         description: "The Green Fork - Paris in Paris is a popular restaurant pick for travelers.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 87,
         isFavorite: false,
         reviewCount: 1936
@@ -2169,7 +2169,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-PAR-021/800/600",
         rating: 0.2,
         description: "Fable Diner - Paris in Paris is a popular restaurant pick for travelers.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 136,
         isFavorite: true,
         reviewCount: 3871
@@ -2181,7 +2181,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-PAR-022/800/600",
         rating: 0.7,
         description: "Bao & Bowl - Paris in Paris is a popular restaurant pick for travelers.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 148,
         isFavorite: false,
         reviewCount: 2556
@@ -2193,7 +2193,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-PAR-023/800/600",
         rating: 3.3,
         description: "Midnight Market - Paris in Paris is a popular restaurant pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 114,
         isFavorite: false,
         reviewCount: 4608
@@ -2205,7 +2205,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-PAR-024/800/600",
         rating: 3.5,
         description: "La Trattoria - Paris in Paris is a popular restaurant pick for travelers.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 123,
         isFavorite: false,
         reviewCount: 5967
@@ -2217,7 +2217,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-PAR-025/800/600",
         rating: 4.9,
         description: "The Spice Route - Paris in Paris is a popular restaurant pick for travelers.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 101,
         isFavorite: true,
         reviewCount: 4545
@@ -2229,7 +2229,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-PAR-026/800/600",
         rating: 4.8,
         description: "Canopy Café - Paris in Paris is a popular restaurant pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 126,
         isFavorite: true,
         reviewCount: 3500
@@ -2241,7 +2241,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-PAR-027/800/600",
         rating: 4.9,
         description: "Taco Alley - Paris in Paris is a popular restaurant pick for travelers.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 95,
         isFavorite: false,
         reviewCount: 2088
@@ -2253,7 +2253,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-PAR-028/800/600",
         rating: 1,
         description: "Naan & Noodles - Paris in Paris is a popular restaurant pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 63,
         isFavorite: false,
         reviewCount: 3842
@@ -2265,7 +2265,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-PAR-029/800/600",
         rating: 3.9,
         description: "Pasta & Co. - Paris in Paris is a popular restaurant pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 10,
         isFavorite: false,
         reviewCount: 2395
@@ -2277,7 +2277,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-PAR-030/800/600",
         rating: 2.7,
         description: "Fable Diner - Paris in Paris is a popular restaurant pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 38,
         isFavorite: false,
         reviewCount: 447
@@ -2289,7 +2289,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-PAR-031/800/600",
         rating: 0.1,
         description: "Fable Diner - Paris in Paris is a popular restaurant pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 70,
         isFavorite: false,
         reviewCount: 283
@@ -2301,7 +2301,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-PAR-032/800/600",
         rating: 1.3,
         description: "Smoke & Ember - Paris in Paris is a popular restaurant pick for travelers.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 117,
         isFavorite: false,
         reviewCount: 1066
@@ -2313,7 +2313,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-PAR-033/800/600",
         rating: 2.2,
         description: "The Brunch Club - Paris in Paris is a popular restaurant pick for travelers.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 37,
         isFavorite: false,
         reviewCount: 3654
@@ -2325,7 +2325,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-PAR-034/800/600",
         rating: 0.2,
         description: "The Oyster Shed - Paris in Paris is a popular restaurant pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 143,
         isFavorite: false,
         reviewCount: 535
@@ -2337,7 +2337,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-PAR-035/800/600",
         rating: 5,
         description: "Saffron & Sage - Paris in Paris is a popular restaurant pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 119,
         isFavorite: false,
         reviewCount: 8057
@@ -2349,7 +2349,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-PAR-036/800/600",
         rating: 0.4,
         description: "Miso & More - Paris in Paris is a popular restaurant pick for travelers.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 47,
         isFavorite: true,
         reviewCount: 4530
@@ -2361,7 +2361,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-PAR-037/800/600",
         rating: 3.2,
         description: "The Oyster Shed - Paris in Paris is a popular restaurant pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 93,
         isFavorite: false,
         reviewCount: 9812
@@ -2373,7 +2373,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-PAR-038/800/600",
         rating: 1.5,
         description: "Tortilla Street - Paris in Paris is a popular restaurant pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 120,
         isFavorite: true,
         reviewCount: 1899
@@ -2385,7 +2385,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-PAR-039/800/600",
         rating: 3.6,
         description: "Firefly Eatery - Paris in Paris is a popular restaurant pick for travelers.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 125,
         isFavorite: false,
         reviewCount: 6804
@@ -2397,7 +2397,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-PAR-040/800/600",
         rating: 4.1,
         description: "Pasta & Co. - Paris in Paris is a popular restaurant pick for travelers.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 34,
         isFavorite: false,
         reviewCount: 5145
@@ -2409,7 +2409,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-PAR-041/800/600",
         rating: 1.9,
         description: "Olive & Thyme - Paris in Paris is a popular restaurant pick for travelers.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 131,
         isFavorite: true,
         reviewCount: 1423
@@ -2421,7 +2421,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-PAR-042/800/600",
         rating: 2.2,
         description: "Tapas & Co. - Paris in Paris is a popular restaurant pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 105,
         isFavorite: false,
         reviewCount: 9140
@@ -2433,7 +2433,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-PAR-043/800/600",
         rating: 2.9,
         description: "Saffron & Sage - Paris in Paris is a popular restaurant pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 94,
         isFavorite: false,
         reviewCount: 6755
@@ -2445,7 +2445,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-PAR-044/800/600",
         rating: 4.4,
         description: "The Dumpling House - Paris in Paris is a popular restaurant pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 118,
         isFavorite: false,
         reviewCount: 867
@@ -2457,7 +2457,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-PAR-045/800/600",
         rating: 3,
         description: "Brick Oven - Paris in Paris is a popular restaurant pick for travelers.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 139,
         isFavorite: false,
         reviewCount: 7925
@@ -2469,7 +2469,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-PAR-046/800/600",
         rating: 4.2,
         description: "Cedar Grill - Paris in Paris is a popular restaurant pick for travelers.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 104,
         isFavorite: true,
         reviewCount: 4589
@@ -2481,7 +2481,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-PAR-047/800/600",
         rating: 1.1,
         description: "Naan & Noodles - Paris in Paris is a popular restaurant pick for travelers.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 16,
         isFavorite: false,
         reviewCount: 4406
@@ -2493,7 +2493,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-PAR-048/800/600",
         rating: 0.9,
         description: "The Copper Spoon - Paris in Paris is a popular restaurant pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 89,
         isFavorite: false,
         reviewCount: 5776
@@ -2505,7 +2505,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-PAR-049/800/600",
         rating: 0.9,
         description: "Bistro Lumière - Paris in Paris is a popular restaurant pick for travelers.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 112,
         isFavorite: true,
         reviewCount: 527
@@ -2517,7 +2517,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-PAR-050/800/600",
         rating: 3.7,
         description: "Tapas & Co. - Paris in Paris is a popular restaurant pick for travelers.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 117,
         isFavorite: false,
         reviewCount: 2603
@@ -2529,7 +2529,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-PAR-051/800/600",
         rating: 1.6,
         description: "Rustic Kitchen - Paris in Paris is a popular restaurant pick for travelers.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 31,
         isFavorite: false,
         reviewCount: 2574
@@ -2541,7 +2541,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-PAR-052/800/600",
         rating: 3.8,
         description: "The Noodle Bar - Paris in Paris is a popular restaurant pick for travelers.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 30,
         isFavorite: false,
         reviewCount: 6972
@@ -2553,7 +2553,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-PAR-053/800/600",
         rating: 3,
         description: "Pho & Go - Paris in Paris is a popular restaurant pick for travelers.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 65,
         isFavorite: false,
         reviewCount: 1889
@@ -2565,7 +2565,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-PAR-054/800/600",
         rating: 2.1,
         description: "The Dumpling House - Paris in Paris is a popular restaurant pick for travelers.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 134,
         isFavorite: false,
         reviewCount: 5078
@@ -2577,7 +2577,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-PAR-055/800/600",
         rating: 1.1,
         description: "La Trattoria - Paris in Paris is a popular restaurant pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 24,
         isFavorite: true,
         reviewCount: 4963
@@ -2589,7 +2589,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-PAR-056/800/600",
         rating: 3.8,
         description: "Golden Wok - Paris in Paris is a popular restaurant pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 84,
         isFavorite: false,
         reviewCount: 151
@@ -2601,7 +2601,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-PAR-057/800/600",
         rating: 3.7,
         description: "Pho & Go - Paris in Paris is a popular restaurant pick for travelers.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 107,
         isFavorite: false,
         reviewCount: 3795
@@ -2613,7 +2613,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-PAR-058/800/600",
         rating: 2.8,
         description: "The Kebab Room - Paris in Paris is a popular restaurant pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 100,
         isFavorite: true,
         reviewCount: 718
@@ -2625,7 +2625,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-PAR-059/800/600",
         rating: 0.1,
         description: "Urban Canteen - Paris in Paris is a popular restaurant pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 90,
         isFavorite: false,
         reviewCount: 9419
@@ -2637,7 +2637,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-PAR-060/800/600",
         rating: 3.5,
         description: "Pepper & Vine - Paris in Paris is a popular restaurant pick for travelers.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 39,
         isFavorite: false,
         reviewCount: 5346
@@ -2649,7 +2649,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-PAR-061/800/600",
         rating: 4,
         description: "The Noodle Bar - Paris in Paris is a popular restaurant pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 102,
         isFavorite: true,
         reviewCount: 1759
@@ -2661,7 +2661,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-PAR-062/800/600",
         rating: 2.2,
         description: "The Pantry - Paris in Paris is a popular restaurant pick for travelers.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 30,
         isFavorite: false,
         reviewCount: 5108
@@ -2673,7 +2673,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-PAR-063/800/600",
         rating: 1.1,
         description: "Pasta & Co. - Paris in Paris is a popular restaurant pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 29,
         isFavorite: false,
         reviewCount: 1893
@@ -2685,7 +2685,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-PAR-064/800/600",
         rating: 2.5,
         description: "Tortilla Street - Paris in Paris is a popular restaurant pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 99,
         isFavorite: false,
         reviewCount: 2444
@@ -2697,7 +2697,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-PAR-065/800/600",
         rating: 0.5,
         description: "The Pantry - Paris in Paris is a popular restaurant pick for travelers.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 54,
         isFavorite: false,
         reviewCount: 1259
@@ -2709,7 +2709,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-PAR-066/800/600",
         rating: 4.8,
         description: "Smoke & Ember - Paris in Paris is a popular restaurant pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 128,
         isFavorite: false,
         reviewCount: 9519
@@ -2721,7 +2721,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-PAR-067/800/600",
         rating: 3.4,
         description: "Miso & More - Paris in Paris is a popular restaurant pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 92,
         isFavorite: false,
         reviewCount: 5204
@@ -2733,7 +2733,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-PAR-068/800/600",
         rating: 2.2,
         description: "Harvest Table - Paris in Paris is a popular restaurant pick for travelers.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 87,
         isFavorite: false,
         reviewCount: 9714
@@ -2745,7 +2745,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-PAR-069/800/600",
         rating: 1.8,
         description: "Saffron & Sage - Paris in Paris is a popular restaurant pick for travelers.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 128,
         isFavorite: false,
         reviewCount: 957
@@ -2757,7 +2757,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-PAR-070/800/600",
         rating: 4.2,
         description: "Rustic Kitchen - Paris in Paris is a popular restaurant pick for travelers.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 33,
         isFavorite: false,
         reviewCount: 8332
@@ -2769,7 +2769,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-PAR-071/800/600",
         rating: 2.3,
         description: "Sea Salt - Paris in Paris is a popular restaurant pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 20,
         isFavorite: false,
         reviewCount: 9391
@@ -2781,7 +2781,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-PAR-072/800/600",
         rating: 1.6,
         description: "Canopy Café - Paris in Paris is a popular restaurant pick for travelers.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 48,
         isFavorite: false,
         reviewCount: 7406
@@ -2793,7 +2793,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-PAR-073/800/600",
         rating: 4.1,
         description: "The Spice Route - Paris in Paris is a popular restaurant pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 31,
         isFavorite: false,
         reviewCount: 2852
@@ -2805,7 +2805,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-PAR-074/800/600",
         rating: 1.2,
         description: "La Trattoria - Paris in Paris is a popular restaurant pick for travelers.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 122,
         isFavorite: false,
         reviewCount: 2625
@@ -2817,7 +2817,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-PAR-075/800/600",
         rating: 1.9,
         description: "Rustic Kitchen - Paris in Paris is a popular restaurant pick for travelers.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 114,
         isFavorite: false,
         reviewCount: 9820
@@ -2829,7 +2829,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-PAR-076/800/600",
         rating: 3.9,
         description: "Saffron & Sage - Paris in Paris is a popular restaurant pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 26,
         isFavorite: false,
         reviewCount: 9166
@@ -2841,7 +2841,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-PAR-077/800/600",
         rating: 1.4,
         description: "Sea Salt - Paris in Paris is a popular restaurant pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 48,
         isFavorite: false,
         reviewCount: 9572
@@ -2853,7 +2853,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-PAR-078/800/600",
         rating: 4.6,
         description: "Harvest Table - Paris in Paris is a popular restaurant pick for travelers.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 110,
         isFavorite: true,
         reviewCount: 1413
@@ -2865,7 +2865,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-PAR-079/800/600",
         rating: 2.8,
         description: "Little Orchard - Paris in Paris is a popular restaurant pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 94,
         isFavorite: false,
         reviewCount: 8649
@@ -2877,7 +2877,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-PAR-080/800/600",
         rating: 3.2,
         description: "Tapas & Co. - Paris in Paris is a popular restaurant pick for travelers.",
-        location: "Paris",
+        location: Location.PARIS,
         priceUsd: 102,
         isFavorite: true,
         reviewCount: 5085
@@ -2889,7 +2889,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-LON-001/800/600",
         rating: 4.8,
         description: "Cathedral Visit - London in London is a popular activity pick for travelers.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 263,
         isFavorite: false,
         durationHours: 3
@@ -2901,7 +2901,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-LON-002/800/600",
         rating: 0.4,
         description: "Photography Walk - London in London is a popular activity pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 66,
         isFavorite: false,
         durationHours: 9
@@ -2913,7 +2913,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-LON-003/800/600",
         rating: 0.2,
         description: "Cheese Tasting - London in London is a popular activity pick for travelers.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 82,
         isFavorite: false,
         durationHours: 3
@@ -2925,7 +2925,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-LON-004/800/600",
         rating: 0.9,
         description: "Palace Tour - London in London is a popular activity pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 99,
         isFavorite: false,
         durationHours: 1
@@ -2937,7 +2937,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-LON-005/800/600",
         rating: 1.8,
         description: "Local Festival - London in London is a popular activity pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 242,
         isFavorite: false,
         durationHours: 12
@@ -2949,7 +2949,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-LON-006/800/600",
         rating: 1.2,
         description: "Street Food Crawl - London in London is a popular activity pick for travelers.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 255,
         isFavorite: false,
         durationHours: 4
@@ -2961,7 +2961,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-LON-007/800/600",
         rating: 3.4,
         description: "Kayak Session - London in London is a popular activity pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 240,
         isFavorite: false,
         durationHours: 5
@@ -2973,7 +2973,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-LON-008/800/600",
         rating: 2.5,
         description: "Nightlife Crawl - London in London is a popular activity pick for travelers.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 97,
         isFavorite: false,
         durationHours: 10
@@ -2985,7 +2985,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-LON-009/800/600",
         rating: 4.4,
         description: "Wine Tasting - London in London is a popular activity pick for travelers.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 261,
         isFavorite: false,
         durationHours: 9
@@ -2997,7 +2997,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-LON-010/800/600",
         rating: 3.6,
         description: "Cooking Class - London in London is a popular activity pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 78,
         isFavorite: false,
         durationHours: 3
@@ -3009,7 +3009,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-LON-011/800/600",
         rating: 2.2,
         description: "Boat Ride - London in London is a popular activity pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 238,
         isFavorite: true,
         durationHours: 4
@@ -3021,7 +3021,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-LON-012/800/600",
         rating: 4.4,
         description: "Street Food Crawl - London in London is a popular activity pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 227,
         isFavorite: true,
         durationHours: 9
@@ -3033,7 +3033,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-LON-013/800/600",
         rating: 1.2,
         description: "Kayak Session - London in London is a popular activity pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 206,
         isFavorite: false,
         durationHours: 6
@@ -3045,7 +3045,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-LON-014/800/600",
         rating: 4.2,
         description: "Cooking Class - London in London is a popular activity pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 89,
         isFavorite: true,
         durationHours: 5
@@ -3057,7 +3057,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-LON-015/800/600",
         rating: 3.5,
         description: "Botanical Tour - London in London is a popular activity pick for travelers.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 255,
         isFavorite: false,
         durationHours: 1
@@ -3069,7 +3069,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-LON-016/800/600",
         rating: 0.1,
         description: "Food Tasting - London in London is a popular activity pick for travelers.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 91,
         isFavorite: false,
         durationHours: 12
@@ -3081,7 +3081,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-LON-017/800/600",
         rating: 2.6,
         description: "Architecture Walk - London in London is a popular activity pick for travelers.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 162,
         isFavorite: false,
         durationHours: 2
@@ -3093,7 +3093,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-LON-018/800/600",
         rating: 1.2,
         description: "Historic Landmark Tour - London in London is a popular activity pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 249,
         isFavorite: true,
         durationHours: 8
@@ -3105,7 +3105,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-LON-019/800/600",
         rating: 2.7,
         description: "Architecture Walk - London in London is a popular activity pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 138,
         isFavorite: false,
         durationHours: 5
@@ -3117,7 +3117,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-LON-020/800/600",
         rating: 0,
         description: "Archaeology Site - London in London is a popular activity pick for travelers.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 228,
         isFavorite: false,
         durationHours: 11
@@ -3129,7 +3129,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-LON-021/800/600",
         rating: 2.6,
         description: "Food Tasting - London in London is a popular activity pick for travelers.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 284,
         isFavorite: false,
         durationHours: 9
@@ -3141,7 +3141,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-LON-022/800/600",
         rating: 0.1,
         description: "Vineyard Tour - London in London is a popular activity pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 37,
         isFavorite: false,
         durationHours: 6
@@ -3153,7 +3153,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-LON-023/800/600",
         rating: 3.7,
         description: "Sunset Tour - London in London is a popular activity pick for travelers.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 49,
         isFavorite: false,
         durationHours: 12
@@ -3165,7 +3165,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-LON-024/800/600",
         rating: 3.9,
         description: "Cooking Class - London in London is a popular activity pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 185,
         isFavorite: true,
         durationHours: 6
@@ -3177,7 +3177,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-LON-025/800/600",
         rating: 1.7,
         description: "Brewery Tour - London in London is a popular activity pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 252,
         isFavorite: false,
         durationHours: 8
@@ -3189,7 +3189,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-LON-026/800/600",
         rating: 4.1,
         description: "Cathedral Visit - London in London is a popular activity pick for travelers.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 249,
         isFavorite: true,
         durationHours: 4
@@ -3201,7 +3201,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-LON-027/800/600",
         rating: 4,
         description: "Museum Visit - London in London is a popular activity pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 176,
         isFavorite: false,
         durationHours: 9
@@ -3213,7 +3213,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-LON-028/800/600",
         rating: 4.9,
         description: "Jazz Night - London in London is a popular activity pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 144,
         isFavorite: true,
         durationHours: 11
@@ -3225,7 +3225,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-LON-029/800/600",
         rating: 1.4,
         description: "Park Picnic - London in London is a popular activity pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 39,
         isFavorite: false,
         durationHours: 6
@@ -3237,7 +3237,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-LON-030/800/600",
         rating: 0.6,
         description: "Boat Ride - London in London is a popular activity pick for travelers.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 219,
         isFavorite: false,
         durationHours: 7
@@ -3249,7 +3249,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-LON-031/800/600",
         rating: 4.9,
         description: "Castle Tour - London in London is a popular activity pick for travelers.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 269,
         isFavorite: false,
         durationHours: 9
@@ -3261,7 +3261,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-LON-032/800/600",
         rating: 4,
         description: "Boat Ride - London in London is a popular activity pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 55,
         isFavorite: false,
         durationHours: 3
@@ -3273,7 +3273,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-LON-033/800/600",
         rating: 1.5,
         description: "Brewery Tour - London in London is a popular activity pick for travelers.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 182,
         isFavorite: false,
         durationHours: 5
@@ -3285,7 +3285,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-LON-034/800/600",
         rating: 3,
         description: "Street Food Crawl - London in London is a popular activity pick for travelers.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 242,
         isFavorite: false,
         durationHours: 1
@@ -3297,7 +3297,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-LON-035/800/600",
         rating: 3.1,
         description: "Hot Air Balloon - London in London is a popular activity pick for travelers.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 44,
         isFavorite: true,
         durationHours: 11
@@ -3309,7 +3309,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-LON-036/800/600",
         rating: 1.8,
         description: "Jazz Night - London in London is a popular activity pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 96,
         isFavorite: false,
         durationHours: 3
@@ -3321,7 +3321,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-LON-037/800/600",
         rating: 3.4,
         description: "Architecture Walk - London in London is a popular activity pick for travelers.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 79,
         isFavorite: true,
         durationHours: 11
@@ -3333,7 +3333,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-LON-038/800/600",
         rating: 1.8,
         description: "Kayak Session - London in London is a popular activity pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 31,
         isFavorite: false,
         durationHours: 11
@@ -3345,7 +3345,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-LON-039/800/600",
         rating: 4.7,
         description: "Street Food Crawl - London in London is a popular activity pick for travelers.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 54,
         isFavorite: false,
         durationHours: 9
@@ -3357,7 +3357,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-LON-040/800/600",
         rating: 2,
         description: "Kayak Session - London in London is a popular activity pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 142,
         isFavorite: false,
         durationHours: 1
@@ -3369,7 +3369,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-LON-041/800/600",
         rating: 2.5,
         description: "Cathedral Visit - London in London is a popular activity pick for travelers.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 75,
         isFavorite: false,
         durationHours: 5
@@ -3381,7 +3381,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-LON-042/800/600",
         rating: 1.1,
         description: "Street Food Crawl - London in London is a popular activity pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 266,
         isFavorite: false,
         durationHours: 3
@@ -3393,7 +3393,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-LON-043/800/600",
         rating: 2.3,
         description: "Bike Tour - London in London is a popular activity pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 242,
         isFavorite: false,
         durationHours: 11
@@ -3405,7 +3405,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-LON-044/800/600",
         rating: 3.3,
         description: "Day Trip - London in London is a popular activity pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 296,
         isFavorite: false,
         durationHours: 5
@@ -3417,7 +3417,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-LON-045/800/600",
         rating: 3.6,
         description: "Palace Tour - London in London is a popular activity pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 104,
         isFavorite: false,
         durationHours: 9
@@ -3429,7 +3429,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-LON-046/800/600",
         rating: 0.6,
         description: "Theater Show - London in London is a popular activity pick for travelers.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 86,
         isFavorite: false,
         durationHours: 8
@@ -3441,7 +3441,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-LON-047/800/600",
         rating: 1.8,
         description: "River Cruise - London in London is a popular activity pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 254,
         isFavorite: false,
         durationHours: 9
@@ -3453,7 +3453,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-LON-048/800/600",
         rating: 3.1,
         description: "Wine Tasting - London in London is a popular activity pick for travelers.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 173,
         isFavorite: false,
         durationHours: 12
@@ -3465,7 +3465,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-LON-049/800/600",
         rating: 2.6,
         description: "Botanical Tour - London in London is a popular activity pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 52,
         isFavorite: true,
         durationHours: 6
@@ -3477,7 +3477,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-LON-050/800/600",
         rating: 2.2,
         description: "Bike Tour - London in London is a popular activity pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 191,
         isFavorite: true,
         durationHours: 9
@@ -3489,7 +3489,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-LON-051/800/600",
         rating: 0.9,
         description: "Scooter Tour - London in London is a popular activity pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 236,
         isFavorite: false,
         durationHours: 1
@@ -3501,7 +3501,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-LON-052/800/600",
         rating: 2.6,
         description: "Street Art Walk - London in London is a popular activity pick for travelers.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 97,
         isFavorite: false,
         durationHours: 12
@@ -3513,7 +3513,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-LON-053/800/600",
         rating: 1.7,
         description: "Theater Show - London in London is a popular activity pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 160,
         isFavorite: false,
         durationHours: 5
@@ -3525,7 +3525,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-LON-054/800/600",
         rating: 3.2,
         description: "Park Picnic - London in London is a popular activity pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 79,
         isFavorite: false,
         durationHours: 10
@@ -3537,7 +3537,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-LON-055/800/600",
         rating: 0.5,
         description: "Brewery Tour - London in London is a popular activity pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 93,
         isFavorite: true,
         durationHours: 10
@@ -3549,7 +3549,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-LON-056/800/600",
         rating: 1.7,
         description: "Architecture Walk - London in London is a popular activity pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 36,
         isFavorite: false,
         durationHours: 1
@@ -3561,7 +3561,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-LON-057/800/600",
         rating: 0.2,
         description: "Food Tasting - London in London is a popular activity pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 150,
         isFavorite: false,
         durationHours: 10
@@ -3573,7 +3573,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-LON-058/800/600",
         rating: 3.1,
         description: "Local Festival - London in London is a popular activity pick for travelers.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 294,
         isFavorite: false,
         durationHours: 5
@@ -3585,7 +3585,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-LON-059/800/600",
         rating: 1.2,
         description: "Botanical Tour - London in London is a popular activity pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 222,
         isFavorite: false,
         durationHours: 2
@@ -3597,7 +3597,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-LON-060/800/600",
         rating: 0.8,
         description: "Historic Landmark Tour - London in London is a popular activity pick for travelers.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 252,
         isFavorite: false,
         durationHours: 10
@@ -3609,7 +3609,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-LON-061/800/600",
         rating: 1.6,
         description: "Photography Walk - London in London is a popular activity pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 191,
         isFavorite: false,
         durationHours: 3
@@ -3621,7 +3621,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-LON-062/800/600",
         rating: 2.6,
         description: "Kayak Session - London in London is a popular activity pick for travelers.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 138,
         isFavorite: false,
         durationHours: 5
@@ -3633,7 +3633,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-LON-063/800/600",
         rating: 1.2,
         description: "Street Food Crawl - London in London is a popular activity pick for travelers.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 163,
         isFavorite: false,
         durationHours: 10
@@ -3645,7 +3645,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-LON-064/800/600",
         rating: 1.2,
         description: "Local Festival - London in London is a popular activity pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 96,
         isFavorite: false,
         durationHours: 10
@@ -3657,7 +3657,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-LON-065/800/600",
         rating: 0.9,
         description: "Day Trip - London in London is a popular activity pick for travelers.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 278,
         isFavorite: false,
         durationHours: 5
@@ -3669,7 +3669,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-LON-066/800/600",
         rating: 0.1,
         description: "Culinary Tour - London in London is a popular activity pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 273,
         isFavorite: false,
         durationHours: 4
@@ -3681,7 +3681,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-LON-067/800/600",
         rating: 2.9,
         description: "Market Stroll - London in London is a popular activity pick for travelers.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 159,
         isFavorite: false,
         durationHours: 11
@@ -3693,7 +3693,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-LON-068/800/600",
         rating: 1.4,
         description: "Botanical Tour - London in London is a popular activity pick for travelers.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 70,
         isFavorite: false,
         durationHours: 5
@@ -3705,7 +3705,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-LON-069/800/600",
         rating: 3.8,
         description: "Kayak Session - London in London is a popular activity pick for travelers.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 220,
         isFavorite: true,
         durationHours: 9
@@ -3717,7 +3717,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-LON-070/800/600",
         rating: 1.8,
         description: "Park Picnic - London in London is a popular activity pick for travelers.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 212,
         isFavorite: false,
         durationHours: 9
@@ -3729,7 +3729,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-LON-071/800/600",
         rating: 4.1,
         description: "Boat Ride - London in London is a popular activity pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 75,
         isFavorite: true,
         durationHours: 2
@@ -3741,7 +3741,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-LON-072/800/600",
         rating: 1.9,
         description: "Jazz Night - London in London is a popular activity pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 300,
         isFavorite: false,
         durationHours: 3
@@ -3753,7 +3753,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-LON-073/800/600",
         rating: 3,
         description: "Park Picnic - London in London is a popular activity pick for travelers.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 35,
         isFavorite: true,
         durationHours: 3
@@ -3765,7 +3765,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-LON-074/800/600",
         rating: 4,
         description: "Castle Tour - London in London is a popular activity pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 91,
         isFavorite: false,
         durationHours: 9
@@ -3777,7 +3777,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-LON-075/800/600",
         rating: 1.6,
         description: "Wine Tasting - London in London is a popular activity pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 98,
         isFavorite: false,
         durationHours: 10
@@ -3789,7 +3789,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-LON-076/800/600",
         rating: 3,
         description: "Chocolate Workshop - London in London is a popular activity pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 275,
         isFavorite: false,
         durationHours: 12
@@ -3801,7 +3801,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-LON-077/800/600",
         rating: 1.5,
         description: "Segway Tour - London in London is a popular activity pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 203,
         isFavorite: false,
         durationHours: 2
@@ -3813,7 +3813,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-LON-078/800/600",
         rating: 2.9,
         description: "Local Festival - London in London is a popular activity pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 28,
         isFavorite: false,
         durationHours: 5
@@ -3825,7 +3825,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-LON-079/800/600",
         rating: 2.9,
         description: "Scooter Tour - London in London is a popular activity pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 260,
         isFavorite: true,
         durationHours: 11
@@ -3837,7 +3837,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-LON-080/800/600",
         rating: 3.9,
         description: "Hidden Alleys Tour - London in London is a popular activity pick for travelers.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 139,
         isFavorite: true,
         durationHours: 12
@@ -3849,7 +3849,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-LON-001/800/600",
         rating: 1,
         description: "The Heritage London in London is a popular hotel pick for travelers.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 508,
         isFavorite: true,
         reviewCount: 1695
@@ -3861,7 +3861,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-LON-002/800/600",
         rating: 2.5,
         description: "Maple Court London in London is a popular hotel pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 562,
         isFavorite: false,
         reviewCount: 535
@@ -3873,7 +3873,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-LON-003/800/600",
         rating: 2.6,
         description: "Skyline Hotel London in London is a popular hotel pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 569,
         isFavorite: false,
         reviewCount: 2595
@@ -3885,7 +3885,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-LON-004/800/600",
         rating: 2.3,
         description: "The Promenade London in London is a popular hotel pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 442,
         isFavorite: false,
         reviewCount: 2190
@@ -3897,7 +3897,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-LON-005/800/600",
         rating: 2.4,
         description: "The Arcade London in London is a popular hotel pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 365,
         isFavorite: false,
         reviewCount: 1867
@@ -3909,7 +3909,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-LON-006/800/600",
         rating: 3.9,
         description: "Harbor View London in London is a popular hotel pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 580,
         isFavorite: false,
         reviewCount: 2882
@@ -3921,7 +3921,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-LON-007/800/600",
         rating: 4.7,
         description: "The Foundry London in London is a popular hotel pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 360,
         isFavorite: false,
         reviewCount: 4722
@@ -3933,7 +3933,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-LON-008/800/600",
         rating: 1.9,
         description: "The Terrace London in London is a popular hotel pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 433,
         isFavorite: false,
         reviewCount: 1224
@@ -3945,7 +3945,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-LON-009/800/600",
         rating: 0.2,
         description: "The Galleria London in London is a popular hotel pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 160,
         isFavorite: false,
         reviewCount: 3648
@@ -3957,7 +3957,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-LON-010/800/600",
         rating: 3.7,
         description: "The Atrium London in London is a popular hotel pick for travelers.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 357,
         isFavorite: false,
         reviewCount: 2250
@@ -3969,7 +3969,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-LON-011/800/600",
         rating: 0.5,
         description: "Skyline Hotel London in London is a popular hotel pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 325,
         isFavorite: false,
         reviewCount: 4375
@@ -3981,7 +3981,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-LON-012/800/600",
         rating: 3.2,
         description: "The Crescent London in London is a popular hotel pick for travelers.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 503,
         isFavorite: false,
         reviewCount: 3894
@@ -3993,7 +3993,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-LON-013/800/600",
         rating: 3.4,
         description: "Royal Court Hotel London in London is a popular hotel pick for travelers.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 241,
         isFavorite: false,
         reviewCount: 3921
@@ -4005,7 +4005,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-LON-014/800/600",
         rating: 3.3,
         description: "The Serene London in London is a popular hotel pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 374,
         isFavorite: false,
         reviewCount: 509
@@ -4017,7 +4017,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-LON-015/800/600",
         rating: 3.3,
         description: "Garden Palace London in London is a popular hotel pick for travelers.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 118,
         isFavorite: false,
         reviewCount: 1459
@@ -4029,7 +4029,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-LON-016/800/600",
         rating: 4.4,
         description: "Maple Court London in London is a popular hotel pick for travelers.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 117,
         isFavorite: false,
         reviewCount: 3277
@@ -4041,7 +4041,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-LON-017/800/600",
         rating: 0.9,
         description: "The Classic London in London is a popular hotel pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 376,
         isFavorite: false,
         reviewCount: 100
@@ -4053,7 +4053,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-LON-018/800/600",
         rating: 2.8,
         description: "Harbor View London in London is a popular hotel pick for travelers.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 423,
         isFavorite: false,
         reviewCount: 4475
@@ -4065,7 +4065,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-LON-019/800/600",
         rating: 2.5,
         description: "Art House Hotel London in London is a popular hotel pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 596,
         isFavorite: false,
         reviewCount: 1604
@@ -4077,7 +4077,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-LON-020/800/600",
         rating: 1.7,
         description: "The Heritage London in London is a popular hotel pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 343,
         isFavorite: false,
         reviewCount: 140
@@ -4089,7 +4089,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-LON-021/800/600",
         rating: 4,
         description: "The Regency London in London is a popular hotel pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 277,
         isFavorite: true,
         reviewCount: 3346
@@ -4101,7 +4101,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-LON-022/800/600",
         rating: 2.6,
         description: "Oak & Ivy London in London is a popular hotel pick for travelers.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 177,
         isFavorite: false,
         reviewCount: 1176
@@ -4113,7 +4113,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-LON-023/800/600",
         rating: 1.6,
         description: "The Serene London in London is a popular hotel pick for travelers.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 347,
         isFavorite: false,
         reviewCount: 3684
@@ -4125,7 +4125,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-LON-024/800/600",
         rating: 4.8,
         description: "Metropolitan Hotel London in London is a popular hotel pick for travelers.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 91,
         isFavorite: false,
         reviewCount: 2970
@@ -4137,7 +4137,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-LON-025/800/600",
         rating: 0.3,
         description: "Parkside Hotel London in London is a popular hotel pick for travelers.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 394,
         isFavorite: true,
         reviewCount: 4141
@@ -4149,7 +4149,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-LON-026/800/600",
         rating: 3.5,
         description: "Harbor View London in London is a popular hotel pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 382,
         isFavorite: false,
         reviewCount: 1834
@@ -4161,7 +4161,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-LON-027/800/600",
         rating: 4.8,
         description: "The Crescent London in London is a popular hotel pick for travelers.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 545,
         isFavorite: false,
         reviewCount: 4987
@@ -4173,7 +4173,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-LON-028/800/600",
         rating: 2.1,
         description: "Emerald Suites London in London is a popular hotel pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 562,
         isFavorite: false,
         reviewCount: 1814
@@ -4185,7 +4185,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-LON-029/800/600",
         rating: 3.4,
         description: "Parkside Hotel London in London is a popular hotel pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 163,
         isFavorite: false,
         reviewCount: 4351
@@ -4197,7 +4197,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-LON-030/800/600",
         rating: 0.4,
         description: "Emerald Suites London in London is a popular hotel pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 143,
         isFavorite: false,
         reviewCount: 4165
@@ -4209,7 +4209,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-LON-031/800/600",
         rating: 2.9,
         description: "Station House London in London is a popular hotel pick for travelers.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 415,
         isFavorite: false,
         reviewCount: 3644
@@ -4221,7 +4221,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-LON-032/800/600",
         rating: 3.4,
         description: "The Heritage London in London is a popular hotel pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 580,
         isFavorite: true,
         reviewCount: 4205
@@ -4233,7 +4233,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-LON-033/800/600",
         rating: 4,
         description: "The Lantern London in London is a popular hotel pick for travelers.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 505,
         isFavorite: false,
         reviewCount: 497
@@ -4245,7 +4245,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-LON-034/800/600",
         rating: 2.3,
         description: "The Foundry London in London is a popular hotel pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 102,
         isFavorite: false,
         reviewCount: 49
@@ -4257,7 +4257,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-LON-035/800/600",
         rating: 2.9,
         description: "Old Town Lodge London in London is a popular hotel pick for travelers.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 432,
         isFavorite: false,
         reviewCount: 4458
@@ -4269,7 +4269,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-LON-036/800/600",
         rating: 4.7,
         description: "Central Plaza Hotel London in London is a popular hotel pick for travelers.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 563,
         isFavorite: true,
         reviewCount: 3374
@@ -4281,7 +4281,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-LON-037/800/600",
         rating: 3.8,
         description: "The Promenade London in London is a popular hotel pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 510,
         isFavorite: false,
         reviewCount: 3158
@@ -4293,7 +4293,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-LON-038/800/600",
         rating: 4.3,
         description: "The Lantern London in London is a popular hotel pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 464,
         isFavorite: true,
         reviewCount: 4442
@@ -4305,7 +4305,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-LON-039/800/600",
         rating: 3.3,
         description: "Skyline Hotel London in London is a popular hotel pick for travelers.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 262,
         isFavorite: false,
         reviewCount: 3244
@@ -4317,7 +4317,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-LON-040/800/600",
         rating: 0.6,
         description: "Art House Hotel London in London is a popular hotel pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 83,
         isFavorite: false,
         reviewCount: 2469
@@ -4329,7 +4329,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-LON-041/800/600",
         rating: 3.4,
         description: "Velvet Rooms London in London is a popular hotel pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 468,
         isFavorite: false,
         reviewCount: 2052
@@ -4341,7 +4341,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-LON-042/800/600",
         rating: 1.7,
         description: "Velvet Rooms London in London is a popular hotel pick for travelers.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 195,
         isFavorite: true,
         reviewCount: 3459
@@ -4353,7 +4353,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-LON-043/800/600",
         rating: 3.8,
         description: "The Arcade London in London is a popular hotel pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 96,
         isFavorite: false,
         reviewCount: 576
@@ -4365,7 +4365,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-LON-044/800/600",
         rating: 3,
         description: "Royal Court Hotel London in London is a popular hotel pick for travelers.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 129,
         isFavorite: false,
         reviewCount: 387
@@ -4377,7 +4377,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-LON-045/800/600",
         rating: 2.2,
         description: "The Willow London in London is a popular hotel pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 137,
         isFavorite: true,
         reviewCount: 2394
@@ -4389,7 +4389,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-LON-046/800/600",
         rating: 4.1,
         description: "The Crescent London in London is a popular hotel pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 406,
         isFavorite: false,
         reviewCount: 2651
@@ -4401,7 +4401,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-LON-047/800/600",
         rating: 1.5,
         description: "Parkside Hotel London in London is a popular hotel pick for travelers.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 306,
         isFavorite: false,
         reviewCount: 2279
@@ -4413,7 +4413,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-LON-048/800/600",
         rating: 2.8,
         description: "Central Plaza Hotel London in London is a popular hotel pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 259,
         isFavorite: false,
         reviewCount: 3524
@@ -4425,7 +4425,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-LON-049/800/600",
         rating: 2.5,
         description: "The Foundry London in London is a popular hotel pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 470,
         isFavorite: false,
         reviewCount: 2636
@@ -4437,7 +4437,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-LON-050/800/600",
         rating: 2,
         description: "Maple Court London in London is a popular hotel pick for travelers.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 268,
         isFavorite: false,
         reviewCount: 3904
@@ -4449,7 +4449,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-LON-051/800/600",
         rating: 4.2,
         description: "Parkside Hotel London in London is a popular hotel pick for travelers.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 227,
         isFavorite: false,
         reviewCount: 497
@@ -4461,7 +4461,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-LON-052/800/600",
         rating: 2.1,
         description: "The Foundry London in London is a popular hotel pick for travelers.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 217,
         isFavorite: false,
         reviewCount: 2113
@@ -4473,7 +4473,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-LON-053/800/600",
         rating: 1.7,
         description: "Old Town Lodge London in London is a popular hotel pick for travelers.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 540,
         isFavorite: false,
         reviewCount: 782
@@ -4485,7 +4485,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-LON-054/800/600",
         rating: 3.6,
         description: "The Terrace London in London is a popular hotel pick for travelers.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 354,
         isFavorite: false,
         reviewCount: 4980
@@ -4497,7 +4497,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-LON-055/800/600",
         rating: 0.2,
         description: "Muse Hotel London in London is a popular hotel pick for travelers.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 302,
         isFavorite: false,
         reviewCount: 2752
@@ -4509,7 +4509,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-LON-056/800/600",
         rating: 4.8,
         description: "Harbor View London in London is a popular hotel pick for travelers.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 274,
         isFavorite: false,
         reviewCount: 986
@@ -4521,7 +4521,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-LON-057/800/600",
         rating: 4.6,
         description: "The Serene London in London is a popular hotel pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 289,
         isFavorite: false,
         reviewCount: 1985
@@ -4533,7 +4533,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-LON-058/800/600",
         rating: 1.6,
         description: "The Foundry London in London is a popular hotel pick for travelers.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 557,
         isFavorite: false,
         reviewCount: 2968
@@ -4545,7 +4545,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-LON-059/800/600",
         rating: 1.3,
         description: "Harbor View London in London is a popular hotel pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 589,
         isFavorite: false,
         reviewCount: 3871
@@ -4557,7 +4557,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-LON-060/800/600",
         rating: 4.6,
         description: "Liberty House London in London is a popular hotel pick for travelers.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 503,
         isFavorite: true,
         reviewCount: 1837
@@ -4569,7 +4569,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-LON-061/800/600",
         rating: 0.1,
         description: "The Pavilion London in London is a popular hotel pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 507,
         isFavorite: false,
         reviewCount: 1632
@@ -4581,7 +4581,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-LON-062/800/600",
         rating: 1.2,
         description: "The Regency London in London is a popular hotel pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 331,
         isFavorite: false,
         reviewCount: 2790
@@ -4593,7 +4593,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-LON-063/800/600",
         rating: 3.8,
         description: "The Atrium London in London is a popular hotel pick for travelers.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 582,
         isFavorite: false,
         reviewCount: 2910
@@ -4605,7 +4605,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-LON-064/800/600",
         rating: 0.7,
         description: "Urban Retreat London in London is a popular hotel pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 268,
         isFavorite: false,
         reviewCount: 4466
@@ -4617,7 +4617,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-LON-065/800/600",
         rating: 2.6,
         description: "Central Plaza Hotel London in London is a popular hotel pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 156,
         isFavorite: false,
         reviewCount: 422
@@ -4629,7 +4629,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-LON-066/800/600",
         rating: 2.1,
         description: "Grand Hotel London in London is a popular hotel pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 316,
         isFavorite: true,
         reviewCount: 1262
@@ -4641,7 +4641,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-LON-067/800/600",
         rating: 1.1,
         description: "Grand Hotel London in London is a popular hotel pick for travelers.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 141,
         isFavorite: false,
         reviewCount: 3983
@@ -4653,7 +4653,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-LON-068/800/600",
         rating: 0.1,
         description: "The Classic London in London is a popular hotel pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 501,
         isFavorite: true,
         reviewCount: 4361
@@ -4665,7 +4665,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-LON-069/800/600",
         rating: 2.7,
         description: "Metropolitan Hotel London in London is a popular hotel pick for travelers.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 594,
         isFavorite: false,
         reviewCount: 3552
@@ -4677,7 +4677,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-LON-070/800/600",
         rating: 0.5,
         description: "The Promenade London in London is a popular hotel pick for travelers.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 232,
         isFavorite: false,
         reviewCount: 4337
@@ -4689,7 +4689,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-LON-071/800/600",
         rating: 4.1,
         description: "The Atrium London in London is a popular hotel pick for travelers.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 486,
         isFavorite: true,
         reviewCount: 3351
@@ -4701,7 +4701,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-LON-072/800/600",
         rating: 2.8,
         description: "Velvet Rooms London in London is a popular hotel pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 311,
         isFavorite: false,
         reviewCount: 685
@@ -4713,7 +4713,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-LON-073/800/600",
         rating: 0.5,
         description: "Riverside Suites London in London is a popular hotel pick for travelers.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 567,
         isFavorite: true,
         reviewCount: 102
@@ -4725,7 +4725,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-LON-074/800/600",
         rating: 0.4,
         description: "Urban Retreat London in London is a popular hotel pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 419,
         isFavorite: false,
         reviewCount: 806
@@ -4737,7 +4737,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-LON-075/800/600",
         rating: 4.6,
         description: "Art House Hotel London in London is a popular hotel pick for travelers.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 566,
         isFavorite: false,
         reviewCount: 634
@@ -4749,7 +4749,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-LON-076/800/600",
         rating: 4.5,
         description: "Metropolitan Hotel London in London is a popular hotel pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 113,
         isFavorite: true,
         reviewCount: 2601
@@ -4761,7 +4761,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-LON-077/800/600",
         rating: 4.8,
         description: "Boutique Inn London in London is a popular hotel pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 487,
         isFavorite: false,
         reviewCount: 2476
@@ -4773,7 +4773,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-LON-078/800/600",
         rating: 2.8,
         description: "Urban Retreat London in London is a popular hotel pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 478,
         isFavorite: false,
         reviewCount: 4453
@@ -4785,7 +4785,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-LON-079/800/600",
         rating: 1.9,
         description: "The Regency London in London is a popular hotel pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 160,
         isFavorite: false,
         reviewCount: 2858
@@ -4797,7 +4797,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-LON-080/800/600",
         rating: 0.5,
         description: "Central Plaza Hotel London in London is a popular hotel pick for travelers.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 157,
         isFavorite: false,
         reviewCount: 4904
@@ -4809,7 +4809,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-LON-001/800/600",
         rating: 4.8,
         description: "Pepper & Vine - London in London is a popular restaurant pick for travelers.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 79,
         isFavorite: false,
         reviewCount: 7406
@@ -4821,7 +4821,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-LON-002/800/600",
         rating: 1.1,
         description: "Pho & Go - London in London is a popular restaurant pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 106,
         isFavorite: false,
         reviewCount: 9623
@@ -4833,7 +4833,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-LON-003/800/600",
         rating: 0.4,
         description: "Sea Salt - London in London is a popular restaurant pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 73,
         isFavorite: false,
         reviewCount: 1369
@@ -4845,7 +4845,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-LON-004/800/600",
         rating: 0.8,
         description: "The Courtyard - London in London is a popular restaurant pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 49,
         isFavorite: false,
         reviewCount: 5213
@@ -4857,7 +4857,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-LON-005/800/600",
         rating: 0.5,
         description: "Rustic Kitchen - London in London is a popular restaurant pick for travelers.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 88,
         isFavorite: false,
         reviewCount: 4444
@@ -4869,7 +4869,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-LON-006/800/600",
         rating: 0.7,
         description: "The Spice Route - London in London is a popular restaurant pick for travelers.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 124,
         isFavorite: false,
         reviewCount: 8420
@@ -4881,7 +4881,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-LON-007/800/600",
         rating: 0.5,
         description: "Midnight Market - London in London is a popular restaurant pick for travelers.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 33,
         isFavorite: false,
         reviewCount: 5340
@@ -4893,7 +4893,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-LON-008/800/600",
         rating: 0.1,
         description: "Sea Salt - London in London is a popular restaurant pick for travelers.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 31,
         isFavorite: false,
         reviewCount: 9192
@@ -4905,7 +4905,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-LON-009/800/600",
         rating: 2.9,
         description: "The Pantry - London in London is a popular restaurant pick for travelers.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 107,
         isFavorite: true,
         reviewCount: 4430
@@ -4917,7 +4917,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-LON-010/800/600",
         rating: 1.3,
         description: "Little Orchard - London in London is a popular restaurant pick for travelers.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 52,
         isFavorite: false,
         reviewCount: 6924
@@ -4929,7 +4929,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-LON-011/800/600",
         rating: 2.4,
         description: "Little Orchard - London in London is a popular restaurant pick for travelers.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 74,
         isFavorite: false,
         reviewCount: 8148
@@ -4941,7 +4941,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-LON-012/800/600",
         rating: 3.1,
         description: "Taco Alley - London in London is a popular restaurant pick for travelers.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 44,
         isFavorite: false,
         reviewCount: 6508
@@ -4953,7 +4953,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-LON-013/800/600",
         rating: 4.2,
         description: "Pasta & Co. - London in London is a popular restaurant pick for travelers.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 94,
         isFavorite: false,
         reviewCount: 7080
@@ -4965,7 +4965,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-LON-014/800/600",
         rating: 0.7,
         description: "Taco Alley - London in London is a popular restaurant pick for travelers.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 61,
         isFavorite: false,
         reviewCount: 2935
@@ -4977,7 +4977,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-LON-015/800/600",
         rating: 4.8,
         description: "Pepper & Vine - London in London is a popular restaurant pick for travelers.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 135,
         isFavorite: false,
         reviewCount: 3996
@@ -4989,7 +4989,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-LON-016/800/600",
         rating: 1.9,
         description: "Marina Bistro - London in London is a popular restaurant pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 110,
         isFavorite: false,
         reviewCount: 9263
@@ -5001,7 +5001,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-LON-017/800/600",
         rating: 3,
         description: "Canopy Café - London in London is a popular restaurant pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 150,
         isFavorite: true,
         reviewCount: 7588
@@ -5013,7 +5013,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-LON-018/800/600",
         rating: 2.2,
         description: "Golden Wok - London in London is a popular restaurant pick for travelers.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 27,
         isFavorite: false,
         reviewCount: 6728
@@ -5025,7 +5025,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-LON-019/800/600",
         rating: 0.7,
         description: "Pho & Go - London in London is a popular restaurant pick for travelers.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 74,
         isFavorite: false,
         reviewCount: 6957
@@ -5037,7 +5037,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-LON-020/800/600",
         rating: 0.4,
         description: "Sea Salt - London in London is a popular restaurant pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 132,
         isFavorite: false,
         reviewCount: 8780
@@ -5049,7 +5049,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-LON-021/800/600",
         rating: 4.6,
         description: "The Kebab Room - London in London is a popular restaurant pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 117,
         isFavorite: false,
         reviewCount: 5915
@@ -5061,7 +5061,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-LON-022/800/600",
         rating: 3,
         description: "Bao & Bowl - London in London is a popular restaurant pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 37,
         isFavorite: false,
         reviewCount: 5841
@@ -5073,7 +5073,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-LON-023/800/600",
         rating: 3.2,
         description: "The Noodle Bar - London in London is a popular restaurant pick for travelers.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 112,
         isFavorite: false,
         reviewCount: 5457
@@ -5085,7 +5085,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-LON-024/800/600",
         rating: 0.5,
         description: "Urban Canteen - London in London is a popular restaurant pick for travelers.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 66,
         isFavorite: false,
         reviewCount: 8524
@@ -5097,7 +5097,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-LON-025/800/600",
         rating: 2.9,
         description: "Firefly Eatery - London in London is a popular restaurant pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 124,
         isFavorite: false,
         reviewCount: 7611
@@ -5109,7 +5109,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-LON-026/800/600",
         rating: 3.5,
         description: "The Salad Lab - London in London is a popular restaurant pick for travelers.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 16,
         isFavorite: false,
         reviewCount: 4865
@@ -5121,7 +5121,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-LON-027/800/600",
         rating: 4.6,
         description: "Midnight Market - London in London is a popular restaurant pick for travelers.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 46,
         isFavorite: false,
         reviewCount: 5645
@@ -5133,7 +5133,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-LON-028/800/600",
         rating: 3.9,
         description: "Curry Corner - London in London is a popular restaurant pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 99,
         isFavorite: false,
         reviewCount: 7203
@@ -5145,7 +5145,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-LON-029/800/600",
         rating: 1.6,
         description: "Miso & More - London in London is a popular restaurant pick for travelers.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 39,
         isFavorite: true,
         reviewCount: 5645
@@ -5157,7 +5157,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-LON-030/800/600",
         rating: 3.4,
         description: "The Spice Route - London in London is a popular restaurant pick for travelers.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 72,
         isFavorite: false,
         reviewCount: 9067
@@ -5169,7 +5169,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-LON-031/800/600",
         rating: 1.7,
         description: "The Noodle Bar - London in London is a popular restaurant pick for travelers.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 128,
         isFavorite: false,
         reviewCount: 6661
@@ -5181,7 +5181,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-LON-032/800/600",
         rating: 0.9,
         description: "Smoke & Ember - London in London is a popular restaurant pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 111,
         isFavorite: true,
         reviewCount: 3257
@@ -5193,7 +5193,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-LON-033/800/600",
         rating: 3,
         description: "Miso & More - London in London is a popular restaurant pick for travelers.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 64,
         isFavorite: false,
         reviewCount: 1050
@@ -5205,7 +5205,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-LON-034/800/600",
         rating: 0.5,
         description: "Naan & Noodles - London in London is a popular restaurant pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 57,
         isFavorite: false,
         reviewCount: 3253
@@ -5217,7 +5217,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-LON-035/800/600",
         rating: 0.6,
         description: "Curry Corner - London in London is a popular restaurant pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 135,
         isFavorite: false,
         reviewCount: 5159
@@ -5229,7 +5229,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-LON-036/800/600",
         rating: 1.9,
         description: "Taco Alley - London in London is a popular restaurant pick for travelers.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 39,
         isFavorite: false,
         reviewCount: 7526
@@ -5241,7 +5241,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-LON-037/800/600",
         rating: 0.9,
         description: "The Oyster Shed - London in London is a popular restaurant pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 86,
         isFavorite: false,
         reviewCount: 9694
@@ -5253,7 +5253,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-LON-038/800/600",
         rating: 3.4,
         description: "Tapas & Co. - London in London is a popular restaurant pick for travelers.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 71,
         isFavorite: false,
         reviewCount: 3024
@@ -5265,7 +5265,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-LON-039/800/600",
         rating: 3.5,
         description: "Rustic Kitchen - London in London is a popular restaurant pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 117,
         isFavorite: false,
         reviewCount: 9442
@@ -5277,7 +5277,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-LON-040/800/600",
         rating: 2.1,
         description: "Sea Salt - London in London is a popular restaurant pick for travelers.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 147,
         isFavorite: false,
         reviewCount: 2863
@@ -5289,7 +5289,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-LON-041/800/600",
         rating: 0.8,
         description: "Firefly Eatery - London in London is a popular restaurant pick for travelers.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 57,
         isFavorite: false,
         reviewCount: 7414
@@ -5301,7 +5301,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-LON-042/800/600",
         rating: 0.3,
         description: "The Oyster Shed - London in London is a popular restaurant pick for travelers.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 12,
         isFavorite: false,
         reviewCount: 3221
@@ -5313,7 +5313,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-LON-043/800/600",
         rating: 4.8,
         description: "Sea Salt - London in London is a popular restaurant pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 136,
         isFavorite: false,
         reviewCount: 8081
@@ -5325,7 +5325,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-LON-044/800/600",
         rating: 3.6,
         description: "Midnight Market - London in London is a popular restaurant pick for travelers.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 52,
         isFavorite: true,
         reviewCount: 530
@@ -5337,7 +5337,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-LON-045/800/600",
         rating: 1.5,
         description: "Cedar Grill - London in London is a popular restaurant pick for travelers.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 147,
         isFavorite: false,
         reviewCount: 7517
@@ -5349,7 +5349,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-LON-046/800/600",
         rating: 3.7,
         description: "Naan & Noodles - London in London is a popular restaurant pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 150,
         isFavorite: false,
         reviewCount: 9408
@@ -5361,7 +5361,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-LON-047/800/600",
         rating: 1.3,
         description: "Ocean & Stone - London in London is a popular restaurant pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 103,
         isFavorite: false,
         reviewCount: 706
@@ -5373,7 +5373,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-LON-048/800/600",
         rating: 2.7,
         description: "Miso & More - London in London is a popular restaurant pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 36,
         isFavorite: false,
         reviewCount: 4080
@@ -5385,7 +5385,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-LON-049/800/600",
         rating: 4.4,
         description: "Little Orchard - London in London is a popular restaurant pick for travelers.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 77,
         isFavorite: false,
         reviewCount: 1450
@@ -5397,7 +5397,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-LON-050/800/600",
         rating: 4.3,
         description: "Miso & More - London in London is a popular restaurant pick for travelers.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 70,
         isFavorite: false,
         reviewCount: 9657
@@ -5409,7 +5409,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-LON-051/800/600",
         rating: 4.3,
         description: "The Dumpling House - London in London is a popular restaurant pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 119,
         isFavorite: true,
         reviewCount: 2306
@@ -5421,7 +5421,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-LON-052/800/600",
         rating: 4.1,
         description: "Golden Wok - London in London is a popular restaurant pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 99,
         isFavorite: false,
         reviewCount: 9803
@@ -5433,7 +5433,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-LON-053/800/600",
         rating: 0.8,
         description: "Bao & Bowl - London in London is a popular restaurant pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 84,
         isFavorite: false,
         reviewCount: 4405
@@ -5445,7 +5445,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-LON-054/800/600",
         rating: 4.9,
         description: "The Kebab Room - London in London is a popular restaurant pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 34,
         isFavorite: true,
         reviewCount: 6768
@@ -5457,7 +5457,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-LON-055/800/600",
         rating: 5,
         description: "Saffron & Sage - London in London is a popular restaurant pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 42,
         isFavorite: false,
         reviewCount: 2199
@@ -5469,7 +5469,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-LON-056/800/600",
         rating: 0.7,
         description: "The Pantry - London in London is a popular restaurant pick for travelers.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 73,
         isFavorite: false,
         reviewCount: 6459
@@ -5481,7 +5481,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-LON-057/800/600",
         rating: 0.7,
         description: "Pho & Go - London in London is a popular restaurant pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 116,
         isFavorite: false,
         reviewCount: 1262
@@ -5493,7 +5493,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-LON-058/800/600",
         rating: 2,
         description: "Tapas & Co. - London in London is a popular restaurant pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 104,
         isFavorite: false,
         reviewCount: 8021
@@ -5505,7 +5505,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-LON-059/800/600",
         rating: 2.9,
         description: "Marina Bistro - London in London is a popular restaurant pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 33,
         isFavorite: false,
         reviewCount: 7536
@@ -5517,7 +5517,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-LON-060/800/600",
         rating: 4.3,
         description: "The Dumpling House - London in London is a popular restaurant pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 111,
         isFavorite: false,
         reviewCount: 7064
@@ -5529,7 +5529,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-LON-061/800/600",
         rating: 2.5,
         description: "Golden Wok - London in London is a popular restaurant pick for travelers.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 82,
         isFavorite: false,
         reviewCount: 9493
@@ -5541,7 +5541,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-LON-062/800/600",
         rating: 2.8,
         description: "Fable Diner - London in London is a popular restaurant pick for travelers.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 97,
         isFavorite: false,
         reviewCount: 818
@@ -5553,7 +5553,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-LON-063/800/600",
         rating: 0.5,
         description: "La Trattoria - London in London is a popular restaurant pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 127,
         isFavorite: true,
         reviewCount: 2613
@@ -5565,7 +5565,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-LON-064/800/600",
         rating: 2.3,
         description: "Miso & More - London in London is a popular restaurant pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 119,
         isFavorite: false,
         reviewCount: 2186
@@ -5577,7 +5577,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-LON-065/800/600",
         rating: 0.8,
         description: "Little Orchard - London in London is a popular restaurant pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 80,
         isFavorite: true,
         reviewCount: 5930
@@ -5589,7 +5589,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-LON-066/800/600",
         rating: 0.4,
         description: "Olive & Thyme - London in London is a popular restaurant pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 52,
         isFavorite: true,
         reviewCount: 5030
@@ -5601,7 +5601,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-LON-067/800/600",
         rating: 2.1,
         description: "Cedar Grill - London in London is a popular restaurant pick for travelers.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 34,
         isFavorite: true,
         reviewCount: 7837
@@ -5613,7 +5613,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-LON-068/800/600",
         rating: 0.7,
         description: "The Green Fork - London in London is a popular restaurant pick for travelers.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 123,
         isFavorite: true,
         reviewCount: 5654
@@ -5625,7 +5625,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-LON-069/800/600",
         rating: 4.9,
         description: "Ocean & Stone - London in London is a popular restaurant pick for travelers.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 43,
         isFavorite: false,
         reviewCount: 3776
@@ -5637,7 +5637,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-LON-070/800/600",
         rating: 0.4,
         description: "Sea Salt - London in London is a popular restaurant pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 36,
         isFavorite: false,
         reviewCount: 4927
@@ -5649,7 +5649,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-LON-071/800/600",
         rating: 1.9,
         description: "Fable Diner - London in London is a popular restaurant pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 44,
         isFavorite: false,
         reviewCount: 2365
@@ -5661,7 +5661,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-LON-072/800/600",
         rating: 2.7,
         description: "The Green Fork - London in London is a popular restaurant pick for travelers.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 52,
         isFavorite: false,
         reviewCount: 3515
@@ -5673,7 +5673,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-LON-073/800/600",
         rating: 4.6,
         description: "Harvest Table - London in London is a popular restaurant pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 123,
         isFavorite: false,
         reviewCount: 1445
@@ -5685,7 +5685,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-LON-074/800/600",
         rating: 0.7,
         description: "The Spice Route - London in London is a popular restaurant pick for travelers.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 108,
         isFavorite: false,
         reviewCount: 7060
@@ -5697,7 +5697,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-LON-075/800/600",
         rating: 4,
         description: "Marina Bistro - London in London is a popular restaurant pick for travelers.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 31,
         isFavorite: false,
         reviewCount: 9871
@@ -5709,7 +5709,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-LON-076/800/600",
         rating: 3.6,
         description: "Taco Alley - London in London is a popular restaurant pick for travelers.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 16,
         isFavorite: false,
         reviewCount: 4967
@@ -5721,7 +5721,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-LON-077/800/600",
         rating: 2.6,
         description: "Golden Wok - London in London is a popular restaurant pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 110,
         isFavorite: false,
         reviewCount: 919
@@ -5733,7 +5733,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-LON-078/800/600",
         rating: 2.5,
         description: "The Pantry - London in London is a popular restaurant pick for travelers.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 137,
         isFavorite: false,
         reviewCount: 1188
@@ -5745,7 +5745,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-LON-079/800/600",
         rating: 4.4,
         description: "Tortilla Street - London in London is a popular restaurant pick for travelers.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 102,
         isFavorite: false,
         reviewCount: 2187
@@ -5757,7 +5757,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-LON-080/800/600",
         rating: 4.3,
         description: "Sea Salt - London in London is a popular restaurant pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "London",
+        location: Location.LONDON,
         priceUsd: 103,
         isFavorite: false,
         reviewCount: 2855
@@ -5769,7 +5769,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-SPA-001/800/600",
         rating: 4.8,
         description: "Botanical Tour - Spain in Spain is a popular activity pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 23,
         isFavorite: false,
         durationHours: 1
@@ -5781,7 +5781,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-SPA-002/800/600",
         rating: 1.1,
         description: "Sunset Tour - Spain in Spain is a popular activity pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 218,
         isFavorite: false,
         durationHours: 11
@@ -5793,7 +5793,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-SPA-003/800/600",
         rating: 3.8,
         description: "Craft Workshop - Spain in Spain is a popular activity pick for travelers.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 220,
         isFavorite: true,
         durationHours: 9
@@ -5805,7 +5805,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-SPA-004/800/600",
         rating: 3.1,
         description: "Brewery Tour - Spain in Spain is a popular activity pick for travelers.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 173,
         isFavorite: true,
         durationHours: 4
@@ -5817,7 +5817,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-SPA-005/800/600",
         rating: 2.7,
         description: "Photography Walk - Spain in Spain is a popular activity pick for travelers.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 48,
         isFavorite: false,
         durationHours: 7
@@ -5829,7 +5829,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-SPA-006/800/600",
         rating: 0.3,
         description: "Rooftop Viewing - Spain in Spain is a popular activity pick for travelers.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 237,
         isFavorite: true,
         durationHours: 10
@@ -5841,7 +5841,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-SPA-007/800/600",
         rating: 0.3,
         description: "Architecture Walk - Spain in Spain is a popular activity pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 104,
         isFavorite: true,
         durationHours: 12
@@ -5853,7 +5853,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-SPA-008/800/600",
         rating: 3.5,
         description: "Wine Tasting - Spain in Spain is a popular activity pick for travelers.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 192,
         isFavorite: false,
         durationHours: 12
@@ -5865,7 +5865,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-SPA-009/800/600",
         rating: 0.8,
         description: "Sunset Tour - Spain in Spain is a popular activity pick for travelers.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 152,
         isFavorite: false,
         durationHours: 2
@@ -5877,7 +5877,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-SPA-010/800/600",
         rating: 1.7,
         description: "River Cruise - Spain in Spain is a popular activity pick for travelers.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 283,
         isFavorite: true,
         durationHours: 12
@@ -5889,7 +5889,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-SPA-011/800/600",
         rating: 3.1,
         description: "Segway Tour - Spain in Spain is a popular activity pick for travelers.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 276,
         isFavorite: false,
         durationHours: 8
@@ -5901,7 +5901,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-SPA-012/800/600",
         rating: 0.8,
         description: "Segway Tour - Spain in Spain is a popular activity pick for travelers.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 67,
         isFavorite: false,
         durationHours: 11
@@ -5913,7 +5913,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-SPA-013/800/600",
         rating: 1.1,
         description: "Street Art Walk - Spain in Spain is a popular activity pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 37,
         isFavorite: false,
         durationHours: 1
@@ -5925,7 +5925,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-SPA-014/800/600",
         rating: 0.2,
         description: "Rooftop Viewing - Spain in Spain is a popular activity pick for travelers.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 91,
         isFavorite: true,
         durationHours: 1
@@ -5937,7 +5937,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-SPA-015/800/600",
         rating: 4,
         description: "Vineyard Tour - Spain in Spain is a popular activity pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 229,
         isFavorite: false,
         durationHours: 4
@@ -5949,7 +5949,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-SPA-016/800/600",
         rating: 4.6,
         description: "Local Festival - Spain in Spain is a popular activity pick for travelers.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 54,
         isFavorite: false,
         durationHours: 2
@@ -5961,7 +5961,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-SPA-017/800/600",
         rating: 3.4,
         description: "Craft Workshop - Spain in Spain is a popular activity pick for travelers.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 129,
         isFavorite: false,
         durationHours: 1
@@ -5973,7 +5973,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-SPA-018/800/600",
         rating: 0.3,
         description: "Jazz Night - Spain in Spain is a popular activity pick for travelers.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 159,
         isFavorite: false,
         durationHours: 5
@@ -5985,7 +5985,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-SPA-019/800/600",
         rating: 0.4,
         description: "Day Trip - Spain in Spain is a popular activity pick for travelers.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 203,
         isFavorite: false,
         durationHours: 10
@@ -5997,7 +5997,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-SPA-020/800/600",
         rating: 3.7,
         description: "Chocolate Workshop - Spain in Spain is a popular activity pick for travelers.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 203,
         isFavorite: false,
         durationHours: 8
@@ -6009,7 +6009,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-SPA-021/800/600",
         rating: 3.7,
         description: "Park Picnic - Spain in Spain is a popular activity pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 140,
         isFavorite: true,
         durationHours: 7
@@ -6021,7 +6021,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-SPA-022/800/600",
         rating: 1.2,
         description: "River Cruise - Spain in Spain is a popular activity pick for travelers.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 19,
         isFavorite: false,
         durationHours: 1
@@ -6033,7 +6033,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-SPA-023/800/600",
         rating: 4.2,
         description: "Nightlife Crawl - Spain in Spain is a popular activity pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 68,
         isFavorite: false,
         durationHours: 4
@@ -6045,7 +6045,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-SPA-024/800/600",
         rating: 2.5,
         description: "Local Festival - Spain in Spain is a popular activity pick for travelers.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 87,
         isFavorite: false,
         durationHours: 2
@@ -6057,7 +6057,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-SPA-025/800/600",
         rating: 4.6,
         description: "Museum Visit - Spain in Spain is a popular activity pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 281,
         isFavorite: false,
         durationHours: 6
@@ -6069,7 +6069,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-SPA-026/800/600",
         rating: 4.9,
         description: "Coffee Workshop - Spain in Spain is a popular activity pick for travelers.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 63,
         isFavorite: false,
         durationHours: 11
@@ -6081,7 +6081,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-SPA-027/800/600",
         rating: 0.4,
         description: "Jazz Night - Spain in Spain is a popular activity pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 237,
         isFavorite: false,
         durationHours: 3
@@ -6093,7 +6093,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-SPA-028/800/600",
         rating: 1.5,
         description: "Rooftop Viewing - Spain in Spain is a popular activity pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 216,
         isFavorite: false,
         durationHours: 12
@@ -6105,7 +6105,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-SPA-029/800/600",
         rating: 1.6,
         description: "Day Trip - Spain in Spain is a popular activity pick for travelers.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 53,
         isFavorite: false,
         durationHours: 3
@@ -6117,7 +6117,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-SPA-030/800/600",
         rating: 0.5,
         description: "Scooter Tour - Spain in Spain is a popular activity pick for travelers.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 245,
         isFavorite: false,
         durationHours: 7
@@ -6129,7 +6129,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-SPA-031/800/600",
         rating: 2.7,
         description: "Street Art Walk - Spain in Spain is a popular activity pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 121,
         isFavorite: false,
         durationHours: 8
@@ -6141,7 +6141,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-SPA-032/800/600",
         rating: 4.3,
         description: "Sunset Tour - Spain in Spain is a popular activity pick for travelers.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 170,
         isFavorite: false,
         durationHours: 12
@@ -6153,7 +6153,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-SPA-033/800/600",
         rating: 0.2,
         description: "Architecture Walk - Spain in Spain is a popular activity pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 182,
         isFavorite: true,
         durationHours: 12
@@ -6165,7 +6165,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-SPA-034/800/600",
         rating: 4.8,
         description: "Rooftop Viewing - Spain in Spain is a popular activity pick for travelers.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 40,
         isFavorite: false,
         durationHours: 5
@@ -6177,7 +6177,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-SPA-035/800/600",
         rating: 0.2,
         description: "Cathedral Visit - Spain in Spain is a popular activity pick for travelers.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 246,
         isFavorite: false,
         durationHours: 9
@@ -6189,7 +6189,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-SPA-036/800/600",
         rating: 0.5,
         description: "Rooftop Viewing - Spain in Spain is a popular activity pick for travelers.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 86,
         isFavorite: true,
         durationHours: 1
@@ -6201,7 +6201,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-SPA-037/800/600",
         rating: 0.7,
         description: "Theater Show - Spain in Spain is a popular activity pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 205,
         isFavorite: false,
         durationHours: 11
@@ -6213,7 +6213,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-SPA-038/800/600",
         rating: 2.9,
         description: "Food Tasting - Spain in Spain is a popular activity pick for travelers.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 53,
         isFavorite: true,
         durationHours: 2
@@ -6225,7 +6225,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-SPA-039/800/600",
         rating: 4.5,
         description: "Park Picnic - Spain in Spain is a popular activity pick for travelers.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 80,
         isFavorite: true,
         durationHours: 6
@@ -6237,7 +6237,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-SPA-040/800/600",
         rating: 0.2,
         description: "Street Art Walk - Spain in Spain is a popular activity pick for travelers.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 101,
         isFavorite: false,
         durationHours: 7
@@ -6249,7 +6249,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-SPA-041/800/600",
         rating: 2.5,
         description: "Jazz Night - Spain in Spain is a popular activity pick for travelers.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 233,
         isFavorite: true,
         durationHours: 4
@@ -6261,7 +6261,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-SPA-042/800/600",
         rating: 1.4,
         description: "Cathedral Visit - Spain in Spain is a popular activity pick for travelers.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 91,
         isFavorite: true,
         durationHours: 10
@@ -6273,7 +6273,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-SPA-043/800/600",
         rating: 1.2,
         description: "Hidden Alleys Tour - Spain in Spain is a popular activity pick for travelers.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 225,
         isFavorite: false,
         durationHours: 8
@@ -6285,7 +6285,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-SPA-044/800/600",
         rating: 0.4,
         description: "Historic Landmark Tour - Spain in Spain is a popular activity pick for travelers.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 229,
         isFavorite: false,
         durationHours: 9
@@ -6297,7 +6297,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-SPA-045/800/600",
         rating: 3.2,
         description: "Rooftop Viewing - Spain in Spain is a popular activity pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 24,
         isFavorite: false,
         durationHours: 12
@@ -6309,7 +6309,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-SPA-046/800/600",
         rating: 2.4,
         description: "Hot Air Balloon - Spain in Spain is a popular activity pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 191,
         isFavorite: false,
         durationHours: 9
@@ -6321,7 +6321,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-SPA-047/800/600",
         rating: 1.9,
         description: "Day Trip - Spain in Spain is a popular activity pick for travelers.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 178,
         isFavorite: false,
         durationHours: 1
@@ -6333,7 +6333,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-SPA-048/800/600",
         rating: 0.3,
         description: "Boat Ride - Spain in Spain is a popular activity pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 286,
         isFavorite: false,
         durationHours: 10
@@ -6345,7 +6345,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-SPA-049/800/600",
         rating: 4.9,
         description: "Theater Show - Spain in Spain is a popular activity pick for travelers.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 138,
         isFavorite: false,
         durationHours: 12
@@ -6357,7 +6357,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-SPA-050/800/600",
         rating: 3.8,
         description: "Historic Landmark Tour - Spain in Spain is a popular activity pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 213,
         isFavorite: false,
         durationHours: 3
@@ -6369,7 +6369,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-SPA-051/800/600",
         rating: 1.2,
         description: "Cathedral Visit - Spain in Spain is a popular activity pick for travelers.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 198,
         isFavorite: false,
         durationHours: 1
@@ -6381,7 +6381,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-SPA-052/800/600",
         rating: 4.7,
         description: "Hot Air Balloon - Spain in Spain is a popular activity pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 111,
         isFavorite: false,
         durationHours: 8
@@ -6393,7 +6393,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-SPA-053/800/600",
         rating: 1.5,
         description: "Brewery Tour - Spain in Spain is a popular activity pick for travelers.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 61,
         isFavorite: true,
         durationHours: 10
@@ -6405,7 +6405,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-SPA-054/800/600",
         rating: 0.1,
         description: "Theater Show - Spain in Spain is a popular activity pick for travelers.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 184,
         isFavorite: false,
         durationHours: 4
@@ -6417,7 +6417,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-SPA-055/800/600",
         rating: 1.7,
         description: "Wine Tasting - Spain in Spain is a popular activity pick for travelers.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 180,
         isFavorite: true,
         durationHours: 3
@@ -6429,7 +6429,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-SPA-056/800/600",
         rating: 3.5,
         description: "Scooter Tour - Spain in Spain is a popular activity pick for travelers.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 71,
         isFavorite: false,
         durationHours: 6
@@ -6441,7 +6441,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-SPA-057/800/600",
         rating: 1.9,
         description: "Bike Tour - Spain in Spain is a popular activity pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 217,
         isFavorite: false,
         durationHours: 6
@@ -6453,7 +6453,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-SPA-058/800/600",
         rating: 1.6,
         description: "Chocolate Workshop - Spain in Spain is a popular activity pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 238,
         isFavorite: false,
         durationHours: 8
@@ -6465,7 +6465,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-SPA-059/800/600",
         rating: 0.9,
         description: "Day Trip - Spain in Spain is a popular activity pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 197,
         isFavorite: false,
         durationHours: 10
@@ -6477,7 +6477,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-SPA-060/800/600",
         rating: 1.9,
         description: "Cathedral Visit - Spain in Spain is a popular activity pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 165,
         isFavorite: true,
         durationHours: 12
@@ -6489,7 +6489,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-SPA-061/800/600",
         rating: 4.7,
         description: "City Walking Tour - Spain in Spain is a popular activity pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 215,
         isFavorite: false,
         durationHours: 10
@@ -6501,7 +6501,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-SPA-062/800/600",
         rating: 0.9,
         description: "Museum Visit - Spain in Spain is a popular activity pick for travelers.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 128,
         isFavorite: false,
         durationHours: 2
@@ -6513,7 +6513,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-SPA-063/800/600",
         rating: 0.7,
         description: "Culinary Tour - Spain in Spain is a popular activity pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 136,
         isFavorite: false,
         durationHours: 6
@@ -6525,7 +6525,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-SPA-064/800/600",
         rating: 3.2,
         description: "Palace Tour - Spain in Spain is a popular activity pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 186,
         isFavorite: false,
         durationHours: 5
@@ -6537,7 +6537,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-SPA-065/800/600",
         rating: 1.2,
         description: "Market Stroll - Spain in Spain is a popular activity pick for travelers.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 146,
         isFavorite: false,
         durationHours: 12
@@ -6549,7 +6549,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-SPA-066/800/600",
         rating: 0.2,
         description: "City Walking Tour - Spain in Spain is a popular activity pick for travelers.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 229,
         isFavorite: false,
         durationHours: 7
@@ -6561,7 +6561,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-SPA-067/800/600",
         rating: 4.4,
         description: "Culinary Tour - Spain in Spain is a popular activity pick for travelers.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 207,
         isFavorite: true,
         durationHours: 8
@@ -6573,7 +6573,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-SPA-068/800/600",
         rating: 3.3,
         description: "Segway Tour - Spain in Spain is a popular activity pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 98,
         isFavorite: false,
         durationHours: 1
@@ -6585,7 +6585,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-SPA-069/800/600",
         rating: 0.1,
         description: "Gardens Visit - Spain in Spain is a popular activity pick for travelers.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 68,
         isFavorite: true,
         durationHours: 3
@@ -6597,7 +6597,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-SPA-070/800/600",
         rating: 0.8,
         description: "Nightlife Crawl - Spain in Spain is a popular activity pick for travelers.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 62,
         isFavorite: false,
         durationHours: 10
@@ -6609,7 +6609,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-SPA-071/800/600",
         rating: 3.5,
         description: "Botanical Tour - Spain in Spain is a popular activity pick for travelers.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 99,
         isFavorite: false,
         durationHours: 7
@@ -6621,7 +6621,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-SPA-072/800/600",
         rating: 0.3,
         description: "Palace Tour - Spain in Spain is a popular activity pick for travelers.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 112,
         isFavorite: false,
         durationHours: 9
@@ -6633,7 +6633,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-SPA-073/800/600",
         rating: 1.3,
         description: "Brewery Tour - Spain in Spain is a popular activity pick for travelers.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 136,
         isFavorite: true,
         durationHours: 7
@@ -6645,7 +6645,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-SPA-074/800/600",
         rating: 2.7,
         description: "Segway Tour - Spain in Spain is a popular activity pick for travelers.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 42,
         isFavorite: false,
         durationHours: 7
@@ -6657,7 +6657,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-SPA-075/800/600",
         rating: 1.5,
         description: "Food Tasting - Spain in Spain is a popular activity pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 260,
         isFavorite: false,
         durationHours: 1
@@ -6669,7 +6669,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-SPA-076/800/600",
         rating: 0.9,
         description: "Market Stroll - Spain in Spain is a popular activity pick for travelers.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 56,
         isFavorite: false,
         durationHours: 2
@@ -6681,7 +6681,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-SPA-077/800/600",
         rating: 3.9,
         description: "Chocolate Workshop - Spain in Spain is a popular activity pick for travelers.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 150,
         isFavorite: true,
         durationHours: 9
@@ -6693,7 +6693,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-SPA-078/800/600",
         rating: 0.9,
         description: "Nightlife Crawl - Spain in Spain is a popular activity pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 204,
         isFavorite: false,
         durationHours: 1
@@ -6705,7 +6705,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-SPA-079/800/600",
         rating: 2.2,
         description: "Sunset Tour - Spain in Spain is a popular activity pick for travelers.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 152,
         isFavorite: false,
         durationHours: 3
@@ -6717,7 +6717,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/ACT-SPA-080/800/600",
         rating: 0.4,
         description: "Cooking Class - Spain in Spain is a popular activity pick for travelers.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 292,
         isFavorite: false,
         durationHours: 10
@@ -6729,7 +6729,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-SPA-001/800/600",
         rating: 2.8,
         description: "The Crescent Spain in Spain is a popular hotel pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 508,
         isFavorite: false,
         reviewCount: 3914
@@ -6741,7 +6741,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-SPA-002/800/600",
         rating: 4.4,
         description: "Ivory Hotel Spain in Spain is a popular hotel pick for travelers.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 160,
         isFavorite: false,
         reviewCount: 309
@@ -6753,7 +6753,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-SPA-003/800/600",
         rating: 2.9,
         description: "The Contemporary Spain in Spain is a popular hotel pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 230,
         isFavorite: true,
         reviewCount: 3703
@@ -6765,7 +6765,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-SPA-004/800/600",
         rating: 4.7,
         description: "The Promenade Spain in Spain is a popular hotel pick for travelers.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 296,
         isFavorite: false,
         reviewCount: 1058
@@ -6777,7 +6777,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-SPA-005/800/600",
         rating: 2.1,
         description: "Riverside Suites Spain in Spain is a popular hotel pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 525,
         isFavorite: false,
         reviewCount: 1236
@@ -6789,7 +6789,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-SPA-006/800/600",
         rating: 1.3,
         description: "Muse Hotel Spain in Spain is a popular hotel pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 148,
         isFavorite: true,
         reviewCount: 4582
@@ -6801,7 +6801,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-SPA-007/800/600",
         rating: 2.8,
         description: "The Willow Spain in Spain is a popular hotel pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 549,
         isFavorite: false,
         reviewCount: 126
@@ -6813,7 +6813,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-SPA-008/800/600",
         rating: 2.9,
         description: "The Arcade Spain in Spain is a popular hotel pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 195,
         isFavorite: false,
         reviewCount: 1239
@@ -6825,7 +6825,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-SPA-009/800/600",
         rating: 2.9,
         description: "Ivory Hotel Spain in Spain is a popular hotel pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 182,
         isFavorite: false,
         reviewCount: 4634
@@ -6837,7 +6837,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-SPA-010/800/600",
         rating: 3.9,
         description: "Royal Court Hotel Spain in Spain is a popular hotel pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 432,
         isFavorite: false,
         reviewCount: 2188
@@ -6849,7 +6849,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-SPA-011/800/600",
         rating: 3.3,
         description: "Sapphire Stay Spain in Spain is a popular hotel pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 564,
         isFavorite: true,
         reviewCount: 2281
@@ -6861,7 +6861,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-SPA-012/800/600",
         rating: 0.7,
         description: "The Willow Spain in Spain is a popular hotel pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 491,
         isFavorite: true,
         reviewCount: 2740
@@ -6873,7 +6873,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-SPA-013/800/600",
         rating: 0.2,
         description: "Parkside Hotel Spain in Spain is a popular hotel pick for travelers.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 355,
         isFavorite: false,
         reviewCount: 190
@@ -6885,7 +6885,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-SPA-014/800/600",
         rating: 4.1,
         description: "The Regency Spain in Spain is a popular hotel pick for travelers.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 367,
         isFavorite: false,
         reviewCount: 829
@@ -6897,7 +6897,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-SPA-015/800/600",
         rating: 0.7,
         description: "The Crescent Spain in Spain is a popular hotel pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 533,
         isFavorite: false,
         reviewCount: 2653
@@ -6909,7 +6909,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-SPA-016/800/600",
         rating: 3.6,
         description: "Metropolitan Hotel Spain in Spain is a popular hotel pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 171,
         isFavorite: false,
         reviewCount: 1756
@@ -6921,7 +6921,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-SPA-017/800/600",
         rating: 3.7,
         description: "Maple Court Spain in Spain is a popular hotel pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 462,
         isFavorite: false,
         reviewCount: 4246
@@ -6933,7 +6933,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-SPA-018/800/600",
         rating: 0.3,
         description: "Urban Retreat Spain in Spain is a popular hotel pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 493,
         isFavorite: true,
         reviewCount: 4319
@@ -6945,7 +6945,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-SPA-019/800/600",
         rating: 0.1,
         description: "Ivory Hotel Spain in Spain is a popular hotel pick for travelers.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 285,
         isFavorite: false,
         reviewCount: 2068
@@ -6957,7 +6957,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-SPA-020/800/600",
         rating: 2.3,
         description: "Riverside Suites Spain in Spain is a popular hotel pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 283,
         isFavorite: false,
         reviewCount: 3827
@@ -6969,7 +6969,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-SPA-021/800/600",
         rating: 2,
         description: "The Contemporary Spain in Spain is a popular hotel pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 111,
         isFavorite: false,
         reviewCount: 4029
@@ -6981,7 +6981,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-SPA-022/800/600",
         rating: 2.2,
         description: "Muse Hotel Spain in Spain is a popular hotel pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 565,
         isFavorite: false,
         reviewCount: 2890
@@ -6993,7 +6993,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-SPA-023/800/600",
         rating: 0.8,
         description: "Amber Hotel Spain in Spain is a popular hotel pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 172,
         isFavorite: false,
         reviewCount: 3191
@@ -7005,7 +7005,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-SPA-024/800/600",
         rating: 0.8,
         description: "Central Plaza Hotel Spain in Spain is a popular hotel pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 299,
         isFavorite: false,
         reviewCount: 1869
@@ -7017,7 +7017,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-SPA-025/800/600",
         rating: 1.3,
         description: "Old Town Lodge Spain in Spain is a popular hotel pick for travelers.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 100,
         isFavorite: false,
         reviewCount: 97
@@ -7029,7 +7029,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-SPA-026/800/600",
         rating: 4.6,
         description: "The Serene Spain in Spain is a popular hotel pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 88,
         isFavorite: false,
         reviewCount: 2527
@@ -7041,7 +7041,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-SPA-027/800/600",
         rating: 2.1,
         description: "Metropolitan Hotel Spain in Spain is a popular hotel pick for travelers.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 437,
         isFavorite: false,
         reviewCount: 1812
@@ -7053,7 +7053,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-SPA-028/800/600",
         rating: 1.5,
         description: "Velvet Rooms Spain in Spain is a popular hotel pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 486,
         isFavorite: false,
         reviewCount: 85
@@ -7065,7 +7065,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-SPA-029/800/600",
         rating: 5,
         description: "The Contemporary Spain in Spain is a popular hotel pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 463,
         isFavorite: false,
         reviewCount: 4889
@@ -7077,7 +7077,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-SPA-030/800/600",
         rating: 1.4,
         description: "Muse Hotel Spain in Spain is a popular hotel pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 573,
         isFavorite: true,
         reviewCount: 2289
@@ -7089,7 +7089,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-SPA-031/800/600",
         rating: 4.3,
         description: "Liberty House Spain in Spain is a popular hotel pick for travelers.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 385,
         isFavorite: false,
         reviewCount: 4262
@@ -7101,7 +7101,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-SPA-032/800/600",
         rating: 4.5,
         description: "Parkside Hotel Spain in Spain is a popular hotel pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 493,
         isFavorite: false,
         reviewCount: 1171
@@ -7113,7 +7113,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-SPA-033/800/600",
         rating: 3.3,
         description: "Boutique Inn Spain in Spain is a popular hotel pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 345,
         isFavorite: false,
         reviewCount: 3339
@@ -7125,7 +7125,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-SPA-034/800/600",
         rating: 3.7,
         description: "Sapphire Stay Spain in Spain is a popular hotel pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 274,
         isFavorite: false,
         reviewCount: 1846
@@ -7137,7 +7137,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-SPA-035/800/600",
         rating: 3.2,
         description: "The Terrace Spain in Spain is a popular hotel pick for travelers.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 447,
         isFavorite: false,
         reviewCount: 1417
@@ -7149,7 +7149,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-SPA-036/800/600",
         rating: 0.9,
         description: "The Foundry Spain in Spain is a popular hotel pick for travelers.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 211,
         isFavorite: false,
         reviewCount: 4604
@@ -7161,7 +7161,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-SPA-037/800/600",
         rating: 4.7,
         description: "The Promenade Spain in Spain is a popular hotel pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 171,
         isFavorite: false,
         reviewCount: 1854
@@ -7173,7 +7173,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-SPA-038/800/600",
         rating: 2.1,
         description: "Harbor View Spain in Spain is a popular hotel pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 460,
         isFavorite: false,
         reviewCount: 2433
@@ -7185,7 +7185,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-SPA-039/800/600",
         rating: 4.3,
         description: "Velvet Rooms Spain in Spain is a popular hotel pick for travelers.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 152,
         isFavorite: false,
         reviewCount: 1618
@@ -7197,7 +7197,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-SPA-040/800/600",
         rating: 0.6,
         description: "The Contemporary Spain in Spain is a popular hotel pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 385,
         isFavorite: false,
         reviewCount: 1260
@@ -7209,7 +7209,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-SPA-041/800/600",
         rating: 5,
         description: "Skyline Hotel Spain in Spain is a popular hotel pick for travelers.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 548,
         isFavorite: true,
         reviewCount: 1502
@@ -7221,7 +7221,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-SPA-042/800/600",
         rating: 2.4,
         description: "Garden Palace Spain in Spain is a popular hotel pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 261,
         isFavorite: false,
         reviewCount: 500
@@ -7233,7 +7233,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-SPA-043/800/600",
         rating: 2.3,
         description: "Grand Hotel Spain in Spain is a popular hotel pick for travelers.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 252,
         isFavorite: false,
         reviewCount: 1322
@@ -7245,7 +7245,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-SPA-044/800/600",
         rating: 3.9,
         description: "The Classic Spain in Spain is a popular hotel pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 212,
         isFavorite: false,
         reviewCount: 3542
@@ -7257,7 +7257,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-SPA-045/800/600",
         rating: 2.1,
         description: "The Willow Spain in Spain is a popular hotel pick for travelers.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 84,
         isFavorite: true,
         reviewCount: 1658
@@ -7269,7 +7269,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-SPA-046/800/600",
         rating: 4.8,
         description: "Emerald Suites Spain in Spain is a popular hotel pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 275,
         isFavorite: true,
         reviewCount: 58
@@ -7281,7 +7281,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-SPA-047/800/600",
         rating: 1.1,
         description: "Parkside Hotel Spain in Spain is a popular hotel pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 399,
         isFavorite: true,
         reviewCount: 3167
@@ -7293,7 +7293,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-SPA-048/800/600",
         rating: 2.9,
         description: "The Contemporary Spain in Spain is a popular hotel pick for travelers.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 126,
         isFavorite: false,
         reviewCount: 2407
@@ -7305,7 +7305,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-SPA-049/800/600",
         rating: 3.6,
         description: "Velvet Rooms Spain in Spain is a popular hotel pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 425,
         isFavorite: false,
         reviewCount: 1121
@@ -7317,7 +7317,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-SPA-050/800/600",
         rating: 5,
         description: "The Regency Spain in Spain is a popular hotel pick for travelers.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 272,
         isFavorite: true,
         reviewCount: 3329
@@ -7329,7 +7329,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-SPA-051/800/600",
         rating: 1.1,
         description: "Boutique Inn Spain in Spain is a popular hotel pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 214,
         isFavorite: false,
         reviewCount: 204
@@ -7341,7 +7341,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-SPA-052/800/600",
         rating: 2.5,
         description: "The Assembly Spain in Spain is a popular hotel pick for travelers.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 118,
         isFavorite: false,
         reviewCount: 2120
@@ -7353,7 +7353,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-SPA-053/800/600",
         rating: 3.1,
         description: "The Terrace Spain in Spain is a popular hotel pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 129,
         isFavorite: false,
         reviewCount: 186
@@ -7365,7 +7365,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-SPA-054/800/600",
         rating: 3.4,
         description: "Central Plaza Hotel Spain in Spain is a popular hotel pick for travelers.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 469,
         isFavorite: true,
         reviewCount: 2095
@@ -7377,7 +7377,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-SPA-055/800/600",
         rating: 3.5,
         description: "The Serene Spain in Spain is a popular hotel pick for travelers.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 89,
         isFavorite: false,
         reviewCount: 852
@@ -7389,7 +7389,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-SPA-056/800/600",
         rating: 1.3,
         description: "Art House Hotel Spain in Spain is a popular hotel pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 220,
         isFavorite: false,
         reviewCount: 884
@@ -7401,7 +7401,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-SPA-057/800/600",
         rating: 3.6,
         description: "The Contemporary Spain in Spain is a popular hotel pick for travelers.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 196,
         isFavorite: false,
         reviewCount: 4102
@@ -7413,7 +7413,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-SPA-058/800/600",
         rating: 3,
         description: "Station House Spain in Spain is a popular hotel pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 286,
         isFavorite: false,
         reviewCount: 3381
@@ -7425,7 +7425,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-SPA-059/800/600",
         rating: 0.8,
         description: "The Galleria Spain in Spain is a popular hotel pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 292,
         isFavorite: false,
         reviewCount: 3962
@@ -7437,7 +7437,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-SPA-060/800/600",
         rating: 1.2,
         description: "The Regency Spain in Spain is a popular hotel pick for travelers.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 171,
         isFavorite: false,
         reviewCount: 4728
@@ -7449,7 +7449,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-SPA-061/800/600",
         rating: 0.7,
         description: "The Classic Spain in Spain is a popular hotel pick for travelers.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 156,
         isFavorite: false,
         reviewCount: 854
@@ -7461,7 +7461,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-SPA-062/800/600",
         rating: 3.2,
         description: "The Atrium Spain in Spain is a popular hotel pick for travelers.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 383,
         isFavorite: false,
         reviewCount: 435
@@ -7473,7 +7473,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-SPA-063/800/600",
         rating: 4.1,
         description: "Royal Court Hotel Spain in Spain is a popular hotel pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 377,
         isFavorite: false,
         reviewCount: 2586
@@ -7485,7 +7485,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-SPA-064/800/600",
         rating: 3.7,
         description: "Oak & Ivy Spain in Spain is a popular hotel pick for travelers.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 126,
         isFavorite: true,
         reviewCount: 1158
@@ -7497,7 +7497,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-SPA-065/800/600",
         rating: 1.6,
         description: "Urban Retreat Spain in Spain is a popular hotel pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 354,
         isFavorite: false,
         reviewCount: 786
@@ -7509,7 +7509,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-SPA-066/800/600",
         rating: 4.1,
         description: "Emerald Suites Spain in Spain is a popular hotel pick for travelers.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 490,
         isFavorite: false,
         reviewCount: 3764
@@ -7521,7 +7521,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-SPA-067/800/600",
         rating: 4.2,
         description: "Metropolitan Hotel Spain in Spain is a popular hotel pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 569,
         isFavorite: false,
         reviewCount: 1391
@@ -7533,7 +7533,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-SPA-068/800/600",
         rating: 0.7,
         description: "The Heritage Spain in Spain is a popular hotel pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 243,
         isFavorite: true,
         reviewCount: 4864
@@ -7545,7 +7545,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-SPA-069/800/600",
         rating: 4,
         description: "The Serene Spain in Spain is a popular hotel pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 265,
         isFavorite: false,
         reviewCount: 2962
@@ -7557,7 +7557,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-SPA-070/800/600",
         rating: 0.1,
         description: "The Arcade Spain in Spain is a popular hotel pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 213,
         isFavorite: false,
         reviewCount: 4023
@@ -7569,7 +7569,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-SPA-071/800/600",
         rating: 4.4,
         description: "The Heritage Spain in Spain is a popular hotel pick for travelers.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 144,
         isFavorite: false,
         reviewCount: 2599
@@ -7581,7 +7581,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-SPA-072/800/600",
         rating: 3.5,
         description: "Grand Hotel Spain in Spain is a popular hotel pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 309,
         isFavorite: false,
         reviewCount: 2796
@@ -7593,7 +7593,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-SPA-073/800/600",
         rating: 2.6,
         description: "Art House Hotel Spain in Spain is a popular hotel pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 177,
         isFavorite: false,
         reviewCount: 2061
@@ -7605,7 +7605,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-SPA-074/800/600",
         rating: 1.7,
         description: "The Serene Spain in Spain is a popular hotel pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 474,
         isFavorite: true,
         reviewCount: 4598
@@ -7617,7 +7617,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-SPA-075/800/600",
         rating: 0.3,
         description: "The Arcade Spain in Spain is a popular hotel pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 240,
         isFavorite: false,
         reviewCount: 3869
@@ -7629,7 +7629,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-SPA-076/800/600",
         rating: 4.3,
         description: "The Classic Spain in Spain is a popular hotel pick for travelers.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 583,
         isFavorite: false,
         reviewCount: 2735
@@ -7641,7 +7641,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-SPA-077/800/600",
         rating: 0.3,
         description: "Metropolitan Hotel Spain in Spain is a popular hotel pick for travelers.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 467,
         isFavorite: false,
         reviewCount: 1950
@@ -7653,7 +7653,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-SPA-078/800/600",
         rating: 2.3,
         description: "Garden Palace Spain in Spain is a popular hotel pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 538,
         isFavorite: true,
         reviewCount: 4108
@@ -7665,7 +7665,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-SPA-079/800/600",
         rating: 1.6,
         description: "The Lantern Spain in Spain is a popular hotel pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 98,
         isFavorite: true,
         reviewCount: 3402
@@ -7677,7 +7677,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/HOT-SPA-080/800/600",
         rating: 2.8,
         description: "Riverside Suites Spain in Spain is a popular hotel pick for travelers.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 173,
         isFavorite: false,
         reviewCount: 2520
@@ -7689,7 +7689,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-SPA-001/800/600",
         rating: 2.8,
         description: "The Kebab Room - Spain in Spain is a popular restaurant pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 126,
         isFavorite: false,
         reviewCount: 5978
@@ -7701,7 +7701,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-SPA-002/800/600",
         rating: 4.1,
         description: "Saffron & Sage - Spain in Spain is a popular restaurant pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 94,
         isFavorite: false,
         reviewCount: 9854
@@ -7713,7 +7713,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-SPA-003/800/600",
         rating: 3.6,
         description: "The Brunch Club - Spain in Spain is a popular restaurant pick for travelers.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 125,
         isFavorite: true,
         reviewCount: 3658
@@ -7725,7 +7725,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-SPA-004/800/600",
         rating: 1.7,
         description: "Bistro Lumière - Spain in Spain is a popular restaurant pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 84,
         isFavorite: false,
         reviewCount: 6150
@@ -7737,7 +7737,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-SPA-005/800/600",
         rating: 0.2,
         description: "The Spice Route - Spain in Spain is a popular restaurant pick for travelers.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 45,
         isFavorite: false,
         reviewCount: 6729
@@ -7749,7 +7749,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-SPA-006/800/600",
         rating: 1.3,
         description: "The Spice Route - Spain in Spain is a popular restaurant pick for travelers.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 40,
         isFavorite: false,
         reviewCount: 6462
@@ -7761,7 +7761,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-SPA-007/800/600",
         rating: 2.3,
         description: "Golden Wok - Spain in Spain is a popular restaurant pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 96,
         isFavorite: true,
         reviewCount: 6815
@@ -7773,7 +7773,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-SPA-008/800/600",
         rating: 4.6,
         description: "La Trattoria - Spain in Spain is a popular restaurant pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 41,
         isFavorite: false,
         reviewCount: 7406
@@ -7785,7 +7785,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-SPA-009/800/600",
         rating: 3.3,
         description: "Curry Corner - Spain in Spain is a popular restaurant pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 44,
         isFavorite: false,
         reviewCount: 96
@@ -7797,7 +7797,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-SPA-010/800/600",
         rating: 3.7,
         description: "Tortilla Street - Spain in Spain is a popular restaurant pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 120,
         isFavorite: false,
         reviewCount: 7937
@@ -7809,7 +7809,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-SPA-011/800/600",
         rating: 3.9,
         description: "The Kebab Room - Spain in Spain is a popular restaurant pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 54,
         isFavorite: false,
         reviewCount: 2128
@@ -7821,7 +7821,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-SPA-012/800/600",
         rating: 1.9,
         description: "The Spice Route - Spain in Spain is a popular restaurant pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 92,
         isFavorite: false,
         reviewCount: 6327
@@ -7833,7 +7833,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-SPA-013/800/600",
         rating: 4.9,
         description: "Midnight Market - Spain in Spain is a popular restaurant pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 73,
         isFavorite: false,
         reviewCount: 5642
@@ -7845,7 +7845,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-SPA-014/800/600",
         rating: 2.3,
         description: "Brick Oven - Spain in Spain is a popular restaurant pick for travelers.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 115,
         isFavorite: false,
         reviewCount: 8418
@@ -7857,7 +7857,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-SPA-015/800/600",
         rating: 4.2,
         description: "Little Orchard - Spain in Spain is a popular restaurant pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 90,
         isFavorite: false,
         reviewCount: 9094
@@ -7869,7 +7869,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-SPA-016/800/600",
         rating: 1,
         description: "Golden Wok - Spain in Spain is a popular restaurant pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 84,
         isFavorite: false,
         reviewCount: 2198
@@ -7881,7 +7881,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-SPA-017/800/600",
         rating: 2.5,
         description: "Smoke & Ember - Spain in Spain is a popular restaurant pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 92,
         isFavorite: false,
         reviewCount: 5796
@@ -7893,7 +7893,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-SPA-018/800/600",
         rating: 2.4,
         description: "Firefly Eatery - Spain in Spain is a popular restaurant pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 116,
         isFavorite: false,
         reviewCount: 8772
@@ -7905,7 +7905,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-SPA-019/800/600",
         rating: 4.4,
         description: "Brick Oven - Spain in Spain is a popular restaurant pick for travelers.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 13,
         isFavorite: false,
         reviewCount: 439
@@ -7917,7 +7917,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-SPA-020/800/600",
         rating: 0.7,
         description: "Sea Salt - Spain in Spain is a popular restaurant pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 61,
         isFavorite: false,
         reviewCount: 2661
@@ -7929,7 +7929,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-SPA-021/800/600",
         rating: 3.4,
         description: "Brick Oven - Spain in Spain is a popular restaurant pick for travelers.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 25,
         isFavorite: false,
         reviewCount: 4860
@@ -7941,7 +7941,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-SPA-022/800/600",
         rating: 3.8,
         description: "Golden Wok - Spain in Spain is a popular restaurant pick for travelers.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 125,
         isFavorite: true,
         reviewCount: 9230
@@ -7953,7 +7953,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-SPA-023/800/600",
         rating: 3.7,
         description: "Cedar Grill - Spain in Spain is a popular restaurant pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 70,
         isFavorite: false,
         reviewCount: 4737
@@ -7965,7 +7965,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-SPA-024/800/600",
         rating: 4.6,
         description: "Saffron & Sage - Spain in Spain is a popular restaurant pick for travelers.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 90,
         isFavorite: false,
         reviewCount: 906
@@ -7977,7 +7977,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-SPA-025/800/600",
         rating: 3.7,
         description: "Bistro Lumière - Spain in Spain is a popular restaurant pick for travelers.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 123,
         isFavorite: false,
         reviewCount: 6050
@@ -7989,7 +7989,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-SPA-026/800/600",
         rating: 2.7,
         description: "The Salad Lab - Spain in Spain is a popular restaurant pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 59,
         isFavorite: false,
         reviewCount: 2931
@@ -8001,7 +8001,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-SPA-027/800/600",
         rating: 0.9,
         description: "The Green Fork - Spain in Spain is a popular restaurant pick for travelers.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 141,
         isFavorite: true,
         reviewCount: 690
@@ -8013,7 +8013,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-SPA-028/800/600",
         rating: 1.4,
         description: "Urban Canteen - Spain in Spain is a popular restaurant pick for travelers.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 51,
         isFavorite: false,
         reviewCount: 4203
@@ -8025,7 +8025,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-SPA-029/800/600",
         rating: 1.7,
         description: "Bistro Lumière - Spain in Spain is a popular restaurant pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 49,
         isFavorite: true,
         reviewCount: 5310
@@ -8037,7 +8037,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-SPA-030/800/600",
         rating: 0.3,
         description: "Taco Alley - Spain in Spain is a popular restaurant pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 87,
         isFavorite: false,
         reviewCount: 9407
@@ -8049,7 +8049,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-SPA-031/800/600",
         rating: 1.8,
         description: "Firefly Eatery - Spain in Spain is a popular restaurant pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 91,
         isFavorite: false,
         reviewCount: 3037
@@ -8061,7 +8061,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-SPA-032/800/600",
         rating: 0.3,
         description: "Tortilla Street - Spain in Spain is a popular restaurant pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 116,
         isFavorite: false,
         reviewCount: 6634
@@ -8073,7 +8073,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-SPA-033/800/600",
         rating: 1.7,
         description: "Tapas & Co. - Spain in Spain is a popular restaurant pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 94,
         isFavorite: false,
         reviewCount: 4834
@@ -8085,7 +8085,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-SPA-034/800/600",
         rating: 4.8,
         description: "Golden Wok - Spain in Spain is a popular restaurant pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 131,
         isFavorite: false,
         reviewCount: 169
@@ -8097,7 +8097,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-SPA-035/800/600",
         rating: 3.3,
         description: "Ocean & Stone - Spain in Spain is a popular restaurant pick for travelers.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 72,
         isFavorite: false,
         reviewCount: 5283
@@ -8109,7 +8109,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-SPA-036/800/600",
         rating: 4.6,
         description: "Sea Salt - Spain in Spain is a popular restaurant pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 108,
         isFavorite: false,
         reviewCount: 4658
@@ -8121,7 +8121,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-SPA-037/800/600",
         rating: 4.6,
         description: "The Copper Spoon - Spain in Spain is a popular restaurant pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 105,
         isFavorite: false,
         reviewCount: 8360
@@ -8133,7 +8133,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-SPA-038/800/600",
         rating: 2.4,
         description: "Miso & More - Spain in Spain is a popular restaurant pick for travelers.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 59,
         isFavorite: false,
         reviewCount: 1374
@@ -8145,7 +8145,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-SPA-039/800/600",
         rating: 0.8,
         description: "The Spice Route - Spain in Spain is a popular restaurant pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 147,
         isFavorite: false,
         reviewCount: 1097
@@ -8157,7 +8157,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-SPA-040/800/600",
         rating: 3.4,
         description: "Golden Wok - Spain in Spain is a popular restaurant pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 118,
         isFavorite: false,
         reviewCount: 3393
@@ -8169,7 +8169,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-SPA-041/800/600",
         rating: 4.1,
         description: "Bao & Bowl - Spain in Spain is a popular restaurant pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 121,
         isFavorite: false,
         reviewCount: 1206
@@ -8181,7 +8181,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-SPA-042/800/600",
         rating: 0.1,
         description: "Harvest Table - Spain in Spain is a popular restaurant pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 19,
         isFavorite: true,
         reviewCount: 914
@@ -8193,7 +8193,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-SPA-043/800/600",
         rating: 4,
         description: "Smoke & Ember - Spain in Spain is a popular restaurant pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 68,
         isFavorite: false,
         reviewCount: 6703
@@ -8205,7 +8205,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-SPA-044/800/600",
         rating: 2.3,
         description: "Sea Salt - Spain in Spain is a popular restaurant pick for travelers.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 90,
         isFavorite: true,
         reviewCount: 1963
@@ -8217,7 +8217,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-SPA-045/800/600",
         rating: 0,
         description: "Bao & Bowl - Spain in Spain is a popular restaurant pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 26,
         isFavorite: false,
         reviewCount: 9619
@@ -8229,7 +8229,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-SPA-046/800/600",
         rating: 3.5,
         description: "La Trattoria - Spain in Spain is a popular restaurant pick for travelers.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 138,
         isFavorite: true,
         reviewCount: 4962
@@ -8241,7 +8241,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-SPA-047/800/600",
         rating: 0.4,
         description: "Taco Alley - Spain in Spain is a popular restaurant pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 122,
         isFavorite: false,
         reviewCount: 529
@@ -8253,7 +8253,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-SPA-048/800/600",
         rating: 0.8,
         description: "The Brunch Club - Spain in Spain is a popular restaurant pick for travelers.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 110,
         isFavorite: false,
         reviewCount: 8966
@@ -8265,7 +8265,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-SPA-049/800/600",
         rating: 4.8,
         description: "Brick Oven - Spain in Spain is a popular restaurant pick for travelers.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 105,
         isFavorite: false,
         reviewCount: 207
@@ -8277,7 +8277,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-SPA-050/800/600",
         rating: 4.4,
         description: "Firefly Eatery - Spain in Spain is a popular restaurant pick for travelers.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 20,
         isFavorite: true,
         reviewCount: 9800
@@ -8289,7 +8289,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-SPA-051/800/600",
         rating: 2.7,
         description: "Pepper & Vine - Spain in Spain is a popular restaurant pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 88,
         isFavorite: false,
         reviewCount: 5658
@@ -8301,7 +8301,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-SPA-052/800/600",
         rating: 2.1,
         description: "Golden Wok - Spain in Spain is a popular restaurant pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 141,
         isFavorite: true,
         reviewCount: 3039
@@ -8313,7 +8313,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-SPA-053/800/600",
         rating: 3.1,
         description: "Cedar Grill - Spain in Spain is a popular restaurant pick for travelers.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 39,
         isFavorite: false,
         reviewCount: 9319
@@ -8325,7 +8325,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-SPA-054/800/600",
         rating: 4.3,
         description: "Saffron & Sage - Spain in Spain is a popular restaurant pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 150,
         isFavorite: false,
         reviewCount: 9030
@@ -8337,7 +8337,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-SPA-055/800/600",
         rating: 1.5,
         description: "The Green Fork - Spain in Spain is a popular restaurant pick for travelers.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 35,
         isFavorite: false,
         reviewCount: 9537
@@ -8349,7 +8349,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-SPA-056/800/600",
         rating: 4.8,
         description: "Pho & Go - Spain in Spain is a popular restaurant pick for travelers.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 70,
         isFavorite: true,
         reviewCount: 1168
@@ -8361,7 +8361,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-SPA-057/800/600",
         rating: 1.6,
         description: "Canopy Café - Spain in Spain is a popular restaurant pick for travelers.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 88,
         isFavorite: false,
         reviewCount: 2521
@@ -8373,7 +8373,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-SPA-058/800/600",
         rating: 2.8,
         description: "Naan & Noodles - Spain in Spain is a popular restaurant pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 119,
         isFavorite: true,
         reviewCount: 5156
@@ -8385,7 +8385,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-SPA-059/800/600",
         rating: 3.9,
         description: "The Pantry - Spain in Spain is a popular restaurant pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 121,
         isFavorite: false,
         reviewCount: 5914
@@ -8397,7 +8397,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-SPA-060/800/600",
         rating: 3.4,
         description: "Fable Diner - Spain in Spain is a popular restaurant pick for travelers.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 132,
         isFavorite: false,
         reviewCount: 5902
@@ -8409,7 +8409,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-SPA-061/800/600",
         rating: 2.4,
         description: "Little Orchard - Spain in Spain is a popular restaurant pick for travelers.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 30,
         isFavorite: false,
         reviewCount: 2318
@@ -8421,7 +8421,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-SPA-062/800/600",
         rating: 1,
         description: "Bao & Bowl - Spain in Spain is a popular restaurant pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 29,
         isFavorite: false,
         reviewCount: 330
@@ -8433,7 +8433,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-SPA-063/800/600",
         rating: 3.2,
         description: "The Kebab Room - Spain in Spain is a popular restaurant pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 113,
         isFavorite: false,
         reviewCount: 3510
@@ -8445,7 +8445,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-SPA-064/800/600",
         rating: 2.8,
         description: "La Trattoria - Spain in Spain is a popular restaurant pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 148,
         isFavorite: false,
         reviewCount: 2460
@@ -8457,7 +8457,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-SPA-065/800/600",
         rating: 2,
         description: "Rustic Kitchen - Spain in Spain is a popular restaurant pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 84,
         isFavorite: true,
         reviewCount: 8235
@@ -8469,7 +8469,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-SPA-066/800/600",
         rating: 0.5,
         description: "The Kebab Room - Spain in Spain is a popular restaurant pick for travelers.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 12,
         isFavorite: false,
         reviewCount: 2742
@@ -8481,7 +8481,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-SPA-067/800/600",
         rating: 0.7,
         description: "The Kebab Room - Spain in Spain is a popular restaurant pick for travelers.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 47,
         isFavorite: false,
         reviewCount: 7946
@@ -8493,7 +8493,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-SPA-068/800/600",
         rating: 0.2,
         description: "The Dumpling House - Spain in Spain is a popular restaurant pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 69,
         isFavorite: true,
         reviewCount: 6077
@@ -8505,7 +8505,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-SPA-069/800/600",
         rating: 0.2,
         description: "Cedar Grill - Spain in Spain is a popular restaurant pick for travelers.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 102,
         isFavorite: false,
         reviewCount: 7473
@@ -8517,7 +8517,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-SPA-070/800/600",
         rating: 0.2,
         description: "La Trattoria - Spain in Spain is a popular restaurant pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 36,
         isFavorite: false,
         reviewCount: 8567
@@ -8529,7 +8529,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-SPA-071/800/600",
         rating: 4.2,
         description: "The Courtyard - Spain in Spain is a popular restaurant pick for travelers.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 149,
         isFavorite: false,
         reviewCount: 6196
@@ -8541,7 +8541,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-SPA-072/800/600",
         rating: 1.8,
         description: "Sea Salt - Spain in Spain is a popular restaurant pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 29,
         isFavorite: false,
         reviewCount: 6190
@@ -8553,7 +8553,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-SPA-073/800/600",
         rating: 2.6,
         description: "Cedar Grill - Spain in Spain is a popular restaurant pick for travelers.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 98,
         isFavorite: false,
         reviewCount: 7923
@@ -8565,7 +8565,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-SPA-074/800/600",
         rating: 0,
         description: "Taco Alley - Spain in Spain is a popular restaurant pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 122,
         isFavorite: true,
         reviewCount: 1288
@@ -8577,7 +8577,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-SPA-075/800/600",
         rating: 3.2,
         description: "The Kebab Room - Spain in Spain is a popular restaurant pick for travelers.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 57,
         isFavorite: true,
         reviewCount: 9888
@@ -8589,7 +8589,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-SPA-076/800/600",
         rating: 3.3,
         description: "Ocean & Stone - Spain in Spain is a popular restaurant pick for travelers.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 94,
         isFavorite: false,
         reviewCount: 7914
@@ -8601,7 +8601,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-SPA-077/800/600",
         rating: 2.4,
         description: "The Brunch Club - Spain in Spain is a popular restaurant pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 115,
         isFavorite: true,
         reviewCount: 731
@@ -8613,7 +8613,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-SPA-078/800/600",
         rating: 2.9,
         description: "Fable Diner - Spain in Spain is a popular restaurant pick for travelers.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 141,
         isFavorite: true,
         reviewCount: 9401
@@ -8625,7 +8625,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-SPA-079/800/600",
         rating: 0.3,
         description: "Harvest Table - Spain in Spain is a popular restaurant pick for travelers.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 56,
         isFavorite: false,
         reviewCount: 6667
@@ -8637,7 +8637,7 @@ export const ENTRIES: Entries = [
         imageUrl: "https://picsum.photos/seed/RES-SPA-080/800/600",
         rating: 4.8,
         description: "Taco Alley - Spain in Spain is a popular restaurant pick for travelers. Expect a well-balanced experience with friendly service and great value.",
-        location: "Spain",
+        location: Location.SPAIN,
         priceUsd: 82,
         isFavorite: false,
         reviewCount: 3573

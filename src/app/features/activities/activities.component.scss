@@ -1,1 +1,7 @@
-.tnt-activities {}
+.tnt-activities {
+    &__pagination {
+        display: flex;
+        justify-content: center;
+        margin: 50px 30px;
+    }
+}

@@ -1,1 +1,7 @@
-.tnt-restaurants {}
+.tnt-restaurants {
+    &__pagination {
+        display: flex;
+        justify-content: center;
+        margin: 50px 30px;
+    }
+}

@@ -1,0 +1,32 @@
+.tnt-pagination {
+    display: inline-block;
+
+    &__link {
+        color: var(--tnt-dark);
+        float: left;
+        padding: 8px 16px;
+        text-decoration: none;
+        border: 1px solid #ddd;
+        cursor: pointer;
+
+        &--active {
+            background-color: var(--tnt-primary);
+            color: var(--tnt-white);
+            border: 1px solid var(--tnt-primary);
+        }
+
+        &:hover:not(.tnt-pagination__link--active) {
+            background-color: #ddd;
+        }
+
+        &:first-child {
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+        }
+
+        &:last-child {
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+        }
+    }
+}

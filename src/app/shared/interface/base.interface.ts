@@ -1,4 +1,4 @@
-import { EntryType } from "../enums";
+import { EntryType, Location } from "../enums";
 
 export interface Base {
     id: string;
@@ -7,7 +7,7 @@ export interface Base {
     imageUrl: string;
     rating: number;
     description: string;
-    location: string;
+    location: Location;
     priceUsd: number;
     isFavorite: boolean;
 }

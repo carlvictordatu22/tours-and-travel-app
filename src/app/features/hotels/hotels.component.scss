@@ -1,1 +1,7 @@
-.tnt-hotels {}
+.tnt-hotels {
+    &__pagination {
+        display: flex;
+        justify-content: center;
+        margin: 50px 30px;
+    }
+}
