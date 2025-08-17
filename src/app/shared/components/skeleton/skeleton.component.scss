@@ -1,0 +1,125 @@
+.tnt-skeleton {
+  background: #f0f0f0;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+    animation: shimmer 1.5s infinite;
+  }
+
+  &--card {
+    width: 100%;
+    height: auto;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+
+    .tnt-skeleton__image {
+      width: 100%;
+      height: 200px;
+      background: #e0e0e0;
+      border-radius: 8px 8px 0 0;
+    }
+
+    .tnt-skeleton__content {
+      padding: 16px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+
+      .tnt-skeleton__title {
+        height: 20px;
+        background: #d0d0d0;
+        border-radius: 4px;
+        width: 80%;
+      }
+
+      .tnt-skeleton__description {
+        height: 16px;
+        background: #d0d0d0;
+        border-radius: 4px;
+        width: 100%;
+      }
+    }
+  }
+
+  &--text {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    .tnt-skeleton__line {
+      height: 16px;
+      background: #d0d0d0;
+      border-radius: 4px;
+    }
+  }
+
+  &--circle {
+    .tnt-skeleton__circle {
+      width: 100%;
+      height: 100%;
+      background: #d0d0d0;
+      border-radius: 50%;
+    }
+  }
+
+  &--pagination {
+    padding: 16px;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+
+    .tnt-skeleton__pagination-item {
+      width: 40px;
+      height: 40px;
+      background: #d0d0d0;
+      border-radius: 4px;
+    }
+  }
+
+  &--navbar {
+    padding: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .tnt-skeleton__logo {
+      width: 120px;
+      height: 32px;
+      background: #d0d0d0;
+      border-radius: 4px;
+    }
+
+    .tnt-skeleton__nav-items {
+      display: flex;
+      gap: 16px;
+
+      .tnt-skeleton__nav-item {
+        width: 80px;
+        height: 24px;
+        background: #d0d0d0;
+        border-radius: 4px;
+      }
+    }
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+} 

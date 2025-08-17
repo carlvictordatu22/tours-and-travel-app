@@ -1,0 +1,122 @@
+<div class="tnt-restaurant-detail" role="main" aria-label="Restaurant detail page">
+  @if (isLoading()) {
+    <div class="tnt-restaurant-detail__loading" role="status" aria-live="polite">
+      <div class="tnt-restaurant-detail__spinner" aria-hidden="true"></div>
+      <p>Loading restaurant details...</p>
+    </div>
+  } @else if (error() || !restaurant()) {
+    <div class="tnt-restaurant-detail__error" role="alert" aria-live="polite">
+      <h2>Restaurant Not Found</h2>
+      <p>The requested restaurant could not be found.</p>
+      <button class="tnt-restaurant-detail__back-btn" (click)="onBackClick()" aria-label="Return to restaurants listing">
+        ← Back to Restaurants
+      </button>
+    </div>
+  } @else {
+    <div class="tnt-restaurant-detail__container">
+      <!-- Back Button -->
+      <div class="tnt-restaurant-detail__back" role="navigation" aria-label="Navigation back to restaurants">
+        <button class="tnt-restaurant-detail__back-btn" (click)="onBackClick()" aria-label="Return to restaurants listing">
+          ← Back to Restaurants
+        </button>
+      </div>
+
+      <!-- Restaurant Header -->
+      <div class="tnt-restaurant-detail__header" role="banner" aria-label="Restaurant header information">
+        <div class="tnt-restaurant-detail__image">
+          <img [src]="restaurant()!.imageUrl" [alt]="restaurant()!.title" class="tnt-restaurant-detail__img" aria-label="Image of {{ restaurant()!.title }}">
+        </div>
+        <div class="tnt-restaurant-detail__info">
+          <div class="tnt-restaurant-detail__type" aria-label="Restaurant type">
+            <span aria-hidden="true">{{ getFavoriteTypeIcon(restaurant()!.type) }}</span> {{ restaurant()!.type }}
+          </div>
+          <h1 class="tnt-restaurant-detail__title">{{ restaurant()!.title }}</h1>
+          <p class="tnt-restaurant-detail__description">{{ restaurant()!.description }}</p>
+          
+          <div class="tnt-restaurant-detail__meta" role="list" aria-label="Restaurant details">
+            <div class="tnt-restaurant-detail__meta-item" role="listitem">
+              <span class="tnt-restaurant-detail__meta-icon" aria-hidden="true">📍</span>
+              <span class="tnt-restaurant-detail__meta-text">{{ getLocationName(restaurant()!.location) }}</span>
+            </div>
+            <div class="tnt-restaurant-detail__meta-item" role="listitem">
+              <span class="tnt-restaurant-detail__meta-icon" aria-hidden="true">⭐</span>
+              <span class="tnt-restaurant-detail__meta-text">{{ restaurant()!.rating }}</span>
+            </div>
+            <div class="tnt-restaurant-detail__meta-item" role="listitem">
+              <span class="tnt-restaurant-detail__meta-icon" aria-hidden="true">💰</span>
+              <span class="tnt-restaurant-detail__meta-text">${{ restaurant()!.priceUsd }}</span>
+            </div>
+            @if (hasReviewCount()) {
+              <div class="tnt-restaurant-detail__meta-item" role="listitem">
+                <span class="tnt-restaurant-detail__meta-icon" aria-hidden="true">💬</span>
+                <span class="tnt-restaurant-detail__meta-text">{{ getReviewCount() }} reviews</span>
+              </div>
+            }
+          </div>
+
+          <div class="tnt-restaurant-detail__actions" role="group" aria-label="Restaurant actions">
+            <button class="tnt-restaurant-detail__action-btn tnt-restaurant-detail__action-btn--primary" aria-label="Make reservation at this restaurant">
+              Make Reservation
+            </button>
+            <button 
+              class="tnt-restaurant-detail__action-btn tnt-restaurant-detail__action-btn--secondary"
+              [class.tnt-restaurant-detail__action-btn--favorited]="isFavorite()"
+              (click)="onFavoriteToggle()"
+              [aria-label]="isFavorite() ? 'Remove restaurant from favorites' : 'Add restaurant to favorites'"
+              [aria-pressed]="isFavorite()"
+            >
+              <span class="tnt-restaurant-detail__favorite-icon" aria-hidden="true">
+                {{ isFavorite() ? '❤️' : '🤍' }}
+              </span>
+              {{ isFavorite() ? 'Remove from Favorites' : 'Add to Favorites' }}
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Restaurant Details -->
+      <div class="tnt-restaurant-detail__content" role="region" aria-label="Restaurant detailed information">
+        <div class="tnt-restaurant-detail__section">
+          <h2>About This Restaurant</h2>
+          <p>{{ restaurant()!.description }}</p>
+          <p>Discover exceptional dining at this remarkable restaurant in {{ getLocationName(restaurant()!.location) }}. 
+          Perfect for food enthusiasts seeking authentic flavors and memorable culinary experiences.</p>
+        </div>
+
+        <div class="tnt-restaurant-detail__section">
+          <h2>Restaurant Features</h2>
+          <ul class="tnt-restaurant-detail__features" role="list" aria-label="Restaurant features and amenities">
+            <li role="listitem">Outdoor seating available</li>
+            <li role="listitem">Private dining rooms</li>
+            <li role="listitem">Wine pairing service</li>
+            <li role="listitem">Chef's tasting menu</li>
+            <li role="listitem">Local ingredients</li>
+            <li role="listitem">Vegetarian options</li>
+            <li role="listitem">Gluten-free choices</li>
+            <li role="listitem">Reservations recommended</li>
+          </ul>
+        </div>
+
+        <div class="tnt-restaurant-detail__section">
+          <h2>Important Information</h2>
+          <div class="tnt-restaurant-detail__info-grid" role="list" aria-label="Important restaurant information">
+            <div class="tnt-restaurant-detail__info-item" role="listitem">
+              <strong>Location:</strong> {{ getLocationName(restaurant()!.location) }}
+            </div>
+            <div class="tnt-restaurant-detail__info-item" role="listitem">
+              <strong>Price Range:</strong> ${{ restaurant()!.priceUsd }} per person
+            </div>
+            <div class="tnt-restaurant-detail__info-item" role="listitem">
+              <strong>Rating:</strong> {{ restaurant()!.rating }}/5
+            </div>
+            @if (hasReviewCount()) {
+              <div class="tnt-restaurant-detail__info-item" role="listitem">
+                <strong>Reviews:</strong> {{ getReviewCount() }} verified reviews
+              </div>
+            }
+          </div>
+        </div>
+      </div>
+    </div>
+  }
+</div> 

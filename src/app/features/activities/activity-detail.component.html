@@ -1,0 +1,117 @@
+<div class="tnt-activity-detail" role="main" aria-label="Activity detail page">
+  @if (isLoading()) {
+    <div class="tnt-activity-detail__loading" role="status" aria-live="polite">
+      <div class="tnt-activity-detail__spinner" aria-hidden="true"></div>
+      <p>Loading activity details...</p>
+    </div>
+  } @else if (error() || !activity()) {
+    <div class="tnt-activity-detail__error" role="alert" aria-live="polite">
+      <h2>Activity Not Found</h2>
+      <p>The requested activity could not be found.</p>
+      <button class="tnt-activity-detail__back-btn" (click)="onBackClick()" aria-label="Return to activities listing">
+        ← Back to Activities
+      </button>
+    </div>
+  } @else {
+    <div class="tnt-activity-detail__container">
+      <!-- Back Button -->
+      <div class="tnt-activity-detail__back" role="navigation" aria-label="Navigation back to activities">
+        <button class="tnt-activity-detail__back-btn" (click)="onBackClick()" aria-label="Return to activities listing">
+          ← Back to Activities
+        </button>
+      </div>
+
+      <!-- Activity Header -->
+      <div class="tnt-activity-detail__header" role="banner" aria-label="Activity header information">
+        <div class="tnt-activity-detail__image">
+          <img [src]="activity()!.imageUrl" [alt]="activity()!.title" class="tnt-activity-detail__img" aria-label="Image of {{ activity()!.title }}">
+        </div>
+        <div class="tnt-activity-detail__info">
+          <div class="tnt-activity-detail__type" aria-label="Activity type">
+            <span aria-hidden="true">{{ getFavoriteTypeIcon(activity()!.type) }}</span> {{ activity()!.type }}
+          </div>
+          <h1 class="tnt-activity-detail__title">{{ activity()!.title }}</h1>
+          <p class="tnt-activity-detail__description">{{ activity()!.description }}</p>
+          
+          <div class="tnt-activity-detail__meta" role="list" aria-label="Activity details">
+            <div class="tnt-activity-detail__meta-item" role="listitem">
+              <span class="tnt-activity-detail__meta-icon" aria-hidden="true">📍</span>
+              <span class="tnt-activity-detail__meta-text">{{ getLocationName(activity()!.location) }}</span>
+            </div>
+            <div class="tnt-activity-detail__meta-item" role="listitem">
+              <span class="tnt-activity-detail__meta-icon" aria-hidden="true">⭐</span>
+              <span class="tnt-activity-detail__meta-text">{{ activity()!.rating }}</span>
+            </div>
+            <div class="tnt-activity-detail__meta-item" role="listitem">
+              <span class="tnt-activity-detail__meta-icon" aria-hidden="true">💰</span>
+              <span class="tnt-activity-detail__meta-text">${{ activity()!.priceUsd }}</span>
+            </div>
+            @if ('durationHours' in activity()!) {
+              <div class="tnt-activity-detail__meta-item" role="listitem">
+                <span class="tnt-activity-detail__meta-icon" aria-hidden="true">⏱️</span>
+                <span class="tnt-activity-detail__meta-text">{{ getDurationHours() }} hours</span>
+              </div>
+            }
+          </div>
+
+          <div class="tnt-activity-detail__actions" role="group" aria-label="Activity actions">
+            <button class="tnt-activity-detail__action-btn tnt-activity-detail__action-btn--primary" aria-label="Book this activity now">
+              Book Now
+            </button>
+            <button 
+              class="tnt-activity-detail__action-btn tnt-activity-detail__action-btn--secondary"
+              [class.tnt-activity-detail__action-btn--favorited]="isFavorite()"
+              (click)="onFavoriteToggle()"
+              [aria-label]="isFavorite() ? 'Remove activity from favorites' : 'Add activity to favorites'"
+              [aria-pressed]="isFavorite()"
+            >
+              <span class="tnt-activity-detail__favorite-icon" aria-hidden="true">
+                {{ isFavorite() ? '❤️' : '🤍' }}
+              </span>
+              {{ isFavorite() ? 'Remove from Favorites' : 'Add to Favorites' }}
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Activity Details -->
+      <div class="tnt-activity-detail__content" role="region" aria-label="Activity detailed information">
+        <div class="tnt-activity-detail__section">
+          <h2>About This Activity</h2>
+          <p>{{ activity()!.description }}</p>
+          <p>Experience the best of {{ getLocationName(activity()!.location) }} with this carefully curated activity. 
+          Perfect for travelers looking to immerse themselves in the local culture and create unforgettable memories.</p>
+        </div>
+
+        <div class="tnt-activity-detail__section">
+          <h2>What's Included</h2>
+          <ul class="tnt-activity-detail__features" role="list" aria-label="Activity features and inclusions">
+            <li role="listitem">Professional guide</li>
+            <li role="listitem">All necessary equipment</li>
+            <li role="listitem">Safety briefing</li>
+            <li role="listitem">Local insights and stories</li>
+            <li role="listitem">Photo opportunities</li>
+          </ul>
+        </div>
+
+        <div class="tnt-activity-detail__section">
+          <h2>Important Information</h2>
+          <div class="tnt-activity-detail__info-grid" role="list" aria-label="Important activity information">
+            <div class="tnt-activity-detail__info-item" role="listitem">
+              <strong>Duration:</strong> {{ getDurationHours() }} hours
+            </div>
+            <div class="tnt-activity-detail__info-item" role="listitem">
+              <strong>Location:</strong> {{ getLocationName(activity()!.location) }}
+            </div>
+            <div class="tnt-activity-detail__info-item" role="listitem">
+              <strong>Price:</strong> ${{ activity()!.priceUsd }}
+            </div>
+            <div class="tnt-activity-detail__info-item" role="listitem">
+              <strong>Rating:</strong> {{ activity()!.rating }}/5
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  }
+</div> 

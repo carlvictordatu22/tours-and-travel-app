@@ -1,0 +1,122 @@
+<div class="tnt-hotel-detail" role="main" aria-label="Hotel detail page">
+  @if (isLoading()) {
+    <div class="tnt-hotel-detail__loading" role="status" aria-live="polite">
+      <div class="tnt-hotel-detail__spinner" aria-hidden="true"></div>
+      <p>Loading hotel details...</p>
+    </div>
+  } @else if (error() || !hotel()) {
+    <div class="tnt-hotel-detail__error" role="alert" aria-live="polite">
+      <h2>Hotel Not Found</h2>
+      <p>The requested hotel could not be found.</p>
+      <button class="tnt-hotel-detail__back-btn" (click)="onBackClick()" aria-label="Return to hotels listing">
+        ← Back to Hotels
+      </button>
+    </div>
+  } @else {
+    <div class="tnt-hotel-detail__container">
+      <!-- Back Button -->
+      <div class="tnt-hotel-detail__back" role="navigation" aria-label="Navigation back to hotels">
+        <button class="tnt-hotel-detail__back-btn" (click)="onBackClick()" aria-label="Return to hotels listing">
+          ← Back to Hotels
+        </button>
+      </div>
+
+      <!-- Hotel Header -->
+      <div class="tnt-hotel-detail__header" role="banner" aria-label="Hotel header information">
+        <div class="tnt-hotel-detail__image">
+          <img [src]="hotel()!.imageUrl" [alt]="hotel()!.title" class="tnt-hotel-detail__img" aria-label="Image of {{ hotel()!.title }}">
+        </div>
+        <div class="tnt-hotel-detail__info">
+          <div class="tnt-hotel-detail__type" aria-label="Hotel type">
+            <span aria-hidden="true">{{ getFavoriteTypeIcon(hotel()!.type) }}</span> {{ hotel()!.type }}
+          </div>
+          <h1 class="tnt-hotel-detail__title">{{ hotel()!.title }}</h1>
+          <p class="tnt-hotel-detail__description">{{ hotel()!.description }}</p>
+          
+          <div class="tnt-hotel-detail__meta" role="list" aria-label="Hotel details">
+            <div class="tnt-hotel-detail__meta-item" role="listitem">
+              <span class="tnt-hotel-detail__meta-icon" aria-hidden="true">📍</span>
+              <span class="tnt-hotel-detail__meta-text">{{ getLocationName(hotel()!.location) }}</span>
+            </div>
+            <div class="tnt-hotel-detail__meta-item" role="listitem">
+              <span class="tnt-hotel-detail__meta-icon" aria-hidden="true">⭐</span>
+              <span class="tnt-hotel-detail__meta-text">{{ hotel()!.rating }}</span>
+            </div>
+            <div class="tnt-hotel-detail__meta-item" role="listitem">
+              <span class="tnt-hotel-detail__meta-icon" aria-hidden="true">💰</span>
+              <span class="tnt-hotel-detail__meta-text">${{ hotel()!.priceUsd }}</span>
+            </div>
+            @if (hasReviewCount()) {
+              <div class="tnt-hotel-detail__meta-item" role="listitem">
+                <span class="tnt-hotel-detail__meta-icon" aria-hidden="true">💬</span>
+                <span class="tnt-hotel-detail__meta-text">{{ getReviewCount() }} reviews</span>
+              </div>
+            }
+          </div>
+
+          <div class="tnt-hotel-detail__actions" role="group" aria-label="Hotel actions">
+            <button class="tnt-hotel-detail__action-btn tnt-hotel-detail__action-btn--primary" aria-label="Book this hotel now">
+              Book Now
+            </button>
+            <button 
+              class="tnt-hotel-detail__action-btn tnt-hotel-detail__action-btn--secondary"
+              [class.tnt-hotel-detail__action-btn--favorited]="isFavorite()"
+              (click)="onFavoriteToggle()"
+              [aria-label]="isFavorite() ? 'Remove hotel from favorites' : 'Add hotel to favorites'"
+              [aria-pressed]="isFavorite()"
+            >
+              <span class="tnt-hotel-detail__favorite-icon" aria-hidden="true">
+                {{ isFavorite() ? '❤️' : '🤍' }}
+              </span>
+              {{ isFavorite() ? 'Remove from Favorites' : 'Add to Favorites' }}
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hotel Details -->
+      <div class="tnt-hotel-detail__content" role="region" aria-label="Hotel detailed information">
+        <div class="tnt-hotel-detail__section">
+          <h2>About This Hotel</h2>
+          <p>{{ hotel()!.description }}</p>
+          <p>Experience luxury and comfort at this exceptional hotel in {{ getLocationName(hotel()!.location) }}. 
+          Perfect for both business and leisure travelers seeking a memorable stay with world-class amenities.</p>
+        </div>
+
+        <div class="tnt-hotel-detail__section">
+          <h2>Hotel Amenities</h2>
+          <ul class="tnt-hotel-detail__features" role="list" aria-label="Hotel amenities and features">
+            <li role="listitem">Free WiFi</li>
+            <li role="listitem">Swimming pool</li>
+            <li role="listitem">Spa & wellness center</li>
+            <li role="listitem">Restaurant & bar</li>
+            <li role="listitem">Fitness center</li>
+            <li role="listitem">24/7 front desk</li>
+            <li role="listitem">Room service</li>
+            <li role="listitem">Concierge service</li>
+          </ul>
+        </div>
+
+        <div class="tnt-hotel-detail__section">
+          <h2>Important Information</h2>
+          <div class="tnt-hotel-detail__info-grid" role="list" aria-label="Important hotel information">
+            <div class="tnt-hotel-detail__info-item" role="listitem">
+              <strong>Location:</strong> {{ getLocationName(hotel()!.location) }}
+            </div>
+            <div class="tnt-hotel-detail__info-item" role="listitem">
+              <strong>Price:</strong> ${{ hotel()!.priceUsd }} per night
+            </div>
+            <div class="tnt-hotel-detail__info-item" role="listitem">
+              <strong>Rating:</strong> {{ hotel()!.rating }}/5
+            </div>
+            @if (hasReviewCount()) {
+              <div class="tnt-hotel-detail__info-item" role="listitem">
+                <strong>Reviews:</strong> {{ getReviewCount() }} verified reviews
+              </div>
+            }
+          </div>
+        </div>
+      </div>
+    </div>
+  }
+</div> 

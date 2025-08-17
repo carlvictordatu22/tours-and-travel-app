@@ -1,0 +1,34 @@
+<div class="tnt-skeleton" [class]="'tnt-skeleton--' + type()" [style.width]="width()" [style.height]="height()">
+  @if (type() === 'card') {
+    <div class="tnt-skeleton__image"></div>
+    <div class="tnt-skeleton__content">
+      <div class="tnt-skeleton__title"></div>
+      <div class="tnt-skeleton__description"></div>
+    </div>
+  }
+  @if (type() === 'text') {
+    @for (line of [1,2,3,4,5].slice(0, lines()); track line) {
+      <div class="tnt-skeleton__line" [style.width]="line === 1 ? '100%' : line === 2 ? '80%' : '60%'"></div>
+    }
+  }
+  @if (type() === 'circle') {
+    <div class="tnt-skeleton__circle"></div>
+  }
+  @if (type() === 'pagination') {
+    <div class="tnt-skeleton__pagination">
+      @for (item of [1,2,3,4,5]; track item) {
+        <div class="tnt-skeleton__pagination-item"></div>
+      }
+    </div>
+  }
+  @if (type() === 'navbar') {
+    <div class="tnt-skeleton__navbar">
+      <div class="tnt-skeleton__logo"></div>
+      <div class="tnt-skeleton__nav-items">
+        @for (item of [1,2,3,4,5]; track item) {
+          <div class="tnt-skeleton__nav-item"></div>
+        }
+      </div>
+    </div>
+  }
+</div> 
