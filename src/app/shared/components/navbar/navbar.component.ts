@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, computed, inject, signal } from '@angular/core';
-import { RouterLink, RouterLinkActive } from '@angular/router';
+import { Router, RouterLink, RouterLinkActive, NavigationEnd } from '@angular/router';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { CreateItineraryComponent } from '../create-itinerary';
 import { MODAL_PANEL_CLASS, MODAL_WIDTH } from '../../constants';
@@ -16,25 +16,29 @@ import { Location } from '../../enums';
 })
 export class NavbarComponent {
   readonly #dialog = inject(MatDialog);
+  readonly #router = inject(Router);
 
-  searchQuery = signal('');
-  isSearchFocused = signal(false);
-  readonly options: Location[] = [Location.PARIS, Location.LONDON, Location.SPAIN];
+  /** List of available locations for autocomplete overlay */
+  readonly locations = signal<string[]>(Object.values(Location));
 
-  filteredItems = computed(() => {
-    const query = this.searchQuery().toLowerCase();
+  /** Currently selected search query (shown in the input) */
+  readonly searchQuery = signal<string>('');
 
-    if (!query) {
-      return [];
-    }
+  /** Normalized query used for filtering */
+  readonly normalizedQuery = computed(() => this.searchQuery().trim().toLowerCase());
 
-    return this.options.filter(item =>
-      item.toLowerCase().includes(query)
-    );
+  /** Filtered locations that include the current query */
+  readonly filteredLocations = computed(() => {
+    const query = this.normalizedQuery();
+
+    if (!query) { return []; }
+    
+    return this.locations().filter(loc => loc.toLowerCase().includes(query));
   });
 
-  isOverlayDropdownShown = computed(() => this.filteredItems().length > 0 && this.isSearchFocused());
-
+  /**
+   * Opens the create itinerary dialog modal
+   */
   openCreateItineraryDialog(): void {
     this.#dialog.open(
       CreateItineraryComponent,
@@ -46,16 +50,35 @@ export class NavbarComponent {
     );
   }
 
-  onSearchFocus(): void {
-    this.isSearchFocused.set(true);
+  /**
+   * Sets the selected location as the current search query
+   */
+  onChooseLocation(location: string, event?: Event): void {
+    this.searchQuery.set('');
+    (event?.currentTarget as HTMLElement | undefined)?.blur();
+    this.#router.navigate(['/location-search', location]);
   }
 
-  onSearchBlur(): void {
-    this.isSearchFocused.set(false);
+  /** Updates the query from input events */
+  onInputQuery(event: Event): void {
+    const value = (event.target as HTMLInputElement | null)?.value ?? '';
+    this.searchQuery.set(value);
   }
 
-  onChooseLocation(location: string): void {
-    this.searchQuery.set(location);
-    this.onSearchBlur();
+  /** If user presses Enter, go to the first match if any */
+  onEnter(): void {
+    const first = this.filteredLocations()[0];
+    if (first) {
+      this.onChooseLocation(first);
+    }
+  }
+
+  constructor() {
+    // Clear query on any navigation end
+    this.#router.events.subscribe(evt => {
+      if (evt instanceof NavigationEnd) {
+        this.searchQuery.set('');
+      }
+    });
   }
 }

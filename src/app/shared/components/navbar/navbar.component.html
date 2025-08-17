@@ -39,16 +39,29 @@
     <!-- Bottom Section -->
     <div class="tnt-navbar__bottom-section">
         <div class="tnt-navbar__search-container">
-            <input type="text" [(ngModel)]="searchQuery" (focus)="onSearchFocus()" (blur)="onSearchBlur()" class="tnt-navbar__search" placeholder="Where would you like to explore?" aria-label="location search bar" />
-
-            <div class="tnt-navbar__overlay" [class.tnt-navbar__overlay--hidden]="!isOverlayDropdownShown()">
-                <div class="tnt-navbar__list">
-                    @for (item of filteredItems(); track $index) {
-                        <div class="tnt-navbar__list-item" (click)="onChooseLocation(item)">{{ item }}</div>
-                    }
+            <input type="text"
+                   class="tnt-navbar__search"
+                   [value]="searchQuery()"
+                   (input)="onInputQuery($event)"
+                   (keydown.enter)="onEnter()"
+                   placeholder="Where would you like to explore?"
+                   aria-label="location search bar"
+                   aria-haspopup="listbox"
+                   aria-controls="tnt-navbar-suggestions"
+                   autocomplete="off" />
+                   
+            @if (filteredLocations().length > 0) {
+                <div class="tnt-navbar__overlay"
+                     id="tnt-navbar-suggestions"
+                     role="listbox"
+                     aria-label="Suggested locations">
+                    <ul class="tnt-navbar__list">
+                        @for (item of filteredLocations(); track $index) {
+                            <li class="tnt-navbar__list-item" role="option" tabindex="0" (click)="onChooseLocation(item, $event)" (keydown.enter)="onChooseLocation(item, $event)">{{ item }}</li>
+                        }
+                    </ul>
                 </div>
-            </div>
-
+            }
         </div>
     </div>
 </header>

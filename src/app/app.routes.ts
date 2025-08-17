@@ -22,6 +22,28 @@ export const routes: Routes = [
             .then(mod => mod.HotelsComponent)
     },
     {
+        path: 'location-search',
+        data: {
+            title: 'Location Search',
+            ogTitle: 'Find Locations',
+            ogDescription: 'Search and discover destinations and points of interest.',
+            ogImage: ''
+        },
+        loadComponent: () => import('./features/location-search/location-search.component')
+            .then(mod => mod.LocationSearchComponent)
+    },
+    {
+        path: 'location-search/:location',
+        data: {
+            title: 'Location Search',
+            ogTitle: 'Find Locations',
+            ogDescription: 'Search and discover destinations and points of interest.',
+            ogImage: ''
+        },
+        loadComponent: () => import('./features/location-search/location-search.component')
+            .then(mod => mod.LocationSearchComponent)
+    },
+    {
         path: 'restaurants',
         data: {
             title: 'Restaurants',
