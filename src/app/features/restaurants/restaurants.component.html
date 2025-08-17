@@ -1,4 +1,34 @@
 <div class="tnt-restaurants">
+    <div class="tnt-restaurants__filter">
+        <!--
+          filterForm: Reactive form controlling the restaurant filters.
+          Controls:
+            - name: text input used to match against restaurant title
+            - location: select options from locationOptions() (Location enum)
+            - isFavorite: checkbox to show only favorites when checked
+          Changes reset the current page and update the filtered grid and totals.
+        -->
+        <form class="tnt-form" [formGroup]="filterForm">
+            <div class="tnt-form__row">
+                <label class="tnt-form__label" for="name">Name</label>
+                <input class="tnt-input" id="name" type="text" formControlName="name" />
+            </div>
+            <div class="tnt-form__row">
+                <label class="tnt-form__label" for="location">Location</label>
+                <select class="tnt-select" id="location" formControlName="location">
+                    <option value="">All</option>
+                    @for (loc of locationOptions(); track loc) {
+                        <option [value]="loc">{{ loc }}</option>
+                    }
+                </select>
+            </div>
+            <div class="tnt-form__row">
+                <label class="tnt-form__label" for="isFavorite">Favorite</label>
+                <input class="tnt-toggle" id="isFavorite" type="checkbox" formControlName="isFavorite" />
+            </div>
+        </form>
+    </div>
+
     @let restaurants = (restaurants$ | async) ?? [];
 
     <!-- Loading: show skeleton grid -->

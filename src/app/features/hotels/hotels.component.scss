@@ -1,7 +1,38 @@
 .tnt-hotels {
+    &__filter {
+        background: var(--tnt-white);
+        border: 1px solid var(--tnt-neutral);
+        border-radius: 8px;
+        padding: 20px;
+        margin: 20px 0 30px 0;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    }
+
     &__pagination {
         display: flex;
         justify-content: center;
         margin: 50px 30px;
+    }
+}
+
+.tnt-form {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+
+    @media screen and (min-width: 768px) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    &__row {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+    }
+
+    &__label {
+        color: var(--tnt-dark);
+        font-size: 14px;
+        font-weight: 600;
     }
 }
