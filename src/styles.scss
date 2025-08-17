@@ -56,3 +56,62 @@
     font-family: "Funnel Display", sans-serif;
   }
 }
+
+/* Global form controls */
+.tnt-input,
+.tnt-select {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid var(--tnt-neutral);
+  border-radius: 6px;
+  background: var(--tnt-white);
+  color: var(--tnt-dark);
+  outline: none;
+}
+
+.tnt-input:focus,
+.tnt-select:focus {
+  border-color: var(--tnt-primary);
+  box-shadow: 0 0 0 2px rgba(240, 100, 73, 0.2);
+}
+
+.tnt-select {
+  appearance: none;
+  background-image: linear-gradient(45deg, transparent 50%, var(--tnt-dark) 50%),
+    linear-gradient(135deg, var(--tnt-dark) 50%, transparent 50%);
+  background-position: calc(100% - 16px) calc(1em - 2px), calc(100% - 11px) calc(1em - 2px);
+  background-size: 5px 5px, 5px 5px;
+  background-repeat: no-repeat;
+}
+
+.tnt-toggle {
+  width: 42px;
+  height: 24px;
+  appearance: none;
+  background: var(--tnt-neutral);
+  border-radius: 999px;
+  position: relative;
+  outline: none;
+  cursor: pointer;
+  transition: background 150ms ease-in-out;
+}
+
+.tnt-toggle::after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 18px;
+  height: 18px;
+  background: var(--tnt-white);
+  border-radius: 50%;
+  transition: transform 150ms ease-in-out;
+}
+
+.tnt-toggle:checked {
+  background: var(--tnt-primary);
+}
+
+.tnt-toggle:checked::after {
+  transform: translateX(18px);
+}

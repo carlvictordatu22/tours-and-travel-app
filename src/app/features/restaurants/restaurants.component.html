@@ -12,17 +12,23 @@
         </div>
     } @else {
         <!-- Not loading: show restaurants grid and pagination -->
-        <div class="tnt-grid tnt-grid--col-3">
-            @for (restaurant of restaurants; track restaurant.id) {
-                <div class="tnt-grid__col">
-                    <tnt-card
-                        [imageUrl]="restaurant.imageUrl"
-                        [title]="restaurant.title"
-                        [description]="restaurant.description"
-                    ></tnt-card>
-                </div>
-            }
-        </div>
+        @if (restaurants.length > 0) {
+            <div class="tnt-grid tnt-grid--col-3">
+                @for (restaurant of restaurants; track restaurant.id) {
+                    <div class="tnt-grid__col">
+                        <tnt-card
+                            [imageUrl]="restaurant.imageUrl"
+                            [title]="restaurant.title"
+                            [description]="restaurant.description"
+                        ></tnt-card>
+                    </div>
+                }
+            </div>
+        } @else {
+            <tnt-empty-card>
+                No restaurants found.
+            </tnt-empty-card>
+        }
 
         <div class="tnt-restaurants__pagination">
             <tnt-pagination [total]="totalRestaurants()" [pageSize]="pageSize" [(page)]="page"></tnt-pagination>

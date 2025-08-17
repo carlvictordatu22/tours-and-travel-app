@@ -1,14 +1,14 @@
 import { ChangeDetectionStrategy, Component, Signal, computed, effect, inject, signal } from '@angular/core';
 import { toObservable } from '@angular/core/rxjs-interop';
 import { CommonModule } from '@angular/common';
-import { CardComponent, ENTRIES, Entries, Entry, EntryType, PaginationComponent, SkeletonComponent } from '../../shared';
+import { CardComponent, ENTRIES, Entries, Entry, EntryType, PaginationComponent, SkeletonComponent, EmptyCardComponent } from '../../shared';
 import { Observable } from 'rxjs';
 import { delay, tap } from 'rxjs/operators';
 import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'tnt-restaurants',
-  imports: [CommonModule, CardComponent, PaginationComponent, SkeletonComponent],
+  imports: [CommonModule, CardComponent, PaginationComponent, SkeletonComponent, EmptyCardComponent],
   templateUrl: './restaurants.component.html',
   styleUrl: './restaurants.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush

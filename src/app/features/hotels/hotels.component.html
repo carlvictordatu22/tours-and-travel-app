@@ -12,17 +12,23 @@
         </div>
     } @else {
         <!-- Not loading: show hotels grid and pagination -->
-        <div class="tnt-grid tnt-grid--col-3">
-            @for (hotel of hotels; track hotel.id) {
-                <div class="tnt-grid__col">
-                    <tnt-card
-                        [imageUrl]="hotel.imageUrl"
-                        [title]="hotel.title"
-                        [description]="hotel.description"
-                    ></tnt-card>
-                </div>
-            }
-        </div>
+        @if (hotels.length > 0) {
+            <div class="tnt-grid tnt-grid--col-3">
+                @for (hotel of hotels; track hotel.id) {
+                    <div class="tnt-grid__col">
+                        <tnt-card
+                            [imageUrl]="hotel.imageUrl"
+                            [title]="hotel.title"
+                            [description]="hotel.description"
+                        ></tnt-card>
+                    </div>
+                }
+            </div>
+        } @else {
+            <tnt-empty-card>
+                No hotels found.
+            </tnt-empty-card>
+        }
 
         <div class="tnt-hotels__pagination">
             <tnt-pagination [total]="totalHotels()" [pageSize]="pageSize" [(page)]="page"></tnt-pagination>
