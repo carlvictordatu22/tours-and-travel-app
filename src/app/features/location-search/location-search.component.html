@@ -16,13 +16,14 @@
 	} @else {
 		@if (entries.length > 0) {
 			<div class="tnt-grid tnt-grid--col-3">
-				@for (entry of entries; track entry.id) {
+				@for (entry of entries; track entry.id; let i = $index) {
 					<div class="tnt-grid__col">
 						<tnt-card
 							[imageUrl]="entry.imageUrl"
 							[type]="entry.type"
 							[title]="entry.title"
 							[description]="entry.description"
+							[priority]="i === 0"
 							[(isFavorite)]="entry.isFavorite"
 							(isFavoriteChange)="onFavoriteChange(entry.id, $event)"
 						></tnt-card>

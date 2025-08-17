@@ -44,13 +44,14 @@
     <!-- Not loading: show activities grid and pagination -->
     @if (activities.length > 0) {
       <div class="tnt-grid tnt-grid--col-3">
-        @for (activity of activities; track activity.id) {
+        @for (activity of activities; track activity.id; let i = $index) {
           <div class="tnt-grid__col">
             <tnt-card
               [imageUrl]="activity.imageUrl"
               [type]="activity.type"
               [title]="activity.title"
               [description]="activity.description"
+              [priority]="i === 0"
               [(isFavorite)]="activity.isFavorite"
               (isFavoriteChange)="onFavoriteChange(activity.id, $event)"
             ></tnt-card>

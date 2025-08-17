@@ -44,13 +44,14 @@
         <!-- Not loading: show restaurants grid and pagination -->
         @if (restaurants.length > 0) {
             <div class="tnt-grid tnt-grid--col-3">
-                @for (restaurant of restaurants; track restaurant.id) {
+                @for (restaurant of restaurants; track restaurant.id; let i = $index) {
                     <div class="tnt-grid__col">
                         <tnt-card
                             [imageUrl]="restaurant.imageUrl"
                             [type]="restaurant.type"
                             [title]="restaurant.title"
                             [description]="restaurant.description"
+                            [priority]="i === 0"
                             [(isFavorite)]="restaurant.isFavorite"
                             (isFavoriteChange)="onFavoriteChange(restaurant.id, $event)"
                         ></tnt-card>

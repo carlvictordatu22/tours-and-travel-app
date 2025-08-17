@@ -16,6 +16,7 @@ export class CardComponent {
   isFavorite = input<boolean>(false);
   isFavoriteChange = output<boolean>();
   type = input<EntryType | null>(null);
+  priority = input<boolean>(false);
 
   /**
    * Toggle favorite state and emit the new value via `isFavoriteChange`.

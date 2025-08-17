@@ -13,7 +13,7 @@
         >
             <span class="tnt-card__favorite-icon" aria-hidden="true"></span>
         </button>
-        <img class="tnt-card__image" [ngSrc]="imageUrl()" height="600" width="800" priority />
+        <img class="tnt-card__image" [ngSrc]="imageUrl()" height="600" width="800" [priority]="priority()" />
     </div>
     <div class="tnt-card__body">
         <h4 class="tnt-card__title">{{ title() }}</h4>
