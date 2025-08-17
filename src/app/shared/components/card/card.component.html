@@ -1,9 +1,62 @@
-<div class="tnt-card">
+<div class="tnt-card" 
+     [class.tnt-card--clickable]="enableNavigation() && entry()"
+     (click)="onCardClick()">
     <div class="tnt-card__header">
-        <img class="tnt-card__image" [ngSrc]="imageUrl()" height="600" width="800" priority />
+        <img 
+            class="tnt-card__image" 
+            [ngSrc]="getCardImageUrl()" 
+            [width]="getImageDimensions().width"
+            [height]="getImageDimensions().height"
+            [priority]="shouldLoadWithPriority()"
+            [fill]="false"
+            [placeholder]="getImagePlaceholder()"
+            [quality]="getImageQuality()"
+            [sizes]="'(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'"
+            alt="{{ getCardTitle() }}"
+        />
+        
+        <!-- Favorite Heart Toggle Button -->
+        <button 
+            class="tnt-card__favorite-btn"
+            [class.tnt-card__favorite-btn--active]="isFavorite()"
+            (click)="onFavoriteToggle($event)"
+            type="button"
+            [attr.aria-label]="isFavorite() ? 'Remove from favorites' : 'Add to favorites'"
+            title="{{ isFavorite() ? 'Remove from favorites' : 'Add to favorites' }}"
+        >
+            <span class="tnt-card__favorite-icon">
+                {{ isFavorite() ? '❤️' : '🤍' }}
+            </span>
+        </button>
+        
+        @if (getCardType()) {
+            <div class="tnt-card__type-badge">
+                {{ getCardTypeIcon() }} {{ getCardType() }}
+            </div>
+        }
     </div>
     <div class="tnt-card__body">
-        <h4 class="tnt-card__title">{{ title() }}</h4>
-        <p class="tnt-card__description">{{ description() }}</p>
+        <h4 class="tnt-card__title">{{ getCardTitle() }}</h4>
+        <p class="tnt-card__description">{{ getCardDescription() }}</p>
+        
+        @if (getCardLocation() || getCardRating() || getCardPrice()) {
+            <div class="tnt-card__meta">
+                @if (getCardLocation()) {
+                    <span class="tnt-card__meta-item">
+                        📍 {{ getCardLocation() }}
+                    </span>
+                }
+                @if (getCardRating()) {
+                    <span class="tnt-card__meta-item">
+                        ⭐ {{ getCardRating() }}
+                    </span>
+                }
+                @if (getCardPrice()) {
+                    <span class="tnt-card__meta-item">
+                        💰 ${{ getCardPrice() }}
+                    </span>
+                }
+            </div>
+        }
     </div>
 </div>

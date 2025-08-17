@@ -1,4 +1,49 @@
 .tnt-restaurants {
+    &__global-filter-notice {
+        background: #e3f2fd;
+        padding: 24px;
+        border-radius: 8px;
+        margin-bottom: 32px;
+        border-left: 4px solid #2196f3;
+        text-align: center;
+
+        p {
+            margin: 8px 0;
+            color: #1565c0;
+            font-weight: 500;
+
+            &:first-child {
+                font-size: 18px;
+                font-weight: 600;
+            }
+
+            &:last-child {
+                font-size: 14px;
+                opacity: 0.8;
+            }
+        }
+    }
+
+    &__no-results {
+        text-align: center;
+        padding: 64px 32px;
+        background: #f8f9fa;
+        border-radius: 12px;
+        margin: 32px 0;
+
+        h3 {
+            color: var(--tnt-dark);
+            margin-bottom: 16px;
+            font-size: 24px;
+        }
+
+        p {
+            color: #666;
+            margin-bottom: 16px;
+            font-size: 18px;
+        }
+    }
+
     &__pagination {
         display: flex;
         justify-content: center;

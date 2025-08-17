@@ -1,14 +1,321 @@
 <div class="tnt-create-itinerary">
-    <h1 mat-dialog-title>Create Itinerary</h1>
+  <h2 mat-dialog-title>Create New Itinerary</h2>
 
-    <div mat-dialog-content>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam corporis magnam, sequi
-        consequuntur deserunt eius iusto dolorum omnis atque excepturi laboriosam, explicabo autem adipisci nisi commodi
-        pariatur saepe eum odio!</div>
+  <div mat-dialog-content>
+    <form [formGroup]="itineraryForm" (ngSubmit)="onSave()">
+      
+      <!-- Basic Information -->
+      <div class="tnt-create-itinerary__section">
+        <h3>Basic Information</h3>
+        
+        <div class="tnt-create-itinerary__field">
+          <label for="itineraryName">Itinerary Name *</label>
+          <input 
+            id="itineraryName"
+            type="text" 
+            formControlName="name" 
+            placeholder="Enter itinerary name"
+            class="tnt-create-itinerary__input"
+            required
+          >
+        </div>
 
-    <div mat-dialog-actions style="float:right;margin:20px;">
-        <button [mat-dialog-close]="{ clicked: 'Ok' }">Ok</button>
-        <button [mat-dialog-close]="{ clicked: 'Cancel' }">
+        <div class="tnt-create-itinerary__date-range">
+          <h4>Date Range *</h4>
+          <p class="tnt-create-itinerary__date-hint">Select start and end dates (maximum 7 days, future dates only)</p>
+          
+          <div class="tnt-create-itinerary__date-inputs">
+            <mat-form-field appearance="outline" class="tnt-create-itinerary__field">
+              <mat-label>Start Date</mat-label>
+              <input matInput [matDatepicker]="startPicker" formControlName="startDate" 
+                     [matDatepickerFilter]="futureDateFilter"
+                     (dateChange)="onDateRangeChange()" required>
+              <mat-datepicker-toggle matSuffix [for]="startPicker"></mat-datepicker-toggle>
+              <mat-datepicker #startPicker></mat-datepicker>
+              <mat-error *ngIf="itineraryForm.get('startDate')?.hasError('required')">
+                Start date is required
+              </mat-error>
+            </mat-form-field>
+            
+            <mat-form-field appearance="outline" class="tnt-create-itinerary__field">
+              <mat-label>End Date</mat-label>
+              <input matInput [matDatepicker]="endPicker" formControlName="endDate" 
+                     [matDatepickerFilter]="endDateFilter" 
+                     (dateChange)="onDateRangeChange()" required>
+              <mat-datepicker-toggle matSuffix [for]="endPicker"></mat-datepicker-toggle>
+              <mat-datepicker #endPicker></mat-datepicker>
+              <mat-error *ngIf="itineraryForm.get('endDate')?.hasError('required')">
+                End date is required
+              </mat-error>
+              <mat-error *ngIf="itineraryForm.get('endDate')?.hasError('invalidDateRange')">
+                End date must be after start date
+              </mat-error>
+              <mat-error *ngIf="itineraryForm.get('endDate')?.hasError('maxDaysExceeded')">
+                Date range cannot exceed 7 days
+              </mat-error>
+            </mat-form-field>
+          </div>
+          
+          <div>
+            @if (generatedDays().length > 0) {
+              <div class="tnt-create-itinerary__generated-days">
+                <p>Generated {{ generatedDays().length }} day(s):</p>
+                <div class="tnt-create-itinerary__days-list">
+                  @for (day of generatedDays(); track day.date.toISOString()) {
+                    <span class="tnt-create-itinerary__day-chip">{{ formatDate(day.date) }}</span>
+                  }
+                </div>
+              </div>
+            } @else if (itineraryForm.get('startDate')?.value && itineraryForm.get('endDate')?.value && 
+                       (itineraryForm.get('endDate')?.hasError('invalidDateRange') || 
+                        itineraryForm.get('endDate')?.hasError('maxDaysExceeded'))) {
+              <div class="tnt-create-itinerary__date-error">
+                <p>⚠️ Invalid date range. Please select a valid range (maximum 7 days).</p>
+              </div>
+            }
+          </div>
+        </div>
+
+        <!-- Date Range Validation -->
+        @if (selectedDateRange().start && selectedDateRange().end) {
+          <div class="tnt-create-itinerary__date-info">
+            <p>📅 <strong>{{ generatedDays().length }} days</strong> selected</p>
+            <p>From {{ formatDate(selectedDateRange().start!) }} to {{ formatDate(selectedDateRange().end!) }}</p>
+          </div>
+        }
+      </div>
+
+      <!-- Thumbnail Section -->
+      <div class="tnt-create-itinerary__section">
+        <h3>Thumbnail Image</h3>
+        <p class="tnt-create-itinerary__thumbnail-hint">Upload an image or provide a URL for your itinerary</p>
+        
+        <div class="tnt-create-itinerary__thumbnail-options">
+          <!-- File Upload -->
+          <div class="tnt-create-itinerary__field">
+            <label for="thumbnailFile">Upload Image</label>
+            <input 
+              id="thumbnailFile"
+              type="file" 
+              accept="image/*" 
+              (change)="onThumbnailChange($event)"
+              class="tnt-create-itinerary__file-input"
+            >
+          </div>
+          
+          <!-- URL Input -->
+          <div class="tnt-create-itinerary__field">
+            <label for="thumbnailUrl">Or Image URL</label>
+            <input 
+              id="thumbnailUrl"
+              type="url" 
+              placeholder="https://example.com/image.jpg"
+              (input)="onThumbnailUrlChange($event)"
+              class="tnt-create-itinerary__input"
+            >
+          </div>
+        </div>
+        
+        <!-- Thumbnail Preview -->
+        @if (selectedThumbnail()) {
+          <div class="tnt-create-itinerary__thumbnail-preview">
+            <img [src]="selectedThumbnail()" alt="Thumbnail preview" class="tnt-create-itinerary__preview-image">
+            <button type="button" mat-icon-button (click)="selectedThumbnail.set('')" 
+                    class="tnt-create-itinerary__remove-thumbnail">
+              <mat-icon>close</mat-icon>
+            </button>
+          </div>
+        }
+      </div>
+
+      <!-- Entry Selection Section -->
+      @if (generatedDays().length > 0) {
+        <div class="tnt-create-itinerary__section">
+          <h3>Select Entries</h3>
+          
+          <!-- Entry Filters -->
+          <form [formGroup]="filterForm">
+            <div class="tnt-create-itinerary__filters">
+              <div class="tnt-create-itinerary__filter-field">
+                <label for="entryTypeFilter">Type</label>
+                <select id="entryTypeFilter" formControlName="entryType" class="tnt-create-itinerary__select">
+                  <option value="">All Types</option>
+                  @for (type of entryTypes; track type) {
+                    <option [value]="type">{{ getEntryTypeIcon(type) }} {{ type }}</option>
+                  }
+                </select>
+              </div>
+
+              <div class="tnt-create-itinerary__filter-field">
+                <label for="locationFilter">Location</label>
+                <select id="locationFilter" formControlName="location" class="tnt-create-itinerary__select">
+                  <option value="">All Locations</option>
+                  @for (location of locations; track location) {
+                    <option [value]="location">🌍 {{ location }}</option>
+                  }
+                </select>
+              </div>
+
+              <div class="tnt-create-itinerary__filter-field">
+                <label for="searchQueryFilter">Search</label>
+                <input id="searchQueryFilter" type="text" placeholder="Search entries..." formControlName="searchQuery" class="tnt-create-itinerary__input">
+              </div>
+            </div>
+          </form>
+
+          <!-- Available Entries -->
+          <div class="tnt-create-itinerary__entries-container">
+            <h4>Available Entries ({{ filteredEntries().length }})</h4>
+            <div class="tnt-create-itinerary__entries-grid">
+              @for (entry of filteredEntries(); track entry.id) {
+                <mat-card class="tnt-create-itinerary__entry-card">
+                  <img mat-card-image [src]="entry.imageUrl" [alt]="entry.title">
+                  <mat-card-content>
+                    <div class="tnt-create-itinerary__entry-header">
+                      <span class="tnt-create-itinerary__entry-type">{{ getEntryTypeIcon(entry.type) }}</span>
+                      <h5>{{ entry.title }}</h5>
+                    </div>
+                    <p class="tnt-create-itinerary__entry-location">🌍 {{ entry.location }}</p>
+                    <p class="tnt-create-itinerary__entry-price">${{ entry.priceUsd }}</p>
+                  </mat-card-content>
+                  <mat-card-actions>
+                    @if (generatedDays().length > 0) {
+                      @if (canAddEntryToAnyDay(entry)) {
+                        <div class="tnt-create-itinerary__quick-add">
+                          <label for="quickAdd_{{ entry.id }}">Add to day</label>
+                          <select id="quickAdd_{{ entry.id }}" (change)="onQuickAddChange($event, entry)" class="tnt-create-itinerary__select">
+                            <option value="">Select a day</option>
+                            @for (day of generatedDays(); track day.date.toISOString()) {
+                              @if (canAddEntryToDay(entry, day)) {
+                                <option [value]="day.date.toISOString()">
+                                  {{ formatDate(day.date) }} ({{ getRemainingCapacity(day) }} slots left)
+                                </option>
+                              }
+                            }
+                          </select>
+                        </div>
+                      } @else {
+                        <div class="tnt-create-itinerary__entry-unavailable">
+                          <mat-icon>event_busy</mat-icon>
+                          <span>No available days</span>
+                        </div>
+                      }
+                    } @else {
+                      <div class="tnt-create-itinerary__entry-no-dates">
+                        <mat-icon>schedule</mat-icon>
+                        <span>Select dates first</span>
+                      </div>
+                    }
+                  </mat-card-actions>
+                </mat-card>
+              }
+            </div>
+          </div>
+
+          <!-- Day-by-Day Planning -->
+          <div class="tnt-create-itinerary__days-container">
+            <div class="tnt-create-itinerary__days-header">
+              <h4>Daily Planning</h4>
+              <div class="tnt-create-itinerary__summary">
+                <span class="tnt-create-itinerary__total-entries">
+                  📋 Total Entries: {{ getTotalEntriesCount() }}
+                </span>
+                <span class="tnt-create-itinerary__total-days">
+                  📅 Days: {{ generatedDays().length }}
+                </span>
+                @if (hasActiveFilters()) {
+                  <span class="tnt-create-itinerary__filter-notice">
+                    🔍 Filters Active
+                  </span>
+                }
+              </div>
+            </div>
+            @for (day of generatedDays(); track day.date.toISOString()) {
+              <div class="tnt-create-itinerary__day">
+                <div class="tnt-create-itinerary__day-header">
+                  <h5>{{ formatDate(day.date) }}</h5>
+                  <span class="tnt-create-itinerary__day-capacity">
+                    {{ getDayEntries(day).length }}/5 entries
+                  </span>
+                </div>
+
+                <!-- Day Entries -->
+                <div class="tnt-create-itinerary__day-entries">
+                  @if (getDayEntries(day).length === 0) {
+                    <div class="tnt-create-itinerary__day-empty">
+                      <mat-icon>event_busy</mat-icon>
+                      <span>No entries planned for this day</span>
+                    </div>
+                  } @else {
+                    @for (entry of getDayEntries(day); track entry.id) {
+                      <div class="tnt-create-itinerary__day-entry">
+                        <img [src]="entry.imageUrl" [alt]="entry.title" class="tnt-create-itinerary__day-entry-image">
+                        <div class="tnt-create-itinerary__day-entry-info">
+                          <h6>{{ entry.title }}</h6>
+                          <p>{{ getEntryTypeIcon(entry.type) }} {{ entry.type }}</p>
+                        </div>
+                        <button type="button" mat-icon-button color="warn" 
+                                (click)="removeEntryFromDay(entry, day)">
+                          <mat-icon>remove_circle</mat-icon>
+                        </button>
+                      </div>
+                    }
+                  }
+                </div>
+
+                <!-- Add Entry to Day -->
+                @if (getRemainingCapacity(day) > 0) {
+                  <div class="tnt-create-itinerary__add-to-day">
+                    <div class="tnt-create-itinerary__add-field">
+                      <label for="addToDay_{{ day.date.toISOString() }}">Add entry to {{ formatDate(day.date) }} ({{ getRemainingCapacity(day) }} slots left)</label>
+                      <select id="addToDay_{{ day.date.toISOString() }}" (change)="onAddToDayChange($event, day)" class="tnt-create-itinerary__select">
+                        <option value="">Select an entry</option>
+                        @for (entry of getAvailableEntriesForDay(day); track entry.id) {
+                          <option [value]="entry.id">
+                            {{ getEntryTypeIcon(entry.type) }} {{ entry.title }}
+                          </option>
+                        }
+                      </select>
+                    </div>
+                  </div>
+                } @else {
+                  <div class="tnt-create-itinerary__day-full">
+                    <mat-icon>check_circle</mat-icon>
+                    <span>Day is full (5/5 entries)</span>
+                  </div>
+                }
+              </div>
+            }
+          </div>
+        </div>
+      }
+
+      <!-- Loading State -->
+      @if (isLoading()) {
+        <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+      }
+    </form>
+  </div>
+
+  <!-- Dialog Actions -->
+  <div mat-dialog-actions class="tnt-create-itinerary__actions">
+    <button type="button" mat-button (click)="onCancel()" [disabled]="isLoading()">
             Cancel
+        </button>
+    <button type="button" mat-raised-button color="primary" 
+            (click)="onSave()" 
+            [disabled]="!canSave() || isLoading()">
+      @if (isLoading()) {
+        <ng-container>
+          <mat-icon>hourglass_empty</mat-icon>
+          Creating...
+        </ng-container>
+      } @else {
+        <ng-container>
+          <mat-icon>save</mat-icon>
+          Create Itinerary
+        </ng-container>
+      }
         </button>
     </div>
 </div>

@@ -1,3 +1,186 @@
-<div class="tnt-profile">
-    Profile
+<div class="tnt-profile" role="main" aria-label="User profile page">
+  <div class="tnt-profile__container">
+    <!-- Left Sidebar - Favorites Filter -->
+    <aside class="tnt-profile__sidebar" role="complementary" aria-label="Favorites filter sidebar">
+      <div class="tnt-profile__sidebar-content">
+        <h3>Favorites Filter</h3>
+        <div class="tnt-profile__filter-controls">
+          <label for="favorite-type-filter" class="tnt-profile__filter-label">Filter by type:</label>
+          <select 
+            id="favorite-type-filter"
+            class="tnt-profile__filter-select"
+            [value]="selectedFavoriteType()"
+            (change)="onFavoriteTypeChange($event)"
+            aria-label="Filter favorites by type"
+          >
+            @for (filterType of favoriteTypes; track filterType.value) {
+              <option [value]="filterType.value">
+                <span aria-hidden="true">{{ filterType.icon }}</span> {{ filterType.label }}
+              </option>
+            }
+          </select>
+        </div>
+        
+        <div class="tnt-profile__filter-stats" role="status" aria-live="polite">
+          <p>Showing {{ filteredFavorites().length }} favorites</p>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="tnt-profile__main">
+      <!-- User Info Section -->
+      <section class="tnt-profile__user-info" role="region" aria-label="User information">
+        <div class="tnt-profile__user-header">
+          <img [src]="userInfo.avatar" [alt]="userInfo.name" class="tnt-profile__user-avatar" aria-label="Profile picture of {{ userInfo.name }}">
+          <div class="tnt-profile__user-details">
+            <h1 class="tnt-profile__user-name">{{ userInfo.name }}</h1>
+            <p class="tnt-profile__user-email">{{ userInfo.email }}</p>
+            <p class="tnt-profile__user-join">Member since {{ userInfo.joinDate }}</p>
+          </div>
+        </div>
+        
+        <div class="tnt-profile__user-stats" role="list" aria-label="User statistics">
+          <div class="tnt-profile__stat" role="listitem">
+            <span class="tnt-profile__stat-number">{{ totalTrips() }}</span>
+            <span class="tnt-profile__stat-label">Total Trips</span>
+          </div>
+          <div class="tnt-profile__stat" role="listitem">
+            <span class="tnt-profile__stat-number">{{ favoriteCount() }}</span>
+            <span class="tnt-profile__stat-label">Favorites</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Favorites Section -->
+      <section class="tnt-profile__favorites" role="region" aria-label="User favorites">
+        <h2>My Favorites</h2>
+        @if (filteredFavorites().length > 0) {
+          <div class="tnt-profile__favorites-grid" role="list" aria-label="Favorites grid">
+            @for (favorite of filteredFavorites(); track favorite.id) {
+              <div class="tnt-profile__favorite-item" 
+                   (click)="onFavoriteCardClick(favorite)"
+                   role="listitem"
+                   tabindex="0"
+                   [attr.aria-label]="'Favorite ' + favorite.type.toLowerCase() + ': ' + favorite.title + ' in ' + favorite.location">
+                <div class="tnt-profile__favorite-card">
+                  <div class="tnt-profile__favorite-image">
+                    <img [src]="favorite.imageUrl" [alt]="favorite.title" class="tnt-profile__favorite-img">
+                  </div>
+                  <div class="tnt-profile__favorite-content">
+                    <div class="tnt-profile__favorite-type" aria-label="Favorite type">
+                      <span aria-hidden="true">{{ getFavoriteTypeIcon(favorite.type) }}</span> {{ favorite.type }}
+                    </div>
+                    <h3 class="tnt-profile__favorite-title">{{ favorite.title }}</h3>
+                    <p class="tnt-profile__favorite-description">{{ favorite.description }}</p>
+                    <div class="tnt-profile__favorite-meta" role="list" aria-label="Favorite details">
+                      <span class="tnt-profile__favorite-location" role="listitem">📍 {{ favorite.location }}</span>
+                      <span class="tnt-profile__favorite-rating" role="listitem">⭐ {{ favorite.rating }}</span>
+                      <span class="tnt-profile__favorite-price" role="listitem">${{ favorite.priceUsd }}</span>
+                      @if (favorite.type === EntryType.ACTIVITY && 'durationHours' in favorite) {
+                        <span class="tnt-profile__favorite-duration" role="listitem">⏱️ {{ favorite.durationHours }}h</span>
+                      }
+                      @if ((favorite.type === EntryType.HOTEL || favorite.type === EntryType.RESTAURANT) && 'reviewCount' in favorite) {
+                        <span class="tnt-profile__favorite-reviews" role="listitem">💬 {{ favorite.reviewCount }}</span>
+                      }
+                    </div>
+                  </div>
+                </div>
+              </div>
+            }
+          </div>
+        } @else {
+          <div class="tnt-profile__empty-state" role="status" aria-live="polite">
+            <p>No favorites found for the selected filter.</p>
+          </div>
+        }
+      </section>
+
+      <!-- Itineraries Section -->
+      <section class="tnt-profile__itineraries" role="region" aria-label="User itineraries">
+        <h2>My Itineraries</h2>
+        @if (itineraries().length > 0) {
+          <div class="tnt-profile__itineraries-list" role="list" aria-label="Itineraries list">
+            @for (itinerary of itineraries(); track itinerary.id) {
+              <div class="tnt-profile__itinerary-detailed" role="listitem">
+                <!-- Itinerary Header -->
+                <div class="tnt-profile__itinerary-header">
+                  <div class="tnt-profile__itinerary-thumbnail">
+                    <img [src]="itinerary.thumbnailUrl" [alt]="itinerary.name" class="tnt-profile__itinerary-image" aria-label="Thumbnail for {{ itinerary.name }}">
+                  </div>
+                  <div class="tnt-profile__itinerary-info">
+                    <h3 class="tnt-profile__itinerary-name">{{ itinerary.name }}</h3>
+                    <p class="tnt-profile__itinerary-dates">
+                      {{ formatDateRange(itinerary.startDate, itinerary.endDate) }}
+                    </p>
+                    <p class="tnt-profile__itinerary-summary">
+                      {{ itinerary.days.length }} day{{ itinerary.days.length !== 1 ? 's' : '' }} • 
+                      {{ getTotalEntriesForItinerary(itinerary) }} entries
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Sequential Days -->
+                <div class="tnt-profile__itinerary-days" role="list" aria-label="Itinerary days">
+                  @for (day of itinerary.days; track day.date; let i = $index) {
+                    <div class="tnt-profile__itinerary-day" role="listitem">
+                      <div class="tnt-profile__day-header">
+                        <div class="tnt-profile__day-number">Day {{ i + 1 }}</div>
+                        <div class="tnt-profile__day-date">{{ formatDayDate(day.date) }}</div>
+                        <div class="tnt-profile__day-entries-count">
+                          {{ day.entries.length }} entr{{ day.entries.length === 1 ? 'y' : 'ies' }}
+                        </div>
+                      </div>
+
+                      @if (day.entries.length > 0) {
+                        <div class="tnt-profile__day-entries" role="list" aria-label="Day {{ i + 1 }} entries">
+                          @for (entry of day.entries; track entry.id) {
+                            <div class="tnt-profile__day-entry" 
+                                 (click)="onItineraryEntryClick(entry)"
+                                 role="listitem"
+                                 tabindex="0"
+                                 [attr.aria-label]="'Itinerary entry: ' + entry.title + ' in ' + entry.location">
+                              <div class="tnt-profile__entry-image">
+                                <img [src]="entry.imageUrl" [alt]="entry.title" class="tnt-profile__entry-img">
+                              </div>
+                              <div class="tnt-profile__entry-content">
+                                <div class="tnt-profile__entry-type" aria-label="Entry type">
+                                  <span aria-hidden="true">{{ getFavoriteTypeIcon(entry.type) }}</span> {{ entry.type }}
+                                </div>
+                                <h4 class="tnt-profile__entry-title">{{ entry.title }}</h4>
+                                <p class="tnt-profile__entry-description">{{ entry.description }}</p>
+                                <div class="tnt-profile__entry-meta" role="list" aria-label="Entry details">
+                                  <span class="tnt-profile__entry-location" role="listitem">📍 {{ entry.location }}</span>
+                                  <span class="tnt-profile__entry-rating" role="listitem">⭐ {{ entry.rating }}</span>
+                                  <span class="tnt-profile__entry-price" role="listitem">${{ entry.priceUsd }}</span>
+                                  @if (entry.type === EntryType.ACTIVITY && 'durationHours' in entry) {
+                                    <span class="tnt-profile__entry-duration" role="listitem">⏱️ {{ entry.durationHours }}h</span>
+                                  }
+                                  @if ((entry.type === EntryType.HOTEL || entry.type === EntryType.RESTAURANT) && 'reviewCount' in entry) {
+                                    <span class="tnt-profile__entry-reviews" role="listitem">💬 {{ entry.reviewCount }}</span>
+                                  }
+                                </div>
+                              </div>
+                            </div>
+                          }
+                        </div>
+                      } @else {
+                        <div class="tnt-profile__empty-day" role="status" aria-live="polite">
+                          <p>No entries planned for this day</p>
+                        </div>
+                      }
+                    </div>
+                  }
+                </div>
+              </div>
+            }
+          </div>
+        } @else {
+          <div class="tnt-profile__empty-state" role="status" aria-live="polite">
+            <p>No itineraries created yet. Start planning your next trip!</p>
+          </div>
+        }
+      </section>
+    </main>
+  </div>
 </div>

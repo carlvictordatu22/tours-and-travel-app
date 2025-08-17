@@ -1,3 +1,119 @@
-<div class="tnt-ai-search">
-    AI Search
+<div class="tnt-ai-search" role="main" aria-label="AI-powered travel search">
+    <div class="tnt-ai-search__header">
+        <h1>AI-Powered Travel Search</h1>
+        <p>Describe what you're looking for and our AI will find the most relevant activities, hotels, and restaurants for you.</p>
+    </div>
+
+    <div class="tnt-ai-search__search" role="search" aria-label="AI search interface">
+        <div class="tnt-ai-search__input-group">
+            <input 
+                type="text" 
+                class="tnt-ai-search__input"
+                placeholder="e.g., 'I want to explore Paris on a budget', 'Family-friendly activities in London', 'Romantic dinner spots'"
+                [value]="searchQuery()"
+                (input)="onQueryChange($event)"
+                (keypress)="onKeyPress($event)"
+                [disabled]="isSearching()"
+                aria-label="Describe your travel preferences for AI search"
+            >
+            <button 
+                class="tnt-ai-search__button"
+                (click)="onSearch()"
+                [disabled]="isSearching() || !searchQuery().trim()"
+                aria-label="Start AI search"
+            >
+                @if (isSearching()) {
+                    <span class="tnt-ai-search__button-text">Searching...</span>
+                } @else {
+                    <span class="tnt-ai-search__button-text">Search</span>
+                }
+            </button>
+        </div>
+        
+        @if (hasSearched() && !isSearching()) {
+            <button 
+                class="tnt-ai-search__clear"
+                (click)="clearSearch()"
+                aria-label="Clear search results"
+            >
+                Clear Search
+            </button>
+        }
+    </div>
+
+    @if (isSearching()) {
+        <!-- Loading state -->
+        <div class="tnt-ai-search__loading" role="status" aria-live="polite">
+            <div class="tnt-ai-search__loading-text">
+                <p>🤖 AI is analyzing your request...</p>
+                <p>Finding the most relevant travel options for you</p>
+            </div>
+            <div class="tnt-ai-search__skeleton-grid" aria-label="Loading search results">
+                @for (item of [1,2,3,4,5,6]; track item) {
+                <div class="tnt-ai-search__skeleton-item">
+                    <tnt-skeleton type="card" aria-label="Loading result card"></tnt-skeleton>
+                </div>
+                }
+            </div>
+        </div>
+    } @else if (searchResults() && hasSearched()) {
+        <!-- Search results -->
+        <div class="tnt-ai-search__results" role="region" aria-label="Search results">
+            <div class="tnt-ai-search__summary">
+                <h2>Search Results for: "{{ searchResults()?.query }}"</h2>
+                <div class="tnt-ai-search__reasoning">
+                    <h3>🤖 AI Reasoning:</h3>
+                    <p>{{ searchResults()?.reasoning }}</p>
+                </div>
+                <p class="tnt-ai-search__count">
+                    Found {{ totalCount() }} relevant items
+                    @if (favoriteCount() > 0) {
+                        <span class="tnt-ai-search__favorite-count">
+                            ({{ favoriteCount() }} in your favorites)
+                        </span>
+                    }
+                </p>
+            </div>
+
+            @if (foundEntries().length > 0) {
+                <div class="tnt-ai-search__grid" role="list" aria-label="Search results grid">
+                    @for (entry of foundEntries(); track entry.id) {
+                    <div class="tnt-ai-search__grid-item" role="listitem">
+                        <tnt-card 
+                            [entry]="entry"
+                            [enableNavigation]="true"
+                            (favoriteToggle)="onFavoriteToggle($event)"
+                            [attr.aria-label]="'Result: ' + entry.title + ' in ' + entry.location">
+                        </tnt-card>
+                    </div>
+                    }
+                </div>
+            } @else {
+                <div class="tnt-ai-search__no-results" role="status" aria-live="polite">
+                    <p>No relevant items found for your search.</p>
+                    <p>Try rephrasing your query or being more specific.</p>
+                </div>
+            }
+        </div>
+    } @else if (hasSearched() && !searchResults()) {
+        <!-- Error state -->
+        <div class="tnt-ai-search__error" role="alert" aria-live="polite">
+            <p>Something went wrong with the search. Please try again.</p>
+        </div>
+    } @else {
+        <!-- Initial state -->
+        <div class="tnt-ai-search__initial">
+            <div class="tnt-ai-search__examples">
+                <h3>💡 Try these example searches:</h3>
+                <ul role="list" aria-label="Example search suggestions">
+                    <li role="listitem">"Budget-friendly activities in Paris"</li>
+                    <li role="listitem">"Luxury hotels with spa facilities"</li>
+                    <li role="listitem">"Family-friendly restaurants near tourist attractions"</li>
+                    <li role="listitem">"Adventure activities for thrill-seekers"</li>
+                    <li role="listitem">"Romantic dinner spots with city views"</li>
+                    <li role="listitem">"Cultural experiences and museums"</li>
+                </ul>
+            </div>
+        </div>
+    }
 </div>

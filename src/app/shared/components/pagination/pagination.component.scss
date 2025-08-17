@@ -15,7 +15,13 @@
             border: 1px solid var(--tnt-primary);
         }
 
-        &:hover:not(.tnt-pagination__link--active) {
+        &--disabled {
+            color: #ccc;
+            cursor: not-allowed;
+            background-color: #f5f5f5;
+        }
+
+        &:hover:not(.tnt-pagination__link--active):not(.tnt-pagination__link--disabled) {
             background-color: #ddd;
         }
 
@@ -28,5 +34,14 @@
             border-top-right-radius: 5px;
             border-bottom-right-radius: 5px;
         }
+    }
+
+    &__ellipsis {
+        float: left;
+        padding: 8px 16px;
+        color: var(--tnt-dark);
+        border: 1px solid #ddd;
+        background-color: #f9f9f9;
+        cursor: default;
     }
 }

@@ -4,6 +4,16 @@
     border-radius: 10px;
     overflow: hidden;
     position: relative;
+    transition: all 0.2s ease;
+
+    &--clickable {
+        cursor: pointer;
+        
+        &:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+    }
 
     &__body {
         padding: 10px 15px 20px;
@@ -13,7 +23,8 @@
         font-size: 14px;
         font-weight: 300;
         text-align: center;
-        color: lighten(#36382E, 40%);
+        color: #6b6d6e;
+        margin-bottom: 10px;
     }
 
     &__header {
@@ -27,12 +38,75 @@
         width: 100%;
     }
 
+    &__favorite-btn {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        z-index: 2;
+        width: 36px;
+        height: 36px;
+        border: none;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.95);
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.2s ease;
+        backdrop-filter: blur(4px);
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+
+        &:hover {
+            transform: scale(1.1);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        &:active {
+            transform: scale(0.95);
+        }
+
+        &:focus {
+            outline: 2px solid var(--tnt-primary);
+            outline-offset: 2px;
+        }
+
+        &--active {
+            background: rgba(231, 76, 60, 0.95);
+            animation: heartBeat 1.5s ease-in-out infinite;
+
+            .tnt-card__favorite-icon {
+                filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.3));
+            }
+        }
+    }
+
+    &__favorite-icon {
+        font-size: 16px;
+        line-height: 1;
+        user-select: none;
+        transition: all 0.2s ease;
+    }
+
+    &__type-badge {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background: rgba(255, 255, 255, 0.9);
+        color: #6c757d;
+        padding: 4px 8px;
+        border-radius: 12px;
+        font-size: 11px;
+        font-weight: 500;
+        backdrop-filter: blur(4px);
+    }
+
     &__title {
         text-align: center;
         font-size: 16px;
         font-weight: bold;
         min-height: 40px;
-        color: var(--tnt-dark)
+        color: var(--tnt-dark);
+        margin-bottom: 8px;
     }
 
     &__title,
@@ -42,5 +116,40 @@
         display: -webkit-box;
         -webkit-line-clamp: 2;
         -webkit-box-orient: vertical;
+    }
+
+    &__meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    &__meta-item {
+        font-size: 11px;
+        color: #6c757d;
+        background: #f8f9fa;
+        padding: 2px 6px;
+        border-radius: 8px;
+        white-space: nowrap;
+    }
+}
+
+@keyframes heartBeat {
+    0% {
+        transform: scale(1);
+    }
+    14% {
+        transform: scale(1.1);
+    }
+    28% {
+        transform: scale(1);
+    }
+    42% {
+        transform: scale(1.1);
+    }
+    70% {
+        transform: scale(1);
     }
 }

@@ -1,13 +1,99 @@
-<div class="tnt-hotels">
-    <div class="tnt-grid tnt-grid--col-3">
-        @for (hotel of hotels(); track hotel.id) {
-        <div class="tnt-grid__col">
-            <tnt-card [imageUrl]="hotel.imageUrl" [title]="hotel.title" [description]="hotel.description"></tnt-card>
+<div class="tnt-hotels" role="main" aria-label="Hotels listing page">
+    <!-- Global Location Filter Notice -->
+    @if (globalLocationFilter().isActive) {
+        <div class="tnt-hotels__global-filter-notice" role="status" aria-live="polite">
+            <p>🌍 <strong>Global Location Filter Active</strong></p>
+            <p>Showing hotels in <strong>{{ globalLocationFilter().selectedLocation }}</strong></p>
+            <p class="tnt-hotels__global-filter-hint">Use the navbar to change location or clear the filter.</p>
         </div>
-        }
-    </div>
+    }
 
-    <div class="tnt-hotels__pagination">
-        <tnt-pagination></tnt-pagination>
-    </div>
+    @if (isLoading()) {
+        <!-- Skeleton loading state -->
+        <div class="tnt-grid tnt-grid--col-3" role="status" aria-label="Loading hotels" aria-live="polite">
+            @for (item of [1,2,3,4,5,6,7,8,9,10,11,12]; track item) {
+            <div class="tnt-grid__col">
+                <tnt-skeleton type="card" aria-label="Loading hotel card"></tnt-skeleton>
+            </div>
+            }
+        </div>
+    } @else {
+        <!-- Actual content -->
+        @if (hotels().length === 0) {
+            <div class="tnt-hotels__no-results" role="status" aria-live="polite">
+                <h3>No hotels found</h3>
+                <p>Try adjusting your search criteria or location filter.</p>
+                @if (globalLocationFilter().isActive) {
+                    <button 
+                        class="tnt-hotels__clear-global-filter"
+                        (click)="clearGlobalLocationFilter()"
+                        aria-label="Clear global location filter to show all hotels"
+                    >
+                        Clear Location Filter
+                    </button>
+                }
+            </div>
+        } @else {
+            <div class="tnt-grid tnt-grid--col-3" role="list" aria-label="Hotels grid">
+                @for (hotel of hotels(); track hotel.id; let i = $index) {
+                <div class="tnt-grid__col" role="listitem">
+                    <tnt-card 
+                        [entry]="hotel" 
+                        [enableNavigation]="true"
+                        [loadWithPriority]="i < 5"
+                        (favoriteToggle)="onFavoriteToggle($event)"
+                        [attr.aria-label]="'Hotel: ' + hotel.title + ' in ' + hotel.location">
+                    </tnt-card>
+                </div>
+                }
+            </div>
+
+            <!-- Defer pagination loading until needed -->
+            @defer (when totalPages() > 1; on viewport) {
+                <div class="tnt-hotels__pagination" role="navigation" aria-label="Hotels pagination">
+                    <tnt-pagination 
+                        [currentPage]="currentPage()" 
+                        [totalPages]="totalPages()"
+                        (pageChange)="onPageChange($event)"
+                        aria-label="Navigate between hotel pages">
+                    </tnt-pagination>
+                </div>
+            } @placeholder {
+                <!-- Placeholder for pagination when deferred -->
+                <div class="tnt-hotels__pagination-placeholder" aria-hidden="true"></div>
+            }
+        }
+    }
+
+    <!-- Defer loading of additional features when user scrolls -->
+    @defer (on viewport) {
+        <div class="tnt-hotels__additional-features" role="complementary" aria-label="Additional hotel features">
+            <!-- This section can contain features like:
+                 - Related hotels
+                 - Popular destinations
+                 - Hotel categories
+                 - User recommendations
+                 - Amenity filters
+                 - Price range filters
+            -->
+        </div>
+    } @placeholder {
+        <!-- Placeholder for additional features -->
+        <div class="tnt-hotels__features-placeholder" aria-hidden="true"></div>
+    }
+
+    <!-- Defer loading of hotel amenities guide when needed -->
+    @defer (on viewport) {
+        <div class="tnt-hotels__amenities-guide" role="complementary" aria-label="Hotel amenities guide">
+            <!-- This section can contain:
+                 - Common hotel amenities
+                 - What to expect
+                 - Booking tips
+                 - Cancellation policies
+            -->
+        </div>
+    } @placeholder {
+        <!-- Placeholder for amenities guide -->
+        <div class="tnt-hotels__amenities-placeholder" aria-hidden="true"></div>
+    }
 </div>

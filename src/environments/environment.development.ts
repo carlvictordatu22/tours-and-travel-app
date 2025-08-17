@@ -1,1 +1,3 @@
-export const environment = {};
+export const environment = {
+  OPENAI_API_KEY: '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'
+};

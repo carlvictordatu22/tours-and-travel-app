@@ -1,14 +1,116 @@
-<div class="tnt-restaurants">
-    <div class="tnt-grid tnt-grid--col-3">
-        @for (restaurant of restaurants(); track restaurant.id) {
-        <div class="tnt-grid__col">
-            <tnt-card [imageUrl]="restaurant.imageUrl" [title]="restaurant.title"
-                [description]="restaurant.description"></tnt-card>
+<div class="tnt-restaurants" role="main" aria-label="Restaurants listing page">
+    <!-- Global Location Filter Notice -->
+    @if (globalLocationFilter().isActive) {
+        <div class="tnt-restaurants__global-filter-notice" role="status" aria-live="polite">
+            <p>🌍 <strong>Global Location Filter Active</strong></p>
+            <p>Showing restaurants in <strong>{{ globalLocationFilter().selectedLocation }}</strong></p>
+            <p class="tnt-restaurants__global-filter-hint">Use the navbar to change location or clear the filter.</p>
         </div>
-        }
-    </div>
+    }
 
-    <div class="tnt-restaurants__pagination">
-        <tnt-pagination></tnt-pagination>
-    </div>
+    @if (isLoading()) {
+        <!-- Skeleton loading state -->
+        <div class="tnt-grid tnt-grid--col-3" role="status" aria-label="Loading restaurants" aria-live="polite">
+            @for (item of [1,2,3,4,5,6,7,8,9,10,11,12]; track item) {
+            <div class="tnt-grid__col">
+                <tnt-skeleton type="card" aria-label="Loading restaurant card"></tnt-skeleton>
+            </div>
+            }
+        </div>
+    } @else {
+        <!-- Actual content -->
+        @if (restaurants().length === 0) {
+            <div class="tnt-restaurants__no-results" role="status" aria-live="polite">
+                <h3>No restaurants found</h3>
+                <p>Try adjusting your search criteria or location filter.</p>
+                @if (globalLocationFilter().isActive) {
+                    <button 
+                        class="tnt-restaurants__clear-global-filter"
+                        (click)="clearGlobalLocationFilter()"
+                        aria-label="Clear global location filter to show all restaurants"
+                    >
+                        Clear Location Filter
+                    </button>
+                }
+            </div>
+        } @else {
+            <div class="tnt-grid tnt-grid--col-3" role="list" aria-label="Restaurants grid">
+                @for (restaurant of restaurants(); track restaurant.id; let i = $index) {
+                <div class="tnt-grid__col" role="listitem">
+                    <tnt-card 
+                        [entry]="restaurant" 
+                        [enableNavigation]="true"
+                        [loadWithPriority]="i < 5"
+                        (favoriteToggle)="onFavoriteToggle($event)"
+                        [attr.aria-label]="'Restaurant: ' + restaurant.title + ' in ' + restaurant.location">
+                    </tnt-card>
+                </div>
+                }
+            </div>
+
+            <!-- Defer pagination loading until needed -->
+            @defer (when totalPages() > 1; on viewport) {
+                <div class="tnt-restaurants__pagination" role="navigation" aria-label="Restaurants pagination">
+                    <tnt-pagination 
+                        [currentPage]="currentPage()" 
+                        [totalPages]="totalPages()"
+                        (pageChange)="onPageChange($event)"
+                        aria-label="Navigate between restaurant pages">
+                    </tnt-pagination>
+                </div>
+            } @placeholder {
+                <!-- Placeholder for pagination when deferred -->
+                <div class="tnt-restaurants__pagination-placeholder" aria-hidden="true"></div>
+            }
+        }
+    }
+
+    <!-- Defer loading of additional features when user scrolls -->
+    @defer (on viewport) {
+        <div class="tnt-restaurants__additional-features" role="complementary" aria-label="Additional restaurant features">
+            <!-- This section can contain features like:
+                 - Related restaurants
+                 - Popular cuisines
+                 - Restaurant categories
+                 - User recommendations
+                 - Price range filters
+                 - Dietary filters
+            -->
+        </div>
+    } @placeholder {
+        <!-- Placeholder for additional features -->
+        <div class="tnt-restaurants__features-placeholder" aria-hidden="true"></div>
+    }
+
+    <!-- Defer loading of restaurant dining guide when needed -->
+    @defer (on viewport) {
+        <div class="tnt-restaurants__dining-guide" role="complementary" aria-label="Restaurant dining guide">
+            <!-- This section can contain:
+                 - Popular cuisines in the area
+                 - Dining tips and etiquette
+                 - Reservation best practices
+                 - Local food specialties
+                 - Seasonal recommendations
+            -->
+        </div>
+    } @placeholder {
+        <!-- Placeholder for dining guide -->
+        <div class="tnt-restaurants__dining-placeholder" aria-hidden="true"></div>
+    }
+
+    <!-- Defer loading of food culture information when needed -->
+    @defer (on viewport) {
+        <div class="tnt-restaurants__food-culture" role="complementary" aria-label="Local food culture information">
+            <!-- This section can contain:
+                 - Local food traditions
+                 - Must-try dishes
+                 - Food festivals and events
+                 - Chef recommendations
+                 - Food photography tips
+            -->
+        </div>
+    } @placeholder {
+        <!-- Placeholder for food culture section -->
+        <div class="tnt-restaurants__culture-placeholder" aria-hidden="true"></div>
+    }
 </div>

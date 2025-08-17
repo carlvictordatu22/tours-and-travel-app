@@ -1,14 +1,165 @@
-<div class="tnt-activities">
-    <div class="tnt-grid tnt-grid--col-3">
-        @for (activity of activities(); track activity.id) {
-        <div class="tnt-grid__col">
-            <tnt-card [imageUrl]="activity.imageUrl" [title]="activity.title"
-                [description]="activity.description"></tnt-card>
-        </div>
-        }
-    </div>
+<div class="tnt-activities" role="main" aria-label="Activities listing page">
+    <!-- Filters Section -->
+    @if (!globalLocationFilter().isActive) {
+        <div class="tnt-activities__filters" role="search" aria-label="Activity filters">
+            <div class="tnt-activities__filter-group">
+                <label for="nameFilter" class="tnt-activities__filter-label">Search Activities</label>
+                <input 
+                    type="text" 
+                    id="nameFilter"
+                    class="tnt-activities__filter-input"
+                    placeholder="Search by name or description..."
+                    [value]="nameFilter()"
+                    (input)="onNameFilterChange($event)"
+                    aria-label="Search activities by name or description"
+                    aria-describedby="nameFilter"
+                >
+            </div>
 
-    <div class="tnt-activities__pagination">
-        <tnt-pagination></tnt-pagination>
-    </div>
+            <div class="tnt-activities__filter-group">
+                <label for="locationFilter" class="tnt-activities__filter-label">Location</label>
+                <select 
+                    id="locationFilter"
+                    class="tnt-activities__filter-select"
+                    [value]="locationFilter()"
+                    (change)="onLocationFilterChange($event)"
+                    aria-label="Filter activities by location"
+                    aria-describedby="locationFilter"
+                >
+                    <option value="">All Locations</option>
+                    @for (location of availableLocations; track location) {
+                        <option [value]="location">{{ location }}</option>
+                    }
+                </select>
+            </div>
+
+            <div class="tnt-activities__filter-group">
+                <label class="tnt-activities__filter-label">Favorites</label>
+                <button 
+                    class="tnt-activities__favorites-toggle"
+                    [class.tnt-activities__favorites-toggle--active]="showFavoritesOnly()"
+                    (click)="onFavoritesToggle()"
+                    aria-label="Toggle to show only favorite activities"
+                    [aria-pressed]="showFavoritesOnly()"
+                >
+                    @if (showFavoritesOnly()) {
+                        ❤️ Show All
+                    } @else {
+                        🤍 Favorites Only
+                    }
+                </button>
+            </div>
+
+            @if (nameFilter() || locationFilter() || showFavoritesOnly()) {
+                <button 
+                    class="tnt-activities__clear-filters"
+                    (click)="clearFilters()"
+                    aria-label="Clear all applied filters"
+                >
+                    Clear Filters
+                </button>
+            }
+        </div>
+    } @else {
+        <div class="tnt-activities__global-filter-notice" role="status" aria-live="polite">
+            <p>🌍 <strong>Global Location Filter Active</strong></p>
+            <p>Showing activities in <strong>{{ globalLocationFilter().selectedLocation }}</strong></p>
+            <p class="tnt-activities__global-filter-hint">Local filters are hidden. Use the navbar to change location or clear the filter.</p>
+        </div>
+    }
+
+    <!-- Filtering Indicator -->
+    @if (isFiltering() || (globalLocationFilter().isActive && !isLoading())) {
+        <div class="tnt-activities__filtering-indicator" role="status" aria-live="polite">
+            <span class="tnt-activities__filtering-spinner" aria-hidden="true"></span>
+            @if (isFiltering()) {
+                <span>Applying filters...</span>
+            } @else {
+                <span>Global location filter active: {{ globalLocationFilter().selectedLocation }}</span>
+            }
+        </div>
+    }
+
+    <!-- Results Summary -->
+    @if (!isLoading() && !isFiltering() && (nameFilter() || locationFilter() || showFavoritesOnly() || globalLocationFilter().isActive)) {
+        <div class="tnt-activities__results-summary" role="status" aria-live="polite">
+            <p>
+                Showing {{ activities().length }} of {{ filteredActivities().length }} activities
+                @if (nameFilter()) { matching "{{ nameFilter() }}" }
+                @if (locationFilter()) { in {{ locationFilter() }} }
+                @if (globalLocationFilter().isActive) { in {{ globalLocationFilter().selectedLocation }} (global filter) }
+                @if (showFavoritesOnly()) { (favorites only) }
+            </p>
+        </div>
+    }
+
+    @if (isLoading()) {
+        <!-- Skeleton loading state -->
+        <div class="tnt-grid tnt-grid--col-3" role="status" aria-label="Loading activities" aria-live="polite">
+            @for (item of [1,2,3,4,5,6,7,8,9,10,11,12]; track item) {
+            <div class="tnt-grid__col">
+                <tnt-skeleton type="card" aria-label="Loading activity card"></tnt-skeleton>
+            </div>
+            }
+        </div>
+    } @else {
+        <!-- Actual content -->
+        @if (filteredActivities().length === 0) {
+            <div class="tnt-activities__no-results" role="status" aria-live="polite">
+                <h3>No activities found</h3>
+                <p>Try adjusting your search criteria.</p>
+                <button 
+                    class="tnt-activities__clear-filters"
+                    (click)="clearFilters()"
+                    aria-label="Clear all filters to show all activities"
+                >
+                    Clear All Filters
+                </button>
+            </div>
+        } @else {
+            <div class="tnt-grid tnt-grid--col-3" role="list" aria-label="Activities grid">
+                @for (activity of activities(); track activity.id; let i = $index) {
+                <div class="tnt-grid__col" role="listitem">
+                    <tnt-card 
+                        [entry]="activity" 
+                        [enableNavigation]="true"
+                        [loadWithPriority]="i < 5"
+                        (favoriteToggle)="onFavoriteToggle($event)"
+                        [attr.aria-label]="'Activity: ' + activity.title + ' in ' + activity.location">
+                    </tnt-card>
+                </div>
+                }
+            </div>
+
+            <!-- Defer pagination loading until needed -->
+            @defer (when totalPages() > 1; on viewport) {
+                <div class="tnt-activities__pagination" role="navigation" aria-label="Activities pagination">
+                    <tnt-pagination 
+                        [currentPage]="currentPage()" 
+                        [totalPages]="totalPages()"
+                        (pageChange)="onPageChange($event)"
+                        aria-label="Navigate between activity pages">
+                    </tnt-pagination>
+                </div>
+            } @placeholder {
+                <!-- Placeholder for pagination when deferred -->
+                <div class="tnt-activities__pagination-placeholder" aria-hidden="true"></div>
+            }
+        }
+    }
+
+    <!-- Defer loading of additional features when user scrolls -->
+    @defer (on viewport) {
+        <div class="tnt-activities__additional-features" role="complementary" aria-label="Additional activity features">
+            <!-- This section can contain features like:
+                 - Related activities
+                 - Popular destinations
+                 - Activity categories
+                 - User recommendations
+            -->
+        </div>
+    } @placeholder {
+        <!-- Placeholder for additional features -->
+        <div class="tnt-activities__features-placeholder" aria-hidden="true"></div>
+    }
 </div>
