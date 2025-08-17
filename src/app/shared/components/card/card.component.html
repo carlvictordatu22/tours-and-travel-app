@@ -1,5 +1,8 @@
 <div class="tnt-card">
     <div class="tnt-card__header">
+        @if (type()) {
+            <span class="tnt-card__badge tnt-card__badge--{{ type() | lowercase }}">{{ type() }}</span>
+        }
         <button
             type="button"
             class="tnt-card__favorite"

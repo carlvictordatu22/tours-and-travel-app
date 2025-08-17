@@ -1,5 +1,6 @@
 import { ChangeDetectionStrategy, Component, input, output } from '@angular/core';
 import { CommonModule, NgOptimizedImage } from '@angular/common';
+import { EntryType } from '../../enums';
 
 @Component({
   selector: 'tnt-card',
@@ -14,6 +15,7 @@ export class CardComponent {
   description = input<string>('');
   isFavorite = input<boolean>(false);
   isFavoriteChange = output<boolean>();
+  type = input<EntryType | null>(null);
 
   /**
    * Toggle favorite state and emit the new value via `isFavoriteChange`.

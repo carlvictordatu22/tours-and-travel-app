@@ -4,6 +4,13 @@
     border-radius: 10px;
     overflow: hidden;
     position: relative;
+    transition: transform 150ms ease, box-shadow 150ms ease;
+    will-change: transform, box-shadow;
+
+    &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px 0 #0000001a;
+    }
 
     &__body {
         padding: 10px 15px 20px;
@@ -20,12 +27,36 @@
         position: relative;
     }
 
+    /* Top-left badge for entry type */
+    &__badge {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        z-index: 1;
+        padding: 4px 8px;
+        font-size: 12px;
+        font-weight: 600;
+        border-radius: 4px;
+        color: var(--tnt-white);
+        background-color: var(--tnt-dark);
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        box-shadow: 0 1px 3px 0 #00000026;
+
+        &--activity { background-color: var(--tnt-primary); }
+        &--hotel { background-color: var(--tnt-accent); }
+        &--restaurant { background-color: var(--tnt-dark); }
+    }
+
     &__image {
         object-fit: cover;
         object-position: center;
         height: auto;
         width: 100%;
+        transition: transform 200ms ease;
     }
+
+    &:hover .tnt-card__image { transform: scale(1.05); }
 
     /* Favorite toggle positioned top-right over header */
     &__favorite {
@@ -43,6 +74,7 @@
         justify-content: center;
         cursor: pointer;
         transition: border-color 150ms ease, box-shadow 150ms ease, background-color 150ms ease;
+        box-shadow: 0 1px 3px 0 #00000026;
         z-index: 1;
         padding: 0;
         outline: none;
@@ -56,7 +88,16 @@
             box-shadow: 0 0 0 3px #0000001a, 0 0 0 5px var(--tnt-accent);
         }
 
-        &--active { background-color: var(--tnt-primary); color: var(--tnt-white); border-color: var(--tnt-primary); }
+        &--active {
+            background-color: var(--tnt-primary);
+            color: var(--tnt-white);
+            border-color: var(--tnt-primary);
+
+            .tnt-card__favorite-icon {
+                animation: tnt-heart-throb 1000ms ease-in-out infinite;
+                will-change: transform;
+            }
+        }
 
         &-icon {
             display: inline-block;
@@ -87,7 +128,7 @@
         font-size: 16px;
         font-weight: bold;
         min-height: 40px;
-        color: var(--tnt-dark)
+        color: var(--tnt-dark);
     }
 
     &__title,
@@ -99,4 +140,12 @@
         -webkit-line-clamp: 2;
         -webkit-box-orient: vertical;
     }
+}
+
+@keyframes tnt-heart-throb {
+    0% { transform: rotate(-45deg) scale(1); }
+    25% { transform: rotate(-45deg) scale(1.1); }
+    50% { transform: rotate(-45deg) scale(1); }
+    75% { transform: rotate(-45deg) scale(1.15); }
+    100% { transform: rotate(-45deg) scale(1); }
 }
