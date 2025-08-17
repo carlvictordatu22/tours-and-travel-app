@@ -50,6 +50,8 @@
               [imageUrl]="activity.imageUrl"
               [title]="activity.title"
               [description]="activity.description"
+              [(isFavorite)]="activity.isFavorite"
+              (isFavoriteChange)="onFavoriteChange(activity.id, $event)"
             ></tnt-card>
           </div>
         }

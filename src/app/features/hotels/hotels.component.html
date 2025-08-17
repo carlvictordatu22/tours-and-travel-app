@@ -20,6 +20,8 @@
                             [imageUrl]="hotel.imageUrl"
                             [title]="hotel.title"
                             [description]="hotel.description"
+                            [(isFavorite)]="hotel.isFavorite"
+                            (isFavoriteChange)="onFavoriteChange(hotel.id, $event)"
                         ></tnt-card>
                     </div>
                 }

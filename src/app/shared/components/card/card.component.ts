@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, input, output } from '@angular/core';
 import { CommonModule, NgOptimizedImage } from '@angular/common';
 
 @Component({
@@ -12,4 +12,13 @@ export class CardComponent {
   imageUrl = input<string>('');
   title = input<string>('');
   description = input<string>('');
+  isFavorite = input<boolean>(false);
+  isFavoriteChange = output<boolean>();
+
+  /**
+   * Toggle favorite state and emit the new value via `isFavoriteChange`.
+   */
+  toggleFavorite(): void {
+    this.isFavoriteChange.emit(!this.isFavorite());
+  }
 }

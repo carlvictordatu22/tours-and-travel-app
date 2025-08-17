@@ -11,7 +11,7 @@ export const ENTRIES: Entries = [
         description: "Street Art Walk - Paris in Paris is a popular activity pick for travelers.",
         location: Location.PARIS,
         priceUsd: 129,
-        isFavorite: true,
+        isFavorite: false,
         durationHours: 2
     },
     {
@@ -23,7 +23,7 @@ export const ENTRIES: Entries = [
         description: "Brewery Tour - Paris in Paris is a popular activity pick for travelers.",
         location: Location.PARIS,
         priceUsd: 30,
-        isFavorite: true,
+        isFavorite: false,
         durationHours: 4
     },
     {
@@ -59,7 +59,7 @@ export const ENTRIES: Entries = [
         description: "Boat Ride - Paris in Paris is a popular activity pick for travelers. Expect a well-balanced experience with friendly service and great value.",
         location: Location.PARIS,
         priceUsd: 187,
-        isFavorite: true,
+        isFavorite: false,
         durationHours: 7
     },
     {
@@ -83,7 +83,7 @@ export const ENTRIES: Entries = [
         description: "Coffee Workshop - Paris in Paris is a popular activity pick for travelers. Expect a well-balanced experience with friendly service and great value.",
         location: Location.PARIS,
         priceUsd: 208,
-        isFavorite: true,
+        isFavorite: false,
         durationHours: 5
     },
     {
@@ -275,7 +275,7 @@ export const ENTRIES: Entries = [
         description: "Chocolate Workshop - Paris in Paris is a popular activity pick for travelers. Expect a well-balanced experience with friendly service and great value.",
         location: Location.PARIS,
         priceUsd: 116,
-        isFavorite: true,
+        isFavorite: false,
         durationHours: 3
     },
     {
@@ -323,7 +323,7 @@ export const ENTRIES: Entries = [
         description: "Wine Tasting - Paris in Paris is a popular activity pick for travelers.",
         location: Location.PARIS,
         priceUsd: 296,
-        isFavorite: true,
+        isFavorite: false,
         durationHours: 9
     },
     {
@@ -359,7 +359,7 @@ export const ENTRIES: Entries = [
         description: "Street Food Crawl - Paris in Paris is a popular activity pick for travelers.",
         location: Location.PARIS,
         priceUsd: 188,
-        isFavorite: true,
+        isFavorite: false,
         durationHours: 9
     },
     {
@@ -419,7 +419,7 @@ export const ENTRIES: Entries = [
         description: "Historic Landmark Tour - Paris in Paris is a popular activity pick for travelers. Expect a well-balanced experience with friendly service and great value.",
         location: Location.PARIS,
         priceUsd: 65,
-        isFavorite: true,
+        isFavorite: false,
         durationHours: 12
     },
     {
@@ -455,7 +455,7 @@ export const ENTRIES: Entries = [
         description: "Street Food Crawl - Paris in Paris is a popular activity pick for travelers. Expect a well-balanced experience with friendly service and great value.",
         location: Location.PARIS,
         priceUsd: 65,
-        isFavorite: true,
+        isFavorite: false,
         durationHours: 9
     },
     {
@@ -467,7 +467,7 @@ export const ENTRIES: Entries = [
         description: "City Walking Tour - Paris in Paris is a popular activity pick for travelers. Expect a well-balanced experience with friendly service and great value.",
         location: Location.PARIS,
         priceUsd: 136,
-        isFavorite: true,
+        isFavorite: false,
         durationHours: 8
     },
     {
@@ -479,7 +479,7 @@ export const ENTRIES: Entries = [
         description: "Botanical Tour - Paris in Paris is a popular activity pick for travelers.",
         location: Location.PARIS,
         priceUsd: 45,
-        isFavorite: true,
+        isFavorite: false,
         durationHours: 1
     },
     {
@@ -515,7 +515,7 @@ export const ENTRIES: Entries = [
         description: "Scooter Tour - Paris in Paris is a popular activity pick for travelers.",
         location: Location.PARIS,
         priceUsd: 175,
-        isFavorite: true,
+        isFavorite: false,
         durationHours: 10
     },
     {
@@ -527,7 +527,7 @@ export const ENTRIES: Entries = [
         description: "Botanical Tour - Paris in Paris is a popular activity pick for travelers. Expect a well-balanced experience with friendly service and great value.",
         location: Location.PARIS,
         priceUsd: 95,
-        isFavorite: true,
+        isFavorite: false,
         durationHours: 9
     },
     {
@@ -587,7 +587,7 @@ export const ENTRIES: Entries = [
         description: "Chocolate Workshop - Paris in Paris is a popular activity pick for travelers. Expect a well-balanced experience with friendly service and great value.",
         location: Location.PARIS,
         priceUsd: 52,
-        isFavorite: true,
+        isFavorite: false,
         durationHours: 10
     },
     {
@@ -623,7 +623,7 @@ export const ENTRIES: Entries = [
         description: "Brewery Tour - Paris in Paris is a popular activity pick for travelers. Expect a well-balanced experience with friendly service and great value.",
         location: Location.PARIS,
         priceUsd: 285,
-        isFavorite: true,
+        isFavorite: false,
         durationHours: 9
     },
     {
@@ -659,7 +659,7 @@ export const ENTRIES: Entries = [
         description: "Sunset Tour - Paris in Paris is a popular activity pick for travelers.",
         location: Location.PARIS,
         priceUsd: 41,
-        isFavorite: true,
+        isFavorite: false,
         durationHours: 7
     },
     {
@@ -803,7 +803,7 @@ export const ENTRIES: Entries = [
         description: "Street Art Walk - Paris in Paris is a popular activity pick for travelers.",
         location: Location.PARIS,
         priceUsd: 150,
-        isFavorite: true,
+        isFavorite: false,
         durationHours: 10
     },
     {
@@ -827,7 +827,7 @@ export const ENTRIES: Entries = [
         description: "Street Art Walk - Paris in Paris is a popular activity pick for travelers. Expect a well-balanced experience with friendly service and great value.",
         location: Location.PARIS,
         priceUsd: 145,
-        isFavorite: true,
+        isFavorite: false,
         durationHours: 7
     },
     {
@@ -935,7 +935,7 @@ export const ENTRIES: Entries = [
         description: "Chocolate Workshop - Paris in Paris is a popular activity pick for travelers.",
         location: Location.PARIS,
         priceUsd: 27,
-        isFavorite: true,
+        isFavorite: false,
         durationHours: 8
     },
     {
@@ -983,7 +983,7 @@ export const ENTRIES: Entries = [
         description: "The Promenade Paris in Paris is a popular hotel pick for travelers. Expect a well-balanced experience with friendly service and great value.",
         location: Location.PARIS,
         priceUsd: 555,
-        isFavorite: true,
+        isFavorite: false,
         reviewCount: 2066
     },
     {
@@ -1043,7 +1043,7 @@ export const ENTRIES: Entries = [
         description: "The Galleria Paris in Paris is a popular hotel pick for travelers.",
         location: Location.PARIS,
         priceUsd: 162,
-        isFavorite: true,
+        isFavorite: false,
         reviewCount: 1919
     },
     {
@@ -1235,7 +1235,7 @@ export const ENTRIES: Entries = [
         description: "The Willow Paris in Paris is a popular hotel pick for travelers.",
         location: Location.PARIS,
         priceUsd: 328,
-        isFavorite: true,
+        isFavorite: false,
         reviewCount: 2495
     },
     {
@@ -1355,7 +1355,7 @@ export const ENTRIES: Entries = [
         description: "The Serene Paris in Paris is a popular hotel pick for travelers.",
         location: Location.PARIS,
         priceUsd: 97,
-        isFavorite: true,
+        isFavorite: false,
         reviewCount: 1840
     },
     {
@@ -1439,7 +1439,7 @@ export const ENTRIES: Entries = [
         description: "The Foundry Paris in Paris is a popular hotel pick for travelers. Expect a well-balanced experience with friendly service and great value.",
         location: Location.PARIS,
         priceUsd: 582,
-        isFavorite: true,
+        isFavorite: false,
         reviewCount: 125
     },
     {
@@ -1523,7 +1523,7 @@ export const ENTRIES: Entries = [
         description: "Old Town Lodge Paris in Paris is a popular hotel pick for travelers.",
         location: Location.PARIS,
         priceUsd: 325,
-        isFavorite: true,
+        isFavorite: false,
         reviewCount: 639
     },
     {
@@ -1547,7 +1547,7 @@ export const ENTRIES: Entries = [
         description: "The Galleria Paris in Paris is a popular hotel pick for travelers. Expect a well-balanced experience with friendly service and great value.",
         location: Location.PARIS,
         priceUsd: 544,
-        isFavorite: true,
+        isFavorite: false,
         reviewCount: 1937
     },
     {
@@ -1571,7 +1571,7 @@ export const ENTRIES: Entries = [
         description: "The Crescent Paris in Paris is a popular hotel pick for travelers. Expect a well-balanced experience with friendly service and great value.",
         location: Location.PARIS,
         priceUsd: 225,
-        isFavorite: true,
+        isFavorite: false,
         reviewCount: 1384
     },
     {
@@ -1679,7 +1679,7 @@ export const ENTRIES: Entries = [
         description: "Riverside Suites Paris in Paris is a popular hotel pick for travelers.",
         location: Location.PARIS,
         priceUsd: 411,
-        isFavorite: true,
+        isFavorite: false,
         reviewCount: 3336
     },
     {
@@ -1835,7 +1835,7 @@ export const ENTRIES: Entries = [
         description: "Ivory Hotel Paris in Paris is a popular hotel pick for travelers. Expect a well-balanced experience with friendly service and great value.",
         location: Location.PARIS,
         priceUsd: 500,
-        isFavorite: true,
+        isFavorite: false,
         reviewCount: 3899
     },
     {
@@ -1943,7 +1943,7 @@ export const ENTRIES: Entries = [
         description: "Harvest Table - Paris in Paris is a popular restaurant pick for travelers.",
         location: Location.PARIS,
         priceUsd: 56,
-        isFavorite: true,
+        isFavorite: false,
         reviewCount: 1318
     },
     {
@@ -1979,7 +1979,7 @@ export const ENTRIES: Entries = [
         description: "Curry Corner - Paris in Paris is a popular restaurant pick for travelers. Expect a well-balanced experience with friendly service and great value.",
         location: Location.PARIS,
         priceUsd: 50,
-        isFavorite: true,
+        isFavorite: false,
         reviewCount: 5686
     },
     {
@@ -2015,7 +2015,7 @@ export const ENTRIES: Entries = [
         description: "The Dumpling House - Paris in Paris is a popular restaurant pick for travelers. Expect a well-balanced experience with friendly service and great value.",
         location: Location.PARIS,
         priceUsd: 85,
-        isFavorite: true,
+        isFavorite: false,
         reviewCount: 6509
     },
     {
@@ -2075,7 +2075,7 @@ export const ENTRIES: Entries = [
         description: "Brick Oven - Paris in Paris is a popular restaurant pick for travelers.",
         location: Location.PARIS,
         priceUsd: 61,
-        isFavorite: true,
+        isFavorite: false,
         reviewCount: 8862
     },
     {
@@ -2171,7 +2171,7 @@ export const ENTRIES: Entries = [
         description: "Fable Diner - Paris in Paris is a popular restaurant pick for travelers.",
         location: Location.PARIS,
         priceUsd: 136,
-        isFavorite: true,
+        isFavorite: false,
         reviewCount: 3871
     },
     {
@@ -2219,7 +2219,7 @@ export const ENTRIES: Entries = [
         description: "The Spice Route - Paris in Paris is a popular restaurant pick for travelers.",
         location: Location.PARIS,
         priceUsd: 101,
-        isFavorite: true,
+        isFavorite: false,
         reviewCount: 4545
     },
     {
@@ -2231,7 +2231,7 @@ export const ENTRIES: Entries = [
         description: "Canopy Café - Paris in Paris is a popular restaurant pick for travelers. Expect a well-balanced experience with friendly service and great value.",
         location: Location.PARIS,
         priceUsd: 126,
-        isFavorite: true,
+        isFavorite: false,
         reviewCount: 3500
     },
     {
@@ -2351,7 +2351,7 @@ export const ENTRIES: Entries = [
         description: "Miso & More - Paris in Paris is a popular restaurant pick for travelers.",
         location: Location.PARIS,
         priceUsd: 47,
-        isFavorite: true,
+        isFavorite: false,
         reviewCount: 4530
     },
     {
@@ -2375,7 +2375,7 @@ export const ENTRIES: Entries = [
         description: "Tortilla Street - Paris in Paris is a popular restaurant pick for travelers. Expect a well-balanced experience with friendly service and great value.",
         location: Location.PARIS,
         priceUsd: 120,
-        isFavorite: true,
+        isFavorite: false,
         reviewCount: 1899
     },
     {
@@ -2411,7 +2411,7 @@ export const ENTRIES: Entries = [
         description: "Olive & Thyme - Paris in Paris is a popular restaurant pick for travelers.",
         location: Location.PARIS,
         priceUsd: 131,
-        isFavorite: true,
+        isFavorite: false,
         reviewCount: 1423
     },
     {
@@ -2471,7 +2471,7 @@ export const ENTRIES: Entries = [
         description: "Cedar Grill - Paris in Paris is a popular restaurant pick for travelers.",
         location: Location.PARIS,
         priceUsd: 104,
-        isFavorite: true,
+        isFavorite: false,
         reviewCount: 4589
     },
     {
@@ -2507,7 +2507,7 @@ export const ENTRIES: Entries = [
         description: "Bistro Lumière - Paris in Paris is a popular restaurant pick for travelers.",
         location: Location.PARIS,
         priceUsd: 112,
-        isFavorite: true,
+        isFavorite: false,
         reviewCount: 527
     },
     {
@@ -2579,7 +2579,7 @@ export const ENTRIES: Entries = [
         description: "La Trattoria - Paris in Paris is a popular restaurant pick for travelers. Expect a well-balanced experience with friendly service and great value.",
         location: Location.PARIS,
         priceUsd: 24,
-        isFavorite: true,
+        isFavorite: false,
         reviewCount: 4963
     },
     {
@@ -2615,7 +2615,7 @@ export const ENTRIES: Entries = [
         description: "The Kebab Room - Paris in Paris is a popular restaurant pick for travelers. Expect a well-balanced experience with friendly service and great value.",
         location: Location.PARIS,
         priceUsd: 100,
-        isFavorite: true,
+        isFavorite: false,
         reviewCount: 718
     },
     {
@@ -2651,7 +2651,7 @@ export const ENTRIES: Entries = [
         description: "The Noodle Bar - Paris in Paris is a popular restaurant pick for travelers. Expect a well-balanced experience with friendly service and great value.",
         location: Location.PARIS,
         priceUsd: 102,
-        isFavorite: true,
+        isFavorite: false,
         reviewCount: 1759
     },
     {
@@ -2855,7 +2855,7 @@ export const ENTRIES: Entries = [
         description: "Harvest Table - Paris in Paris is a popular restaurant pick for travelers.",
         location: Location.PARIS,
         priceUsd: 110,
-        isFavorite: true,
+        isFavorite: false,
         reviewCount: 1413
     },
     {
@@ -2879,7 +2879,7 @@ export const ENTRIES: Entries = [
         description: "Tapas & Co. - Paris in Paris is a popular restaurant pick for travelers.",
         location: Location.PARIS,
         priceUsd: 102,
-        isFavorite: true,
+        isFavorite: false,
         reviewCount: 5085
     },
     {
@@ -3011,7 +3011,7 @@ export const ENTRIES: Entries = [
         description: "Boat Ride - London in London is a popular activity pick for travelers. Expect a well-balanced experience with friendly service and great value.",
         location: Location.LONDON,
         priceUsd: 238,
-        isFavorite: true,
+        isFavorite: false,
         durationHours: 4
     },
     {
@@ -3023,7 +3023,7 @@ export const ENTRIES: Entries = [
         description: "Street Food Crawl - London in London is a popular activity pick for travelers. Expect a well-balanced experience with friendly service and great value.",
         location: Location.LONDON,
         priceUsd: 227,
-        isFavorite: true,
+        isFavorite: false,
         durationHours: 9
     },
     {
@@ -3047,7 +3047,7 @@ export const ENTRIES: Entries = [
         description: "Cooking Class - London in London is a popular activity pick for travelers. Expect a well-balanced experience with friendly service and great value.",
         location: Location.LONDON,
         priceUsd: 89,
-        isFavorite: true,
+        isFavorite: false,
         durationHours: 5
     },
     {
@@ -3095,7 +3095,7 @@ export const ENTRIES: Entries = [
         description: "Historic Landmark Tour - London in London is a popular activity pick for travelers. Expect a well-balanced experience with friendly service and great value.",
         location: Location.LONDON,
         priceUsd: 249,
-        isFavorite: true,
+        isFavorite: false,
         durationHours: 8
     },
     {
@@ -3167,7 +3167,7 @@ export const ENTRIES: Entries = [
         description: "Cooking Class - London in London is a popular activity pick for travelers. Expect a well-balanced experience with friendly service and great value.",
         location: Location.LONDON,
         priceUsd: 185,
-        isFavorite: true,
+        isFavorite: false,
         durationHours: 6
     },
     {
@@ -3191,7 +3191,7 @@ export const ENTRIES: Entries = [
         description: "Cathedral Visit - London in London is a popular activity pick for travelers.",
         location: Location.LONDON,
         priceUsd: 249,
-        isFavorite: true,
+        isFavorite: false,
         durationHours: 4
     },
     {
@@ -3215,7 +3215,7 @@ export const ENTRIES: Entries = [
         description: "Jazz Night - London in London is a popular activity pick for travelers. Expect a well-balanced experience with friendly service and great value.",
         location: Location.LONDON,
         priceUsd: 144,
-        isFavorite: true,
+        isFavorite: false,
         durationHours: 11
     },
     {
@@ -3299,7 +3299,7 @@ export const ENTRIES: Entries = [
         description: "Hot Air Balloon - London in London is a popular activity pick for travelers.",
         location: Location.LONDON,
         priceUsd: 44,
-        isFavorite: true,
+        isFavorite: false,
         durationHours: 11
     },
     {
@@ -3323,7 +3323,7 @@ export const ENTRIES: Entries = [
         description: "Architecture Walk - London in London is a popular activity pick for travelers.",
         location: Location.LONDON,
         priceUsd: 79,
-        isFavorite: true,
+        isFavorite: false,
         durationHours: 11
     },
     {
@@ -3467,7 +3467,7 @@ export const ENTRIES: Entries = [
         description: "Botanical Tour - London in London is a popular activity pick for travelers. Expect a well-balanced experience with friendly service and great value.",
         location: Location.LONDON,
         priceUsd: 52,
-        isFavorite: true,
+        isFavorite: false,
         durationHours: 6
     },
     {
@@ -3479,7 +3479,7 @@ export const ENTRIES: Entries = [
         description: "Bike Tour - London in London is a popular activity pick for travelers. Expect a well-balanced experience with friendly service and great value.",
         location: Location.LONDON,
         priceUsd: 191,
-        isFavorite: true,
+        isFavorite: false,
         durationHours: 9
     },
     {
@@ -3539,7 +3539,7 @@ export const ENTRIES: Entries = [
         description: "Brewery Tour - London in London is a popular activity pick for travelers. Expect a well-balanced experience with friendly service and great value.",
         location: Location.LONDON,
         priceUsd: 93,
-        isFavorite: true,
+        isFavorite: false,
         durationHours: 10
     },
     {
@@ -3707,7 +3707,7 @@ export const ENTRIES: Entries = [
         description: "Kayak Session - London in London is a popular activity pick for travelers.",
         location: Location.LONDON,
         priceUsd: 220,
-        isFavorite: true,
+        isFavorite: false,
         durationHours: 9
     },
     {
@@ -3731,7 +3731,7 @@ export const ENTRIES: Entries = [
         description: "Boat Ride - London in London is a popular activity pick for travelers. Expect a well-balanced experience with friendly service and great value.",
         location: Location.LONDON,
         priceUsd: 75,
-        isFavorite: true,
+        isFavorite: false,
         durationHours: 2
     },
     {
@@ -3755,7 +3755,7 @@ export const ENTRIES: Entries = [
         description: "Park Picnic - London in London is a popular activity pick for travelers.",
         location: Location.LONDON,
         priceUsd: 35,
-        isFavorite: true,
+        isFavorite: false,
         durationHours: 3
     },
     {
@@ -3827,7 +3827,7 @@ export const ENTRIES: Entries = [
         description: "Scooter Tour - London in London is a popular activity pick for travelers. Expect a well-balanced experience with friendly service and great value.",
         location: Location.LONDON,
         priceUsd: 260,
-        isFavorite: true,
+        isFavorite: false,
         durationHours: 11
     },
     {
@@ -3839,7 +3839,7 @@ export const ENTRIES: Entries = [
         description: "Hidden Alleys Tour - London in London is a popular activity pick for travelers.",
         location: Location.LONDON,
         priceUsd: 139,
-        isFavorite: true,
+        isFavorite: false,
         durationHours: 12
     },
     {
@@ -3851,7 +3851,7 @@ export const ENTRIES: Entries = [
         description: "The Heritage London in London is a popular hotel pick for travelers.",
         location: Location.LONDON,
         priceUsd: 508,
-        isFavorite: true,
+        isFavorite: false,
         reviewCount: 1695
     },
     {
@@ -4091,7 +4091,7 @@ export const ENTRIES: Entries = [
         description: "The Regency London in London is a popular hotel pick for travelers. Expect a well-balanced experience with friendly service and great value.",
         location: Location.LONDON,
         priceUsd: 277,
-        isFavorite: true,
+        isFavorite: false,
         reviewCount: 3346
     },
     {
@@ -4139,7 +4139,7 @@ export const ENTRIES: Entries = [
         description: "Parkside Hotel London in London is a popular hotel pick for travelers.",
         location: Location.LONDON,
         priceUsd: 394,
-        isFavorite: true,
+        isFavorite: false,
         reviewCount: 4141
     },
     {
@@ -4223,7 +4223,7 @@ export const ENTRIES: Entries = [
         description: "The Heritage London in London is a popular hotel pick for travelers. Expect a well-balanced experience with friendly service and great value.",
         location: Location.LONDON,
         priceUsd: 580,
-        isFavorite: true,
+        isFavorite: false,
         reviewCount: 4205
     },
     {
@@ -4271,7 +4271,7 @@ export const ENTRIES: Entries = [
         description: "Central Plaza Hotel London in London is a popular hotel pick for travelers.",
         location: Location.LONDON,
         priceUsd: 563,
-        isFavorite: true,
+        isFavorite: false,
         reviewCount: 3374
     },
     {
@@ -4295,7 +4295,7 @@ export const ENTRIES: Entries = [
         description: "The Lantern London in London is a popular hotel pick for travelers. Expect a well-balanced experience with friendly service and great value.",
         location: Location.LONDON,
         priceUsd: 464,
-        isFavorite: true,
+        isFavorite: false,
         reviewCount: 4442
     },
     {
@@ -4343,7 +4343,7 @@ export const ENTRIES: Entries = [
         description: "Velvet Rooms London in London is a popular hotel pick for travelers.",
         location: Location.LONDON,
         priceUsd: 195,
-        isFavorite: true,
+        isFavorite: false,
         reviewCount: 3459
     },
     {
@@ -4379,7 +4379,7 @@ export const ENTRIES: Entries = [
         description: "The Willow London in London is a popular hotel pick for travelers. Expect a well-balanced experience with friendly service and great value.",
         location: Location.LONDON,
         priceUsd: 137,
-        isFavorite: true,
+        isFavorite: false,
         reviewCount: 2394
     },
     {
@@ -4559,7 +4559,7 @@ export const ENTRIES: Entries = [
         description: "Liberty House London in London is a popular hotel pick for travelers.",
         location: Location.LONDON,
         priceUsd: 503,
-        isFavorite: true,
+        isFavorite: false,
         reviewCount: 1837
     },
     {
@@ -4631,7 +4631,7 @@ export const ENTRIES: Entries = [
         description: "Grand Hotel London in London is a popular hotel pick for travelers. Expect a well-balanced experience with friendly service and great value.",
         location: Location.LONDON,
         priceUsd: 316,
-        isFavorite: true,
+        isFavorite: false,
         reviewCount: 1262
     },
     {
@@ -4655,7 +4655,7 @@ export const ENTRIES: Entries = [
         description: "The Classic London in London is a popular hotel pick for travelers. Expect a well-balanced experience with friendly service and great value.",
         location: Location.LONDON,
         priceUsd: 501,
-        isFavorite: true,
+        isFavorite: false,
         reviewCount: 4361
     },
     {
@@ -4691,7 +4691,7 @@ export const ENTRIES: Entries = [
         description: "The Atrium London in London is a popular hotel pick for travelers.",
         location: Location.LONDON,
         priceUsd: 486,
-        isFavorite: true,
+        isFavorite: false,
         reviewCount: 3351
     },
     {
@@ -4715,7 +4715,7 @@ export const ENTRIES: Entries = [
         description: "Riverside Suites London in London is a popular hotel pick for travelers.",
         location: Location.LONDON,
         priceUsd: 567,
-        isFavorite: true,
+        isFavorite: false,
         reviewCount: 102
     },
     {
@@ -4751,7 +4751,7 @@ export const ENTRIES: Entries = [
         description: "Metropolitan Hotel London in London is a popular hotel pick for travelers. Expect a well-balanced experience with friendly service and great value.",
         location: Location.LONDON,
         priceUsd: 113,
-        isFavorite: true,
+        isFavorite: false,
         reviewCount: 2601
     },
     {
@@ -4907,7 +4907,7 @@ export const ENTRIES: Entries = [
         description: "The Pantry - London in London is a popular restaurant pick for travelers.",
         location: Location.LONDON,
         priceUsd: 107,
-        isFavorite: true,
+        isFavorite: false,
         reviewCount: 4430
     },
     {
@@ -5003,7 +5003,7 @@ export const ENTRIES: Entries = [
         description: "Canopy Café - London in London is a popular restaurant pick for travelers. Expect a well-balanced experience with friendly service and great value.",
         location: Location.LONDON,
         priceUsd: 150,
-        isFavorite: true,
+        isFavorite: false,
         reviewCount: 7588
     },
     {
@@ -5147,7 +5147,7 @@ export const ENTRIES: Entries = [
         description: "Miso & More - London in London is a popular restaurant pick for travelers.",
         location: Location.LONDON,
         priceUsd: 39,
-        isFavorite: true,
+        isFavorite: false,
         reviewCount: 5645
     },
     {
@@ -5183,7 +5183,7 @@ export const ENTRIES: Entries = [
         description: "Smoke & Ember - London in London is a popular restaurant pick for travelers. Expect a well-balanced experience with friendly service and great value.",
         location: Location.LONDON,
         priceUsd: 111,
-        isFavorite: true,
+        isFavorite: false,
         reviewCount: 3257
     },
     {
@@ -5327,7 +5327,7 @@ export const ENTRIES: Entries = [
         description: "Midnight Market - London in London is a popular restaurant pick for travelers.",
         location: Location.LONDON,
         priceUsd: 52,
-        isFavorite: true,
+        isFavorite: false,
         reviewCount: 530
     },
     {
@@ -5411,7 +5411,7 @@ export const ENTRIES: Entries = [
         description: "The Dumpling House - London in London is a popular restaurant pick for travelers. Expect a well-balanced experience with friendly service and great value.",
         location: Location.LONDON,
         priceUsd: 119,
-        isFavorite: true,
+        isFavorite: false,
         reviewCount: 2306
     },
     {
@@ -5447,7 +5447,7 @@ export const ENTRIES: Entries = [
         description: "The Kebab Room - London in London is a popular restaurant pick for travelers. Expect a well-balanced experience with friendly service and great value.",
         location: Location.LONDON,
         priceUsd: 34,
-        isFavorite: true,
+        isFavorite: false,
         reviewCount: 6768
     },
     {
@@ -5555,7 +5555,7 @@ export const ENTRIES: Entries = [
         description: "La Trattoria - London in London is a popular restaurant pick for travelers. Expect a well-balanced experience with friendly service and great value.",
         location: Location.LONDON,
         priceUsd: 127,
-        isFavorite: true,
+        isFavorite: false,
         reviewCount: 2613
     },
     {
@@ -5579,7 +5579,7 @@ export const ENTRIES: Entries = [
         description: "Little Orchard - London in London is a popular restaurant pick for travelers. Expect a well-balanced experience with friendly service and great value.",
         location: Location.LONDON,
         priceUsd: 80,
-        isFavorite: true,
+        isFavorite: false,
         reviewCount: 5930
     },
     {
@@ -5591,7 +5591,7 @@ export const ENTRIES: Entries = [
         description: "Olive & Thyme - London in London is a popular restaurant pick for travelers. Expect a well-balanced experience with friendly service and great value.",
         location: Location.LONDON,
         priceUsd: 52,
-        isFavorite: true,
+        isFavorite: false,
         reviewCount: 5030
     },
     {
@@ -5603,7 +5603,7 @@ export const ENTRIES: Entries = [
         description: "Cedar Grill - London in London is a popular restaurant pick for travelers.",
         location: Location.LONDON,
         priceUsd: 34,
-        isFavorite: true,
+        isFavorite: false,
         reviewCount: 7837
     },
     {
@@ -5615,7 +5615,7 @@ export const ENTRIES: Entries = [
         description: "The Green Fork - London in London is a popular restaurant pick for travelers.",
         location: Location.LONDON,
         priceUsd: 123,
-        isFavorite: true,
+        isFavorite: false,
         reviewCount: 5654
     },
     {
@@ -5795,7 +5795,7 @@ export const ENTRIES: Entries = [
         description: "Craft Workshop - Spain in Spain is a popular activity pick for travelers.",
         location: Location.SPAIN,
         priceUsd: 220,
-        isFavorite: true,
+        isFavorite: false,
         durationHours: 9
     },
     {
@@ -5807,7 +5807,7 @@ export const ENTRIES: Entries = [
         description: "Brewery Tour - Spain in Spain is a popular activity pick for travelers.",
         location: Location.SPAIN,
         priceUsd: 173,
-        isFavorite: true,
+        isFavorite: false,
         durationHours: 4
     },
     {
@@ -5831,7 +5831,7 @@ export const ENTRIES: Entries = [
         description: "Rooftop Viewing - Spain in Spain is a popular activity pick for travelers.",
         location: Location.SPAIN,
         priceUsd: 237,
-        isFavorite: true,
+        isFavorite: false,
         durationHours: 10
     },
     {
@@ -5843,7 +5843,7 @@ export const ENTRIES: Entries = [
         description: "Architecture Walk - Spain in Spain is a popular activity pick for travelers. Expect a well-balanced experience with friendly service and great value.",
         location: Location.SPAIN,
         priceUsd: 104,
-        isFavorite: true,
+        isFavorite: false,
         durationHours: 12
     },
     {
@@ -5879,7 +5879,7 @@ export const ENTRIES: Entries = [
         description: "River Cruise - Spain in Spain is a popular activity pick for travelers.",
         location: Location.SPAIN,
         priceUsd: 283,
-        isFavorite: true,
+        isFavorite: false,
         durationHours: 12
     },
     {
@@ -5927,7 +5927,7 @@ export const ENTRIES: Entries = [
         description: "Rooftop Viewing - Spain in Spain is a popular activity pick for travelers.",
         location: Location.SPAIN,
         priceUsd: 91,
-        isFavorite: true,
+        isFavorite: false,
         durationHours: 1
     },
     {
@@ -6011,7 +6011,7 @@ export const ENTRIES: Entries = [
         description: "Park Picnic - Spain in Spain is a popular activity pick for travelers. Expect a well-balanced experience with friendly service and great value.",
         location: Location.SPAIN,
         priceUsd: 140,
-        isFavorite: true,
+        isFavorite: false,
         durationHours: 7
     },
     {
@@ -6155,7 +6155,7 @@ export const ENTRIES: Entries = [
         description: "Architecture Walk - Spain in Spain is a popular activity pick for travelers. Expect a well-balanced experience with friendly service and great value.",
         location: Location.SPAIN,
         priceUsd: 182,
-        isFavorite: true,
+        isFavorite: false,
         durationHours: 12
     },
     {
@@ -6191,7 +6191,7 @@ export const ENTRIES: Entries = [
         description: "Rooftop Viewing - Spain in Spain is a popular activity pick for travelers.",
         location: Location.SPAIN,
         priceUsd: 86,
-        isFavorite: true,
+        isFavorite: false,
         durationHours: 1
     },
     {
@@ -6215,7 +6215,7 @@ export const ENTRIES: Entries = [
         description: "Food Tasting - Spain in Spain is a popular activity pick for travelers.",
         location: Location.SPAIN,
         priceUsd: 53,
-        isFavorite: true,
+        isFavorite: false,
         durationHours: 2
     },
     {
@@ -6227,7 +6227,7 @@ export const ENTRIES: Entries = [
         description: "Park Picnic - Spain in Spain is a popular activity pick for travelers.",
         location: Location.SPAIN,
         priceUsd: 80,
-        isFavorite: true,
+        isFavorite: false,
         durationHours: 6
     },
     {
@@ -6251,7 +6251,7 @@ export const ENTRIES: Entries = [
         description: "Jazz Night - Spain in Spain is a popular activity pick for travelers.",
         location: Location.SPAIN,
         priceUsd: 233,
-        isFavorite: true,
+        isFavorite: false,
         durationHours: 4
     },
     {
@@ -6263,7 +6263,7 @@ export const ENTRIES: Entries = [
         description: "Cathedral Visit - Spain in Spain is a popular activity pick for travelers.",
         location: Location.SPAIN,
         priceUsd: 91,
-        isFavorite: true,
+        isFavorite: false,
         durationHours: 10
     },
     {
@@ -6395,7 +6395,7 @@ export const ENTRIES: Entries = [
         description: "Brewery Tour - Spain in Spain is a popular activity pick for travelers.",
         location: Location.SPAIN,
         priceUsd: 61,
-        isFavorite: true,
+        isFavorite: false,
         durationHours: 10
     },
     {
@@ -6419,7 +6419,7 @@ export const ENTRIES: Entries = [
         description: "Wine Tasting - Spain in Spain is a popular activity pick for travelers.",
         location: Location.SPAIN,
         priceUsd: 180,
-        isFavorite: true,
+        isFavorite: false,
         durationHours: 3
     },
     {
@@ -6479,7 +6479,7 @@ export const ENTRIES: Entries = [
         description: "Cathedral Visit - Spain in Spain is a popular activity pick for travelers. Expect a well-balanced experience with friendly service and great value.",
         location: Location.SPAIN,
         priceUsd: 165,
-        isFavorite: true,
+        isFavorite: false,
         durationHours: 12
     },
     {
@@ -6563,7 +6563,7 @@ export const ENTRIES: Entries = [
         description: "Culinary Tour - Spain in Spain is a popular activity pick for travelers.",
         location: Location.SPAIN,
         priceUsd: 207,
-        isFavorite: true,
+        isFavorite: false,
         durationHours: 8
     },
     {
@@ -6587,7 +6587,7 @@ export const ENTRIES: Entries = [
         description: "Gardens Visit - Spain in Spain is a popular activity pick for travelers.",
         location: Location.SPAIN,
         priceUsd: 68,
-        isFavorite: true,
+        isFavorite: false,
         durationHours: 3
     },
     {
@@ -6635,7 +6635,7 @@ export const ENTRIES: Entries = [
         description: "Brewery Tour - Spain in Spain is a popular activity pick for travelers.",
         location: Location.SPAIN,
         priceUsd: 136,
-        isFavorite: true,
+        isFavorite: false,
         durationHours: 7
     },
     {
@@ -6683,7 +6683,7 @@ export const ENTRIES: Entries = [
         description: "Chocolate Workshop - Spain in Spain is a popular activity pick for travelers.",
         location: Location.SPAIN,
         priceUsd: 150,
-        isFavorite: true,
+        isFavorite: false,
         durationHours: 9
     },
     {
@@ -6755,7 +6755,7 @@ export const ENTRIES: Entries = [
         description: "The Contemporary Spain in Spain is a popular hotel pick for travelers. Expect a well-balanced experience with friendly service and great value.",
         location: Location.SPAIN,
         priceUsd: 230,
-        isFavorite: true,
+        isFavorite: false,
         reviewCount: 3703
     },
     {
@@ -6791,7 +6791,7 @@ export const ENTRIES: Entries = [
         description: "Muse Hotel Spain in Spain is a popular hotel pick for travelers. Expect a well-balanced experience with friendly service and great value.",
         location: Location.SPAIN,
         priceUsd: 148,
-        isFavorite: true,
+        isFavorite: false,
         reviewCount: 4582
     },
     {
@@ -6851,7 +6851,7 @@ export const ENTRIES: Entries = [
         description: "Sapphire Stay Spain in Spain is a popular hotel pick for travelers. Expect a well-balanced experience with friendly service and great value.",
         location: Location.SPAIN,
         priceUsd: 564,
-        isFavorite: true,
+        isFavorite: false,
         reviewCount: 2281
     },
     {
@@ -6863,7 +6863,7 @@ export const ENTRIES: Entries = [
         description: "The Willow Spain in Spain is a popular hotel pick for travelers. Expect a well-balanced experience with friendly service and great value.",
         location: Location.SPAIN,
         priceUsd: 491,
-        isFavorite: true,
+        isFavorite: false,
         reviewCount: 2740
     },
     {
@@ -6935,7 +6935,7 @@ export const ENTRIES: Entries = [
         description: "Urban Retreat Spain in Spain is a popular hotel pick for travelers. Expect a well-balanced experience with friendly service and great value.",
         location: Location.SPAIN,
         priceUsd: 493,
-        isFavorite: true,
+        isFavorite: false,
         reviewCount: 4319
     },
     {
@@ -7079,7 +7079,7 @@ export const ENTRIES: Entries = [
         description: "Muse Hotel Spain in Spain is a popular hotel pick for travelers. Expect a well-balanced experience with friendly service and great value.",
         location: Location.SPAIN,
         priceUsd: 573,
-        isFavorite: true,
+        isFavorite: false,
         reviewCount: 2289
     },
     {
@@ -7211,7 +7211,7 @@ export const ENTRIES: Entries = [
         description: "Skyline Hotel Spain in Spain is a popular hotel pick for travelers.",
         location: Location.SPAIN,
         priceUsd: 548,
-        isFavorite: true,
+        isFavorite: false,
         reviewCount: 1502
     },
     {
@@ -7259,7 +7259,7 @@ export const ENTRIES: Entries = [
         description: "The Willow Spain in Spain is a popular hotel pick for travelers.",
         location: Location.SPAIN,
         priceUsd: 84,
-        isFavorite: true,
+        isFavorite: false,
         reviewCount: 1658
     },
     {
@@ -7271,7 +7271,7 @@ export const ENTRIES: Entries = [
         description: "Emerald Suites Spain in Spain is a popular hotel pick for travelers. Expect a well-balanced experience with friendly service and great value.",
         location: Location.SPAIN,
         priceUsd: 275,
-        isFavorite: true,
+        isFavorite: false,
         reviewCount: 58
     },
     {
@@ -7283,7 +7283,7 @@ export const ENTRIES: Entries = [
         description: "Parkside Hotel Spain in Spain is a popular hotel pick for travelers. Expect a well-balanced experience with friendly service and great value.",
         location: Location.SPAIN,
         priceUsd: 399,
-        isFavorite: true,
+        isFavorite: false,
         reviewCount: 3167
     },
     {
@@ -7319,7 +7319,7 @@ export const ENTRIES: Entries = [
         description: "The Regency Spain in Spain is a popular hotel pick for travelers.",
         location: Location.SPAIN,
         priceUsd: 272,
-        isFavorite: true,
+        isFavorite: false,
         reviewCount: 3329
     },
     {
@@ -7367,7 +7367,7 @@ export const ENTRIES: Entries = [
         description: "Central Plaza Hotel Spain in Spain is a popular hotel pick for travelers.",
         location: Location.SPAIN,
         priceUsd: 469,
-        isFavorite: true,
+        isFavorite: false,
         reviewCount: 2095
     },
     {
@@ -7487,7 +7487,7 @@ export const ENTRIES: Entries = [
         description: "Oak & Ivy Spain in Spain is a popular hotel pick for travelers.",
         location: Location.SPAIN,
         priceUsd: 126,
-        isFavorite: true,
+        isFavorite: false,
         reviewCount: 1158
     },
     {
@@ -7535,7 +7535,7 @@ export const ENTRIES: Entries = [
         description: "The Heritage Spain in Spain is a popular hotel pick for travelers. Expect a well-balanced experience with friendly service and great value.",
         location: Location.SPAIN,
         priceUsd: 243,
-        isFavorite: true,
+        isFavorite: false,
         reviewCount: 4864
     },
     {
@@ -7607,7 +7607,7 @@ export const ENTRIES: Entries = [
         description: "The Serene Spain in Spain is a popular hotel pick for travelers. Expect a well-balanced experience with friendly service and great value.",
         location: Location.SPAIN,
         priceUsd: 474,
-        isFavorite: true,
+        isFavorite: false,
         reviewCount: 4598
     },
     {
@@ -7655,7 +7655,7 @@ export const ENTRIES: Entries = [
         description: "Garden Palace Spain in Spain is a popular hotel pick for travelers. Expect a well-balanced experience with friendly service and great value.",
         location: Location.SPAIN,
         priceUsd: 538,
-        isFavorite: true,
+        isFavorite: false,
         reviewCount: 4108
     },
     {
@@ -7667,7 +7667,7 @@ export const ENTRIES: Entries = [
         description: "The Lantern Spain in Spain is a popular hotel pick for travelers. Expect a well-balanced experience with friendly service and great value.",
         location: Location.SPAIN,
         priceUsd: 98,
-        isFavorite: true,
+        isFavorite: false,
         reviewCount: 3402
     },
     {
@@ -7715,7 +7715,7 @@ export const ENTRIES: Entries = [
         description: "The Brunch Club - Spain in Spain is a popular restaurant pick for travelers.",
         location: Location.SPAIN,
         priceUsd: 125,
-        isFavorite: true,
+        isFavorite: false,
         reviewCount: 3658
     },
     {
@@ -7763,7 +7763,7 @@ export const ENTRIES: Entries = [
         description: "Golden Wok - Spain in Spain is a popular restaurant pick for travelers. Expect a well-balanced experience with friendly service and great value.",
         location: Location.SPAIN,
         priceUsd: 96,
-        isFavorite: true,
+        isFavorite: false,
         reviewCount: 6815
     },
     {
@@ -7943,7 +7943,7 @@ export const ENTRIES: Entries = [
         description: "Golden Wok - Spain in Spain is a popular restaurant pick for travelers.",
         location: Location.SPAIN,
         priceUsd: 125,
-        isFavorite: true,
+        isFavorite: false,
         reviewCount: 9230
     },
     {
@@ -8003,7 +8003,7 @@ export const ENTRIES: Entries = [
         description: "The Green Fork - Spain in Spain is a popular restaurant pick for travelers.",
         location: Location.SPAIN,
         priceUsd: 141,
-        isFavorite: true,
+        isFavorite: false,
         reviewCount: 690
     },
     {
@@ -8027,7 +8027,7 @@ export const ENTRIES: Entries = [
         description: "Bistro Lumière - Spain in Spain is a popular restaurant pick for travelers. Expect a well-balanced experience with friendly service and great value.",
         location: Location.SPAIN,
         priceUsd: 49,
-        isFavorite: true,
+        isFavorite: false,
         reviewCount: 5310
     },
     {
@@ -8183,7 +8183,7 @@ export const ENTRIES: Entries = [
         description: "Harvest Table - Spain in Spain is a popular restaurant pick for travelers. Expect a well-balanced experience with friendly service and great value.",
         location: Location.SPAIN,
         priceUsd: 19,
-        isFavorite: true,
+        isFavorite: false,
         reviewCount: 914
     },
     {
@@ -8207,7 +8207,7 @@ export const ENTRIES: Entries = [
         description: "Sea Salt - Spain in Spain is a popular restaurant pick for travelers.",
         location: Location.SPAIN,
         priceUsd: 90,
-        isFavorite: true,
+        isFavorite: false,
         reviewCount: 1963
     },
     {
@@ -8231,7 +8231,7 @@ export const ENTRIES: Entries = [
         description: "La Trattoria - Spain in Spain is a popular restaurant pick for travelers.",
         location: Location.SPAIN,
         priceUsd: 138,
-        isFavorite: true,
+        isFavorite: false,
         reviewCount: 4962
     },
     {
@@ -8279,7 +8279,7 @@ export const ENTRIES: Entries = [
         description: "Firefly Eatery - Spain in Spain is a popular restaurant pick for travelers.",
         location: Location.SPAIN,
         priceUsd: 20,
-        isFavorite: true,
+        isFavorite: false,
         reviewCount: 9800
     },
     {
@@ -8303,7 +8303,7 @@ export const ENTRIES: Entries = [
         description: "Golden Wok - Spain in Spain is a popular restaurant pick for travelers. Expect a well-balanced experience with friendly service and great value.",
         location: Location.SPAIN,
         priceUsd: 141,
-        isFavorite: true,
+        isFavorite: false,
         reviewCount: 3039
     },
     {
@@ -8351,7 +8351,7 @@ export const ENTRIES: Entries = [
         description: "Pho & Go - Spain in Spain is a popular restaurant pick for travelers.",
         location: Location.SPAIN,
         priceUsd: 70,
-        isFavorite: true,
+        isFavorite: false,
         reviewCount: 1168
     },
     {
@@ -8375,7 +8375,7 @@ export const ENTRIES: Entries = [
         description: "Naan & Noodles - Spain in Spain is a popular restaurant pick for travelers. Expect a well-balanced experience with friendly service and great value.",
         location: Location.SPAIN,
         priceUsd: 119,
-        isFavorite: true,
+        isFavorite: false,
         reviewCount: 5156
     },
     {
@@ -8459,7 +8459,7 @@ export const ENTRIES: Entries = [
         description: "Rustic Kitchen - Spain in Spain is a popular restaurant pick for travelers. Expect a well-balanced experience with friendly service and great value.",
         location: Location.SPAIN,
         priceUsd: 84,
-        isFavorite: true,
+        isFavorite: false,
         reviewCount: 8235
     },
     {
@@ -8495,7 +8495,7 @@ export const ENTRIES: Entries = [
         description: "The Dumpling House - Spain in Spain is a popular restaurant pick for travelers. Expect a well-balanced experience with friendly service and great value.",
         location: Location.SPAIN,
         priceUsd: 69,
-        isFavorite: true,
+        isFavorite: false,
         reviewCount: 6077
     },
     {
@@ -8567,7 +8567,7 @@ export const ENTRIES: Entries = [
         description: "Taco Alley - Spain in Spain is a popular restaurant pick for travelers. Expect a well-balanced experience with friendly service and great value.",
         location: Location.SPAIN,
         priceUsd: 122,
-        isFavorite: true,
+        isFavorite: false,
         reviewCount: 1288
     },
     {
@@ -8579,7 +8579,7 @@ export const ENTRIES: Entries = [
         description: "The Kebab Room - Spain in Spain is a popular restaurant pick for travelers.",
         location: Location.SPAIN,
         priceUsd: 57,
-        isFavorite: true,
+        isFavorite: false,
         reviewCount: 9888
     },
     {
@@ -8603,7 +8603,7 @@ export const ENTRIES: Entries = [
         description: "The Brunch Club - Spain in Spain is a popular restaurant pick for travelers. Expect a well-balanced experience with friendly service and great value.",
         location: Location.SPAIN,
         priceUsd: 115,
-        isFavorite: true,
+        isFavorite: false,
         reviewCount: 731
     },
     {
@@ -8615,7 +8615,7 @@ export const ENTRIES: Entries = [
         description: "Fable Diner - Spain in Spain is a popular restaurant pick for travelers.",
         location: Location.SPAIN,
         priceUsd: 141,
-        isFavorite: true,
+        isFavorite: false,
         reviewCount: 9401
     },
     {

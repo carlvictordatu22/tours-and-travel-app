@@ -1,5 +1,15 @@
 <div class="tnt-card">
     <div class="tnt-card__header">
+        <button
+            type="button"
+            class="tnt-card__favorite"
+            [class.tnt-card__favorite--active]="isFavorite()"
+            (click)="toggleFavorite()"
+            [attr.aria-pressed]="isFavorite()"
+            aria-label="Toggle favorite"
+        >
+            <span class="tnt-card__favorite-icon" aria-hidden="true"></span>
+        </button>
         <img class="tnt-card__image" [ngSrc]="imageUrl()" height="600" width="800" priority />
     </div>
     <div class="tnt-card__body">

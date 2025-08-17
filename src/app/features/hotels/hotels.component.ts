@@ -1,9 +1,9 @@
 import { ChangeDetectionStrategy, Component, Signal, computed, effect, inject, signal } from '@angular/core';
 import { toObservable } from '@angular/core/rxjs-interop';
 import { CommonModule } from '@angular/common';
-import { CardComponent, ENTRIES, Entries, Entry, EntryType, PaginationComponent, SkeletonComponent, EmptyCardComponent } from '../../shared';
+import { CardComponent, ENTRIES, Entries, Entry, EntryType, PaginationComponent, SkeletonComponent, EmptyCardComponent, FavoritesService } from '../../shared';
 import { Observable } from 'rxjs';
-import { delay, tap } from 'rxjs/operators';
+ 
 import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
@@ -16,6 +16,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class HotelsComponent {
   readonly #router = inject(Router);
   readonly #route = inject(ActivatedRoute);
+  readonly #favorites = inject(FavoritesService);
 
   readonly isLoading = signal(false);
 
@@ -23,7 +24,7 @@ export class HotelsComponent {
   readonly page = signal<number>(1);
 
   readonly allHotels: Signal<Entries> = computed(() =>
-    ENTRIES.filter((entry: Entry) => entry.type === EntryType.HOTEL)
+    this.#favorites.entries().filter((entry: Entry) => entry.type === EntryType.HOTEL)
   );
 
   readonly totalHotels = computed(() => this.allHotels().length);
@@ -36,11 +37,7 @@ export class HotelsComponent {
     return this.allHotels().slice(start, end);
   });
 
-  readonly hotels$: Observable<Entries> = toObservable(this.hotels).pipe(
-    tap(() => this.isLoading.set(true)),
-    delay(3000),
-    tap(() => this.isLoading.set(false))
-  );
+  readonly hotels$: Observable<Entries> = toObservable(this.hotels);
 
   /** Bootstraps page state from URL and keeps it synced with the query param. */
   constructor() {
@@ -66,5 +63,18 @@ export class HotelsComponent {
         });
       }
     });
+
+    // Show skeleton only when page changes
+    effect(() => {
+      this.page();
+      this.isLoading.set(true);
+      const timeout = setTimeout(() => this.isLoading.set(false), 3000);
+      return () => clearTimeout(timeout);
+    });
+  }
+
+  /** Update favorite state via the global FavoritesService */
+  onFavoriteChange(id: string, value: boolean): void {
+    this.#favorites.setFavorite(id, value);
   }
 }

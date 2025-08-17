@@ -1,9 +1,9 @@
 import { ChangeDetectionStrategy, Component, Signal, computed, effect, inject, signal } from '@angular/core';
 import { toObservable, toSignal } from '@angular/core/rxjs-interop';
 import { CommonModule } from '@angular/common';
-import { CardComponent, ENTRIES, Entries, Entry, EntryType, PaginationComponent, SkeletonComponent, Location, EmptyCardComponent } from '../../shared';
+import { CardComponent, ENTRIES, Entries, Entry, EntryType, PaginationComponent, SkeletonComponent, Location, EmptyCardComponent, FavoritesService } from '../../shared';
 import { Observable } from 'rxjs';
-import { delay, tap, startWith, debounceTime, distinctUntilChanged } from 'rxjs/operators';
+import { startWith, debounceTime, distinctUntilChanged } from 'rxjs/operators';
 import { ActivatedRoute, Router } from '@angular/router';
 import { FormBuilder, ReactiveFormsModule } from '@angular/forms';
 
@@ -24,8 +24,10 @@ export class ActivitiesComponent {
   readonly pageSize = 12;
   readonly page = signal<number>(1);
 
+  readonly #favorites = inject(FavoritesService);
+
   readonly allActivities: Signal<Entries> = computed(() =>
-    ENTRIES.filter((entry: Entry) => entry.type === EntryType.ACTIVITY)
+    this.#favorites.entries().filter((entry: Entry) => entry.type === EntryType.ACTIVITY)
   );
 
   readonly filterForm = this.#fb.nonNullable.group({
@@ -93,11 +95,7 @@ export class ActivitiesComponent {
     return this.filteredActivities().slice(start, end);
   });
 
-  readonly activities$: Observable<Entries> = toObservable(this.activities).pipe(
-    tap(() => this.isLoading.set(true)),
-    delay(3000),
-    tap(() => this.isLoading.set(false))
-  );
+  readonly activities$: Observable<Entries> = toObservable(this.activities);
 
   /** Bootstraps page state from URL and keeps it synced with the query param. */
   constructor() {
@@ -131,5 +129,23 @@ export class ActivitiesComponent {
         });
       }
     });
+
+    // Show skeleton only for filter/page changes (not for favorite toggles)
+    effect(() => {
+      // These are user-driven controls; favorite heart toggles do not touch them
+      this.page();
+      this.nameQuery();
+      this.locationFilter();
+      this.isFavoriteFilter();
+
+      this.isLoading.set(true);
+      const timeout = setTimeout(() => this.isLoading.set(false), 3000);
+      return () => clearTimeout(timeout);
+    });
+  }
+
+  /** Update favorite state via the global FavoritesService */
+  onFavoriteChange(id: string, value: boolean): void {
+    this.#favorites.setFavorite(id, value);
   }
 }
