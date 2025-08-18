@@ -1,0 +1,22 @@
+<div class="tnt-card">
+    <div class="tnt-card__header">
+        @if (type()) {
+            <span class="tnt-card__badge tnt-card__badge--{{ type() | lowercase }}">{{ type() }}</span>
+        }
+        <button
+            type="button"
+            class="tnt-card__favorite"
+            [class.tnt-card__favorite--active]="isFavorite()"
+            (click)="toggleFavorite()"
+            [attr.aria-pressed]="isFavorite()"
+            aria-label="Toggle favorite"
+        >
+            <span class="tnt-card__favorite-icon" aria-hidden="true"></span>
+        </button>
+        <img class="tnt-card__image" [ngSrc]="imageUrl()" height="600" width="800" [priority]="priority()" />
+    </div>
+    <div class="tnt-card__body">
+        <h4 class="tnt-card__title">{{ title() }}</h4>
+        <p class="tnt-card__description">{{ description() }}</p>
+    </div>
+</div>

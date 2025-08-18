@@ -1,14 +1,40 @@
 .tnt-navbar {
-    padding: 30px 30px 50px;
+    padding: 30px;
     background-color: var(--tnt-background);
+
+    @media screen and (min-width: 992px) {
+        padding: 30px 30px 50px;
+    }
+
+    &__bottom-section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
     &__brand {
         height: 30px;
         cursor: pointer;
     }
 
+    &__center-section {
+        margin-bottom: 15px;
+
+        @media screen and (min-width: 992px) {
+            margin-bottom: 10px;
+        }
+    }
+
+    &__left-section {
+        margin-bottom: 10px;
+
+        @media screen and (min-width: 992px) {
+            margin-bottom: 0;
+        }
+    }
+
     &__link {
-        font-size: 18px;
+        font-size: 14px;
         display: inline-flex;
         align-items: center;
         font-weight: bold;
@@ -16,6 +42,10 @@
         padding: 10px 0;
         color: lighten(#36382E, 40%);
         border-bottom: 3px solid transparent;
+
+        @media screen and (min-width: 576px) {
+            font-size: 18px;
+        }
 
         &:not(:last-of-type) {
             margin-right: 20px;
@@ -37,26 +67,57 @@
     }
 
     &__link-logo {
-        height: 40px;
+        height: 20px;
         display: inline-block;
         margin-right: 10px;
+
+        @media screen and (min-width: 576px) {
+            height: 40px;
+        }
+    }
+
+    &__link-text {
+        font-weight: 500;
+    }
+
+    &__list {
+        list-style-type: none;
+        margin: 0;
+        padding: 10px 0;
+        max-height: 280px;
+        overflow-y: auto;
+
+        &-item {
+            padding: 10px 15px;
+            font-size: 16px;
+            cursor: pointer;
+            color: var(--tnt-dark);
+            outline: none;
+
+            &:hover,
+            &:focus {
+                background-color: var(--tnt-background);
+            }
+        }
     }
 
     &__nav {
-        margin-left: 90px;
+        @media screen and (min-width: 992px) {
+            margin-left: 90px;
+        }
     }
 
     &__top-section {
         display: flex;
-        justify-content: space-between;
+        flex-direction: column;
         align-items: center;
-        margin-bottom: 20px;
-    }
+        margin-bottom: 10px;
 
-    &__bottom-section {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @media screen and (min-width: 992px) {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
     }
 
     &__create-itinerary {
@@ -71,6 +132,35 @@
         cursor: pointer;
     }
 
+    &__overlay {
+        position: absolute;
+        top: 110%;
+        left: 0;
+        width: 100%;
+        border-radius: 10px;
+        background-color: var(--tnt-white);
+        box-shadow: 0px 11px 10px -4px rgba(0, 0, 0, 0.12);
+        border: 2px solid var(--tnt-dark);
+        z-index: 10;
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        transform: translateY(6px);
+        transition: opacity .2s ease, transform .2s ease, visibility .2s ease;
+
+        &--hidden {
+            opacity: 0;
+            transition: opacity .3s ease;
+        }
+    }
+
+    &__search-container:focus-within &__overlay {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+        transform: translateY(0);
+    }
+
     &__right-section {
         display: flex;
     }
@@ -81,21 +171,33 @@
     }
 
     &__search {
-        background-color: var(--tnt-white);
         border-radius: 100px;
         border: 2px solid transparent;
-        outline: 1px solid var(--tnt-neutral);
         width: 700px;
         max-width: 100%;
-        padding: 20px 40px;
+        padding: 10px 40px;
         outline: none;
         display: inline-block;
         text-align: center;
         font-size: 16px;
         box-shadow: 0px 11px 10px -4px rgba(0, 0, 0, 0.12);
+        background: url('/assets/images/map.png') no-repeat 97% center/5% var(--tnt-white);
+
+        @media screen and (min-width: 576px) {
+            padding: 20px 40px;
+        }
 
         &:focus {
             border: 2px solid var(--tnt-dark);
+        }
+
+        &-container {
+            position: relative;
+            width: 100%;
+
+            @media screen and (min-width: 768px) {
+                width: unset;
+            }
         }
     }
 }

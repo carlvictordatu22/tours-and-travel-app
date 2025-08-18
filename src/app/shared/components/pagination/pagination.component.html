@@ -1,0 +1,11 @@
+<div class="tnt-pagination">
+    <a class="tnt-pagination__link" (click)="prev()" [class.tnt-pagination__link--disabled]="page() === 1">&laquo;</a>
+    @for (p of visiblePages(); track p) {
+        @if (typeof p === 'number') {
+            <a class="tnt-pagination__link" (click)="goTo(p)" [class.tnt-pagination__link--active]="p === page()">{{ p }}</a>
+        } @else {
+            <span class="tnt-pagination__ellipsis">{{ p }}</span>
+        }
+    }
+    <a class="tnt-pagination__link" (click)="next()" [class.tnt-pagination__link--disabled]="page() === totalPages()">&raquo;</a>
+</div>

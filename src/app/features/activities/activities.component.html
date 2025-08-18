@@ -1,18 +1,74 @@
 <div class="tnt-activities">
-    Activities
+  <div class="tnt-activities__filter">
+    <!--
+      filterForm: Reactive form controlling the activity filters.
+      Controls:
+        - name: text input used to match against activity title
+        - location: select options from locationOptions() (Location enum)
+        - isFavorite: checkbox to show only favorites when checked
+      Changes reset the current page and update the filtered grid and totals.
+    -->
+    <form class="tnt-form" [formGroup]="filterForm">
+      <div class="tnt-form__row">
+        <label class="tnt-form__label" for="name">Name</label>
+        <input class="tnt-input" id="name" type="text" formControlName="name" />
+      </div>
+      <div class="tnt-form__row">
+        <label class="tnt-form__label" for="location">Location</label>
+        <select class="tnt-select" id="location" formControlName="location">
+          <option value="">All</option>
+          @for (loc of locationOptions(); track loc) {
+            <option [value]="loc">{{ loc }}</option>
+          }
+        </select>
+      </div>
+      <div class="tnt-form__row">
+        <label class="tnt-form__label" for="isFavorite">Favorite</label>
+        <input class="tnt-toggle" id="isFavorite" type="checkbox" formControlName="isFavorite" />
+      </div>
+      <div class="tnt-form__row tnt-form__row--actions">
+        <tnt-button [primary]="true" [blockSm]="true" (click)="clearSearch()">Clear search</tnt-button>
+      </div>
+    </form>
+  </div>
 
+  @let activities = (activities$ | async) ?? [];
+
+  <!-- Loading: show skeleton grid -->
+  @if (isLoading()) {
     <div class="tnt-grid tnt-grid--col-3">
-        <div class="tnt-grid__col">A</div>
-        <div class="tnt-grid__col">B</div>
-        <div class="tnt-grid__col">C</div>
-        <div class="tnt-grid__col">D</div>
-        <div class="tnt-grid__col">E</div>
-        <div class="tnt-grid__col">F</div>
-        <div class="tnt-grid__col">G</div>
-        <div class="tnt-grid__col">H</div>
-        <div class="tnt-grid__col">I</div>
-        <div class="tnt-grid__col">H</div>
-        <div class="tnt-grid__col">I</div>
-        <div class="tnt-grid__col">J</div>
+      @for (i of [0,1,2,3,4,5,6,7,8]; track i) {
+        <div class="tnt-grid__col">
+          <tnt-skeleton-card></tnt-skeleton-card>
+        </div>
+      }
     </div>
+  } @else {
+    <!-- Not loading: show activities grid and pagination -->
+    @if (activities.length > 0) {
+      <div class="tnt-grid tnt-grid--col-3">
+        @for (activity of activities; track activity.id; let i = $index) {
+          <div class="tnt-grid__col">
+            <tnt-card
+              [imageUrl]="activity.imageUrl"
+              [type]="activity.type"
+              [title]="activity.title"
+              [description]="activity.description"
+              [priority]="i === 0"
+              [(isFavorite)]="activity.isFavorite"
+              (isFavoriteChange)="onFavoriteChange(activity.id, $event)"
+            ></tnt-card>
+          </div>
+        }
+      </div>
+    } @else {
+      <tnt-empty-card>
+        No activities found.
+      </tnt-empty-card>
+    }
+
+    <div class="tnt-activities__pagination">
+      <tnt-pagination [total]="totalActivities()" [pageSize]="pageSize" [(page)]="page"></tnt-pagination>
+    </div>
+  }
 </div>

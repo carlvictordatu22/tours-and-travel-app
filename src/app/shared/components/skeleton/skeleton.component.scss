@@ -1,0 +1,49 @@
+.tnt-skeleton-card {
+    width: 100%;
+    box-shadow: 0 2px 5px 1px #403c4329;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    background-color: #ffffff;
+
+    &__header {
+        position: relative;
+    }
+
+    &__image {
+        width: 100%;
+        height: 160px;
+        background-color: #e6e6e6;
+        animation: tnt-skeleton-pulse 1200ms ease-in-out infinite;
+    }
+
+    &__body {
+        padding: 10px 15px 20px;
+    }
+
+    &__title {
+        height: 18px;
+        width: 60%;
+        margin: 0 auto 10px auto;
+        background-color: #e6e6e6;
+        border-radius: 4px;
+        animation: tnt-skeleton-pulse 1200ms ease-in-out infinite;
+    }
+
+    &__description {
+        height: 14px;
+        width: 90%;
+        margin: 0 auto;
+        background-color: #e6e6e6;
+        border-radius: 4px;
+        animation: tnt-skeleton-pulse 1200ms ease-in-out infinite;
+    }
+}
+
+@keyframes tnt-skeleton-pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.6; }
+    100% { opacity: 1; }
+}
+
+

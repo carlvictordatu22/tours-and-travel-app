@@ -1,0 +1,151 @@
+.tnt-card {
+    width: 100%;
+    box-shadow: 0 2px 5px 1px #403c4329;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    transition: transform 150ms ease, box-shadow 150ms ease;
+    will-change: transform, box-shadow;
+
+    &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px 0 #0000001a;
+    }
+
+    &__body {
+        padding: 10px 15px 20px;
+    }
+
+    &__description {
+        font-size: 14px;
+        font-weight: 300;
+        text-align: center;
+        color: lighten(#36382E, 40%);
+    }
+
+    &__header {
+        position: relative;
+    }
+
+    /* Top-left badge for entry type */
+    &__badge {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        z-index: 1;
+        padding: 4px 8px;
+        font-size: 12px;
+        font-weight: 600;
+        border-radius: 4px;
+        color: var(--tnt-white);
+        background-color: var(--tnt-dark);
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        box-shadow: 0 1px 3px 0 #00000026;
+
+        &--activity { background-color: var(--tnt-primary); }
+        &--hotel { background-color: var(--tnt-accent); }
+        &--restaurant { background-color: var(--tnt-dark); }
+    }
+
+    &__image {
+        object-fit: cover;
+        object-position: center;
+        height: auto;
+        width: 100%;
+        transition: transform 200ms ease;
+    }
+
+    &:hover .tnt-card__image { transform: scale(1.05); }
+
+    /* Favorite toggle positioned top-right over header */
+    &__favorite {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        background-color: var(--tnt-white);
+        color: var(--tnt-neutral);
+        border: 1px solid var(--tnt-neutral);
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: border-color 150ms ease, box-shadow 150ms ease, background-color 150ms ease;
+        box-shadow: 0 1px 3px 0 #00000026;
+        z-index: 1;
+        padding: 0;
+        outline: none;
+
+        &:hover {
+            box-shadow: 0 2px 6px 0 #00000026;
+            border-color: var(--tnt-primary);
+        }
+
+        &:focus-visible {
+            box-shadow: 0 0 0 3px #0000001a, 0 0 0 5px var(--tnt-accent);
+        }
+
+        &--active {
+            background-color: var(--tnt-primary);
+            color: var(--tnt-white);
+            border-color: var(--tnt-primary);
+
+            .tnt-card__favorite-icon {
+                animation: tnt-heart-throb 1000ms ease-in-out infinite;
+                will-change: transform;
+            }
+        }
+
+        &-icon {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            position: relative;
+            transform: rotate(-45deg);
+            transform-origin: center;
+            background-color: currentColor;
+
+            &::before,
+            &::after {
+                content: "";
+                position: absolute;
+                width: 12px;
+                height: 12px;
+                background-color: currentColor;
+                border-radius: 50%;
+            }
+
+            &::before { top: -6px; left: 0; }
+            &::after { top: 0; left: 6px; }
+        }
+    }
+
+    &__title {
+        text-align: center;
+        font-size: 16px;
+        font-weight: bold;
+        min-height: 40px;
+        color: var(--tnt-dark);
+    }
+
+    &__title,
+    &__description {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        line-clamp: 2;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+    }
+}
+
+@keyframes tnt-heart-throb {
+    0% { transform: rotate(-45deg) scale(1); }
+    25% { transform: rotate(-45deg) scale(1.1); }
+    50% { transform: rotate(-45deg) scale(1); }
+    75% { transform: rotate(-45deg) scale(1.15); }
+    100% { transform: rotate(-45deg) scale(1); }
+}
