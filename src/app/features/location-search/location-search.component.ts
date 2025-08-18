@@ -98,6 +98,7 @@ export class LocationSearchComponent {
 		this.#favorites.setFavorite(id, value);
 	}
 
+	/** Normalizes raw route param to `Location` enum; returns `null` if invalid. */
 	#normalizeToLocation(value: string): Location | null {
 		const candidates = Object.values(Location);
 		return (candidates as string[]).includes(value) ? (value as Location) : null;

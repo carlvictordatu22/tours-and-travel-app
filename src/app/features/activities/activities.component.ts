@@ -18,13 +18,12 @@ export class ActivitiesComponent {
   readonly #router = inject(Router);
   readonly #route = inject(ActivatedRoute);
   readonly #fb = inject(FormBuilder);
+  readonly #favorites = inject(FavoritesService);
 
   readonly isLoading = signal(false);
 
   readonly pageSize = 12;
   readonly page = signal<number>(1);
-
-  readonly #favorites = inject(FavoritesService);
 
   readonly allActivities: Signal<Entries> = computed(() =>
     this.#favorites.entries().filter((entry: Entry) => entry.type === EntryType.ACTIVITY)

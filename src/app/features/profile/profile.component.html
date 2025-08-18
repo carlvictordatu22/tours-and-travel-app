@@ -1,3 +1,45 @@
-<div class="tnt-profile">
-    Profile
-</div>
+<section class="tnt-profile">
+    <div class="tnt-profile__user">
+        <div class="tnt-profile__left">
+            <div class="tnt-profile__avatar">
+                <img class="tnt-profile__avatar-image" src="assets/images/profile.png" alt="User avatar">
+            </div>
+            <div class="tnt-profile__details">
+                <h2 class="tnt-profile__name">Diana Traveler</h2>
+                <p class="tnt-profile__meta">diana@example.com</p>
+                <p class="tnt-profile__meta">San Francisco, CA</p>
+            </div>
+        </div>
+        <div class="tnt-profile__right">
+            <div class="tnt-profile__stats">
+                <div class="tnt-profile__stat">
+                    <div class="tnt-profile__stat-number">12</div>
+                    <div class="tnt-profile__stat-label">Itineraries</div>
+                </div>
+                <div class="tnt-profile__stat">
+                    <div class="tnt-profile__stat-number">{{ favoritesCount() }}</div>
+                    <div class="tnt-profile__stat-label">Favorites</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="tnt-grid tnt-grid--col-3-9">
+        <nav class="tnt-profile__nav tnt-sidebar tnt-grid__col">
+            <a class="tnt-sidebar__link" routerLink="favorites" routerLinkActive="active">
+                <svg class="tnt-sidebar__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                    <path fill="currentColor" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                </svg>
+                <span>Favorites</span>
+            </a>
+            <a class="tnt-sidebar__link" routerLink="itineraries" routerLinkActive="active">
+                <svg class="tnt-sidebar__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                    <path fill="currentColor" d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 14H5V9h14v9z"/>
+                </svg>
+                <span>Itineraries</span>
+            </a>
+        </nav>
+        <div class="tnt-profile__content tnt-grid__col">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</section>

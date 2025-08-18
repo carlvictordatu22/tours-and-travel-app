@@ -20,6 +20,11 @@ export class FavoritesService {
         return ENTRIES.map(entry => ({ ...entry, isFavorite: current.has(entry.id) }));
     });
 
+    /** Total number of favorites. */
+    readonly favoritesCount: Signal<number> = computed(() =>
+        this.entries().filter(entry => entry.isFavorite).length
+    );
+
     /** Loads persisted favorites and wires up persistence effects. */
     constructor() {
         try {

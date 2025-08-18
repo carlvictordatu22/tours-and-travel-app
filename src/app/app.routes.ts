@@ -74,6 +74,11 @@ export const routes: Routes = [
             ogImage: ''
         },
         loadComponent: () => import('./features/profile/profile.component')
-            .then(mod => mod.ProfileComponent)
+            .then(mod => mod.ProfileComponent),
+        children: [
+            { path: '', pathMatch: 'full', redirectTo: 'favorites' },
+            { path: 'favorites', loadComponent: () => import('./features/profile/favorites/favorites.component').then(m => m.ProfileFavoritesComponent) },
+            { path: 'itineraries', loadComponent: () => import('./features/profile/itineraries/itineraries.component').then(m => m.ProfileItinerariesComponent) },
+        ]
     },
 ];
