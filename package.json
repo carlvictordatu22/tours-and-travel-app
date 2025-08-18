@@ -11,7 +11,12 @@
     "test:headless": "ng test --watch=false --browsers=ChromeHeadless",
     "coverage": "ng test --no-watch --code-coverage",
     "lint": "ng lint",
-    "serve": "node dist/tours-and-travel/server/server.mjs"
+    "serve": "node dist/tours-and-travel/server/server.mjs",
+    "firebase:login": "npx --yes firebase-tools login",
+    "firebase:use": "npx --yes firebase-tools use",
+    "firebase:serve": "npx --yes firebase-tools emulators:start --only hosting",
+    "firebase:deploy": "npx --yes firebase-tools deploy --only hosting",
+    "deploy": "npm run build && npx --yes firebase-tools deploy --only hosting"
   },
   "private": true,
   "dependencies": {
