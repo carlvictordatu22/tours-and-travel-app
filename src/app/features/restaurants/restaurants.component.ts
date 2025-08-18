@@ -2,6 +2,7 @@ import { ChangeDetectionStrategy, Component, Signal, computed, effect, inject, s
 import { toObservable, toSignal } from '@angular/core/rxjs-interop';
 import { CommonModule } from '@angular/common';
 import { CardComponent, ENTRIES, Entries, Entry, EntryType, PaginationComponent, SkeletonComponent, EmptyCardComponent, FavoritesService, Location } from '../../shared';
+import { ButtonComponent } from '../../shared/components/button/button.component';
 import { Observable } from 'rxjs';
 import { startWith, debounceTime, distinctUntilChanged } from 'rxjs/operators';
 import { ActivatedRoute, Router } from '@angular/router';
@@ -9,7 +10,7 @@ import { FormBuilder, ReactiveFormsModule } from '@angular/forms';
 
 @Component({
   selector: 'tnt-restaurants',
-  imports: [CommonModule, ReactiveFormsModule, CardComponent, PaginationComponent, SkeletonComponent, EmptyCardComponent],
+  imports: [CommonModule, ReactiveFormsModule, CardComponent, PaginationComponent, SkeletonComponent, EmptyCardComponent, ButtonComponent],
   templateUrl: './restaurants.component.html',
   styleUrl: './restaurants.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush
@@ -145,5 +146,11 @@ export class RestaurantsComponent {
   /** Update favorite state via the global FavoritesService */
   onFavoriteChange(id: string, value: boolean): void {
     this.#favorites.setFavorite(id, value);
+  }
+
+  /** Clears all filters (name, location, favorite) and resets to first page */
+  clearSearch(): void {
+    this.filterForm.reset({ name: '', location: '', isFavorite: false }, { emitEvent: true });
+    this.page.set(1);
   }
 }

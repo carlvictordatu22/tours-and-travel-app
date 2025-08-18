@@ -21,13 +21,19 @@
     gap: 16px;
 
     @media screen and (min-width: 768px) {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(4, 1fr);
+        align-items: start;
     }
 
     &__row {
         display: flex;
         flex-direction: column;
         gap: 6px;
+
+        &--actions {
+            justify-self: end;
+            align-self: center;
+        }
     }
 
     &__label {

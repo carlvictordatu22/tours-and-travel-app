@@ -1,0 +1,52 @@
+.tnt-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    padding: 0 14px;
+    border: 1px solid var(--tnt-neutral);
+    border-radius: 6px;
+    background: var(--tnt-white);
+    color: var(--tnt-dark);
+    cursor: pointer;
+    transition: background-color 150ms ease-in-out, color 150ms ease-in-out, border-color 150ms ease-in-out, box-shadow 150ms ease-in-out;
+
+    &:hover {
+        background-color: var(--tnt-background);
+    }
+
+    &--primary {
+        border-color: var(--tnt-primary);
+        background: var(--tnt-primary);
+        color: var(--tnt-white);
+
+        &:hover {
+            background: color-mix(in srgb, var(--tnt-primary) 90%, black);
+            border-color: color-mix(in srgb, var(--tnt-primary) 85%, black);
+        }
+    }
+
+    &--accent {
+        border-color: var(--tnt-accent);
+        background: var(--tnt-accent);
+        color: var(--tnt-white);
+
+        &:hover {
+            background: color-mix(in srgb, var(--tnt-accent) 90%, black);
+            border-color: color-mix(in srgb, var(--tnt-accent) 85%, black);
+        }
+    }
+
+    &:disabled,
+    &--disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
+        pointer-events: none;
+        background: var(--tnt-neutral);
+        border-color: var(--tnt-neutral);
+        color: var(--tnt-dark);
+        box-shadow: none;
+    }
+}
+
+

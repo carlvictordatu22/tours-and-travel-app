@@ -26,6 +26,9 @@
         <label class="tnt-form__label" for="isFavorite">Favorite</label>
         <input class="tnt-toggle" id="isFavorite" type="checkbox" formControlName="isFavorite" />
       </div>
+      <div class="tnt-form__row tnt-form__row--actions">
+        <tnt-button [primary]="true" (click)="clearSearch()">Clear search</tnt-button>
+      </div>
     </form>
   </div>
 
