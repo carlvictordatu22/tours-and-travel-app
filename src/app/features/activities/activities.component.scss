@@ -13,6 +13,14 @@
         justify-content: center;
         margin: 50px 30px;
     }
+
+    &__meta {
+        font-size: 13px;
+        color: var(--tnt-dark);
+        opacity: 0.8;
+        margin-bottom: 8px;
+        text-align: center;
+    }
 }
 
 .tnt-form {

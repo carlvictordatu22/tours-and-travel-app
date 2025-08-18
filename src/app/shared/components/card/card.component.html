@@ -17,6 +17,7 @@
     </div>
     <div class="tnt-card__body">
         <h4 class="tnt-card__title">{{ title() }}</h4>
+        <ng-content select="[tnt-card-meta]"></ng-content>
         <p class="tnt-card__description">{{ description() }}</p>
     </div>
 </div>

@@ -57,7 +57,12 @@
               [priority]="i === 0"
               [(isFavorite)]="activity.isFavorite"
               (isFavoriteChange)="onFavoriteChange(activity.id, $event)"
-            ></tnt-card>
+            >
+              <div tnt-card-meta class="tnt-activities__meta">
+                {{ activity.location }} · ⭐ {{ activity.rating }} · ${{ activity.priceUsd }}
+                @if (isActivity(activity)) { · ⏱ {{ activity.durationHours }}h }
+              </div>
+            </tnt-card>
           </div>
         }
       </div>

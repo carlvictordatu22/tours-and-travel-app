@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component, Signal, computed, effect, inject, signal } from '@angular/core';
 import { toObservable, toSignal } from '@angular/core/rxjs-interop';
 import { CommonModule } from '@angular/common';
-import { CardComponent, ENTRIES, Entries, Entry, EntryType, PaginationComponent, SkeletonComponent, EmptyCardComponent, FavoritesService, Location } from '../../shared';
+import { CardComponent, ENTRIES, Entries, Entry, EntryType, PaginationComponent, SkeletonComponent, EmptyCardComponent, FavoritesService, Location, Hotel } from '../../shared';
 import { ButtonComponent } from '../../shared/components/button/button.component';
 import { Observable } from 'rxjs';
 import { startWith, debounceTime, distinctUntilChanged } from 'rxjs/operators';
@@ -152,5 +152,10 @@ export class HotelsComponent {
   clearSearch(): void {
     this.filterForm.reset({ name: '', location: '', isFavorite: false }, { emitEvent: true });
     this.page.set(1);
+  }
+
+  /** Template type guard */
+  isHotel(entry: Entry): entry is Hotel {
+    return entry.type === EntryType.HOTEL;
   }
 }

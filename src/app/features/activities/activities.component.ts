@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component, Signal, computed, effect, inject, signal } from '@angular/core';
 import { toObservable, toSignal } from '@angular/core/rxjs-interop';
 import { CommonModule } from '@angular/common';
-import { CardComponent, ENTRIES, Entries, Entry, EntryType, PaginationComponent, SkeletonComponent, Location, EmptyCardComponent, FavoritesService } from '../../shared';
+import { CardComponent, ENTRIES, Entries, Entry, EntryType, PaginationComponent, SkeletonComponent, Location, EmptyCardComponent, FavoritesService, Activity } from '../../shared';
 import { ButtonComponent } from '../../shared/components/button/button.component';
 import { Observable } from 'rxjs';
 import { startWith, debounceTime, distinctUntilChanged } from 'rxjs/operators';
@@ -153,5 +153,10 @@ export class ActivitiesComponent {
   clearSearch(): void {
     this.filterForm.reset({ name: '', location: '', isFavorite: false }, { emitEvent: true });
     this.page.set(1);
+  }
+
+  /** Template type guard */
+  isActivity(entry: Entry): entry is Activity {
+    return entry.type === EntryType.ACTIVITY;
   }
 }

@@ -1,3 +1,68 @@
 <div class="tnt-ai-search">
-    AI Search
+    <div class="tnt-ai-search__intro">
+        <h2 class="tnt-ai-search__title">AI Search</h2>
+        <p class="tnt-ai-search__description">Ask in plain English to discover hotels, restaurants, and activities.</p>
+        <ul class="tnt-ai-search__suggestions" role="list">
+            @for (s of suggestions; track s) {
+                <li class="tnt-ai-search__suggestion">
+                    <button type="button" class="tnt-ai-search__chip" (click)="useSuggestion(s)" [attr.aria-label]="'Use suggestion: ' + s">{{ s }}</button>
+                </li>
+            }
+        </ul>
+    </div>
+
+    <form class="tnt-ai-search__form" (submit)="onSubmit($event)">
+        <label class="tnt-ai-search__label" for="query">Your question</label>
+        <input
+            id="query"
+            class="tnt-ai-search__input tnt-input"
+            type="text"
+            #q
+            [value]="query()"
+            (input)="onInput(q.value)"
+            placeholder="Ask a travel question..."
+            autocomplete="off"
+        />
+        <div class="tnt-ai-search__actions">
+            <tnt-button type="submit" class="tnt-ai-search__submit" [blockSm]="true" [accent]="true" [disabled]="loading()">{{ loading() ? 'Searching…' : 'Search with AI' }}</tnt-button>
+            <tnt-button type="button" class="tnt-ai-search__clear" [blockSm]="true" (click)="clearSearch()">Clear</tnt-button>
+        </div>
+    </form>
+
+    @if (error()) {
+        <div class="tnt-ai-search__status">{{ error() }}</div>
+    }
+
+    @if (loading()) {
+        <div class="tnt-grid tnt-grid--col-3">
+            @for (i of [0,1,2,3,4,5,6,7,8]; track i) {
+                <div class="tnt-grid__col">
+                    <tnt-skeleton-card></tnt-skeleton-card>
+                </div>
+            }
+        </div>
+    } @else {
+        @if (results().length > 0) {
+            <ul class="tnt-ai-search__list">
+                @for (item of results(); track item.id) {
+                    <li class="tnt-ai-search__item">
+                        <tnt-card
+                            [imageUrl]="item.imageUrl"
+                            [type]="item.type"
+                            [title]="item.title"
+                            [description]="item.description"
+                            [(isFavorite)]="item.isFavorite"
+                            (isFavoriteChange)="onFavoriteChange(item.id, $event)"
+                        >
+                            <div tnt-card-meta class="tnt-ai-search__meta">{{ item.type }} · {{ item.location }} · ⭐ {{ item.rating }} · ${{ item.priceUsd }}</div>
+                        </tnt-card>
+                    </li>
+                }
+            </ul>
+        } @else if (hasSearched() && hasQuery() && !error()) {
+            <tnt-empty-card>
+                No results found.
+            </tnt-empty-card>
+        }
+    }
 </div>

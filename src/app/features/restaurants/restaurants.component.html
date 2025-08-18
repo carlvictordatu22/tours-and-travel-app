@@ -57,7 +57,12 @@
                             [priority]="i === 0"
                             [(isFavorite)]="restaurant.isFavorite"
                             (isFavoriteChange)="onFavoriteChange(restaurant.id, $event)"
-                        ></tnt-card>
+                        >
+                            <div tnt-card-meta class="tnt-restaurants__meta">
+                                {{ restaurant.location }} · ⭐ {{ restaurant.rating }} · ${{ restaurant.priceUsd }}
+                                @if (isRestaurant(restaurant)) { · {{ restaurant.reviewCount }} reviews }
+                            </div>
+                        </tnt-card>
                     </div>
                 }
             </div>

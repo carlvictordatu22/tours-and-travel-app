@@ -57,7 +57,12 @@
                             [priority]="i === 0"
                             [(isFavorite)]="hotel.isFavorite"
                             (isFavoriteChange)="onFavoriteChange(hotel.id, $event)"
-                        ></tnt-card>
+                        >
+                            <div tnt-card-meta class="tnt-hotels__meta">
+                                {{ hotel.location }} · ⭐ {{ hotel.rating }} · ${{ hotel.priceUsd }}
+                                @if (isHotel(hotel)) { · {{ hotel.reviewCount }} reviews }
+                            </div>
+                        </tnt-card>
                     </div>
                 }
             </div>

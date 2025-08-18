@@ -14,6 +14,7 @@ export class ButtonComponent {
   readonly accent = input<boolean>(false);
   readonly disabled = input<boolean>(false);
   readonly blockSm = input<boolean>(false);
+  readonly block = input<boolean>(false);
   readonly type = input<'button' | 'submit' | 'reset'>('button');
 }
 
