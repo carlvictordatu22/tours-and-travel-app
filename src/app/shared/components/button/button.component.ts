@@ -13,6 +13,7 @@ export class ButtonComponent {
   @Input() primary: boolean = false;
   @Input() accent: boolean = false;
   @Input() disabled: boolean = false;
+  @Input() blockSm: boolean = false;
   @Input() type: 'button' | 'submit' | 'reset' = 'button';
 }
 

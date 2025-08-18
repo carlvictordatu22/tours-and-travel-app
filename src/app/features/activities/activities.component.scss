@@ -17,12 +17,12 @@
 
 .tnt-form {
     display: grid;
+    align-items: stretch;
     grid-template-columns: 1fr;
     gap: 16px;
 
     @media screen and (min-width: 768px) {
         grid-template-columns: repeat(4, 1fr);
-        align-items: start;
     }
 
     &__row {
@@ -31,8 +31,13 @@
         gap: 6px;
 
         &--actions {
-            justify-self: end;
-            align-self: center;
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-end;
+
+             @media screen and (max-width: 768px) {
+               display: block;
+            }
         }
     }
 
