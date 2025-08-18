@@ -1,8 +1,8 @@
 <button
   class="tnt-button"
-  [ngClass]="{ 'tnt-button--primary': primary, 'tnt-button--accent': accent, 'tnt-button--disabled': disabled, 'tnt-button--block-sm': blockSm }"
-  [attr.type]="type"
-  [disabled]="disabled"
+  [ngClass]="{ 'tnt-button--primary': primary(), 'tnt-button--accent': accent(), 'tnt-button--disabled': disabled(), 'tnt-button--block-sm': blockSm() }"
+  [attr.type]="type()"
+  [disabled]="disabled()"
 >
   <ng-content></ng-content>
 </button>

@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -10,11 +10,11 @@ import { CommonModule } from '@angular/common';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ButtonComponent {
-  @Input() primary: boolean = false;
-  @Input() accent: boolean = false;
-  @Input() disabled: boolean = false;
-  @Input() blockSm: boolean = false;
-  @Input() type: 'button' | 'submit' | 'reset' = 'button';
+  readonly primary = input<boolean>(false);
+  readonly accent = input<boolean>(false);
+  readonly disabled = input<boolean>(false);
+  readonly blockSm = input<boolean>(false);
+  readonly type = input<'button' | 'submit' | 'reset'>('button');
 }
 
 

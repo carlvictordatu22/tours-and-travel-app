@@ -1,7 +1,36 @@
 <section class="tnt-profile__section tnt-profile-favorites">
-	<h2 class="tnt-profile-favorites__title">Favorites</h2>
-	<div class="tnt-profile-favorites__content">
-		<!-- Content goes here -->
+	<div class="tnt-profile-favorites__filters">
+		<tnt-button [primary]="selectedType() === null" (click)="setSelectedType(null)">All</tnt-button>
+		<tnt-button [primary]="selectedType() === EntryType.ACTIVITY" (click)="setSelectedType(EntryType.ACTIVITY)">Activity</tnt-button>
+		<tnt-button [primary]="selectedType() === EntryType.HOTEL" (click)="setSelectedType(EntryType.HOTEL)">Hotel</tnt-button>
+		<tnt-button [primary]="selectedType() === EntryType.RESTAURANT" (click)="setSelectedType(EntryType.RESTAURANT)">Restaurant</tnt-button>
+	</div>
+	@let items = favorites();
+
+	@if (items.length > 0) {
+		<div class="tnt-profile-favorites__content tnt-grid tnt-grid--col-3">
+			@for (entry of items; track entry.id; let i = $index) {
+				<div class="tnt-grid__col">
+					<tnt-card
+						[imageUrl]="entry.imageUrl"
+						[type]="entry.type"
+						[title]="entry.title"
+						[description]="entry.description"
+						[priority]="i === 0"
+						[(isFavorite)]="entry.isFavorite"
+						(isFavoriteChange)="onFavoriteChange(entry.id, $event)"
+					></tnt-card>
+				</div>
+			}
+		</div>
+	} @else {
+		<tnt-empty-card>
+			You haven't added any favorites yet.
+		</tnt-empty-card>
+	}
+
+	<div class="tnt-profile-favorites__pagination">
+		<tnt-pagination [total]="totalFavorites()" [pageSize]="pageSize" [(page)]="page"></tnt-pagination>
 	</div>
 </section>
 
