@@ -49,6 +49,38 @@ This project includes a Firebase Hosting setup for static deployment of the brow
 - `npm run firebase:deploy` (deploy only hosting)
 - `npm run deploy` (build then deploy hosting)
 
+#### Step-by-step Firebase deployment
+
+1. One-time setup
+
+- Ensure a Firebase project exists in the console (`https://console.firebase.google.com`).
+- Login: `npm run firebase:login`
+- Select/link a project: `npm run firebase:use` and pick the correct project (this creates/updates `.firebaserc`).
+
+2. Local preview (optional)
+
+- `npm run firebase:serve`
+- Open `http://localhost:5000` to preview the static SPA build.
+
+3. Deploy to Hosting
+
+- Quick deploy (build is run automatically via `predeploy` in `firebase.json`): `npm run firebase:deploy`
+- Or explicit build then deploy: `npm run deploy`
+- After completion, open the printed Hosting URL (typically `https://<project-id>.web.app`).
+
+Notes
+
+- Hosting serves the static browser build from `dist/tours-and-travel/browser` (configured in `firebase.json`).
+- Client-side routing is handled via a rewrite to `/index.html` so deep links work.
+- For SSR, run the Node server separately via `npm run serve` (SSR is not deployed on Hosting).
+
+Troubleshooting
+
+- Wrong project? Run `npm run firebase:use` again.
+- Permission/auth errors? Re-login: `npm run firebase:login`.
+- 404 on refresh? Already handled by `rewrites` in `firebase.json`.
+- If your output path changes, update `hosting.public` in `firebase.json`.
+
 ### Available Scripts
 
 - **dev/start**: Run the dev server at `http://localhost:4200`
@@ -93,7 +125,3 @@ This project includes a Firebase Hosting setup for static deployment of the brow
 
 - `npm run serve`
 - in your browser [http://localhost:4000](http://localhost:4000)
-
-### Author
-
-- Author : Carl Victor "Vicky" Datu
