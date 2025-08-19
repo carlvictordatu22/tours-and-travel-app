@@ -1,6 +1,65 @@
 <section class="tnt-profile__section tnt-profile-itineraries">
-    <h2 class="tnt-profile-itineraries__title">Itineraries</h2>
     <div class="tnt-profile-itineraries__content">
-        <!-- Content goes here -->
+        @let list = itineraries();
+
+        @if (list.length === 0) {
+            <tnt-empty-card> No itineraries saved yet. </tnt-empty-card>
+        } @else {
+            <div class="tnt-itinerary-grid">
+                @for (itinerary of list; track itinerary.id) {
+                    <div class="tnt-itinerary-card">
+                        <div class="tnt-itinerary-card__header">
+                            <div class="tnt-itinerary-card__thumb">
+                                @if (itinerary.thumbnailDataUrl) {
+                                    <img [src]="itinerary.thumbnailDataUrl!" alt="{{ itinerary.itineraryName }} thumbnail" />
+                                } @else {
+                                    <div class="tnt-itinerary-card__thumb--placeholder">No Image</div>
+                                }
+                            </div>
+                            <div class="tnt-itinerary-card__meta">
+                                <h3 class="tnt-itinerary-card__title">{{ itinerary.itineraryName }}</h3>
+                                <p class="tnt-itinerary-card__subtitle">{{ formatDateRange(itinerary.startDateISO, itinerary.endDateISO) }}</p>
+                                <div class="tnt-itinerary-card__chips">
+                                    <span class="tnt-chip">{{ itinerary.days }} days</span>
+                                    <span class="tnt-chip">{{ countItineraryEntries(itinerary) }} stops</span>
+                                    <span class="tnt-chip">Created {{ formatDateISO(itinerary.createdAtISO) }}</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tnt-itinerary-card__body">
+                            @for (day of itinerary.dailyEntries; track day.dateISO) {
+                                @let entries = getEntriesByIds(day.selectedEntryIds);
+                                <details class="tnt-itinerary-day" open>
+                                    <summary class="tnt-itinerary-day__summary">
+                                        <h4 class="tnt-itinerary-day__title">{{ formatDateISO(day.dateISO) }}</h4>
+                                        <span class="tnt-itinerary-day__count">{{ entries.length }} entries</span>
+                                    </summary>
+
+                                    @if (entries.length > 0) {
+                                        <div class="tnt-itinerary-day__entries">
+                                            @for (entry of entries; track entry.id) {
+                                                <div class="tnt-itinerary-day__entry">
+                                                    <tnt-card
+                                                        [imageUrl]="entry.imageUrl"
+                                                        [type]="entry.type"
+                                                        [title]="entry.title"
+                                                        [description]="entry.description"
+                                                        [isFavorite]="entry.isFavorite"
+                                                        [showFavorite]="false"
+                                                    ></tnt-card>
+                                                </div>
+                                            }
+                                        </div>
+                                    } @else {
+                                        <div class="tnt-itinerary-day__empty">No entries selected for this day</div>
+                                    }
+                                </details>
+                            }
+                        </div>
+                    </div>
+                }
+            </div>
+        }
     </div>
 </section>

@@ -1,7 +1,7 @@
-import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
-import { FavoritesService } from '../../shared/services';
+import { FavoritesService, ItinerariesService } from '../../shared/services';
 
 @Component({
     selector: 'tnt-profile',
@@ -12,6 +12,8 @@ import { FavoritesService } from '../../shared/services';
 })
 export class ProfileComponent {
     readonly #favorites = inject(FavoritesService);
+    readonly #itineraries = inject(ItinerariesService);
 
     readonly favoritesCount = this.#favorites.favoritesCount;
+    readonly itinerariesCount = signal<number>(this.#itineraries.list().length);
 }
