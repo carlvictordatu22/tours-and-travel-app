@@ -34,46 +34,56 @@
 
     @let hotels = (hotels$ | async) ?? [];
 
-    <!-- Loading: show skeleton grid -->
-    @if (isLoading()) {
+    @defer {
+        <!-- Loading: show skeleton grid -->
+        @if (isLoading()) {
+            <div class="tnt-grid tnt-grid--col-3">
+                @for (i of [0, 1, 2, 3, 4, 5, 6, 7, 8]; track i) {
+                    <div class="tnt-grid__col">
+                        <tnt-skeleton-card></tnt-skeleton-card>
+                    </div>
+                }
+            </div>
+        } @else {
+            <!-- Not loading: show hotels grid and pagination -->
+            @if (hotels.length > 0) {
+                <div class="tnt-grid tnt-grid--col-3">
+                    @for (hotel of hotels; track hotel.id; let i = $index) {
+                        <div class="tnt-grid__col">
+                            <tnt-card
+                                [imageUrl]="hotel.imageUrl"
+                                [type]="hotel.type"
+                                [title]="hotel.title"
+                                [description]="hotel.description"
+                                [priority]="i === 0"
+                                [(isFavorite)]="hotel.isFavorite"
+                                (isFavoriteChange)="onFavoriteChange(hotel.id, $event)"
+                            >
+                                <div tnt-card-meta class="tnt-hotels__meta">
+                                    {{ hotel.location }} · ⭐ {{ hotel.rating }} · ${{ hotel.priceUsd }}
+                                    @if (isHotel(hotel)) {
+                                        · {{ hotel.reviewCount }} reviews
+                                    }
+                                </div>
+                            </tnt-card>
+                        </div>
+                    }
+                </div>
+            } @else {
+                <tnt-empty-card> No hotels found. </tnt-empty-card>
+            }
+
+            <div class="tnt-hotels__pagination">
+                <tnt-pagination [total]="totalHotels()" [pageSize]="pageSize" [(page)]="page"></tnt-pagination>
+            </div>
+        }
+    } @placeholder {
         <div class="tnt-grid tnt-grid--col-3">
             @for (i of [0, 1, 2, 3, 4, 5, 6, 7, 8]; track i) {
                 <div class="tnt-grid__col">
                     <tnt-skeleton-card></tnt-skeleton-card>
                 </div>
             }
-        </div>
-    } @else {
-        <!-- Not loading: show hotels grid and pagination -->
-        @if (hotels.length > 0) {
-            <div class="tnt-grid tnt-grid--col-3">
-                @for (hotel of hotels; track hotel.id; let i = $index) {
-                    <div class="tnt-grid__col">
-                        <tnt-card
-                            [imageUrl]="hotel.imageUrl"
-                            [type]="hotel.type"
-                            [title]="hotel.title"
-                            [description]="hotel.description"
-                            [priority]="i === 0"
-                            [(isFavorite)]="hotel.isFavorite"
-                            (isFavoriteChange)="onFavoriteChange(hotel.id, $event)"
-                        >
-                            <div tnt-card-meta class="tnt-hotels__meta">
-                                {{ hotel.location }} · ⭐ {{ hotel.rating }} · ${{ hotel.priceUsd }}
-                                @if (isHotel(hotel)) {
-                                    · {{ hotel.reviewCount }} reviews
-                                }
-                            </div>
-                        </tnt-card>
-                    </div>
-                }
-            </div>
-        } @else {
-            <tnt-empty-card> No hotels found. </tnt-empty-card>
-        }
-
-        <div class="tnt-hotels__pagination">
-            <tnt-pagination [total]="totalHotels()" [pageSize]="pageSize" [(page)]="page"></tnt-pagination>
         </div>
     }
 </div>

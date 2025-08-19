@@ -34,46 +34,56 @@
 
     @let activities = (activities$ | async) ?? [];
 
-    <!-- Loading: show skeleton grid -->
-    @if (isLoading()) {
+    @defer {
+        <!-- Loading: show skeleton grid -->
+        @if (isLoading()) {
+            <div class="tnt-grid tnt-grid--col-3">
+                @for (i of [0, 1, 2, 3, 4, 5, 6, 7, 8]; track i) {
+                    <div class="tnt-grid__col">
+                        <tnt-skeleton-card></tnt-skeleton-card>
+                    </div>
+                }
+            </div>
+        } @else {
+            <!-- Not loading: show activities grid and pagination -->
+            @if (activities.length > 0) {
+                <div class="tnt-grid tnt-grid--col-3">
+                    @for (activity of activities; track activity.id; let i = $index) {
+                        <div class="tnt-grid__col">
+                            <tnt-card
+                                [imageUrl]="activity.imageUrl"
+                                [type]="activity.type"
+                                [title]="activity.title"
+                                [description]="activity.description"
+                                [priority]="i === 0"
+                                [(isFavorite)]="activity.isFavorite"
+                                (isFavoriteChange)="onFavoriteChange(activity.id, $event)"
+                            >
+                                <div tnt-card-meta class="tnt-activities__meta">
+                                    {{ activity.location }} · ⭐ {{ activity.rating }} · ${{ activity.priceUsd }}
+                                    @if (isActivity(activity)) {
+                                        · ⏱ {{ activity.durationHours }}h
+                                    }
+                                </div>
+                            </tnt-card>
+                        </div>
+                    }
+                </div>
+            } @else {
+                <tnt-empty-card> No activities found. </tnt-empty-card>
+            }
+
+            <div class="tnt-activities__pagination">
+                <tnt-pagination [total]="totalActivities()" [pageSize]="pageSize" [(page)]="page"></tnt-pagination>
+            </div>
+        }
+    } @placeholder {
         <div class="tnt-grid tnt-grid--col-3">
             @for (i of [0, 1, 2, 3, 4, 5, 6, 7, 8]; track i) {
                 <div class="tnt-grid__col">
                     <tnt-skeleton-card></tnt-skeleton-card>
                 </div>
             }
-        </div>
-    } @else {
-        <!-- Not loading: show activities grid and pagination -->
-        @if (activities.length > 0) {
-            <div class="tnt-grid tnt-grid--col-3">
-                @for (activity of activities; track activity.id; let i = $index) {
-                    <div class="tnt-grid__col">
-                        <tnt-card
-                            [imageUrl]="activity.imageUrl"
-                            [type]="activity.type"
-                            [title]="activity.title"
-                            [description]="activity.description"
-                            [priority]="i === 0"
-                            [(isFavorite)]="activity.isFavorite"
-                            (isFavoriteChange)="onFavoriteChange(activity.id, $event)"
-                        >
-                            <div tnt-card-meta class="tnt-activities__meta">
-                                {{ activity.location }} · ⭐ {{ activity.rating }} · ${{ activity.priceUsd }}
-                                @if (isActivity(activity)) {
-                                    · ⏱ {{ activity.durationHours }}h
-                                }
-                            </div>
-                        </tnt-card>
-                    </div>
-                }
-            </div>
-        } @else {
-            <tnt-empty-card> No activities found. </tnt-empty-card>
-        }
-
-        <div class="tnt-activities__pagination">
-            <tnt-pagination [total]="totalActivities()" [pageSize]="pageSize" [(page)]="page"></tnt-pagination>
         </div>
     }
 </div>
