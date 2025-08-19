@@ -28,6 +28,7 @@ export class ProfileFavoritesComponent {
     readonly filteredFavorites: Signal<Entries> = computed(() => {
         const type = this.selectedType();
         const favorites = this.allFavorites();
+
         return type ? favorites.filter((entry) => entry.type === type) : favorites;
     });
 
@@ -42,6 +43,7 @@ export class ProfileFavoritesComponent {
         const current = Math.min(this.totalPages(), Math.max(1, this.page()));
         const start = (current - 1) * this.pageSize;
         const end = start + this.pageSize;
+
         return this.filteredFavorites().slice(start, end);
     });
 

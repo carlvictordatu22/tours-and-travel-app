@@ -2,17 +2,18 @@
     <h1 mat-dialog-title>Create Itinerary</h1>
 
     <div mat-dialog-content>
-        <form class="tnt-create-itinerary-form" novalidate>
+        <form class="tnt-create-itinerary-form" [formGroup]="entrySelectionForm" novalidate>
             <!-- Group: Itinerary name input - collects the trip title -->
             <div class="tnt-create-itinerary-form__group">
                 <label class="tnt-create-itinerary-form__label" for="itinerary-name">Itinerary name</label>
                 <input
                     class="tnt-input tnt-create-itinerary-form__control"
                     id="itinerary-name"
-                    name="itineraryName"
                     type="text"
                     placeholder="e.g. Bali Getaway"
                     required
+                    formControlName="itineraryName"
+                    [class.error]="itineraryNameControl?.invalid && itineraryNameControl?.touched"
                 />
                 <small class="tnt-create-itinerary-form__hint">Enter a short descriptive name</small>
             </div>
@@ -21,14 +22,13 @@
                 <!-- Group: Start date picker - selects the trip start date -->
                 <div class="tnt-create-itinerary-form__group">
                     <mat-form-field appearance="outline" class="tnt-create-itinerary-form__control">
-                        <mat-label>Start Date</mat-label>
                         <input
                             matInput
                             [matDatepicker]="startPicker"
-                            [value]="startDate()"
                             [min]="today"
                             (dateChange)="onStartDateChange($event.value)"
                             placeholder="Choose a date"
+                            formControlName="startDate"
                         />
                         <mat-datepicker-toggle matSuffix [for]="startPicker"></mat-datepicker-toggle>
                         <mat-datepicker #startPicker></mat-datepicker>
@@ -39,21 +39,19 @@
                 <!-- Group: End date picker - selects the trip end date -->
                 <div class="tnt-create-itinerary-form__group">
                     <mat-form-field appearance="outline" class="tnt-create-itinerary-form__control">
-                        <mat-label>End Date</mat-label>
                         <input
                             matInput
                             [matDatepicker]="endPicker"
-                            [value]="endDate()"
                             [max]="endMaxDate()"
                             [min]="startDate() || today"
-                            [disabled]="!startDate()"
-                            (dateChange)="endDate.set($event.value)"
+                            (dateChange)="onEndDateChange($event.value)"
                             placeholder="Choose a date"
+                            formControlName="endDate"
                         />
-                        <mat-datepicker-toggle matSuffix [for]="endPicker" [disabled]="!startDate()"></mat-datepicker-toggle>
+                        <mat-datepicker-toggle matSuffix [for]="endPicker"></mat-datepicker-toggle>
                         <mat-datepicker #endPicker></mat-datepicker>
                     </mat-form-field>
-                    <small class="tnt-create-itinerary-form__hint">Trip end date (within 5 days of start)</small>
+                    <small class="tnt-create-itinerary-form__hint">Trip end date (within 7 days of start)</small>
                 </div>
             </div>
 
@@ -71,11 +69,152 @@
                 />
                 <small class="tnt-create-itinerary-form__hint">Total days from start to end</small>
             </div>
+
+            <!-- Group: Thumbnail image upload -->
+            <div class="tnt-create-itinerary-form__group">
+                <label class="tnt-create-itinerary-form__label" for="thumbnail-image">Thumbnail Image</label>
+
+                <div class="tnt-create-itinerary-form__image-upload" [class.has-preview]="thumbnailPreview()">
+                    <input
+                        class="tnt-create-itinerary-form__file-input"
+                        id="thumbnail-image"
+                        type="file"
+                        accept="image/*"
+                        (change)="onImageFileChange($event)"
+                        #fileInput
+                    />
+                    <button type="button" class="tnt-create-itinerary-form__upload-area" (click)="fileInput.click()">
+                        @if (thumbnailPreview()) {
+                            <div class="tnt-create-itinerary-form__preview">
+                                <img [src]="thumbnailPreview()" alt="Thumbnail preview" class="tnt-create-itinerary-form__preview-image" />
+                            </div>
+                        }
+                        <div class="tnt-create-itinerary-form__upload-content">
+                            <mat-icon>cloud_upload</mat-icon>
+                            <span>Click to upload image or drag and drop</span>
+                        </div>
+                    </button>
+                </div>
+
+                <small class="tnt-create-itinerary-form__hint tnt-create-itinerary-form__hint--center">Upload an image for your itinerary thumbnail</small>
+            </div>
+
+            <!-- Group: Entry Selection - Only show when dates are selected -->
+            @if (availableDates().length > 0) {
+                <div class="tnt-create-itinerary-form__group">
+                    <h3 class="tnt-create-itinerary-form__label">Entry Selection</h3>
+                    <p class="tnt-create-itinerary-form__subtitle">Select up to 5 entries per day for your itinerary</p>
+
+                    <!-- Date tabs for entry selection -->
+                    <div class="tnt-create-itinerary-form__date-tabs">
+                        @for (date of availableDates(); track date.getTime(); let i = $index) {
+                            <button
+                                type="button"
+                                class="tnt-create-itinerary-form__date-tab"
+                                [class.active]="i === activeDateTab()"
+                                (click)="setActiveDateTab(i)"
+                            >
+                                <span class="tnt-create-itinerary-form__date-label">{{ formatDate(date) }}</span>
+                                <span class="tnt-create-itinerary-form__entry-count"> {{ getSelectedEntriesCount(date) }}/{{ MAX_ENTRIES_PER_DAY }} </span>
+                            </button>
+                        }
+                    </div>
+
+                    <!-- Entry selection grid for each date -->
+                    @for (date of availableDates(); track date.getTime(); let i = $index) {
+                        <div class="tnt-create-itinerary-form__date-section" [class.active]="i === activeDateTab()">
+                            <h4 class="tnt-create-itinerary-form__date-title">{{ formatDate(date) }} - Select Entries</h4>
+
+                            <!-- Filters as selects -->
+                            <div class="tnt-create-itinerary-form__entry-filters">
+                                <select class="tnt-create-itinerary-form__select" [value]="activeCategoryFilter()" (change)="onCategorySelectChange($event)">
+                                    <option value="all">All ({{ allEntries().length }})</option>
+                                    <option [value]="EntryType.ACTIVITY">Activities ({{ activityCount() }})</option>
+                                    <option [value]="EntryType.HOTEL">Hotels ({{ hotelCount() }})</option>
+                                    <option [value]="EntryType.RESTAURANT">Restaurants ({{ restaurantCount() }})</option>
+                                </select>
+
+                                <select class="tnt-create-itinerary-form__select" [value]="activeLocationFilter()" (change)="onLocationSelectChange($event)">
+                                    <option value="all">All Locations ({{ allEntries().length }})</option>
+                                    <option [value]="Location.PARIS">Paris ({{ parisCount() }})</option>
+                                    <option [value]="Location.LONDON">London ({{ londonCount() }})</option>
+                                    <option [value]="Location.SPAIN">Spain ({{ spainCount() }})</option>
+                                </select>
+                            </div>
+
+                            <!-- Entry selection grid -->
+                            <div class="tnt-create-itinerary-form__entries-grid">
+                                @for (entry of filteredEntries(); track entry.id) {
+                                    <div class="tnt-create-itinerary-form__entry-item">
+                                        <div class="tnt-create-itinerary-form__entry-checkbox">
+                                            <input
+                                                type="checkbox"
+                                                [id]="'entry-' + date.getTime() + '-' + entry.id"
+                                                [checked]="isEntrySelected(date, entry.id)"
+                                                [disabled]="isEntryDisabled(date, entry.id)"
+                                                (change)="onEntrySelectionChange(date, entry.id, $event)"
+                                            />
+                                            <label [for]="'entry-' + date.getTime() + '-' + entry.id"></label>
+                                        </div>
+                                        <div class="tnt-create-itinerary-form__entry-content">
+                                            <img [src]="entry.imageUrl" [alt]="entry.title" class="tnt-create-itinerary-form__entry-image" />
+                                            <div class="tnt-create-itinerary-form__entry-details">
+                                                <h5 class="tnt-create-itinerary-form__entry-title">{{ entry.title }}</h5>
+                                                <p class="tnt-create-itinerary-form__entry-type">{{ entry.type }}</p>
+                                                <p class="tnt-create-itinerary-form__entry-description">{{ entry.description }}</p>
+                                                <p class="tnt-create-itinerary-form__entry-price">${{ entry.priceUsd }}</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                }
+                            </div>
+                        </div>
+                    }
+                </div>
+
+                <!-- Group: Daily Preview -->
+                <div class="tnt-create-itinerary-form__group">
+                    <h3 class="tnt-create-itinerary-form__label">Daily Preview</h3>
+                    <p class="tnt-create-itinerary-form__subtitle">Preview of your selected entries for each day</p>
+
+                    <div class="tnt-create-itinerary-form__daily-preview">
+                        @for (date of availableDates(); track date.getTime()) {
+                            @let selectedEntries = getSelectedEntriesForDate(date);
+                            <div class="tnt-create-itinerary-form__day-preview">
+                                <h4 class="tnt-create-itinerary-form__day-title">{{ formatDate(date) }}</h4>
+
+                                @if (selectedEntries.length > 0) {
+                                    <div class="tnt-create-itinerary-form__day-entries">
+                                        @for (entry of selectedEntries; track entry.id) {
+                                            <div class="tnt-create-itinerary-form__day-entry">
+                                                <tnt-card
+                                                    [imageUrl]="entry.imageUrl"
+                                                    [type]="entry.type"
+                                                    [title]="entry.title"
+                                                    [description]="entry.description"
+                                                    [isFavorite]="entry.isFavorite"
+                                                    [showFavorite]="false"
+                                                ></tnt-card>
+                                            </div>
+                                        }
+                                    </div>
+                                } @else {
+                                    <div class="tnt-create-itinerary-form__day-empty">
+                                        <p>No entries selected for this day</p>
+                                    </div>
+                                }
+                            </div>
+                        }
+                    </div>
+                </div>
+            }
         </form>
     </div>
 
-    <div mat-dialog-actions style="float: right; margin: 20px">
-        <button [mat-dialog-close]="{ clicked: 'Ok' }">Ok</button>
-        <button [mat-dialog-close]="{ clicked: 'Cancel' }">Cancel</button>
+    <div mat-dialog-actions class="tnt-create-itinerary__actions">
+        <tnt-button type="button" [mat-dialog-close]="{ clicked: 'Cancel' }">Cancel</tnt-button>
+        <tnt-button type="submit" [primary]="true" (click)="onSubmit()" [disabled]="!entrySelectionForm.valid || !hasAtLeastOneEntryPerDate()"
+            >Create Itinerary</tnt-button
+        >
     </div>
 </div>

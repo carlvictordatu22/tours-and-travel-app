@@ -1,8 +1,8 @@
 import { Injectable, Signal, WritableSignal, computed, effect, signal } from '@angular/core';
-import { ENTRIES } from '../constants';
+import { ENTRIES, STORAGE_KEYS } from '../constants';
 import { Entries } from '../interface';
 
-const STORAGE_KEY = 'tnt_favorites';
+const STORAGE_KEY = STORAGE_KEYS.FAVORITES;
 
 /**
  * Favorites state manager.
@@ -17,6 +17,7 @@ export class FavoritesService {
      */
     readonly entries: Signal<Entries> = computed(() => {
         const current = this.#favoriteIds();
+
         return ENTRIES.map((entry) => ({ ...entry, isFavorite: current.has(entry.id) }));
     });
 
@@ -92,7 +93,7 @@ export class FavoritesService {
      * @param value Favorite state to apply
      */
     #applyFavoriteToEntries(id: string, value: boolean): void {
-        const target = ENTRIES.find((e) => e.id === id);
+        const target = ENTRIES.find((entry) => entry.id === id);
         if (target) {
             target.isFavorite = value;
         }

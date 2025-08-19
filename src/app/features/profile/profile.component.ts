@@ -11,7 +11,6 @@ import { FavoritesService } from '../../shared/services';
     changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ProfileComponent {
-    // Private dependencies
     readonly #favorites = inject(FavoritesService);
 
     readonly favoritesCount = this.#favorites.favoritesCount;

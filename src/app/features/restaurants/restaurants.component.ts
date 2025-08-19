@@ -3,7 +3,6 @@ import { toObservable, toSignal } from '@angular/core/rxjs-interop';
 import { CommonModule } from '@angular/common';
 import {
     CardComponent,
-    ENTRIES,
     Entries,
     Entry,
     EntryType,
@@ -85,6 +84,7 @@ export class RestaurantsComponent {
         const current = Math.min(this.totalPages(), Math.max(1, this.page()));
         const start = (current - 1) * this.pageSize;
         const end = start + this.pageSize;
+
         return this.filteredRestaurants().slice(start, end);
     });
 
@@ -132,6 +132,7 @@ export class RestaurantsComponent {
 
             this.isLoading.set(true);
             const timeout = setTimeout(() => this.isLoading.set(false), 3000);
+
             return () => clearTimeout(timeout);
         });
     }

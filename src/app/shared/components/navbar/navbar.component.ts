@@ -45,7 +45,8 @@ export class NavbarComponent {
         this.#dialog.open(CreateItineraryComponent, {
             width: MODAL_WIDTH,
             panelClass: MODAL_PANEL_CLASS,
-            hasBackdrop: true
+            hasBackdrop: true,
+            autoFocus: false
         });
     }
 

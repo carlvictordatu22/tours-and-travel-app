@@ -45,15 +45,16 @@ export class AISearchComponent {
      */
     onSubmit(event: Event): void {
         event.preventDefault();
-        const q = this.query().trim();
+        const query = this.query().trim();
 
-        if (!q) {
+        if (!query) {
             this.hasSearched.set(false);
+
             return;
         }
 
         this.hasSearched.set(true);
-        this.#search(q).catch(() => void 0);
+        this.#search(query).catch(() => void 0);
     }
 
     /** Sets the query from a suggestion and searches immediately */
@@ -113,10 +114,11 @@ export class AISearchComponent {
 
             const ids = this.#extractIds(text);
             const idSet = new Set(ids);
-            const selected = ENTRIES.filter((e) => idSet.has(e.id));
+            const selected = ENTRIES.filter((entry) => idSet.has(entry.id));
 
             this.results.set(selected);
-        } catch (err: any) {
+        } catch (error) {
+            console.log(error);
             this.error.set('Unable to fetch AI results. Please try again.');
         } finally {
             this.loading.set(false);
@@ -129,36 +131,37 @@ export class AISearchComponent {
      * @param limit Maximum number of candidates to include
      * @returns Array of lightweight candidate entry objects
      */
-    #buildCandidates(queryText: string, limit: number): Array<Pick<Entry, 'id' | 'type' | 'title' | 'description' | 'location' | 'rating' | 'priceUsd'>> {
+    #buildCandidates(queryText: string, limit: number): Pick<Entry, 'id' | 'type' | 'title' | 'description' | 'location' | 'rating' | 'priceUsd'>[] {
         const terms = queryText
             .toLowerCase()
             .split(/[^a-z0-9]+/g)
             .filter(Boolean);
-        const scoreEntry = (e: Entry): number => {
-            const hay = `${e.title} ${e.description} ${e.location} ${e.type}`.toLowerCase();
+        const scoreEntry = (entry: Entry): number => {
+            const hay = `${entry.title} ${entry.description} ${entry.location} ${entry.type}`.toLowerCase();
             let score = 0;
-            for (const t of terms) {
-                if (hay.includes(t)) {
+            for (const term of terms) {
+                if (hay.includes(term)) {
                     score += 2;
                 }
             }
-            if (e.rating >= 4.5) {
+            if (entry.rating >= 4.5) {
                 score += 1;
             }
+
             return score;
         };
 
-        return ENTRIES.map((e) => ({ e, s: scoreEntry(e) }))
-            .sort((a, b) => b.s - a.s)
+        return ENTRIES.map((entry) => ({ entry, score: scoreEntry(entry) }))
+            .sort((entry1, entry2) => entry2.score - entry1.score)
             .slice(0, Math.max(5, limit))
-            .map(({ e }) => ({
-                id: e.id,
-                type: e.type,
-                title: e.title,
-                description: e.description,
-                location: e.location,
-                rating: e.rating,
-                priceUsd: e.priceUsd
+            .map(({ entry }) => ({
+                id: entry.id,
+                type: entry.type,
+                title: entry.title,
+                description: entry.description,
+                location: entry.location,
+                rating: entry.rating,
+                priceUsd: entry.priceUsd
             }));
     }
 
@@ -168,7 +171,7 @@ export class AISearchComponent {
      * @param candidates Candidate entries to consider
      * @returns Prompt string for the Responses API
      */
-    #buildPrompt(userQuery: string, candidates: Array<Pick<Entry, 'id' | 'type' | 'title' | 'description' | 'location' | 'rating' | 'priceUsd'>>): string {
+    #buildPrompt(userQuery: string, candidates: Pick<Entry, 'id' | 'type' | 'title' | 'description' | 'location' | 'rating' | 'priceUsd'>[]): string {
         return [
             'You are a travel search assistant. Given a user query and a small list of candidate entries,',
             'select the most relevant items. Return ONLY compact JSON with this exact shape:',
@@ -192,7 +195,8 @@ export class AISearchComponent {
             const raw = jsonStart >= 0 && jsonEnd > jsonStart ? text.slice(jsonStart, jsonEnd + 1) : text;
             const parsed = JSON.parse(raw);
             const ids: unknown = parsed?.ids;
-            return Array.isArray(ids) ? ids.filter((x) => typeof x === 'string') : [];
+
+            return Array.isArray(ids) ? ids.filter((id) => typeof id === 'string') : [];
         } catch {
             return [];
         }

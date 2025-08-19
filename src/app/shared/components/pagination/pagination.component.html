@@ -1,11 +1,24 @@
 <div class="tnt-pagination">
-    <a class="tnt-pagination__link" (click)="prev()" [class.tnt-pagination__link--disabled]="page() === 1">&laquo;</a>
+    <button type="button" class="tnt-pagination__link" (click)="prev()" (keydown.enter)="prev()" [disabled]="page() === 1" aria-label="Previous page">
+        &laquo;
+    </button>
     @for (p of visiblePages(); track p) {
         @if (typeof p === 'number') {
-            <a class="tnt-pagination__link" (click)="goTo(p)" [class.tnt-pagination__link--active]="p === page()">{{ p }}</a>
+            <button
+                type="button"
+                class="tnt-pagination__link"
+                (click)="goTo(p)"
+                (keydown.enter)="goTo(p)"
+                [class.tnt-pagination__link--active]="p === page()"
+                [attr.aria-current]="p === page() ? 'page' : null"
+            >
+                {{ p }}
+            </button>
         } @else {
-            <span class="tnt-pagination__ellipsis">{{ p }}</span>
+            <span class="tnt-pagination__ellipsis" aria-hidden="true">{{ p }}</span>
         }
     }
-    <a class="tnt-pagination__link" (click)="next()" [class.tnt-pagination__link--disabled]="page() === totalPages()">&raquo;</a>
+    <button type="button" class="tnt-pagination__link" (click)="next()" (keydown.enter)="next()" [disabled]="page() === totalPages()" aria-label="Next page">
+        &raquo;
+    </button>
 </div>

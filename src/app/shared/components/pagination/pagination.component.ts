@@ -16,10 +16,11 @@ export class PaginationComponent {
     readonly totalPages = computed(() => {
         const items = this.total();
         const size = Math.max(1, this.pageSize());
+
         return Math.max(1, Math.ceil(items / size));
     });
 
-    readonly pages = computed(() => Array.from({ length: this.totalPages() }, (_, i) => i + 1));
+    readonly pages = computed(() => Array.from({ length: this.totalPages() }, (_, index) => index + 1));
 
     /**
      * Compact list of pages with ellipses for large page counts.
@@ -34,18 +35,18 @@ export class PaginationComponent {
         const current = this.page();
 
         if (totalPages <= 7) {
-            return Array.from({ length: totalPages }, (_, i) => i + 1) as Array<number | string>;
+            return Array.from({ length: totalPages }, (_, i) => i + 1) as (number | string)[];
         }
 
         if (current <= 4) {
-            return [1, 2, 3, 4, 5, '...', totalPages] as Array<number | string>;
+            return [1, 2, 3, 4, 5, '...', totalPages] as (number | string)[];
         }
 
         if (current >= totalPages - 3) {
-            return [1, '...', totalPages - 4, totalPages - 3, totalPages - 2, totalPages - 1, totalPages] as Array<number | string>;
+            return [1, '...', totalPages - 4, totalPages - 3, totalPages - 2, totalPages - 1, totalPages] as (number | string)[];
         }
 
-        return [1, '...', current - 1, current, current + 1, '...', totalPages] as Array<number | string>;
+        return [1, '...', current - 1, current, current + 1, '...', totalPages] as (number | string)[];
     });
 
     /** Navigate to a specific page number (1-indexed). Clamps to valid range. */

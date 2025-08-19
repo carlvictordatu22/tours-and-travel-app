@@ -59,6 +59,11 @@
     .mat-mdc-dialog-inner-container .mat-mdc-dialog-content {
         font-family: 'Funnel Display', sans-serif;
     }
+
+    @media screen and (max-width: 600px) {
+        width: calc(100vw - 16px) !important;
+        max-width: none !important;
+    }
 }
 
 /* Global form controls */
@@ -71,6 +76,7 @@
     background: var(--tnt-white);
     color: var(--tnt-dark);
     outline: none;
+    font-size: 16px;
 }
 
 .tnt-input:focus,
@@ -202,5 +208,109 @@
     &__link &__icon {
         width: 18px;
         height: 18px;
+    }
+}
+
+// Material Datepicker Overrides
+.tnt-create-itinerary {
+    .mat-mdc-form-field {
+        width: 100%;
+
+        .mat-mdc-form-field-wrapper {
+            padding-bottom: 0;
+        }
+
+        .mat-mdc-form-field-flex {
+            padding: 0;
+            background: var(--tnt-white);
+            border: 1px solid var(--tnt-neutral);
+            border-radius: 6px;
+            min-height: 42px;
+            transition:
+                border-color 0.3s ease,
+                box-shadow 0.3s ease;
+
+            &:hover {
+                border-color: var(--tnt-primary);
+            }
+        }
+
+        .mat-mdc-form-field-focus-overlay {
+            display: none;
+        }
+
+        .mat-mdc-text-field-wrapper {
+            padding: 0;
+            background: transparent;
+        }
+
+        .mat-mdc-form-field-infix {
+            padding: 10px 12px;
+            min-height: auto;
+            border-top: none;
+        }
+
+        .mat-mdc-input-element {
+            font-family: 'Funnel Display', sans-serif;
+            font-size: 14px;
+            color: var(--tnt-dark);
+            padding: 0;
+            margin: 0;
+            border: none;
+            outline: none;
+            background: transparent;
+
+            &::placeholder {
+                color: var(--tnt-neutral);
+            }
+        }
+
+        .mat-mdc-form-field-subscript-wrapper {
+            display: none;
+        }
+
+        &.mat-focused .mat-mdc-form-field-flex {
+            border-color: var(--tnt-primary);
+            box-shadow: 0 0 0 2px rgba(240, 100, 73, 0.2);
+        }
+
+        &.mat-form-field-invalid .mat-mdc-form-field-flex {
+            border-color: var(--tnt-primary);
+            box-shadow: 0 0 0 2px rgba(211, 47, 47, 0.2);
+        }
+
+        .mat-mdc-form-field-suffix {
+            padding-right: 8px;
+
+            .mat-mdc-icon-button {
+                width: 32px;
+                height: 32px;
+                color: var(--tnt-dark);
+
+                &:hover {
+                    color: var(--tnt-primary);
+                    background-color: rgba(240, 100, 73, 0.1);
+                }
+
+                .mat-mdc-button-touch-target {
+                    width: 32px;
+                    height: 32px;
+                }
+            }
+        }
+
+        &.mat-mdc-form-field-appearance-outline {
+            .mat-mdc-form-field-outline {
+                display: none;
+            }
+
+            .mat-mdc-form-field-outline-thick {
+                display: none;
+            }
+
+            .mdc-notched-outline {
+                display: none;
+            }
+        }
     }
 }

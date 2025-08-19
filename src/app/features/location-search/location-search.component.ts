@@ -32,6 +32,7 @@ export class LocationSearchComponent {
         if (!loc) {
             return [];
         }
+
         return this.#favorites
             .entries()
             .filter(
@@ -47,6 +48,7 @@ export class LocationSearchComponent {
         const current = Math.min(this.totalPages(), Math.max(1, this.page()));
         const start = (current - 1) * this.pageSize;
         const end = start + this.pageSize;
+
         return this.allForLocation().slice(start, end);
     });
 
@@ -91,6 +93,7 @@ export class LocationSearchComponent {
             this.selectedLocation();
             this.isLoading.set(true);
             const timeout = setTimeout(() => this.isLoading.set(false), 3000);
+
             return () => clearTimeout(timeout);
         });
     }
@@ -103,6 +106,7 @@ export class LocationSearchComponent {
     /** Normalizes raw route param to `Location` enum; returns `null` if invalid. */
     #normalizeToLocation(value: string): Location | null {
         const candidates = Object.values(Location);
+
         return (candidates as string[]).includes(value) ? (value as Location) : null;
     }
 }
