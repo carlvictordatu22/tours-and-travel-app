@@ -9,15 +9,33 @@
         <!-- Center Section -->
         <div class="tnt-navbar__center-section">
             <nav class="tnt-navbar__nav" aria-label="Main navigation">
-                <a routerLink="/" routerLinkActive="tnt-navbar__link--active" [routerLinkActiveOptions]="{ paths: 'exact', queryParams: 'ignored', matrixParams: 'ignored', fragment: 'ignored' }" class="tnt-navbar__link" aria-label="activities navbar link">
+                <a
+                    routerLink="/"
+                    routerLinkActive="tnt-navbar__link--active"
+                    [routerLinkActiveOptions]="{ paths: 'exact', queryParams: 'ignored', matrixParams: 'ignored', fragment: 'ignored' }"
+                    class="tnt-navbar__link"
+                    aria-label="activities navbar link"
+                >
                     <img src="/assets/images/activity.png" class="tnt-navbar__link-logo" alt="activities" />
                     <span class="tnt-navbar__link-text">Activities</span>
                 </a>
-                <a routerLink="/hotels" routerLinkActive="tnt-navbar__link--active" [routerLinkActiveOptions]="{ paths: 'exact', queryParams: 'ignored', matrixParams: 'ignored', fragment: 'ignored' }" class="tnt-navbar__link" aria-label="hotels navbar link">
+                <a
+                    routerLink="/hotels"
+                    routerLinkActive="tnt-navbar__link--active"
+                    [routerLinkActiveOptions]="{ paths: 'exact', queryParams: 'ignored', matrixParams: 'ignored', fragment: 'ignored' }"
+                    class="tnt-navbar__link"
+                    aria-label="hotels navbar link"
+                >
                     <img src="/assets/images/hotel.png" class="tnt-navbar__link-logo" alt="hotels" />
                     <span class="tnt-navbar__link-text">Hotels</span>
                 </a>
-                <a routerLink="/restaurants" routerLinkActive="tnt-navbar__link--active" [routerLinkActiveOptions]="{ paths: 'exact', queryParams: 'ignored', matrixParams: 'ignored', fragment: 'ignored' }" class="tnt-navbar__link" aria-label="restaurants navbar link">
+                <a
+                    routerLink="/restaurants"
+                    routerLinkActive="tnt-navbar__link--active"
+                    [routerLinkActiveOptions]="{ paths: 'exact', queryParams: 'ignored', matrixParams: 'ignored', fragment: 'ignored' }"
+                    class="tnt-navbar__link"
+                    aria-label="restaurants navbar link"
+                >
                     <img src="/assets/images/restaurant.png" class="tnt-navbar__link-logo" alt="restaurants" />
                     <span class="tnt-navbar__link-text">Restaurants</span>
                 </a>
@@ -39,25 +57,32 @@
     <!-- Bottom Section -->
     <div class="tnt-navbar__bottom-section">
         <div class="tnt-navbar__search-container">
-            <input type="text"
-                   class="tnt-navbar__search"
-                   [value]="searchQuery()"
-                   (input)="onInputQuery($event)"
-                   (keydown.enter)="onEnter()"
-                   placeholder="Where would you like to explore?"
-                   aria-label="location search bar"
-                   aria-haspopup="listbox"
-                   aria-controls="tnt-navbar-suggestions"
-                   autocomplete="off" />
-                   
+            <input
+                type="text"
+                class="tnt-navbar__search"
+                [value]="searchQuery()"
+                (input)="onInputQuery($event)"
+                (keydown.enter)="onEnter()"
+                placeholder="Where would you like to explore?"
+                aria-label="location search bar"
+                aria-haspopup="listbox"
+                aria-controls="tnt-navbar-suggestions"
+                autocomplete="off"
+            />
+
             @if (filteredLocations().length > 0) {
-                <div class="tnt-navbar__overlay"
-                     id="tnt-navbar-suggestions"
-                     role="listbox"
-                     aria-label="Suggested locations">
+                <div class="tnt-navbar__overlay" id="tnt-navbar-suggestions" role="listbox" aria-label="Suggested locations">
                     <ul class="tnt-navbar__list">
                         @for (item of filteredLocations(); track $index) {
-                            <li class="tnt-navbar__list-item" role="option" tabindex="0" (click)="onChooseLocation(item, $event)" (keydown.enter)="onChooseLocation(item, $event)">{{ item }}</li>
+                            <li
+                                class="tnt-navbar__list-item"
+                                role="option"
+                                tabindex="0"
+                                (click)="onChooseLocation(item, $event)"
+                                (keydown.enter)="onChooseLocation(item, $event)"
+                            >
+                                {{ item }}
+                            </li>
                         }
                     </ul>
                 </div>

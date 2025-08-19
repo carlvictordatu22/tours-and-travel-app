@@ -15,12 +15,12 @@
     }
 
     &__meta {
-         font-size: 13px;
-         color: var(--tnt-dark);
-         opacity: 0.8;
-         margin-bottom: 8px;
-         text-align: center;
-     }
+        font-size: 13px;
+        color: var(--tnt-dark);
+        opacity: 0.8;
+        margin-bottom: 8px;
+        text-align: center;
+    }
 }
 
 .tnt-form {
@@ -43,8 +43,8 @@
             align-items: center;
             justify-content: flex-end;
 
-             @media screen and (max-width: 768px) {
-               display: block;
+            @media screen and (max-width: 768px) {
+                display: block;
             }
         }
     }

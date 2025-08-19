@@ -37,7 +37,7 @@
     <!-- Loading: show skeleton grid -->
     @if (isLoading()) {
         <div class="tnt-grid tnt-grid--col-3">
-            @for (i of [0,1,2,3,4,5,6,7,8]; track i) {
+            @for (i of [0, 1, 2, 3, 4, 5, 6, 7, 8]; track i) {
                 <div class="tnt-grid__col">
                     <tnt-skeleton-card></tnt-skeleton-card>
                 </div>
@@ -60,16 +60,16 @@
                         >
                             <div tnt-card-meta class="tnt-hotels__meta">
                                 {{ hotel.location }} · ⭐ {{ hotel.rating }} · ${{ hotel.priceUsd }}
-                                @if (isHotel(hotel)) { · {{ hotel.reviewCount }} reviews }
+                                @if (isHotel(hotel)) {
+                                    · {{ hotel.reviewCount }} reviews
+                                }
                             </div>
                         </tnt-card>
                     </div>
                 }
             </div>
         } @else {
-            <tnt-empty-card>
-                No hotels found.
-            </tnt-empty-card>
+            <tnt-empty-card> No hotels found. </tnt-empty-card>
         }
 
         <div class="tnt-hotels__pagination">

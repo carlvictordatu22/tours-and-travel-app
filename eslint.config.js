@@ -1,58 +1,52 @@
 // @ts-check
-const eslint = require("@eslint/js");
-const tseslint = require("typescript-eslint");
-const angular = require("angular-eslint");
+const eslint = require('@eslint/js');
+const tseslint = require('typescript-eslint');
+const angular = require('angular-eslint');
+const eslintConfigPrettier = require('eslint-config-prettier');
 
 module.exports = tseslint.config(
-  {
-    files: ["**/*.ts"],
-    extends: [
-      eslint.configs.recommended,
-      ...tseslint.configs.recommended,
-      ...tseslint.configs.stylistic,
-      ...angular.configs.tsRecommended,
-    ],
-    processor: angular.processInlineTemplates,
-    rules: {
-      "@angular-eslint/directive-selector": [
-        "error",
-        {
-          type: "attribute",
-          prefix: "tnt",
-          style: "camelCase",
-        },
-      ],
-      "@angular-eslint/component-selector": [
-        "error",
-        {
-          type: "element",
-          prefix: "tnt",
-          style: "kebab-case",
-        },
-      ],
-      "@angular-eslint/component-class-suffix": [
-        "error",
-        {
-          suffixes: ["","Component"] 
+    {
+        files: ['**/*.ts'],
+        extends: [eslint.configs.recommended, ...tseslint.configs.recommended, ...tseslint.configs.stylistic, ...angular.configs.tsRecommended],
+        processor: angular.processInlineTemplates,
+        rules: {
+            '@angular-eslint/directive-selector': [
+                'error',
+                {
+                    type: 'attribute',
+                    prefix: 'tnt',
+                    style: 'camelCase'
+                }
+            ],
+            '@angular-eslint/component-selector': [
+                'error',
+                {
+                    type: 'element',
+                    prefix: 'tnt',
+                    style: 'kebab-case'
+                }
+            ],
+            '@angular-eslint/component-class-suffix': [
+                'error',
+                {
+                    suffixes: ['', 'Component']
+                }
+            ],
+            '@angular-eslint/prefer-inject': 'off',
+            'no-undefined': 'error',
+            'no-var': 'error',
+            'prefer-const': 'error',
+            'func-names': 'error',
+            'id-length': 'error',
+            'newline-before-return': 'error',
+            'space-before-blocks': 'error',
+            'no-alert': 'error'
         }
-      ],
-      "@angular-eslint/prefer-inject": "off",
-      "no-undefined": "error",
-      "no-var": "error",
-      "prefer-const": "error",
-      "func-names": "error",
-      "id-length": "error",
-      "newline-before-return": "error",
-      "space-before-blocks": "error",
-      "no-alert": "error"             
     },
-  },
-  {
-    files: ["**/*.html"],
-    extends: [
-      ...angular.configs.templateRecommended,
-      ...angular.configs.templateAccessibility,
-    ],
-    rules: {},
-  }
+    {
+        files: ['**/*.html'],
+        extends: [...angular.configs.templateRecommended, ...angular.configs.templateAccessibility],
+        rules: {}
+    },
+    eslintConfigPrettier
 );

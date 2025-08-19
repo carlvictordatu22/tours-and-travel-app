@@ -24,7 +24,9 @@
             autocomplete="off"
         />
         <div class="tnt-ai-search__actions">
-            <tnt-button type="submit" class="tnt-ai-search__submit" [blockSm]="true" [accent]="true" [disabled]="loading()">{{ loading() ? 'Searching…' : 'Search with AI' }}</tnt-button>
+            <tnt-button type="submit" class="tnt-ai-search__submit" [blockSm]="true" [accent]="true" [disabled]="loading()">{{
+                loading() ? 'Searching…' : 'Search with AI'
+            }}</tnt-button>
             <tnt-button type="button" class="tnt-ai-search__clear" [blockSm]="true" (click)="clearSearch()">Clear</tnt-button>
         </div>
     </form>
@@ -35,7 +37,7 @@
 
     @if (loading()) {
         <div class="tnt-grid tnt-grid--col-3">
-            @for (i of [0,1,2,3,4,5,6,7,8]; track i) {
+            @for (i of [0, 1, 2, 3, 4, 5, 6, 7, 8]; track i) {
                 <div class="tnt-grid__col">
                     <tnt-skeleton-card></tnt-skeleton-card>
                 </div>
@@ -54,15 +56,15 @@
                             [(isFavorite)]="item.isFavorite"
                             (isFavoriteChange)="onFavoriteChange(item.id, $event)"
                         >
-                            <div tnt-card-meta class="tnt-ai-search__meta">{{ item.type }} · {{ item.location }} · ⭐ {{ item.rating }} · ${{ item.priceUsd }}</div>
+                            <div tnt-card-meta class="tnt-ai-search__meta">
+                                {{ item.type }} · {{ item.location }} · ⭐ {{ item.rating }} · ${{ item.priceUsd }}
+                            </div>
                         </tnt-card>
                     </li>
                 }
             </ul>
         } @else if (hasSearched() && hasQuery() && !error()) {
-            <tnt-empty-card>
-                No results found.
-            </tnt-empty-card>
+            <tnt-empty-card> No results found. </tnt-empty-card>
         }
     }
 </div>

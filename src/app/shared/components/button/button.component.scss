@@ -9,7 +9,11 @@
     background: var(--tnt-white);
     color: var(--tnt-dark);
     cursor: pointer;
-    transition: background-color 150ms ease-in-out, color 150ms ease-in-out, border-color 150ms ease-in-out, box-shadow 150ms ease-in-out;
+    transition:
+        background-color 150ms ease-in-out,
+        color 150ms ease-in-out,
+        border-color 150ms ease-in-out,
+        box-shadow 150ms ease-in-out;
 
     &:hover {
         background-color: var(--tnt-background);
@@ -60,5 +64,3 @@
         box-shadow: none;
     }
 }
-
-

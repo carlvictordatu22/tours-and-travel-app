@@ -5,15 +5,15 @@ import { ButtonComponent } from '../../shared/components/button/button.component
 import { environment } from '../../../environments/environment';
 
 @Component({
-  selector: 'tnt-ai-search',
-  imports: [CommonModule, CardComponent, SkeletonComponent, EmptyCardComponent, ButtonComponent],
-  templateUrl: './ai-search.component.html',
-  styleUrl: './ai-search.component.scss',
-  changeDetection: ChangeDetectionStrategy.OnPush
+    selector: 'tnt-ai-search',
+    imports: [CommonModule, CardComponent, SkeletonComponent, EmptyCardComponent, ButtonComponent],
+    templateUrl: './ai-search.component.html',
+    styleUrl: './ai-search.component.scss',
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class AISearchComponent {
     readonly #favorites = inject(FavoritesService);
-    
+
     readonly query: WritableSignal<string> = signal('');
     readonly loading: WritableSignal<boolean> = signal(false);
     readonly error: WritableSignal<string | null> = signal(null);
@@ -95,7 +95,7 @@ export class AISearchComponent {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
-                    'Authorization': `Bearer ${environment.OPENAI_API_KEY}`
+                    Authorization: `Bearer ${environment.OPENAI_API_KEY}`
                 },
                 body: JSON.stringify({
                     model: 'gpt-4o-mini',
@@ -109,13 +109,11 @@ export class AISearchComponent {
             }
 
             const data = await response.json();
-            const text: string = data.output_text
-                ?? data?.output?.[0]?.content?.[0]?.text
-                ?? '';
+            const text: string = data.output_text ?? data?.output?.[0]?.content?.[0]?.text ?? '';
 
             const ids = this.#extractIds(text);
             const idSet = new Set(ids);
-            const selected = ENTRIES.filter(e => idSet.has(e.id));
+            const selected = ENTRIES.filter((e) => idSet.has(e.id));
 
             this.results.set(selected);
         } catch (err: any) {
@@ -132,19 +130,25 @@ export class AISearchComponent {
      * @returns Array of lightweight candidate entry objects
      */
     #buildCandidates(queryText: string, limit: number): Array<Pick<Entry, 'id' | 'type' | 'title' | 'description' | 'location' | 'rating' | 'priceUsd'>> {
-        const terms = queryText.toLowerCase().split(/[^a-z0-9]+/g).filter(Boolean);
+        const terms = queryText
+            .toLowerCase()
+            .split(/[^a-z0-9]+/g)
+            .filter(Boolean);
         const scoreEntry = (e: Entry): number => {
             const hay = `${e.title} ${e.description} ${e.location} ${e.type}`.toLowerCase();
             let score = 0;
             for (const t of terms) {
-                if (hay.includes(t)) { score += 2; }
+                if (hay.includes(t)) {
+                    score += 2;
+                }
             }
-            if (e.rating >= 4.5) { score += 1; }
+            if (e.rating >= 4.5) {
+                score += 1;
+            }
             return score;
         };
-        
-        return ENTRIES
-            .map(e => ({ e, s: scoreEntry(e) }))
+
+        return ENTRIES.map((e) => ({ e, s: scoreEntry(e) }))
             .sort((a, b) => b.s - a.s)
             .slice(0, Math.max(5, limit))
             .map(({ e }) => ({
@@ -188,7 +192,7 @@ export class AISearchComponent {
             const raw = jsonStart >= 0 && jsonEnd > jsonStart ? text.slice(jsonStart, jsonEnd + 1) : text;
             const parsed = JSON.parse(raw);
             const ids: unknown = parsed?.ids;
-            return Array.isArray(ids) ? ids.filter(x => typeof x === 'string') : [];
+            return Array.isArray(ids) ? ids.filter((x) => typeof x === 'string') : [];
         } catch {
             return [];
         }

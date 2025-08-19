@@ -4,7 +4,9 @@
     border-radius: 10px;
     overflow: hidden;
     position: relative;
-    transition: transform 150ms ease, box-shadow 150ms ease;
+    transition:
+        transform 150ms ease,
+        box-shadow 150ms ease;
     will-change: transform, box-shadow;
 
     &:hover {
@@ -20,7 +22,7 @@
         font-size: 14px;
         font-weight: 300;
         text-align: center;
-        color: lighten(#36382E, 40%);
+        color: lighten(#36382e, 40%);
     }
 
     &__header {
@@ -43,9 +45,15 @@
         letter-spacing: 1px;
         box-shadow: 0 1px 3px 0 #00000026;
 
-        &--activity { background-color: var(--tnt-primary); }
-        &--hotel { background-color: var(--tnt-accent); }
-        &--restaurant { background-color: var(--tnt-dark); }
+        &--activity {
+            background-color: var(--tnt-primary);
+        }
+        &--hotel {
+            background-color: var(--tnt-accent);
+        }
+        &--restaurant {
+            background-color: var(--tnt-dark);
+        }
     }
 
     &__image {
@@ -56,7 +64,9 @@
         transition: transform 200ms ease;
     }
 
-    &:hover .tnt-card__image { transform: scale(1.05); }
+    &:hover .tnt-card__image {
+        transform: scale(1.05);
+    }
 
     /* Favorite toggle positioned top-right over header */
     &__favorite {
@@ -73,7 +83,10 @@
         align-items: center;
         justify-content: center;
         cursor: pointer;
-        transition: border-color 150ms ease, box-shadow 150ms ease, background-color 150ms ease;
+        transition:
+            border-color 150ms ease,
+            box-shadow 150ms ease,
+            background-color 150ms ease;
         box-shadow: 0 1px 3px 0 #00000026;
         z-index: 1;
         padding: 0;
@@ -85,7 +98,9 @@
         }
 
         &:focus-visible {
-            box-shadow: 0 0 0 3px #0000001a, 0 0 0 5px var(--tnt-accent);
+            box-shadow:
+                0 0 0 3px #0000001a,
+                0 0 0 5px var(--tnt-accent);
         }
 
         &--active {
@@ -110,7 +125,7 @@
 
             &::before,
             &::after {
-                content: "";
+                content: '';
                 position: absolute;
                 width: 12px;
                 height: 12px;
@@ -118,8 +133,14 @@
                 border-radius: 50%;
             }
 
-            &::before { top: -6px; left: 0; }
-            &::after { top: 0; left: 6px; }
+            &::before {
+                top: -6px;
+                left: 0;
+            }
+            &::after {
+                top: 0;
+                left: 6px;
+            }
         }
     }
 
@@ -143,9 +164,19 @@
 }
 
 @keyframes tnt-heart-throb {
-    0% { transform: rotate(-45deg) scale(1); }
-    25% { transform: rotate(-45deg) scale(1.1); }
-    50% { transform: rotate(-45deg) scale(1); }
-    75% { transform: rotate(-45deg) scale(1.15); }
-    100% { transform: rotate(-45deg) scale(1); }
+    0% {
+        transform: rotate(-45deg) scale(1);
+    }
+    25% {
+        transform: rotate(-45deg) scale(1.1);
+    }
+    50% {
+        transform: rotate(-45deg) scale(1);
+    }
+    75% {
+        transform: rotate(-45deg) scale(1.15);
+    }
+    100% {
+        transform: rotate(-45deg) scale(1);
+    }
 }

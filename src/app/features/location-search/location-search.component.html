@@ -1,45 +1,43 @@
 <section class="tnt-location-search">
-	<h1 class="tnt-location-search__title">Location Search: <strong>"{{ displayText() }}"</strong></h1>
-	<p class="tnt-location-search__subtitle">Find destinations and points of interest.</p>
+    <h1 class="tnt-location-search__title">
+        Location Search: <strong>"{{ displayText() }}"</strong>
+    </h1>
+    <p class="tnt-location-search__subtitle">Find destinations and points of interest.</p>
 
-	@let entries = (entries$ | async) ?? [];
+    @let entries = (entries$ | async) ?? [];
 
-	<!-- Loading: show skeleton grid -->
-	@if (isLoading()) {
-		<div class="tnt-grid tnt-grid--col-3">
-			@for (i of [0,1,2,3,4,5,6,7,8]; track i) {
-				<div class="tnt-grid__col">
-					<tnt-skeleton-card></tnt-skeleton-card>
-				</div>
-			}
-		</div>
-	} @else {
-		@if (entries.length > 0) {
-			<div class="tnt-grid tnt-grid--col-3">
-				@for (entry of entries; track entry.id; let i = $index) {
-					<div class="tnt-grid__col">
-						<tnt-card
-							[imageUrl]="entry.imageUrl"
-							[type]="entry.type"
-							[title]="entry.title"
-							[description]="entry.description"
-							[priority]="i === 0"
-							[(isFavorite)]="entry.isFavorite"
-							(isFavoriteChange)="onFavoriteChange(entry.id, $event)"
-						></tnt-card>
-					</div>
-				}
-			</div>
-		} @else {
-			<tnt-empty-card>
-				No results found for this location.
-			</tnt-empty-card>
-		}
+    <!-- Loading: show skeleton grid -->
+    @if (isLoading()) {
+        <div class="tnt-grid tnt-grid--col-3">
+            @for (i of [0, 1, 2, 3, 4, 5, 6, 7, 8]; track i) {
+                <div class="tnt-grid__col">
+                    <tnt-skeleton-card></tnt-skeleton-card>
+                </div>
+            }
+        </div>
+    } @else {
+        @if (entries.length > 0) {
+            <div class="tnt-grid tnt-grid--col-3">
+                @for (entry of entries; track entry.id; let i = $index) {
+                    <div class="tnt-grid__col">
+                        <tnt-card
+                            [imageUrl]="entry.imageUrl"
+                            [type]="entry.type"
+                            [title]="entry.title"
+                            [description]="entry.description"
+                            [priority]="i === 0"
+                            [(isFavorite)]="entry.isFavorite"
+                            (isFavoriteChange)="onFavoriteChange(entry.id, $event)"
+                        ></tnt-card>
+                    </div>
+                }
+            </div>
+        } @else {
+            <tnt-empty-card> No results found for this location. </tnt-empty-card>
+        }
 
-		<div class="tnt-location-search__pagination">
-			<tnt-pagination [total]="totalEntries()" [pageSize]="pageSize" [(page)]="page"></tnt-pagination>
-		</div>
-	}
+        <div class="tnt-location-search__pagination">
+            <tnt-pagination [total]="totalEntries()" [pageSize]="pageSize" [(page)]="page"></tnt-pagination>
+        </div>
+    }
 </section>
-
-

@@ -1,4 +1,4 @@
-import { EntryType, Location } from "../enums";
+import { EntryType, Location } from '../enums';
 
 export interface Base {
     id: string;

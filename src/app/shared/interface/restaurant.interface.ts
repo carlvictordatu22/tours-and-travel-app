@@ -1,4 +1,4 @@
-import { Base } from "./base.interface";
+import { Base } from './base.interface';
 
 export interface Restaurant extends Base {
     reviewCount: number;

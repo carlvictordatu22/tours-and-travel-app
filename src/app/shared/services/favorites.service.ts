@@ -17,13 +17,11 @@ export class FavoritesService {
      */
     readonly entries: Signal<Entries> = computed(() => {
         const current = this.#favoriteIds();
-        return ENTRIES.map(entry => ({ ...entry, isFavorite: current.has(entry.id) }));
+        return ENTRIES.map((entry) => ({ ...entry, isFavorite: current.has(entry.id) }));
     });
 
     /** Total number of favorites. */
-    readonly favoritesCount: Signal<number> = computed(() =>
-        this.entries().filter(entry => entry.isFavorite).length
-    );
+    readonly favoritesCount: Signal<number> = computed(() => this.entries().filter((entry) => entry.isFavorite).length);
 
     /** Loads persisted favorites and wires up persistence effects. */
     constructor() {
@@ -58,7 +56,9 @@ export class FavoritesService {
      * @param id Entry identifier
      * @returns True if favorite
      */
-    isFavorite(id: string): boolean { return this.#favoriteIds().has(id); }
+    isFavorite(id: string): boolean {
+        return this.#favoriteIds().has(id);
+    }
 
     /**
      * Toggles favorite state for the given entry.
@@ -76,7 +76,11 @@ export class FavoritesService {
      */
     setFavorite(id: string, value: boolean): void {
         const next = new Set(this.#favoriteIds());
-        if (value) { next.add(id); } else { next.delete(id); }
+        if (value) {
+            next.add(id);
+        } else {
+            next.delete(id);
+        }
         this.#favoriteIds.set(next);
         this.#applyFavoriteToEntries(id, value);
     }
@@ -88,8 +92,10 @@ export class FavoritesService {
      * @param value Favorite state to apply
      */
     #applyFavoriteToEntries(id: string, value: boolean): void {
-        const target = ENTRIES.find(e => e.id === id);
-        if (target) { target.isFavorite = value; }
+        const target = ENTRIES.find((e) => e.id === id);
+        if (target) {
+            target.isFavorite = value;
+        }
     }
 
     /** Syncs all entries' `isFavorite` flags from the favorites set. */
@@ -100,5 +106,3 @@ export class FavoritesService {
         }
     }
 }
-
-

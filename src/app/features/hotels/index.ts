@@ -1,1 +1,1 @@
-export * from './hotels.component'
+export * from './hotels.component';

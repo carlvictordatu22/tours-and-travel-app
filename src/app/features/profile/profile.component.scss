@@ -1,154 +1,157 @@
 .tnt-profile {
-  &__user {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    padding: 16px;
-    border: 1px solid var(--tnt-neutral);
-    border-radius: 8px;
-    background: var(--tnt-white);
-    color: var(--tnt-dark);
-    margin-bottom: 20px;
+    &__user {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        padding: 16px;
+        border: 1px solid var(--tnt-neutral);
+        border-radius: 8px;
+        background: var(--tnt-white);
+        color: var(--tnt-dark);
+        margin-bottom: 20px;
 
-    @media screen and (max-width: 767px) {
-      align-items: flex-start;
-      flex-direction: column;
-      gap: 12px;
-      padding: 14px;
-    }
-  }
-
-  &__left {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-  }
-
-  &__right {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    margin-left: auto;
-
-    @media screen and (max-width: 767px) {
-      margin-left: 0;
-      width: 100%;
-      justify-content: space-between;
-    }
-  }
-
-  &__avatar {
-    width: 64px;
-    height: 64px;
-    border-radius: 50%;
-    overflow: hidden;
-    flex: 0 0 64px;
-    border: 2px solid var(--tnt-primary);
-    background: var(--tnt-background);
-
-    @media screen and (max-width: 767px) {
-      width: 56px;
-      height: 56px;
-      flex: 0 0 56px;
+        @media screen and (max-width: 767px) {
+            align-items: flex-start;
+            flex-direction: column;
+            gap: 12px;
+            padding: 14px;
+        }
     }
 
-    @media screen and (max-width: 480px) {
-      width: 48px;
-      height: 48px;
-      flex: 0 0 48px;
-    }
-  }
-
-  &__avatar-image {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
-  &__details {
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-  }
-
-  &__name {
-    margin: 0;
-    font-size: 20px;
-    line-height: 24px;
-    color: var(--tnt-dark);
-
-    @media screen and (max-width: 767px) {
-      font-size: 18px;
-      line-height: 22px;
-    }
-  }
-
-  &__meta {
-    margin: 0;
-    font-size: 14px;
-    line-height: 18px;
-    color: var(--tnt-dark);
-    opacity: 0.8;
-  }
-
-  &__stats {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-
-    @media screen and (max-width: 480px) {
-      gap: 12px;
-      flex-wrap: wrap;
-    }
-  }
-
-  &__stat {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 10px 12px;
-    border: 1px solid var(--tnt-neutral);
-    border-radius: 6px;
-    min-width: 96px;
-    background: var(--tnt-background);
-
-    @media screen and (max-width: 480px) {
-      padding: 8px 10px;
-      min-width: 84px;
+    &__left {
+        display: flex;
+        align-items: center;
+        gap: 16px;
     }
 
-    @media screen and (max-width: 360px) {
-      min-width: 72px;
+    &__right {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        margin-left: auto;
+
+        @media screen and (max-width: 767px) {
+            margin-left: 0;
+            width: 100%;
+            justify-content: space-between;
+        }
     }
-  }
 
-  &__stat-number {
-    font-size: 18px;
-    line-height: 22px;
-    font-weight: bold;
-    color: var(--tnt-primary);
-  }
+    &__avatar {
+        width: 64px;
+        height: 64px;
+        border-radius: 50%;
+        overflow: hidden;
+        flex: 0 0 64px;
+        border: 2px solid var(--tnt-primary);
+        background: var(--tnt-background);
 
-  &__stat-label {
-    font-size: 12px;
-    line-height: 16px;
-    color: var(--tnt-dark);
-    opacity: 0.9;
-  }
+        @media screen and (max-width: 767px) {
+            width: 56px;
+            height: 56px;
+            flex: 0 0 56px;
+        }
 
-  &__edit-button {
-    padding: 12px 16px;
-    border: 1px solid var(--tnt-primary);
-    background: var(--tnt-primary);
-    color: var(--tnt-white);
-    border-radius: 6px;
-    cursor: pointer;
-    transition: background-color 150ms ease-in-out, color 150ms ease-in-out, border-color 150ms ease-in-out;
-
-    &:hover {
-      background: transparent;
-      color: var(--tnt-primary);
+        @media screen and (max-width: 480px) {
+            width: 48px;
+            height: 48px;
+            flex: 0 0 48px;
+        }
     }
-  }
+
+    &__avatar-image {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &__details {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+    }
+
+    &__name {
+        margin: 0;
+        font-size: 20px;
+        line-height: 24px;
+        color: var(--tnt-dark);
+
+        @media screen and (max-width: 767px) {
+            font-size: 18px;
+            line-height: 22px;
+        }
+    }
+
+    &__meta {
+        margin: 0;
+        font-size: 14px;
+        line-height: 18px;
+        color: var(--tnt-dark);
+        opacity: 0.8;
+    }
+
+    &__stats {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+        @media screen and (max-width: 480px) {
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+    }
+
+    &__stat {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 12px;
+        border: 1px solid var(--tnt-neutral);
+        border-radius: 6px;
+        min-width: 96px;
+        background: var(--tnt-background);
+
+        @media screen and (max-width: 480px) {
+            padding: 8px 10px;
+            min-width: 84px;
+        }
+
+        @media screen and (max-width: 360px) {
+            min-width: 72px;
+        }
+    }
+
+    &__stat-number {
+        font-size: 18px;
+        line-height: 22px;
+        font-weight: bold;
+        color: var(--tnt-primary);
+    }
+
+    &__stat-label {
+        font-size: 12px;
+        line-height: 16px;
+        color: var(--tnt-dark);
+        opacity: 0.9;
+    }
+
+    &__edit-button {
+        padding: 12px 16px;
+        border: 1px solid var(--tnt-primary);
+        background: var(--tnt-primary);
+        color: var(--tnt-white);
+        border-radius: 6px;
+        cursor: pointer;
+        transition:
+            background-color 150ms ease-in-out,
+            color 150ms ease-in-out,
+            border-color 150ms ease-in-out;
+
+        &:hover {
+            background: transparent;
+            color: var(--tnt-primary);
+        }
+    }
 }

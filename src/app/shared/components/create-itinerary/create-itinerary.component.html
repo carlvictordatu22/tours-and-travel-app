@@ -1,14 +1,81 @@
 <div class="tnt-create-itinerary">
     <h1 mat-dialog-title>Create Itinerary</h1>
 
-    <div mat-dialog-content>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam corporis magnam, sequi
-        consequuntur deserunt eius iusto dolorum omnis atque excepturi laboriosam, explicabo autem adipisci nisi commodi
-        pariatur saepe eum odio!</div>
+    <div mat-dialog-content>
+        <form class="tnt-create-itinerary-form" novalidate>
+            <!-- Group: Itinerary name input - collects the trip title -->
+            <div class="tnt-create-itinerary-form__group">
+                <label class="tnt-create-itinerary-form__label" for="itinerary-name">Itinerary name</label>
+                <input
+                    class="tnt-input tnt-create-itinerary-form__control"
+                    id="itinerary-name"
+                    name="itineraryName"
+                    type="text"
+                    placeholder="e.g. Bali Getaway"
+                    required
+                />
+                <small class="tnt-create-itinerary-form__hint">Enter a short descriptive name</small>
+            </div>
 
-    <div mat-dialog-actions style="float:right;margin:20px;">
+            <div class="tnt-create-itinerary-form__row">
+                <!-- Group: Start date picker - selects the trip start date -->
+                <div class="tnt-create-itinerary-form__group">
+                    <mat-form-field appearance="outline" class="tnt-create-itinerary-form__control">
+                        <mat-label>Start Date</mat-label>
+                        <input
+                            matInput
+                            [matDatepicker]="startPicker"
+                            [value]="startDate()"
+                            [min]="today"
+                            (dateChange)="onStartDateChange($event.value)"
+                            placeholder="Choose a date"
+                        />
+                        <mat-datepicker-toggle matSuffix [for]="startPicker"></mat-datepicker-toggle>
+                        <mat-datepicker #startPicker></mat-datepicker>
+                    </mat-form-field>
+                    <small class="tnt-create-itinerary-form__hint">Trip start date</small>
+                </div>
+
+                <!-- Group: End date picker - selects the trip end date -->
+                <div class="tnt-create-itinerary-form__group">
+                    <mat-form-field appearance="outline" class="tnt-create-itinerary-form__control">
+                        <mat-label>End Date</mat-label>
+                        <input
+                            matInput
+                            [matDatepicker]="endPicker"
+                            [value]="endDate()"
+                            [max]="endMaxDate()"
+                            [min]="startDate() || today"
+                            [disabled]="!startDate()"
+                            (dateChange)="endDate.set($event.value)"
+                            placeholder="Choose a date"
+                        />
+                        <mat-datepicker-toggle matSuffix [for]="endPicker" [disabled]="!startDate()"></mat-datepicker-toggle>
+                        <mat-datepicker #endPicker></mat-datepicker>
+                    </mat-form-field>
+                    <small class="tnt-create-itinerary-form__hint">Trip end date (within 5 days of start)</small>
+                </div>
+            </div>
+
+            <!-- Group: Trip days - displays computed duration based on selected dates -->
+            <div class="tnt-create-itinerary-form__group">
+                <label class="tnt-create-itinerary-form__label" for="itinerary-days">Days</label>
+                <input
+                    class="tnt-input tnt-create-itinerary-form__control"
+                    id="itinerary-days"
+                    name="days"
+                    type="text"
+                    [value]="tripDays()"
+                    readonly
+                    placeholder="Trip days"
+                />
+                <small class="tnt-create-itinerary-form__hint">Total days from start to end</small>
+            </div>
+        </form>
+    </div>
+
+    <div mat-dialog-actions style="float: right; margin: 20px">
         <button [mat-dialog-close]="{ clicked: 'Ok' }">Ok</button>
-        <button [mat-dialog-close]="{ clicked: 'Cancel' }">
-            Cancel
-        </button>
+        <button [mat-dialog-close]="{ clicked: 'Cancel' }">Cancel</button>
     </div>
 </div>

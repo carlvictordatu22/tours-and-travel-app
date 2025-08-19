@@ -1,201 +1,206 @@
-// @import "~@angular/material/prebuilt-themes/indigo-pink.css";
-
 // CSS Variables
 :root {
-  --tnt-primary: #F06449;
-  --tnt-background: #EDE6E3;
-  --tnt-neutral: #DADAD9;
-  --tnt-dark: #36382E;
-  --tnt-accent: #5BC3EB;
-  --tnt-white: #FFFFFF;
+    --tnt-primary: #f06449;
+    --tnt-background: #ede6e3;
+    --tnt-neutral: #dadad9;
+    --tnt-dark: #36382e;
+    --tnt-accent: #5bc3eb;
+    --tnt-white: #ffffff;
 }
 
 // Reset
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: "Funnel Display", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: normal;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Funnel Display', sans-serif;
+    font-optical-sizing: auto;
+    font-weight: normal;
 }
 
 // Custom Grid
 .tnt-grid {
-  display: grid;
-  grid-gap: 20px;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr;
-
-  &--col-3 {
-    @media screen and (min-width: 768px) {
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: 1fr 1fr;
-    }
-
-    @media screen and (min-width: 992px) {
-      grid-template-columns: 1fr 1fr 1fr;
-      grid-template-rows: 1fr 1fr 1fr;
-    }
-  }
-
-  &--col-3-9 {
+    display: grid;
+    grid-gap: 20px;
     grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
 
-    @media screen and (min-width: 768px) {
-      grid-template-columns: 3fr 9fr;
-      grid-template-rows: 1fr;
+    &--col-3 {
+        @media screen and (min-width: 768px) {
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+        }
+
+        @media screen and (min-width: 992px) {
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+        }
     }
-  }
 
-  &__col {
-    background: transparent;
-  }
+    &--col-3-9 {
+        grid-template-columns: 1fr;
+
+        @media screen and (min-width: 768px) {
+            grid-template-columns: 3fr 9fr;
+            grid-template-rows: 1fr;
+        }
+    }
+
+    &__col {
+        background: transparent;
+    }
 }
 
 // Modal
 .tnt-modal {
-
-  .mat-mdc-dialog-inner-container .mat-mdc-dialog-title,
-  .mat-mdc-dialog-inner-container .mat-mdc-dialog-content {
-    font-family: "Funnel Display", sans-serif;
-  }
+    .mat-mdc-dialog-inner-container .mat-mdc-dialog-title,
+    .mat-mdc-dialog-inner-container .mat-mdc-dialog-content {
+        font-family: 'Funnel Display', sans-serif;
+    }
 }
 
 /* Global form controls */
 .tnt-input,
 .tnt-select {
-  width: 100%;
-  padding: 10px 12px;
-  border: 1px solid var(--tnt-neutral);
-  border-radius: 6px;
-  background: var(--tnt-white);
-  color: var(--tnt-dark);
-  outline: none;
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid var(--tnt-neutral);
+    border-radius: 6px;
+    background: var(--tnt-white);
+    color: var(--tnt-dark);
+    outline: none;
 }
 
 .tnt-input:focus,
 .tnt-select:focus {
-  border-color: var(--tnt-primary);
-  box-shadow: 0 0 0 2px rgba(240, 100, 73, 0.2);
+    border-color: var(--tnt-primary);
+    box-shadow: 0 0 0 2px rgba(240, 100, 73, 0.2);
 }
 
 .tnt-select {
-  appearance: none;
-  background-image: linear-gradient(45deg, transparent 50%, var(--tnt-dark) 50%),
-    linear-gradient(135deg, var(--tnt-dark) 50%, transparent 50%);
-  background-position: calc(100% - 16px) calc(1em - 2px), calc(100% - 11px) calc(1em - 2px);
-  background-size: 5px 5px, 5px 5px;
-  background-repeat: no-repeat;
+    appearance: none;
+    background-image: linear-gradient(45deg, transparent 50%, var(--tnt-dark) 50%), linear-gradient(135deg, var(--tnt-dark) 50%, transparent 50%);
+    background-position:
+        calc(100% - 16px) calc(1em - 2px),
+        calc(100% - 11px) calc(1em - 2px);
+    background-size:
+        5px 5px,
+        5px 5px;
+    background-repeat: no-repeat;
 }
 
 .tnt-toggle {
-  width: 42px;
-  height: 24px;
-  appearance: none;
-  background: var(--tnt-neutral);
-  border-radius: 999px;
-  position: relative;
-  outline: none;
-  cursor: pointer;
-  transition: background 150ms ease-in-out;
-
-  &::after {
-    content: "";
-    position: absolute;
-    top: 3px;
-    left: 3px;
-    width: 18px;
-    height: 18px;
-    background: var(--tnt-white);
-    border-radius: 50%;
-    transition: transform 150ms ease-in-out;
-  }
-
-  &:checked {
-    background: var(--tnt-primary);
+    width: 42px;
+    height: 24px;
+    appearance: none;
+    background: var(--tnt-neutral);
+    border-radius: 999px;
+    position: relative;
+    outline: none;
+    cursor: pointer;
+    transition: background 150ms ease-in-out;
 
     &::after {
-      transform: translateX(18px);
+        content: '';
+        position: absolute;
+        top: 3px;
+        left: 3px;
+        width: 18px;
+        height: 18px;
+        background: var(--tnt-white);
+        border-radius: 50%;
+        transition: transform 150ms ease-in-out;
     }
-  }
+
+    &:checked {
+        background: var(--tnt-primary);
+
+        &::after {
+            transform: translateX(18px);
+        }
+    }
 }
 
-// Tabs 
+// Tabs
 .tnt-tabs {
-  display: flex;
-  gap: 16px;
-  border-bottom: 1px solid var(--tnt-neutral);
+    display: flex;
+    gap: 16px;
+    border-bottom: 1px solid var(--tnt-neutral);
 
-  &__tab {
-    position: relative;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    height: 40px;
-    padding: 0 12px;
-    color: var(--tnt-dark);
-    text-decoration: none;
-    border-bottom: 2px solid transparent;
-    transition: color 150ms ease-in-out, border-color 150ms ease-in-out, background-color 150ms ease-in-out;
+    &__tab {
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        height: 40px;
+        padding: 0 12px;
+        color: var(--tnt-dark);
+        text-decoration: none;
+        border-bottom: 2px solid transparent;
+        transition:
+            color 150ms ease-in-out,
+            border-color 150ms ease-in-out,
+            background-color 150ms ease-in-out;
 
-    &:hover {
-      color: var(--tnt-primary);
-      background-color: var(--tnt-background);
+        &:hover {
+            color: var(--tnt-primary);
+            background-color: var(--tnt-background);
+        }
+
+        &.active,
+        &[aria-current='page'] {
+            color: var(--tnt-primary);
+            border-color: var(--tnt-primary);
+        }
     }
-
-    &.active,
-    &[aria-current="page"] {
-      color: var(--tnt-primary);
-      border-color: var(--tnt-primary);
-    }
-  }
 }
 
 // Sidebar (vertical navigation)
 .tnt-sidebar {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  border-right: 1px solid var(--tnt-neutral);
-  padding-right: 12px;
-  min-height: 100vh;
-  
-  @media screen and (max-width: 767px) {
-    min-height: auto;
-    padding-right: 0;
-    border-right: none;
-    border-bottom: 1px solid var(--tnt-neutral);
-  }
-
-  &__link {
-    display: inline-flex;
-    align-items: center;
+    display: flex;
+    flex-direction: column;
     gap: 8px;
-    padding: 10px 12px;
-    color: var(--tnt-dark);
-    text-decoration: none;
-    border-left: 2px solid transparent;
-    transition: color 150ms ease-in-out, background-color 150ms ease-in-out, border-color 150ms ease-in-out;
+    border-right: 1px solid var(--tnt-neutral);
+    padding-right: 12px;
+    min-height: 100vh;
 
-
-    &:hover {
-      color: var(--tnt-primary);
-      background-color: var(--tnt-background);
+    @media screen and (max-width: 767px) {
+        min-height: auto;
+        padding-right: 0;
+        border-right: none;
+        border-bottom: 1px solid var(--tnt-neutral);
     }
 
-    &.active,
-    &[aria-current="page"] {
-      color: var(--tnt-primary);
-      background-color: var(--tnt-background);
-      border-color: var(--tnt-primary);
-    }
-  }
+    &__link {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 10px 12px;
+        color: var(--tnt-dark);
+        text-decoration: none;
+        border-left: 2px solid transparent;
+        transition:
+            color 150ms ease-in-out,
+            background-color 150ms ease-in-out,
+            border-color 150ms ease-in-out;
 
-  &__link &__icon {
-    width: 18px;
-    height: 18px;
-  }
+        &:hover {
+            color: var(--tnt-primary);
+            background-color: var(--tnt-background);
+        }
+
+        &.active,
+        &[aria-current='page'] {
+            color: var(--tnt-primary);
+            background-color: var(--tnt-background);
+            border-color: var(--tnt-primary);
+        }
+    }
+
+    &__link &__icon {
+        width: 18px;
+        height: 18px;
+    }
 }
