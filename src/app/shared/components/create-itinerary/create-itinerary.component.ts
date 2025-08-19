@@ -58,16 +58,14 @@ export class CreateItineraryComponent {
         // Initialize form when dates change
         effect(() => {
             const dates = this.availableDates();
-            console.log('Available dates changed:', dates.length, 'dates');
+
             if (dates.length > 0) {
                 // Clear existing entries
                 this.dailyEntriesArray.clear();
-                console.log('Cleared daily entries array');
                 // Add entries for each date
                 dates.forEach((date) => {
                     this.addDailyEntry(date);
                 });
-                console.log('Added daily entries, total count:', this.dailyEntriesArray.length);
             }
         });
     }
@@ -137,13 +135,6 @@ export class CreateItineraryComponent {
             dates.push(new Date(current));
             current.setDate(current.getDate() + 1);
         }
-
-        console.log('Available dates calculation:', {
-            start: start?.toDateString(),
-            end: end?.toDateString(),
-            count: dates.length,
-            tripDays: this.tripDays()
-        });
 
         return dates;
     });
@@ -336,12 +327,8 @@ export class CreateItineraryComponent {
         const target = event.target as HTMLInputElement;
         const isSelected = target.checked;
 
-        console.log('Entry selection change:', { date: date.toDateString(), entryId, isSelected });
-
         // Safety check: ensure the FormArray exists and has controls
         if (!this.dailyEntriesArray || this.dailyEntriesArray.length === 0) {
-            console.log('No daily entries array found');
-
             return;
         }
 
@@ -352,8 +339,6 @@ export class CreateItineraryComponent {
         });
 
         if (!dailyEntry) {
-            console.log('No daily entry found for date:', date.toDateString());
-
             return;
         }
 
@@ -361,13 +346,10 @@ export class CreateItineraryComponent {
 
         // Ensure we have a valid FormArray
         if (!selectedEntriesControl) {
-            console.log('No selected entries control found');
-
             return;
         }
 
         const currentSelection = selectedEntriesControl.value || [];
-        console.log('Current selection before change:', currentSelection);
 
         if (isSelected) {
             // Check if entry is already selected to prevent duplicates
@@ -391,8 +373,6 @@ export class CreateItineraryComponent {
                 selectedEntriesControl.push(this.#fb.control(id));
             });
         }
-
-        console.log('Final selection after change:', selectedEntriesControl.value);
     }
 
     /**
@@ -531,7 +511,6 @@ export class CreateItineraryComponent {
             };
 
             const saved = this.#itineraries.save(draft);
-            console.log('Itinerary saved to localStorage:', saved);
             this.#dialogRef.close(saved);
         }
     }
